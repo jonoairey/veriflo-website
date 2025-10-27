@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing - Veriflo</title>
+    <meta name="description" content="Transparent pricing for Veriflo's document protection platform. Starting at $49/month for individuals. Enterprise plans available. Free trial included. No credit card required.">
+    <meta name="keywords" content="document security pricing, veriflo cost, blockchain verification pricing, leak detection software cost, document protection plans">
+    <meta name="author" content="Veriflo">
+    <meta name="theme-color" content="#3b82f6">
+    <meta property="og:title" content="Veriflo Pricing - Affordable Document Protection Plans">
+    <meta property="og:description" content="Starter $49/mo | Professional $149/mo | Enterprise Custom. Protect your documents with blockchain verification and forensic fingerprinting.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://useveriflo.com/veriflo-pricing.html">
+    <meta property="og:image" content="https://useveriflo.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://useveriflo.com/veriflo-pricing.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.15);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid #3b82f6;
+            transform: scale(1.05);
+        }
+        
+        .pricing-card.featured:hover {
+            transform: scale(1.08) translateY(-8px);
+        }
+        
+        .toggle-switch {
+            position: relative;
+            width: 60px;
+            height: 30px;
+            background: #e5e7eb;
+            border-radius: 30px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        .toggle-switch.active {
+            background: #3b82f6;
+        }
+        
+        .toggle-knob {
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            width: 24px;
+            height: 24px;
+            background: white;
+            border-radius: 50%;
+            transition: 0.3s;
+        }
+        
+        .toggle-switch.active .toggle-knob {
+            left: 33px;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <rect width="40" height="40" rx="8" fill="url(#gradient)"/>
+                        <path d="M20 10L12 15V25L20 30L28 25V15L20 10Z" fill="white" opacity="0.9"/>
+                        <circle cx="20" cy="20" r="4" fill="white"/>
+                        <defs>
+                            <linearGradient id="gradient" x1="0" y1="0" x2="40" y2="40">
+                                <stop offset="0%" stop-color="#3b82f6"/>
+                                <stop offset="100%" stop-color="#1e40af"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    <span class="text-xl font-bold gradient-text">Veriflo</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="veriflo-website.html#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
+                    <a href="veriflo-website.html#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
+                    <a href="veriflo-website.html#use-cases" class="text-gray-700 hover:text-blue-600 transition">Use Cases</a>
+                    <a href="veriflo-website.html#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/login" class="text-gray-700 hover:text-blue-600 transition font-medium">
+                        Login
+                    </a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition font-medium">
+                        Get Started
+                    </a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-6">
+                Simple, Transparent Pricing
+            </h1>
+            <p class="text-xl md:text-2xl text-blue-100 max-w-3xl mx-auto mb-8">
+                90% less expensive than traditional document security solutions. No hidden fees, no surprises.
+            </p>
+            
+            <!-- Billing Toggle -->
+            <div class="flex items-center justify-center space-x-4">
+                <span class="text-lg" id="monthly-label">Monthly</span>
+                <div class="toggle-switch" id="billing-toggle" onclick="toggleBilling()">
+                    <div class="toggle-knob"></div>
+                </div>
+                <span class="text-lg" id="annual-label">Annual <span class="text-sm text-blue-200">(Save 20%)</span></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Cards -->
+    <section class="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid md:grid-cols-3 gap-8 -mt-32">
+            <!-- Starter Tier -->
+            <div class="pricing-card bg-white rounded-2xl p-8 shadow-xl">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold mb-2">Starter</h3>
+                    <p class="text-gray-600 text-sm mb-4">For individuals & creators</p>
+                    <div class="mb-4">
+                        <span class="text-5xl font-bold monthly-price">$49</span>
+                        <span class="text-5xl font-bold annual-price hidden">$41</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <p class="text-gray-500 text-sm monthly-billing">Billed monthly</p>
+                    <p class="text-gray-500 text-sm annual-billing hidden">Billed annually ($490/year)</p>
+                </div>
+
+                <a href="https://app.useveriflo.com/signup" class="block w-full py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 mb-6 text-center">
+                    Get Started
+                </a>
+
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span><strong>100 files</strong></span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>Full verification</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>5-layer fingerprinting</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>Leak detection</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>Real-time monitoring</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>Email support</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Professional Tier (Featured) -->
+            <div class="pricing-card featured bg-white rounded-2xl p-8 shadow-2xl relative">
+                <div class="absolute top-0 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                    <span class="bg-gradient-to-r from-blue-600 to-blue-600 text-white px-4 py-1 rounded-full text-sm font-semibold">
+                        MOST POPULAR
+                    </span>
+                </div>
+
+                <div class="text-center mb-6 mt-4">
+                    <h3 class="text-2xl font-bold mb-2">Professional</h3>
+                    <p class="text-gray-600 text-sm mb-4">For growing businesses</p>
+                    <div class="mb-4">
+                        <span class="text-5xl font-bold monthly-price">$149</span>
+                        <span class="text-5xl font-bold annual-price hidden">$124</span>
+                        <span class="text-gray-500">/month</span>
+                    </div>
+                    <p class="text-gray-500 text-sm monthly-billing">Billed monthly</p>
+                    <p class="text-gray-500 text-sm annual-billing hidden">Billed annually ($1,490/year)</p>
+                </div>
+
+                <a href="https://app.useveriflo.com/signup" class="block w-full py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 mb-6 text-center">
+                    Get Started
+                </a>
+
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span><strong>500 files</strong></span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>Everything in Starter</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>Bulk operations</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>Advanced analytics</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>API access</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>DMCA automation</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                        <span>Priority support</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Enterprise Tier -->
+            <div class="pricing-card bg-gradient-to-br from-blue-900 to-blue-900 text-white rounded-2xl p-8 shadow-xl">
+                <div class="text-center mb-6">
+                    <h3 class="text-2xl font-bold mb-2">Enterprise</h3>
+                    <p class="text-blue-200 text-sm mb-4">For large organizations</p>
+                    <div class="mb-4">
+                        <span class="text-5xl font-bold">Custom</span>
+                    </div>
+                    <p class="text-blue-200 text-sm">Contact us for pricing</p>
+                </div>
+                
+                <a href="mailto:sales@useveriflo.com?subject=Enterprise Plan Inquiry" class="block w-full py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 mb-6 text-center">
+                    Contact Sales
+                </a>
+                
+                <div class="space-y-3 text-sm">
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                        <span><strong>Unlimited files</strong></span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                        <span>Everything in Professional</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                        <span>White-label options</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                        <span>SSO & SAML</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                        <span>Custom integrations</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                        <span>SLA guarantee</span>
+                    </div>
+                    <div class="flex items-start">
+                        <i class="fas fa-check text-green-400 mt-1 mr-3"></i>
+                        <span>Dedicated support</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Feature Comparison Table -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Compare All Features</h2>
+            
+            <div class="overflow-x-auto">
+                <table class="w-full">
+                    <thead>
+                        <tr class="border-b-2 border-gray-200">
+                            <th class="text-left py-4 px-4">Feature</th>
+                            <th class="text-center py-4 px-4">Starter</th>
+                            <th class="text-center py-4 px-4 bg-blue-50">Professional</th>
+                            <th class="text-center py-4 px-4">Enterprise</th>
+                        </tr>
+                    </thead>
+                    <tbody class="text-sm">
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Documents per month</td>
+                            <td class="text-center py-4 px-4">3</td>
+                            <td class="text-center py-4 px-4">100</td>
+                            <td class="text-center py-4 px-4 bg-blue-50">1,000</td>
+                            <td class="text-center py-4 px-4">Unlimited</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Recipients per document</td>
+                            <td class="text-center py-4 px-4">5</td>
+                            <td class="text-center py-4 px-4">Unlimited</td>
+                            <td class="text-center py-4 px-4 bg-blue-50">Unlimited</td>
+                            <td class="text-center py-4 px-4">Unlimited</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Blockchain verification</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Basic watermarking</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">5-layer fingerprinting</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Leak detection</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Real-time monitoring</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Access logs & tracking</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Analytics dashboard</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4">Basic</td>
+                            <td class="text-center py-4 px-4 bg-blue-50">Advanced</td>
+                            <td class="text-center py-4 px-4">Advanced</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Bulk operations</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">API access</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50">10K calls/mo</td>
+                            <td class="text-center py-4 px-4">Custom</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">DMCA automation</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-check text-green-500"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">Team management</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50">Up to 10 users</td>
+                            <td class="text-center py-4 px-4">Unlimited</td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">White-label branding</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr class="border-b">
+                            <td class="py-4 px-4 font-semibold">SSO / SAML</td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4 bg-blue-50"><i class="fas fa-times text-gray-300"></i></td>
+                            <td class="text-center py-4 px-4"><i class="fas fa-check text-green-500"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-4 font-semibold">Support</td>
+                            <td class="text-center py-4 px-4">Community</td>
+                            <td class="text-center py-4 px-4">Email</td>
+                            <td class="text-center py-4 px-4 bg-blue-50">Priority</td>
+                            <td class="text-center py-4 px-4">24/7 Phone</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Cost Comparison -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4">How Veriflo Saves You Money</h2>
+                <p class="text-xl text-gray-600">Compare traditional solutions to Veriflo</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+                <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+                    <h3 class="text-xl font-bold mb-4 text-gray-700">Traditional Notarization</h3>
+                    <div class="text-4xl font-bold text-gray-400 mb-4">$30</div>
+                    <p class="text-gray-600 mb-4">per document</p>
+                    <ul class="text-sm text-left space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+                            <span>Requires in-person visit</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+                            <span>Slow verification process</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+                            <span>No leak detection</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg text-center">
+                    <h3 class="text-xl font-bold mb-4 text-gray-700">Enterprise DLP Solutions</h3>
+                    <div class="text-4xl font-bold text-gray-400 mb-4">$100K+</div>
+                    <p class="text-gray-600 mb-4">per year</p>
+                    <ul class="text-sm text-left space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+                            <span>Months of implementation</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+                            <span>High false positive rates</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-times text-red-500 mt-1 mr-2"></i>
+                            <span>No attribution capability</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-600 to-blue-600 text-white rounded-xl p-8 shadow-xl text-center transform scale-105">
+                    <h3 class="text-xl font-bold mb-4">Veriflo Business</h3>
+                    <div class="text-4xl font-bold mb-4">$149</div>
+                    <p class="mb-4">per month</p>
+                    <ul class="text-sm text-left space-y-2">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-300 mt-1 mr-2"></i>
+                            <span>30-second setup</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-300 mt-1 mr-2"></i>
+                            <span>98.5% leak attribution</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-300 mt-1 mr-2"></i>
+                            <span>Both verification & protection</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white rounded-xl p-8 shadow-lg max-w-3xl mx-auto text-center">
+                <h4 class="text-2xl font-bold mb-4">The Math is Simple</h4>
+                <p class="text-xl text-gray-700 mb-6">
+                    For a company protecting 100 documents per month:
+                </p>
+                <div class="grid md:grid-cols-2 gap-6 text-left">
+                    <div>
+                        <p class="font-semibold mb-2">Traditional Approach:</p>
+                        <ul class="text-gray-600 space-y-1">
+                            <li>• Notarization: $3,000/month</li>
+                            <li>• DLP Software: $10,000/month</li>
+                            <li>• <strong>Total: $13,000/month</strong></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-semibold mb-2">Veriflo Business:</p>
+                        <ul class="text-blue-600 space-y-1">
+                            <li>• Verification: Included</li>
+                            <li>• Leak Detection: Included</li>
+                            <li>• <strong>Total: $149/month</strong></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-green-50 rounded-lg">
+                    <p class="text-2xl font-bold text-green-600">
+                        Save $12,851 per month (98.9% cost reduction)
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-4xl font-bold text-center mb-12">Pricing FAQs</h2>
+            
+            <div class="space-y-6">
+                <div class="border-b pb-6">
+                    <h3 class="text-xl font-semibold mb-3">Can I change plans anytime?</h3>
+                    <p class="text-gray-600">Yes! You can upgrade or downgrade at any time. Changes take effect immediately, and we'll prorate any charges.</p>
+                </div>
+
+                <div class="border-b pb-6">
+                    <h3 class="text-xl font-semibold mb-3">What happens if I exceed my document limit?</h3>
+                    <p class="text-gray-600">We'll notify you when you're close to your limit. You can either upgrade your plan or purchase additional documents at $2 per document.</p>
+                </div>
+
+                <div class="border-b pb-6">
+                    <h3 class="text-xl font-semibold mb-3">Is there a long-term contract?</h3>
+                    <p class="text-gray-600">No contracts required for monthly plans. Annual plans lock in your rate for 12 months but can be cancelled with 30 days notice.</p>
+                </div>
+
+                <div class="border-b pb-6">
+                    <h3 class="text-xl font-semibold mb-3">What payment methods do you accept?</h3>
+                    <p class="text-gray-600">We accept all major credit cards (Visa, Mastercard, Amex) and ACH bank transfers for Enterprise plans.</p>
+                </div>
+
+                <div class="border-b pb-6">
+                    <h3 class="text-xl font-semibold mb-3">Do you offer discounts for nonprofits or education?</h3>
+                    <p class="text-gray-600">Yes! We offer 50% discounts for qualified nonprofit organizations and educational institutions. Contact us for verification.</p>
+                </div>
+
+                <div class="border-b pb-6">
+                    <h3 class="text-xl font-semibold mb-3">What's included in the Free tier forever?</h3>
+                    <p class="text-gray-600">The Free tier never expires and includes 3 documents per month with basic watermarking and blockchain verification. It's perfect for trying the technology.</p>
+                </div>
+
+                <div class="pb-6">
+                    <h3 class="text-xl font-semibold mb-3">How does Enterprise pricing work?</h3>
+                    <p class="text-gray-600">Enterprise pricing is customized based on your volume, feature requirements, and SLA needs. Contact our sales team for a detailed quote tailored to your organization.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="gradient-bg text-white py-20">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                Start Protecting Your Documents Today
+            </h2>
+            <p class="text-xl mb-8 text-blue-100">
+                No credit card required for Free tier. Upgrade anytime.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-100 text-lg">
+                    Start Free
+                </button>
+                <button class="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-blue-600 text-lg">
+                    Talk to Sales
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-8">
+                <div>
+                    <a href="veriflo-website.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold">Veriflo</span>
+                    </a>
+                    <p class="text-gray-400 text-sm">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="veriflo-website.html#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="veriflo-website.html#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">API</a></li>
+                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Content Creators</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="onlyfans-leak-protection.html" class="hover:text-white transition">OnlyFans Protection</a></li>
+                        <li><a href="youtube-content-protection.html" class="hover:text-white transition">YouTube Creators</a></li>
+                        <li><a href="music-leak-prevention.html" class="hover:text-white transition">Music & Audio</a></li>
+                        <li><a href="photography-protection.html" class="hover:text-white transition">Photography</a></li>
+                        <li><a href="course-creator-protection.html" class="hover:text-white transition">Online Courses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Business Solutions</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="legal-document-protection.html" class="hover:text-white transition">Legal & Law Firms</a></li>
+                        <li><a href="corporate-leak-prevention.html" class="hover:text-white transition">Corporate Documents</a></li>
+                        <li><a href="financial-document-verification.html" class="hover:text-white transition">Financial Services</a></li>
+                        <li><a href="healthcare-record-protection.html" class="hover:text-white transition">Healthcare</a></li>
+                        <li><a href="university-diploma-verification.html" class="hover:text-white transition">Universities</a></li>
+                    </ul>
+                </div>
+                                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="veriflo-website.html#contact" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 Veriflo. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        function toggleBilling() {
+            const toggle = document.getElementById('billing-toggle');
+            const monthlyPrices = document.querySelectorAll('.monthly-price');
+            const annualPrices = document.querySelectorAll('.annual-price');
+            const monthlyBilling = document.querySelectorAll('.monthly-billing');
+            const annualBilling = document.querySelectorAll('.annual-billing');
+            
+            toggle.classList.toggle('active');
+            
+            if (toggle.classList.contains('active')) {
+                // Show annual pricing
+                monthlyPrices.forEach(el => el.classList.add('hidden'));
+                annualPrices.forEach(el => el.classList.remove('hidden'));
+                monthlyBilling.forEach(el => el.classList.add('hidden'));
+                annualBilling.forEach(el => el.classList.remove('hidden'));
+            } else {
+                // Show monthly pricing
+                monthlyPrices.forEach(el => el.classList.remove('hidden'));
+                annualPrices.forEach(el => el.classList.add('hidden'));
+                monthlyBilling.forEach(el => el.classList.remove('hidden'));
+                annualBilling.forEach(el => el.classList.add('hidden'));
+            }
+        }
+    </script>
+</body>
+</html>

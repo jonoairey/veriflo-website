@@ -1,0 +1,582 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube Content Protection - Veriflo</title>
+    <meta name="description" content="Protect your YouTube content from theft and unauthorized reuploads. Track video leaks, prove ownership with blockchain, and automate copyright strikes.">
+    <meta name="keywords" content="youtube content protection, video leak detection, youtube copyright protection, content creator security, video piracy prevention">
+    <meta name="author" content="Veriflo">
+    <meta name="theme-color" content="#3b82f6">
+    <meta property="og:title" content="YouTube Content Protection - Stop Video Theft | Veriflo">
+    <meta property="og:description" content="Protect your videos from theft. Track unauthorized uploads. Prove ownership with blockchain verification.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://useveriflo.com/youtube-content-protection.html">
+    <meta property="og:image" content="https://useveriflo.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <link rel="canonical" href="https://useveriflo.com/youtube-content-protection.html">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .hero-pattern {
+            background-color: #3b82f6;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="antialiased">
+    
+    <!-- Navigation -->
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="veriflo-website.html" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">Veriflo</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="veriflo-website.html#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
+                    <a href="veriflo-website.html#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
+                    <a href="veriflo-website.html#use-cases" class="text-gray-700 hover:text-blue-600 transition">Use Cases</a>
+                    <a href="veriflo-website.html#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/login" class="text-gray-700 hover:text-blue-600 transition font-medium">
+                        Login
+                    </a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition font-medium">
+                        Get Started
+                    </a>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern pt-32 pb-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <div class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
+                        <i class="fab fa-youtube text-red-400 mr-2"></i>
+                        FOR YOUTUBE CREATORS
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        Stop Content Theft. Identify Video Reuploaders.
+                    </h1>
+                    <p class="text-xl mb-8 text-white/90 leading-relaxed">
+                        Your videos are being reuploaded without permission. Veriflo fingerprints every frame to identify exactly who downloaded and shared your content—with evidence that gets them banned.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <button class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-50 transition shadow-lg">
+                            Protect My Channel
+                        </button>
+                        <button class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition border-2 border-white/30">
+                            See How It Works
+                        </button>
+                    </div>
+                    <div class="mt-8 flex items-center space-x-6 text-sm">
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>98.5% attribution accuracy</span>
+                        </div>
+                        <div class="flex items-center">
+                            <i class="fas fa-check-circle mr-2"></i>
+                            <span>Survives re-uploads</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="relative">
+                        <div class="absolute inset-0 bg-gradient-to-r from-blue-400 to-pink-400 rounded-2xl blur-3xl opacity-30"></div>
+                        <div class="relative bg-white/10 backdrop-blur-md rounded-2xl p-8 border border-white/20">
+                            <div class="bg-gradient-to-br from-red-500 to-red-600 rounded-xl p-6 mb-4">
+                                <div class="flex items-center justify-between mb-4">
+                                    <i class="fab fa-youtube text-white text-4xl"></i>
+                                    <div class="text-right">
+                                        <div class="text-white text-sm font-semibold">Channel Protected</div>
+                                        <div class="text-white/80 text-xs">Real-time monitoring</div>
+                                    </div>
+                                </div>
+                                <div class="text-white text-3xl font-bold">1.2M Views</div>
+                                <div class="text-white/80 text-sm">Protected across 847 videos</div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="bg-white/10 rounded-lg p-4">
+                                    <div class="text-white/60 text-xs mb-1">Unauthorized Uploads</div>
+                                    <div class="text-white text-2xl font-bold">23</div>
+                                    <div class="text-green-400 text-xs">Detected & removed</div>
+                                </div>
+                                <div class="bg-white/10 rounded-lg p-4">
+                                    <div class="text-white/60 text-xs mb-1">Revenue Recovered</div>
+                                    <div class="text-white text-2xl font-bold">$12K+</div>
+                                    <div class="text-green-400 text-xs">This month</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">The YouTube Content Theft Problem</h2>
+                <p class="text-xl text-gray-600">Your hard work is being stolen. Here's how reuploaders profit from your content.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-red-50 rounded-xl p-8 border-l-4 border-red-500">
+                    <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-download text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Subscribers Download Your Videos</h3>
+                    <p class="text-gray-700 mb-4">
+                        Channel members and Patreon supporters download your exclusive content, courses, or early-access videos.
+                    </p>
+                    <div class="text-sm text-gray-600">
+                        <strong>The Promise:</strong> "For members only"<br>
+                        <strong>The Reality:</strong> Downloaded in seconds
+                    </div>
+                </div>
+
+                <div class="bg-orange-50 rounded-xl p-8 border-l-4 border-orange-500">
+                    <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-upload text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Reuploaders Steal Your Views</h3>
+                    <p class="text-gray-700 mb-4">
+                        They reupload your videos to their own channels, "compilation" channels, or clip channels—monetizing your work.
+                    </p>
+                    <div class="text-sm text-gray-600">
+                        <strong>Lost to Theft:</strong> 15-40% of potential views<br>
+                        <strong>Your Revenue:</strong> $0
+                    </div>
+                </div>
+
+                <div class="bg-red-50 rounded-xl p-8 border-l-4 border-red-500">
+                    <div class="w-14 h-14 bg-red-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-question-circle text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">You Can't Prove Who Did It</h3>
+                    <p class="text-gray-700 mb-4">
+                        YouTube's Content ID only finds reuploads—it doesn't tell you which subscriber leaked your video. You're powerless to stop them.
+                    </p>
+                    <div class="text-sm text-gray-600">
+                        <strong>Current Solution:</strong> File DMCA, repeat forever<br>
+                        <strong>Problem Solved:</strong> Never
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gradient-to-r from-red-50 to-orange-50 rounded-xl p-8 border border-red-200">
+                <div class="flex items-start">
+                    <div class="flex-shrink-0 w-12 h-12 bg-red-500 rounded-lg flex items-center justify-center">
+                        <i class="fas fa-exclamation-triangle text-white text-xl"></i>
+                    </div>
+                    <div class="ml-6">
+                        <h4 class="text-2xl font-bold mb-3">The Real Cost of Content Theft</h4>
+                        <div class="grid md:grid-cols-3 gap-6">
+                            <div>
+                                <div class="text-3xl font-bold text-red-600 mb-2">$50K-200K</div>
+                                <p class="text-gray-700">Average annual revenue lost to reuploaders for mid-tier creators</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-red-600 mb-2">72%</div>
+                                <p class="text-gray-700">Of YouTube creators report having their content stolen and reuploaded</p>
+                            </div>
+                            <div>
+                                <div class="text-3xl font-bold text-red-600 mb-2">Months</div>
+                                <p class="text-gray-700">Time wasted filing DMCAs instead of creating content</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solution Section -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">How Veriflo Stops YouTube Content Theft</h2>
+                <p class="text-xl text-gray-600">Invisible fingerprints in every frame. Identify the leaker in hours, not never.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white text-2xl font-bold">1</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Fingerprint Your Videos</h3>
+                    <p class="text-gray-700 mb-4">
+                        Upload your video to Veriflo before publishing. We add invisible, unique fingerprints to each subscriber's copy—imperceptible to viewers but trackable by our AI.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Embedded in every frame</span>
+                        </div>
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Survives re-encoding & compression</span>
+                        </div>
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Works with 4K, 1080p, any resolution</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white text-2xl font-bold">2</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Automatic Monitoring</h3>
+                    <p class="text-gray-700 mb-4">
+                        Our AI continuously scans YouTube, Dailymotion, TikTok, and 500+ video platforms for unauthorized reuploads of your fingerprinted content.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>24/7 automated scanning</span>
+                        </div>
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Detects clips, compilations, full reuploads</span>
+                        </div>
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Real-time email alerts</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
+                        <span class="text-white text-2xl font-bold">3</span>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Identify & Take Action</h3>
+                    <p class="text-gray-700 mb-4">
+                        When a reupload is found, we extract the fingerprint and tell you exactly which subscriber leaked it—with 98.5% accuracy and court-ready evidence.
+                    </p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Exact subscriber identification</span>
+                        </div>
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Automated DMCA takedown filing</span>
+                        </div>
+                        <div class="flex items-center text-green-600">
+                            <i class="fas fa-check mr-2"></i>
+                            <span>Ban repeat offenders permanently</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white rounded-xl p-8 shadow-lg">
+                <h3 class="text-2xl font-bold mb-6 text-center">Why Veriflo's Fingerprinting Can't Be Removed</h3>
+                <div class="grid md:grid-cols-4 gap-6">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-film text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Frame-Level Encoding</h4>
+                        <p class="text-sm text-gray-600">Invisible markers in pixel data across multiple frames</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-volume-up text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Audio Watermarking</h4>
+                        <p class="text-sm text-gray-600">Steganographic encoding in audio track—survives re-encoding</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-cog text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Metadata Embedding</h4>
+                        <p class="text-sm text-gray-600">Hidden subscriber ID in video file metadata</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-3">
+                            <i class="fas fa-link text-blue-600 text-2xl"></i>
+                        </div>
+                        <h4 class="font-semibold mb-2">Blockchain Registry</h4>
+                        <p class="text-sm text-gray-600">Immutable proof linking video to specific subscriber</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Perfect For All YouTube Creator Types</h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
+                    <div class="text-3xl mb-3">📚</div>
+                    <h3 class="text-xl font-bold mb-2">Educational Creators</h3>
+                    <p class="text-gray-600 mb-4">Protect your courses, tutorials, and premium educational content from being downloaded and resold by students.</p>
+                    <div class="text-sm font-semibold text-blue-600">Tech YouTubers, Course Creators, Tutors</div>
+                </div>
+
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
+                    <div class="text-3xl mb-3">🎮</div>
+                    <h3 class="text-xl font-bold mb-2">Gaming Channels</h3>
+                    <p class="text-gray-600 mb-4">Stop clip channels from stealing your gameplay, reactions, and funny moments—keep your views and monetization.</p>
+                    <div class="text-sm font-semibold text-blue-600">Gaming, Streaming, Let's Players</div>
+                </div>
+
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
+                    <div class="text-3xl mb-3">💼</div>
+                    <h3 class="text-xl font-bold mb-2">Business & Finance</h3>
+                    <p class="text-gray-600 mb-4">Protect exclusive market analysis, trading strategies, and premium business content from member leaks.</p>
+                    <div class="text-sm font-semibold text-blue-600">Finance, Business Coaching, Investing</div>
+                </div>
+
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
+                    <div class="text-3xl mb-3">🎬</div>
+                    <h3 class="text-xl font-bold mb-2">Entertainment & Vlogs</h3>
+                    <p class="text-gray-600 mb-4">Identify which Patreon supporter leaked your behind-the-scenes content, early access vlogs, or exclusive videos.</p>
+                    <div class="text-sm font-semibold text-blue-600">Vloggers, Entertainment, Lifestyle</div>
+                </div>
+
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
+                    <div class="text-3xl mb-3">🎨</div>
+                    <h3 class="text-xl font-bold mb-2">Creative & Art Channels</h3>
+                    <p class="text-gray-600 mb-4">Stop art theft and unauthorized reuploads of your time-lapses, tutorials, and process videos.</p>
+                    <div class="text-sm font-semibold text-blue-600">Art, Design, Animation, Photography</div>
+                </div>
+
+                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
+                    <div class="text-3xl mb-3">💪</div>
+                    <h3 class="text-xl font-bold mb-2">Fitness & Wellness</h3>
+                    <p class="text-gray-600 mb-4">Protect your workout programs, meal plans, and training videos from being shared outside your membership.</p>
+                    <div class="text-sm font-semibold text-blue-600">Fitness, Yoga, Health, Wellness</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Teaser -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl font-bold mb-4">Simple Pricing for YouTube Creators</h2>
+            <p class="text-xl text-gray-600 mb-12">90% less expensive than losing subscribers and revenue to content theft</p>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <h3 class="text-2xl font-bold mb-4">Creator Pro</h3>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold">$49</span>
+                        <span class="text-gray-600">/month</span>
+                    </div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>100 videos per month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Unlimited subscribers tracked</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Automatic platform scanning</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>98.5% attribution accuracy</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-500 mt-1 mr-3"></i>
+                            <span>Email support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90">
+                        Start Protecting Videos
+                    </button>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-600 to-blue-600 text-white rounded-xl p-8 shadow-xl">
+                    <div class="inline-block px-3 py-1 bg-white/20 rounded-full text-sm font-semibold mb-4">
+                        MOST POPULAR
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Creator Business</h3>
+                    <div class="mb-6">
+                        <span class="text-5xl font-bold">$149</span>
+                        <span class="text-white/80">/month</span>
+                    </div>
+                    <ul class="text-left space-y-3 mb-8">
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-300 mt-1 mr-3"></i>
+                            <span>1,000 videos per month</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-300 mt-1 mr-3"></i>
+                            <span>Everything in Creator Pro</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-300 mt-1 mr-3"></i>
+                            <span>Automated DMCA filing</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-300 mt-1 mr-3"></i>
+                            <span>Advanced analytics dashboard</span>
+                        </li>
+                        <li class="flex items-start">
+                            <i class="fas fa-check text-green-300 mt-1 mr-3"></i>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                    <button class="w-full py-3 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-50">
+                        Start Business Plan
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Stop Losing Revenue to Content Thieves</h2>
+            <p class="text-xl mb-8 text-white/90">
+                Protect your YouTube channel today. Identify leakers in hours, not never.
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <button class="px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl">
+                    Get Started Now
+                </button>
+                <a href="veriflo-website.html#contact" class="px-10 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-white/20 transition border-2 border-white/30 text-center">
+                    Schedule Demo
+                </a>
+            </div>
+            <div class="mt-8 flex justify-center items-center text-sm">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>No credit card required</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-8">
+                <div>
+                    <a href="veriflo-website.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold">Veriflo</span>
+                    </a>
+                    <p class="text-gray-400 text-sm">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="veriflo-website.html#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="veriflo-website.html#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">API</a></li>
+                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Content Creators</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="onlyfans-leak-protection.html" class="hover:text-white transition">OnlyFans Protection</a></li>
+                        <li><a href="youtube-content-protection.html" class="hover:text-white transition">YouTube Creators</a></li>
+                        <li><a href="music-leak-prevention.html" class="hover:text-white transition">Music & Audio</a></li>
+                        <li><a href="photography-protection.html" class="hover:text-white transition">Photography</a></li>
+                        <li><a href="course-creator-protection.html" class="hover:text-white transition">Online Courses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Business Solutions</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="legal-document-protection.html" class="hover:text-white transition">Legal & Law Firms</a></li>
+                        <li><a href="corporate-leak-prevention.html" class="hover:text-white transition">Corporate Documents</a></li>
+                        <li><a href="financial-document-verification.html" class="hover:text-white transition">Financial Services</a></li>
+                        <li><a href="healthcare-record-protection.html" class="hover:text-white transition">Healthcare</a></li>
+                        <li><a href="university-diploma-verification.html" class="hover:text-white transition">Universities</a></li>
+                    </ul>
+                </div>
+                                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="veriflo-website.html#contact" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 Veriflo. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

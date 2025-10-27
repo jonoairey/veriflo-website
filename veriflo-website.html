@@ -1,0 +1,1611 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Veriflo - The Truth Layer for Digital Content | Document & Media Protection</title>
+    <meta name="description" content="Veriflo provides blockchain-verified document protection with invisible forensic fingerprinting. Track leaks, prove authenticity, and protect your confidential content from unauthorized sharing.">
+    <meta name="keywords" content="document protection, leak detection, blockchain verification, forensic fingerprinting, document security, content protection, DMCA automation">
+    <meta name="author" content="Veriflo">
+    <meta name="theme-color" content="#3b82f6">
+    <meta property="og:title" content="Veriflo - The Truth Layer for Digital Content">
+    <meta property="og:description" content="Prove authenticity with blockchain. Identify leakers with invisible fingerprinting. Protect documents, images, videos, and more.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://useveriflo.com">
+    <meta property="og:image" content="https://useveriflo.com/images/og-image.jpg">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Veriflo - The Truth Layer for Digital Content">
+    <meta name="twitter:description" content="Blockchain verification + Forensic fingerprinting for document protection">
+    <link rel="canonical" href="https://useveriflo.com">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+        
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1);
+        }
+        
+        .stat-counter {
+            font-variant-numeric: tabular-nums;
+        }
+        
+        .feature-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover .feature-icon {
+            transform: scale(1.1);
+        }
+        
+        .comparison-table td {
+            padding: 1rem;
+        }
+        
+        .hero-pattern {
+            background-color: #3b82f6;
+            background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+        }
+    </style>
+</head>
+<body class="antialiased">
+    
+    <!-- Navigation -->
+    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <a href="#" class="flex items-center space-x-2 hover:opacity-80 transition">
+                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-2xl font-bold gradient-text">Veriflo</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
+                    <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
+                    <a href="#use-cases" class="text-gray-700 hover:text-blue-600 transition">Use Cases</a>
+                    <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/login" class="text-gray-700 hover:text-blue-600 transition font-medium">
+                        Login
+                    </a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition font-medium">
+                        Get Started
+                    </a>
+                </div>
+                <button class="md:hidden text-gray-700">
+                    <i class="fas fa-bars text-xl"></i>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-pattern pt-32 pb-20 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+                        The Truth Layer for Digital Content
+                    </h1>
+                    <p class="text-xl mb-8 text-white/90 leading-relaxed">
+                        Prove your content is authentic with blockchain verification. Identify who leaked it with invisible forensic fingerprinting. Works on documents, images, videos, audio, and more.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://app.useveriflo.com/signup" class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-50 transition shadow-lg text-center">
+                            Get Started
+                        </a>
+                        <a href="#contact" class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition border border-white/20 text-center">
+                            Schedule Demo
+                        </a>
+                    </div>
+                </div>
+                <div class="hidden md:block">
+                    <div class="relative">
+                        <!-- Main Document Card -->
+                        <div class="bg-white rounded-2xl shadow-2xl p-6 border border-gray-100">
+                            <div class="flex items-center justify-between mb-4 pb-4 border-b border-gray-200">
+                                <div class="flex items-center space-x-3">
+                                    <div class="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-file-contract text-blue-600 text-lg"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold text-gray-900">Confidential_Agreement.pdf</div>
+                                        <div class="text-xs text-gray-500">Protected & Verified</div>
+                                    </div>
+                                </div>
+                                <div class="flex items-center space-x-2">
+                                    <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center">
+                                        <i class="fas fa-check text-green-600 text-sm"></i>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Document Preview -->
+                            <div class="bg-gradient-to-br from-gray-50 to-blue-50 rounded-lg p-6 mb-4 relative overflow-hidden">
+                                <div class="absolute top-0 right-0 w-32 h-32 bg-blue-200 rounded-full opacity-20 -mr-16 -mt-16"></div>
+                                <div class="absolute bottom-0 left-0 w-24 h-24 bg-blue-200 rounded-full opacity-20 -ml-12 -mb-12"></div>
+                                <div class="relative">
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                        <div class="h-2 bg-gray-300 rounded flex-1"></div>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                        <div class="h-2 bg-gray-300 rounded w-3/4"></div>
+                                    </div>
+                                    <div class="flex items-center space-x-2 mb-3">
+                                        <div class="w-2 h-2 bg-blue-600 rounded-full"></div>
+                                        <div class="h-2 bg-gray-300 rounded w-5/6"></div>
+                                    </div>
+                                    <div class="mt-4 p-3 bg-white/80 backdrop-blur-sm rounded-lg border border-blue-200">
+                                        <div class="flex items-center justify-center space-x-2">
+                                            <i class="fas fa-qrcode text-blue-600 text-2xl"></i>
+                                            <div class="text-xs text-gray-600">Scan to Verify</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <!-- Status Indicators -->
+                            <div class="grid grid-cols-3 gap-3">
+                                <div class="bg-green-50 rounded-lg p-3 text-center border border-green-200">
+                                    <i class="fas fa-shield-alt text-green-600 text-lg mb-1"></i>
+                                    <div class="text-xs font-semibold text-green-900">Blockchain</div>
+                                    <div class="text-xs text-green-600">Verified</div>
+                                </div>
+                                <div class="bg-blue-50 rounded-lg p-3 text-center border border-blue-200">
+                                    <i class="fas fa-fingerprint text-blue-600 text-lg mb-1"></i>
+                                    <div class="text-xs font-semibold text-blue-900">Fingerprint</div>
+                                    <div class="text-xs text-blue-600">Active</div>
+                                </div>
+                                <div class="bg-blue-50 rounded-lg p-3 text-center border border-blue-200">
+                                    <i class="fas fa-eye text-blue-600 text-lg mb-1"></i>
+                                    <div class="text-xs font-semibold text-blue-900">Monitoring</div>
+                                    <div class="text-xs text-blue-600">Real-time</div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Floating Badge - Top Right -->
+                        <div class="absolute -top-4 -right-4 bg-gradient-to-r from-green-500 to-emerald-500 text-white px-4 py-2 rounded-full shadow-lg text-sm font-semibold">
+                            <i class="fas fa-lock mr-1"></i> Protected
+                        </div>
+                        
+                        <!-- Floating Badge - Bottom Left -->
+                        <div class="absolute -bottom-4 -left-4 bg-gradient-to-r from-blue-500 to-cyan-500 text-white px-4 py-2 rounded-full shadow-lg text-sm font-semibold">
+                            <i class="fas fa-check-circle mr-1"></i> Authentic
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold gradient-text mb-2 stat-counter">98.5%</div>
+                    <div class="text-gray-600">Leak Attribution Accuracy</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold gradient-text mb-2 stat-counter">$133B</div>
+                    <div class="text-gray-600">Annual Document Fraud</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold gradient-text mb-2 stat-counter">90%</div>
+                    <div class="text-gray-600">Cost Reduction</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-4xl md:text-5xl font-bold gradient-text mb-2 stat-counter">30s</div>
+                    <div class="text-gray-600">Setup Time</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- All Media Types Protected -->
+    <section class="py-20 bg-gradient-to-br from-blue-50 via-cyan-50 to-sky-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Protection for Every Content Type</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Not just documents. Veriflo protects all your valuable digital content with the same powerful blockchain verification and invisible fingerprinting technology.
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-blue-500">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-file-alt text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Documents</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• PDFs & Contracts</li>
+                        <li>• Word Documents</li>
+                        <li>• Spreadsheets</li>
+                        <li>• Presentations</li>
+                        <li>• Legal Filings</li>
+                        <li>• Financial Reports</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-blue-500">
+                    <div class="w-14 h-14 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-image text-blue-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Images & Photos</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• JPG, PNG, GIF</li>
+                        <li>• RAW Photography</li>
+                        <li>• Digital Art</li>
+                        <li>• Exclusive Content</li>
+                        <li>• Product Photos</li>
+                        <li>• Design Mockups</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-pink-500">
+                    <div class="w-14 h-14 bg-pink-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-video text-pink-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Videos</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• MP4, MOV, AVI</li>
+                        <li>• Exclusive Videos</li>
+                        <li>• Course Content</li>
+                        <li>• Behind-the-Scenes</li>
+                        <li>• Tutorials</li>
+                        <li>• Unreleased Footage</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-green-500">
+                    <div class="w-14 h-14 bg-green-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-music text-green-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Audio & Music</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• MP3, WAV, FLAC</li>
+                        <li>• Unreleased Tracks</li>
+                        <li>• Podcast Episodes</li>
+                        <li>• Studio Sessions</li>
+                        <li>• Voice Recordings</li>
+                        <li>• Sound Effects</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-orange-500">
+                    <div class="w-14 h-14 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-code text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Source Code</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Python, JavaScript, Java</li>
+                        <li>• Proprietary Algorithms</li>
+                        <li>• Beta Builds</li>
+                        <li>• Development Files</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-cyan-500">
+                    <div class="w-14 h-14 bg-cyan-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-graduation-cap text-cyan-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">Credentials</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Diplomas & Degrees</li>
+                        <li>• Certificates</li>
+                        <li>• Licenses</li>
+                        <li>• Transcripts</li>
+                    </ul>
+                </div>
+
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover border-t-4 border-indigo-500">
+                    <div class="w-14 h-14 bg-indigo-100 rounded-lg flex items-center justify-center mb-4">
+                        <i class="fas fa-ellipsis-h text-indigo-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-lg font-bold mb-3">And More</h3>
+                    <ul class="text-sm text-gray-600 space-y-2">
+                        <li>• Archives (ZIP, RAR)</li>
+                        <li>• CAD Files</li>
+                        <li>• 3D Models</li>
+                        <li>• Any Digital File</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-white rounded-2xl p-8 shadow-xl">
+                <div class="grid md:grid-cols-3 gap-8 items-center">
+                    <div class="md:col-span-2">
+                        <h3 class="text-2xl font-bold mb-4">The Same Powerful Protection, Regardless of Format</h3>
+                        <p class="text-gray-600 mb-4">
+                            Whether you're protecting a confidential business contract, exclusive OnlyFans content, unreleased music, or proprietary source code - Veriflo's dual-layer protection works identically across all file types.
+                        </p>
+                        <ul class="space-y-2 text-gray-700">
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                <span><strong>Blockchain verification</strong> proves authenticity for any file type</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                <span><strong>Invisible fingerprinting</strong> identifies leakers across all media formats</span>
+                            </li>
+                            <li class="flex items-start space-x-2">
+                                <i class="fas fa-check-circle text-green-500 mt-1"></i>
+                                <span><strong>Up to 500MB per file</strong> - handle even large video and audio files</span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="text-center">
+                        <div class="text-5xl font-bold gradient-text mb-2">500MB</div>
+                        <div class="text-gray-600 mb-4">Maximum File Size</div>
+                        <div class="text-5xl font-bold gradient-text mb-2">All</div>
+                        <div class="text-gray-600">File Types Supported</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problems We Solve -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Two Critical Problems. One Solution.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    Document fraud and leaks cost businesses billions annually. Traditional solutions are expensive, complex, and ineffective.
+                </p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Problem 1 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-red-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-exclamation-triangle text-red-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Document Authenticity Crisis</h3>
+                    <div class="space-y-4 text-gray-600">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">$133B Annual Loss</div>
+                                <div>Document fraud costs businesses massive amounts each year</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">Expensive Verification</div>
+                                <div>Traditional notarization: $30/document, requires in-person visits</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">No Real-Time Proof</div>
+                                <div>No instant, global way to verify document authenticity</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">Veriflo Solution</div>
+                                <div class="text-gray-600">Blockchain verification at $3/document, instant global access</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Problem 2 -->
+                <div class="bg-white rounded-2xl p-8 shadow-lg card-hover">
+                    <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user-secret text-orange-600 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Document Leak Epidemic</h3>
+                    <div class="space-y-4 text-gray-600">
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">$4.88M Per Incident</div>
+                                <div>60% of businesses experience leaks with devastating costs</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">Watermarks Don't Work</div>
+                                <div>Easily removed or cropped out, provide no legal evidence</div>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-3">
+                            <i class="fas fa-times-circle text-red-500 mt-1"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">DLP Systems Fail</div>
+                                <div>Cost $100K+/year but can't identify leakers or provide proof</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-6 pt-6 border-t border-gray-200">
+                        <div class="flex items-center space-x-3">
+                            <i class="fas fa-check-circle text-green-500 text-xl"></i>
+                            <div>
+                                <div class="font-semibold text-gray-900">Veriflo Solution</div>
+                                <div class="text-gray-600">Invisible fingerprinting identifies leakers in 4 hours with legal proof</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Core Features -->
+    <section id="features" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Dual-Purpose Protection</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">
+                    The only platform that provides both document authenticity verification AND leak attribution
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-16">
+                <div class="feature-card bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 card-hover">
+                    <div class="feature-icon w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-certificate text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Authenticity Verification</h3>
+                    <p class="text-gray-600 mb-4">
+                        Instant, global, court-admissible proof that documents are real through blockchain attestation
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Multi-chain blockchain registration</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>QR code instant verification</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Permanent immutable proof</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Legal certificate generation</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 card-hover">
+                    <div class="feature-icon w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-fingerprint text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Leak Attribution</h3>
+                    <p class="text-gray-600 mb-4">
+                        98.5% accurate identification of who leaked confidential documents with forensic evidence
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>5-layer invisible fingerprinting</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Survives screenshots & editing</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Automated leak detection</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Court-ready evidence packages</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="feature-card bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 card-hover">
+                    <div class="feature-icon w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Universal File Support</h3>
+                    <p class="text-gray-600 mb-4">
+                        Works on PDFs, images, videos, audio, code, and all file types up to 500MB
+                    </p>
+                    <ul class="space-y-2 text-gray-700">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>All document formats</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Images, videos, and audio</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Source code protection</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check text-green-500 mt-1"></i>
+                            <span>Bulk processing capabilities</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <!-- Additional Features -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="bg-white border border-gray-200 rounded-xl p-6 card-hover">
+                    <i class="fas fa-clock text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2">Real-Time Monitoring</h4>
+                    <p class="text-sm text-gray-600">Track who accesses your documents, when, and from where with live analytics</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6 card-hover">
+                    <i class="fas fa-gavel text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2">Automated DMCA</h4>
+                    <p class="text-sm text-gray-600">Auto-generate and send takedown notices with compiled evidence packages</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6 card-hover">
+                    <i class="fas fa-plug text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2">API Integration</h4>
+                    <p class="text-sm text-gray-600">Seamlessly integrate with your existing workflows and systems</p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-6 card-hover">
+                    <i class="fas fa-lock text-blue-600 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2">Enterprise Security</h4>
+                    <p class="text-sm text-gray-600">Bank-level security with AES-256 encryption and compliance certifications</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">How Veriflo Works</h2>
+                <p class="text-xl text-gray-600">Simple setup, powerful protection in just 6 steps</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-12">
+                <div class="bg-white rounded-xl p-8 shadow-lg relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">1</div>
+                    <i class="fas fa-upload text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Upload Document</h3>
+                    <p class="text-gray-600">Simply drag and drop any file type into Veriflo. No software installation required.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">2</div>
+                    <i class="fas fa-cog text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Automatic Processing</h3>
+                    <p class="text-gray-600">We create blockchain proof of authenticity AND add invisible forensic fingerprints.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">3</div>
+                    <i class="fas fa-share-alt text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Share Securely</h3>
+                    <p class="text-gray-600">Share your document normally via email, cloud storage, or direct download.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">4</div>
+                    <i class="fas fa-check-circle text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Instant Verification</h3>
+                    <p class="text-gray-600">Anyone can verify authenticity instantly via QR code, link, or our API.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">5</div>
+                    <i class="fas fa-chart-line text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Real-Time Tracking</h3>
+                    <p class="text-gray-600">Monitor who accesses your documents with detailed analytics and alerts.</p>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg relative">
+                    <div class="absolute -top-4 -left-4 w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">6</div>
+                    <i class="fas fa-user-secret text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Leak Detection</h3>
+                    <p class="text-gray-600">If leaked, we identify the exact source within 4 hours with legal proof.</p>
+                </div>
+            </div>
+
+            <!-- Technology Deep Dive -->
+            <div class="bg-white rounded-2xl p-8 shadow-xl">
+                <h3 class="text-2xl font-bold mb-6 text-center">5-Layer Fingerprinting Technology</h3>
+                <div class="grid md:grid-cols-5 gap-4">
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">1</div>
+                        <h4 class="font-semibold mb-2 text-sm">Visible Watermark</h4>
+                        <p class="text-xs text-gray-600">Optional visible marking for deterrence</p>
+                    </div>
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">2</div>
+                        <h4 class="font-semibold mb-2 text-sm">Metadata Embedding</h4>
+                        <p class="text-xs text-gray-600">Hidden data in file properties</p>
+                    </div>
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">3</div>
+                        <h4 class="font-semibold mb-2 text-sm">Steganography</h4>
+                        <p class="text-xs text-gray-600">Invisible pixel-level encoding</p>
+                    </div>
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">4</div>
+                        <h4 class="font-semibold mb-2 text-sm">Structural Markers</h4>
+                        <p class="text-xs text-gray-600">Spacing and formatting patterns</p>
+                    </div>
+                    <div class="text-center p-4 bg-blue-50 rounded-lg">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold mx-auto mb-3">5</div>
+                        <h4 class="font-semibold mb-2 text-sm">Blockchain Record</h4>
+                        <p class="text-xs text-gray-600">Immutable recipient registry</p>
+                    </div>
+                </div>
+                <div class="mt-6 p-4 bg-green-50 rounded-lg border border-green-200">
+                    <div class="flex items-center space-x-3">
+                        <i class="fas fa-shield-alt text-green-600 text-2xl"></i>
+                        <div>
+                            <div class="font-semibold text-green-900">Survives Everything</div>
+                            <div class="text-sm text-green-700">Screenshots, editing, format conversion, printing and scanning - fingerprints remain intact</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Use Cases -->
+    <section id="use-cases" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Trusted Across Industries</h2>
+                <p class="text-xl text-gray-600">From law firms to content creators, Veriflo protects what matters most</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 card-hover">
+                    <i class="fas fa-balance-scale text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Law Firms</h3>
+                    <p class="text-gray-700 mb-4">Protect privileged communications, verify contract authenticity, and identify leak sources with court-admissible evidence.</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Attorney-client privilege protection</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Litigation document verification</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Whistleblower leak investigation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-pink-50 rounded-2xl p-8 card-hover">
+                    <i class="fas fa-graduation-cap text-blue-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Universities</h3>
+                    <p class="text-gray-700 mb-4">Issue verifiable digital diplomas, protect research papers, and prevent credential fraud globally.</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Digital diploma verification</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Research paper authentication</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Student record protection</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-green-50 to-emerald-50 rounded-2xl p-8 card-hover">
+                    <i class="fas fa-chart-line text-green-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Financial Services</h3>
+                    <p class="text-gray-700 mb-4">Prevent invoice fraud, protect client data, and ensure compliance with verifiable audit trails.</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Invoice fraud prevention</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Financial report authentication</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Compliance documentation</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-orange-50 to-red-50 rounded-2xl p-8 card-hover">
+                    <i class="fas fa-video text-orange-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Content Creators</h3>
+                    <p class="text-gray-700 mb-4">Stop piracy, protect intellectual property, and automatically issue DMCA takedowns with proof.</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Video and music protection</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Automated piracy detection</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Copyright enforcement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-pink-50 to-rose-50 rounded-2xl p-8 card-hover">
+                    <i class="fas fa-heartbeat text-pink-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Healthcare</h3>
+                    <p class="text-gray-700 mb-4">Ensure medical record integrity, verify prescriptions, and maintain HIPAA compliance with audit trails.</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Medical record authentication</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Prescription verification</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>HIPAA compliance tracking</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8 card-hover">
+                    <i class="fas fa-building text-indigo-600 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold mb-3">Enterprises</h3>
+                    <p class="text-gray-700 mb-4">Protect confidential business information, track document distribution, and identify internal leakers.</p>
+                    <div class="space-y-2 text-sm">
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Trade secret protection</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>M&A document security</span>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Employee leak investigation</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comparison -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Why Veriflo Wins</h2>
+                <p class="text-xl text-gray-600">See how we compare to traditional solutions</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-xl overflow-hidden">
+                <table class="w-full comparison-table">
+                    <thead>
+                        <tr class="bg-gray-50">
+                            <th class="text-left py-4 px-6 font-bold text-gray-900">Feature</th>
+                            <th class="text-center py-4 px-6 font-bold gradient-text">Veriflo</th>
+                            <th class="text-center py-4 px-6 font-semibold text-gray-600">Watermarks</th>
+                            <th class="text-center py-4 px-6 font-semibold text-gray-600">DLP Systems</th>
+                            <th class="text-center py-4 px-6 font-semibold text-gray-600">Notarization</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr>
+                            <td class="py-4 px-6 font-medium">Authenticity Verification</td>
+                            <td class="text-center"><i class="fas fa-check-circle text-green-500 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-check-circle text-gray-400 text-xl"></i></td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-4 px-6 font-medium">Leak Attribution</td>
+                            <td class="text-center"><i class="fas fa-check-circle text-green-500 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 font-medium">Cannot Be Removed</td>
+                            <td class="text-center"><i class="fas fa-check-circle text-green-500 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                            <td class="text-center"><span class="text-gray-400">N/A</span></td>
+                            <td class="text-center"><span class="text-gray-400">N/A</span></td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-4 px-6 font-medium">Legal Evidence</td>
+                            <td class="text-center"><i class="fas fa-check-circle text-green-500 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-check-circle text-gray-400 text-xl"></i></td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 font-medium">Real-Time Monitoring</td>
+                            <td class="text-center"><i class="fas fa-check-circle text-green-500 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-check-circle text-gray-400 text-xl"></i></td>
+                            <td class="text-center"><i class="fas fa-times-circle text-red-400 text-xl"></i></td>
+                        </tr>
+                        <tr class="bg-gray-50">
+                            <td class="py-4 px-6 font-medium">Setup Time</td>
+                            <td class="text-center font-bold text-green-600">30 seconds</td>
+                            <td class="text-center text-gray-600">5 minutes</td>
+                            <td class="text-center text-gray-600">3-6 months</td>
+                            <td class="text-center text-gray-600">In-person</td>
+                        </tr>
+                        <tr>
+                            <td class="py-4 px-6 font-medium">Cost per Document</td>
+                            <td class="text-center font-bold text-green-600">$0.49</td>
+                            <td class="text-center text-gray-600">$0.10</td>
+                            <td class="text-center text-gray-600">$100K+/year</td>
+                            <td class="text-center text-gray-600">$30</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing -->
+    <section id="pricing" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Simple, Transparent Pricing</h2>
+                <p class="text-xl text-gray-600 mb-8">Choose the plan that fits your needs. All plans include core features.</p>
+                
+                <!-- Pricing Toggle -->
+                <div class="flex items-center justify-center gap-4 mb-8">
+                    <span class="text-lg font-medium text-gray-700" id="monthlyLabel">Monthly</span>
+                    <div class="relative">
+                        <button id="pricingToggle" onclick="togglePricing()" class="w-16 h-8 bg-gray-300 rounded-full transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">
+                            <div id="toggleSlider" class="absolute top-1 left-1 w-6 h-6 bg-white rounded-full shadow-md transition-transform duration-300"></div>
+                        </button>
+                    </div>
+                    <span class="text-lg font-medium text-gray-400" id="annualLabel">Annual</span>
+                    <span class="ml-2 px-3 py-1 bg-green-100 text-green-700 text-sm font-semibold rounded-full">Save 20%</span>
+                </div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Starter -->
+                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 border-2 border-blue-600 rounded-2xl p-8 card-hover relative">
+                    <div class="text-sm font-semibold text-blue-600 uppercase mb-2">Starter</div>
+                    <div class="text-4xl font-bold mb-2">
+                        $<span id="starter-price">49</span><span class="text-lg text-gray-600">/mo</span>
+                    </div>
+                    <div id="starter-savings" class="text-sm text-green-600 font-semibold mb-2" style="display: none;">
+                        <span class="line-through text-gray-400">$588/year</span> Save $117.60/year
+                    </div>
+                    <p class="text-gray-600 mb-6">For individuals & creators</p>
+                    <a href="https://app.useveriflo.com/signup" class="block w-full px-6 py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition mb-6 text-center">
+                        Get Started
+                    </a>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span><strong>100 files</strong></span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Full verification</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>5-layer fingerprinting</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Leak detection</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Real-time monitoring</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Email support</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Professional -->
+                <div class="bg-white border-2 border-gray-200 rounded-2xl p-8 card-hover">
+                    <div class="text-sm font-semibold text-gray-600 uppercase mb-2">Professional</div>
+                    <div class="text-4xl font-bold mb-2">
+                        $<span id="business-price">149</span><span class="text-lg text-gray-600">/mo</span>
+                    </div>
+                    <div id="business-savings" class="text-sm text-green-600 font-semibold mb-2" style="display: none;">
+                        <span class="line-through text-gray-400">$1,788/year</span> Save $357.60/year
+                    </div>
+                    <p class="text-gray-600 mb-6">For growing businesses</p>
+                    <a href="https://app.useveriflo.com/signup" class="block w-full px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition mb-6 text-center">
+                        Get Started
+                    </a>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span><strong>500 files</strong></span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Everything in Starter</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Bulk operations</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Advanced analytics</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>API access</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>DMCA automation</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-500"></i>
+                            <span>Priority support</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Enterprise -->
+                <div class="bg-gradient-to-br from-gray-900 to-gray-800 text-white rounded-2xl p-8 card-hover">
+                    <div class="text-sm font-semibold text-blue-400 uppercase mb-2">Enterprise</div>
+                    <div class="text-4xl font-bold mb-4">Custom</div>
+                    <p class="text-gray-300 mb-6">For large organizations</p>
+                    <a href="mailto:sales@useveriflo.com?subject=Enterprise Plan Inquiry" class="block w-full px-6 py-3 bg-white text-gray-900 rounded-lg font-semibold hover:bg-gray-100 transition mb-6 text-center">
+                        Contact Sales
+                    </a>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span><strong>Unlimited files</strong></span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span>Everything in Professional</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span>White-label options</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span>SSO & SAML</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span>Custom integrations</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span>SLA guarantee</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <i class="fas fa-check text-green-400"></i>
+                            <span>Dedicated support</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-600 mb-4">All plans include blockchain verification, encrypted storage, and enterprise-grade security</p>
+                <div class="flex justify-center items-center space-x-8 text-sm text-gray-500">
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Enterprise Security</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-lock"></i>
+                        <span>AES-256 Encryption</span>
+                    </div>
+                    <div class="flex items-center space-x-2">
+                        <i class="fas fa-check-circle"></i>
+                        <span>GDPR Compliant</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why This Matters -->
+    <section class="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Why Document Attestation & Verification Matter</h2>
+                <p class="text-xl text-white/90 max-w-3xl mx-auto">
+                    In our digital world, the ability to prove a document is authentic and trace its origins is no longer optional—it's essential
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-12 mb-16">
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">The Trust Crisis</h3>
+                    <div class="space-y-6 text-lg text-white/90">
+                        <p>
+                            Digital documents can be altered in seconds. Screenshots can be fabricated. PDFs can be edited without trace. In courtrooms, boardrooms, and classrooms worldwide, the fundamental question "Is this document real?" has become impossible to answer with certainty.
+                        </p>
+                        <p>
+                            This erosion of trust costs the global economy over $133 billion annually in document fraud alone. Fake diplomas, forged contracts, manipulated financial statements, and counterfeit certifications undermine everything from hiring decisions to legal proceedings.
+                        </p>
+                        <p class="font-semibold text-white">
+                            Without verifiable proof of authenticity, any digital document is just pixels on a screen—no matter how official it looks.
+                        </p>
+                    </div>
+                </div>
+                <div>
+                    <h3 class="text-3xl font-bold mb-6">The Leaking Epidemic</h3>
+                    <div class="space-y-6 text-lg text-white/90">
+                        <p>
+                            Simultaneously, confidential information leaks have become the norm rather than the exception. 60% of businesses experience document leaks, with an average cost of $4.88 million per incident. Trade secrets, client data, financial projections, and sensitive communications end up on public forums, competitor hands, or news outlets.
+                        </p>
+                        <p>
+                            Traditional protection methods fail spectacularly. Watermarks get cropped out. DLP systems can't identify the actual leaker. NDAs provide no real enforcement mechanism. Companies are left helpless, unable to prove who violated their trust.
+                        </p>
+                        <p class="font-semibold text-white">
+                            Without attribution technology, leakers operate with impunity—because you can't prosecute someone you can't identify.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white/10 backdrop-blur-sm rounded-2xl p-8 md:p-12 border border-white/20">
+                <h3 class="text-3xl font-bold mb-8 text-center">The Power of Blockchain Attestation</h3>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div>
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-cube text-blue-300 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">Immutable Proof</h4>
+                        <p class="text-white/90 text-center">
+                            Once recorded on the blockchain, attestations cannot be altered, deleted, or backdated. The proof exists forever, verified by distributed consensus.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-clock text-blue-300 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">Timestamped Forever</h4>
+                        <p class="text-white/90 text-center">
+                            Every document gets a cryptographic timestamp proving exactly when it existed, who created it, and its exact content at that moment.
+                        </p>
+                    </div>
+                    <div>
+                        <div class="w-16 h-16 bg-green-500/20 rounded-xl flex items-center justify-center mb-4 mx-auto">
+                            <i class="fas fa-globe text-green-300 text-2xl"></i>
+                        </div>
+                        <h4 class="text-xl font-bold mb-3 text-center">Globally Verifiable</h4>
+                        <p class="text-white/90 text-center">
+                            Anyone, anywhere can verify authenticity in seconds. No central authority needed. No geographic restrictions. Just mathematical certainty.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 grid md:grid-cols-2 gap-8">
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <h4 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-balance-scale text-yellow-300 text-2xl mr-3"></i>
+                        Legal & Compliance Benefits
+                    </h4>
+                    <ul class="space-y-3 text-white/90">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <span><strong>Court-admissible evidence:</strong> Blockchain attestations are increasingly accepted as legal proof globally</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <span><strong>Regulatory compliance:</strong> Meet audit requirements with verifiable document trails</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <span><strong>Dispute resolution:</strong> Prove document authenticity and timeline without ambiguity</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <span><strong>Intellectual property protection:</strong> Establish proof of creation and ownership</span>
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="bg-white/10 backdrop-blur-sm rounded-xl p-6 border border-white/20">
+                    <h4 class="text-xl font-bold mb-4 flex items-center">
+                        <i class="fas fa-shield-alt text-blue-300 text-2xl mr-3"></i>
+                        Business Protection Benefits
+                    </h4>
+                    <ul class="space-y-3 text-white/90">
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <span><strong>Deterrence effect:</strong> Visible tracking dramatically reduces leak attempts</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <span><strong>Rapid response:</strong> Identify leakers within hours, not weeks or months</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <span><strong>Accountability culture:</strong> Recipients know documents are tracked, increasing responsibility</span>
+                        </li>
+                        <li class="flex items-start space-x-2">
+                            <i class="fas fa-check-circle text-green-300 mt-1"></i>
+                            <span><strong>Insurance value:</strong> Document protection can reduce insurance premiums and liability</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 bg-gradient-to-r from-yellow-500/20 to-orange-500/20 backdrop-blur-sm rounded-xl p-8 border border-yellow-400/30">
+                <div class="flex items-start space-x-4">
+                    <i class="fas fa-exclamation-triangle text-yellow-300 text-3xl mt-1"></i>
+                    <div>
+                        <h4 class="text-2xl font-bold mb-3">The Cost of Doing Nothing</h4>
+                        <p class="text-lg text-white/90 mb-4">
+                            Every day without document protection increases your risk exposure. A single leak can cost millions in legal fees, lost business, and reputational damage. A single fraudulent document accepted as genuine can invalidate contracts, derail deals, or result in hiring the wrong person.
+                        </p>
+                        <p class="text-lg font-semibold text-white">
+                            The question isn't whether you can afford document protection—it's whether you can afford to operate without it.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Social Proof -->
+    <section class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Trusted by Industry Leaders</h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"Veriflo saved us from a major leak incident. We identified the source within hours and had legal evidence ready. Invaluable for law firms."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Sarah Johnson</div>
+                            <div class="text-sm text-gray-600">Partner, Johnson & Associates Law</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"We issue 50,000 diplomas annually. Veriflo's blockchain verification eliminated fraud and costs 95% less than our old system."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Dr. Michael Chen</div>
+                            <div class="text-sm text-gray-600">Registrar, State University</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-xl p-8 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="flex space-x-1 text-yellow-400">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4 italic">"The automated DMCA feature is a game-changer. We've taken down 200+ pirated videos with zero manual work. Veriflo paid for itself in week one."</p>
+                    <div class="flex items-center space-x-3">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                            <i class="fas fa-user text-blue-600"></i>
+                        </div>
+                        <div>
+                            <div class="font-semibold">Alex Martinez</div>
+                            <div class="text-sm text-gray-600">Content Creator, 2M subscribers</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Form -->
+    <section id="contact" class="py-20 bg-gradient-to-br from-gray-50 to-blue-50">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-2 gap-12 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Talk About Your Document Security</h2>
+                    <p class="text-xl text-gray-600 mb-6">
+                        Whether you're protecting confidential business information, verifying credentials, or preventing leaks, we're here to help.
+                    </p>
+                    <div class="space-y-4">
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-phone text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-lg mb-1">Talk to Sales</div>
+                                <p class="text-gray-600">Get a personalized demo and pricing for your organization</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-rocket text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-lg mb-1">Quick Implementation</div>
+                                <p class="text-gray-600">Most customers are up and running within 30 minutes</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start space-x-4">
+                            <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-headset text-white"></i>
+                            </div>
+                            <div>
+                                <div class="font-semibold text-lg mb-1">Expert Support</div>
+                                <p class="text-gray-600">Our team helps you design the perfect protection strategy</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-8 p-6 bg-white rounded-xl shadow-lg border border-blue-100">
+                        <div class="flex items-center space-x-3 mb-3">
+                            <i class="fas fa-clock text-blue-600 text-xl"></i>
+                            <span class="font-semibold">Typical Response Time: Under 2 hours</span>
+                        </div>
+                        <p class="text-sm text-gray-600">We respond to all inquiries during business hours (Mon-Fri, 9am-6pm EST)</p>
+                    </div>
+                </div>
+
+                <div class="bg-white rounded-2xl shadow-xl p-8">
+                    <h3 class="text-2xl font-bold mb-6">Get in Touch</h3>
+                    <form action="https://formsubmit.co/hello@useveriflo.com" method="POST" class="space-y-5">
+                        <!-- FormSubmit Configuration -->
+                        <input type="hidden" name="_subject" value="New Contact Form Submission - Veriflo">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Full Name *</label>
+                            <input type="text" name="name" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="John Smith">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Work Email *</label>
+                            <input type="email" name="email" required class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="john@company.com">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Company Name</label>
+                            <input type="text" name="company" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="Your Company">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Phone Number</label>
+                            <input type="tel" name="phone" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition" placeholder="+1 (555) 000-0000">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">What are you looking to protect?</label>
+                            <select name="protection_type" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition">
+                                <option value="">Select an option...</option>
+                                <option value="legal">Legal Documents</option>
+                                <option value="financial">Financial Records</option>
+                                <option value="credentials">Credentials/Diplomas</option>
+                                <option value="ip">Intellectual Property</option>
+                                <option value="business">Confidential Business Info</option>
+                                <option value="contracts">Contracts & Agreements</option>
+                                <option value="media">Media & Content</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">How many documents per month?</label>
+                            <select name="volume" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition">
+                                <option value="">Select a range...</option>
+                                <option value="1-50">1-50 documents</option>
+                                <option value="51-200">51-200 documents</option>
+                                <option value="201-1000">201-1,000 documents</option>
+                                <option value="1000+">1,000+ documents</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
+                            <textarea name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition resize-none" placeholder="Tell us about your document security needs..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full px-6 py-4 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition shadow-lg">
+                            Send Message
+                        </button>
+                        <p class="text-xs text-gray-500 text-center">
+                            By submitting this form, you agree to our privacy policy. We'll never share your information.
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-20 bg-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-4">Frequently Asked Questions</h2>
+            </div>
+
+            <div class="space-y-6">
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-3">How accurate is leak detection?</h3>
+                    <p class="text-gray-600">Our 5-layer fingerprinting system achieves 98.5% accuracy in identifying leak sources. The multi-layer approach means even if some layers are removed, enough remain for attribution.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-3">Can fingerprints be removed?</h3>
+                    <p class="text-gray-600">No. Our fingerprints survive screenshots, editing, format conversion, and even printing and scanning. They're embedded at multiple structural levels that can't be removed without destroying the document.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-3">Is blockchain verification legal evidence?</h3>
+                    <p class="text-gray-600">Yes. Blockchain attestations are increasingly accepted as court evidence globally. We provide certified proof packages that meet legal standards in most jurisdictions.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-3">What file types are supported?</h3>
+                    <p class="text-gray-600">All major formats: PDFs, Word docs, images (JPG, PNG, etc.), videos (MP4, MOV, etc.), audio files, source code, spreadsheets, and more. Files up to 500MB supported.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-3">How fast is verification?</h3>
+                    <p class="text-gray-600">Instant. Blockchain lookups typically complete in under 1 second. Anyone can verify a document's authenticity immediately via QR code or link.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-3">Is my data secure?</h3>
+                    <p class="text-gray-600">Yes. We use AES-256 encryption, are SOC 2 Type II compliant, and are GDPR/CCPA compliant. Documents are stored in encrypted, redundant cloud storage with strict access controls.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-3">What happens if I find a leak?</h3>
+                    <p class="text-gray-600">You'll receive immediate notification with attribution details (98.5% confidence), compiled evidence, and auto-generated DMCA notices. Our platform handles everything to make enforcement simple.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-3">Can I integrate with existing tools?</h3>
+                    <p class="text-gray-600">Yes. We offer a RESTful API, webhook support, Zapier integration, and can build custom integrations for Enterprise customers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 gradient-bg text-white">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Protect Your Documents?</h2>
+            <p class="text-xl mb-8 text-white/90">
+                Join organizations worldwide using Veriflo to verify authenticity and stop leaks
+            </p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="https://app.useveriflo.com/signup" class="px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl text-center">
+                    Get Started Now
+                </a>
+                <a href="#contact" class="px-10 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-white/20 transition border-2 border-white/30 text-center">
+                    Schedule Demo
+                </a>
+            </div>
+            <div class="mt-8 flex justify-center items-center text-sm">
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-check-circle"></i>
+                    <span>Cancel anytime</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-8 mb-8">
+                <div>
+                    <a href="veriflo-website.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
+                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
+                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                            </svg>
+                        </div>
+                        <span class="text-xl font-bold">Veriflo</span>
+                    </a>
+                    <p class="text-gray-400 text-sm">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Product</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="veriflo-website.html#features" class="hover:text-white transition">Features</a></li>
+                        <li><a href="veriflo-website.html#pricing" class="hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="hover:text-white transition">API</a></li>
+                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Content Creators</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="onlyfans-leak-protection.html" class="hover:text-white transition">OnlyFans Protection</a></li>
+                        <li><a href="youtube-content-protection.html" class="hover:text-white transition">YouTube Creators</a></li>
+                        <li><a href="music-leak-prevention.html" class="hover:text-white transition">Music & Audio</a></li>
+                        <li><a href="photography-protection.html" class="hover:text-white transition">Photography</a></li>
+                        <li><a href="course-creator-protection.html" class="hover:text-white transition">Online Courses</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-bold mb-4">Business Solutions</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="legal-document-protection.html" class="hover:text-white transition">Legal & Law Firms</a></li>
+                        <li><a href="corporate-leak-prevention.html" class="hover:text-white transition">Corporate Documents</a></li>
+                        <li><a href="financial-document-verification.html" class="hover:text-white transition">Financial Services</a></li>
+                        <li><a href="healthcare-record-protection.html" class="hover:text-white transition">Healthcare</a></li>
+                        <li><a href="university-diploma-verification.html" class="hover:text-white transition">Universities</a></li>
+                    </ul>
+                </div>
+                                <div>
+                    <h4 class="font-bold mb-4">Company</h4>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
+                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
+                        <li><a href="veriflo-website.html#contact" class="hover:text-white transition">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2025 Veriflo. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-linkedin text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script>
+        // Pricing data
+        const pricingData = {
+            starter: {
+                monthly: 49,
+                annual: 39.20  // 20% discount: 49 * 12 * 0.8 / 12 = 39.20
+            },
+            business: {
+                monthly: 149,
+                annual: 119.20  // 20% discount: 149 * 12 * 0.8 / 12 = 119.20
+            }
+        };
+
+        let isAnnual = false;
+
+        function togglePricing() {
+            isAnnual = !isAnnual;
+            
+            const toggle = document.getElementById('pricingToggle');
+            const slider = document.getElementById('toggleSlider');
+            const monthlyLabel = document.getElementById('monthlyLabel');
+            const annualLabel = document.getElementById('annualLabel');
+            
+            if (isAnnual) {
+                toggle.classList.remove('bg-gray-300');
+                toggle.classList.add('bg-blue-600');
+                slider.style.transform = 'translateX(32px)';
+                monthlyLabel.classList.remove('text-gray-700');
+                monthlyLabel.classList.add('text-gray-400');
+                annualLabel.classList.remove('text-gray-400');
+                annualLabel.classList.add('text-gray-700');
+            } else {
+                toggle.classList.remove('bg-blue-600');
+                toggle.classList.add('bg-gray-300');
+                slider.style.transform = 'translateX(0)';
+                monthlyLabel.classList.remove('text-gray-400');
+                monthlyLabel.classList.add('text-gray-700');
+                annualLabel.classList.remove('text-gray-700');
+                annualLabel.classList.add('text-gray-400');
+            }
+            
+            updatePrices();
+        }
+
+        function updatePrices() {
+            // Update Starter plan
+            const starterPrice = document.getElementById('starter-price');
+            const starterSavings = document.getElementById('starter-savings');
+            
+            if (isAnnual) {
+                starterPrice.textContent = pricingData.starter.annual.toFixed(2);
+                starterSavings.style.display = 'block';
+            } else {
+                starterPrice.textContent = pricingData.starter.monthly;
+                starterSavings.style.display = 'none';
+            }
+            
+            // Update Business plan
+            const businessPrice = document.getElementById('business-price');
+            const businessSavings = document.getElementById('business-savings');
+            
+            if (isAnnual) {
+                businessPrice.textContent = pricingData.business.annual.toFixed(2);
+                businessSavings.style.display = 'block';
+            } else {
+                businessPrice.textContent = pricingData.business.monthly;
+                businessSavings.style.display = 'none';
+            }
+        }
+    </script>
+
+</body>
+</html>

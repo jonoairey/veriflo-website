@@ -5,7 +5,7 @@
     <!-- Homepage -->
     <url>
         <loc>https://useveriflo.com/</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-02</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -57,7 +57,7 @@
     <!-- Content Creator Pages -->
     <url>
         <loc>https://useveriflo.com/onlyfans-leak-protection.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -93,7 +93,21 @@
     <!-- Business Solution Pages -->
     <url>
         <loc>https://useveriflo.com/legal-document-protection.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://useveriflo.com/supply-chain-document-security.html</loc>
+        <lastmod>2025-11-02</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.8</priority>
+    </url>
+
+    <url>
+        <loc>https://useveriflo.com/sensitive-business-documents.html</loc>
+        <lastmod>2025-11-02</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

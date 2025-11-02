@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Veriflo - The Truth Layer for Digital Content | Document & Media Protection</title>
-    <meta name="description" content="Veriflo provides blockchain-verified document protection with invisible forensic fingerprinting. Track leaks, prove authenticity, and protect your confidential content from unauthorized sharing.">
+    <meta name="description" content="Veriflo provides blockchain-verified content protection with invisible forensic fingerprinting. Track leaks, prove authenticity, and protect your documents, images, videos, and media from unauthorized sharing.">
     <meta name="keywords" content="document protection, leak detection, blockchain verification, forensic fingerprinting, document security, content protection, DMCA automation">
     <meta name="author" content="Veriflo">
     <meta name="theme-color" content="#3b82f6">
@@ -15,7 +15,7 @@
     <meta property="og:image" content="https://useveriflo.com/images/og-image.jpg">
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Veriflo - The Truth Layer for Digital Content">
-    <meta name="twitter:description" content="Blockchain verification + Forensic fingerprinting for document protection">
+    <meta name="twitter:description" content="Blockchain verification + Forensic fingerprinting for content protection">
     <link rel="canonical" href="https://useveriflo.com">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -66,6 +66,60 @@
             background-color: #3b82f6;
             background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
         }
+
+        /* Dropdown Menu Styles */
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: white;
+            min-width: 280px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+            border-radius: 8px;
+            z-index: 1000;
+            margin-top: 0;
+            padding: 0.5rem 0;
+            padding-top: 0.75rem;
+        }
+
+        .dropdown:hover .dropdown-content {
+            display: block;
+        }
+
+        .dropdown-content a {
+            color: #374151;
+            padding: 0.75rem 1.5rem;
+            text-decoration: none;
+            display: block;
+            transition: all 0.2s ease;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #f3f4f6;
+            color: #2563eb;
+        }
+
+        .dropdown-divider {
+            height: 1px;
+            background-color: #e5e7eb;
+            margin: 0.5rem 0;
+        }
+
+        .dropdown-header {
+            padding: 0.5rem 1.5rem;
+            font-size: 0.75rem;
+            font-weight: 600;
+            color: #6b7280;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+        }
     </style>
 </head>
 <body class="antialiased">
@@ -85,7 +139,17 @@
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
                     <a href="#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
-                    <a href="#use-cases" class="text-gray-700 hover:text-blue-600 transition">Use Cases</a>
+                    <div class="dropdown">
+                        <a href="#use-cases" class="text-gray-700 hover:text-blue-600 transition cursor-pointer">
+                            Use Cases <i class="fas fa-chevron-down text-xs ml-1"></i>
+                        </a>
+                        <div class="dropdown-content">
+                            <a href="onlyfans-leak-protection.html">OnlyFans & Digital Creators</a>
+                            <a href="legal-document-protection.html">Legal & Law Firms</a>
+                            <a href="supply-chain-document-security.html">Supply Chain Security</a>
+                            <a href="sensitive-business-documents.html">Sensitive Business Documents</a>
+                        </div>
+                    </div>
                     <a href="#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
                     <a href="https://app.useveriflo.com/login" class="text-gray-700 hover:text-blue-600 transition font-medium">
                         Login
@@ -379,7 +443,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Two Critical Problems. One Solution.</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    Document fraud and leaks cost businesses billions annually. Traditional solutions are expensive, complex, and ineffective.
+                    Content fraud and leaks cost businesses billions annually. Traditional solutions are expensive, complex, and ineffective.
                 </p>
             </div>
             
@@ -429,7 +493,7 @@
                     <div class="w-16 h-16 bg-orange-100 rounded-xl flex items-center justify-center mb-6">
                         <i class="fas fa-user-secret text-orange-600 text-2xl"></i>
                     </div>
-                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Document Leak Epidemic</h3>
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Content Leak Epidemic</h3>
                     <div class="space-y-4 text-gray-600">
                         <div class="flex items-start space-x-3">
                             <i class="fas fa-times-circle text-red-500 mt-1"></i>
@@ -473,7 +537,7 @@
             <div class="text-center mb-16">
                 <h2 class="text-4xl md:text-5xl font-bold mb-4">Dual-Purpose Protection</h2>
                 <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-                    The only platform that provides both document authenticity verification AND leak attribution
+                    The only platform that provides both content authenticity verification AND leak attribution
                 </p>
             </div>
 
@@ -484,7 +548,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Authenticity Verification</h3>
                     <p class="text-gray-600 mb-4">
-                        Instant, global, court-admissible proof that documents are real through blockchain attestation
+                        Instant, global, court-admissible proof that your content is real through blockchain attestation
                     </p>
                     <ul class="space-y-2 text-gray-700">
                         <li class="flex items-start space-x-2">
@@ -512,7 +576,7 @@
                     </div>
                     <h3 class="text-2xl font-bold mb-4">Leak Attribution</h3>
                     <p class="text-gray-600 mb-4">
-                        98.5% accurate identification of who leaked confidential documents with forensic evidence
+                        98.5% accurate identification of who leaked confidential content with forensic evidence
                     </p>
                     <ul class="space-y-2 text-gray-700">
                         <li class="flex items-start space-x-2">
@@ -568,7 +632,7 @@
                 <div class="bg-white border border-gray-200 rounded-xl p-6 card-hover">
                     <i class="fas fa-clock text-blue-600 text-3xl mb-4"></i>
                     <h4 class="font-bold mb-2">Real-Time Monitoring</h4>
-                    <p class="text-sm text-gray-600">Track who accesses your documents, when, and from where with live analytics</p>
+                    <p class="text-sm text-gray-600">Track who accesses your content, when, and from where with live analytics</p>
                 </div>
                 <div class="bg-white border border-gray-200 rounded-xl p-6 card-hover">
                     <i class="fas fa-gavel text-blue-600 text-3xl mb-4"></i>
@@ -601,7 +665,7 @@
                 <div class="bg-white rounded-xl p-8 shadow-lg relative">
                     <div class="absolute -top-4 -left-4 w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">1</div>
                     <i class="fas fa-upload text-blue-600 text-4xl mb-4"></i>
-                    <h3 class="text-xl font-bold mb-3">Upload Document</h3>
+                    <h3 class="text-xl font-bold mb-3">Upload Content</h3>
                     <p class="text-gray-600">Simply drag and drop any file type into Veriflo. No software installation required.</p>
                 </div>
 
@@ -616,7 +680,7 @@
                     <div class="absolute -top-4 -left-4 w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">3</div>
                     <i class="fas fa-share-alt text-blue-600 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">Share Securely</h3>
-                    <p class="text-gray-600">Share your document normally via email, cloud storage, or direct download.</p>
+                    <p class="text-gray-600">Share your content normally via email, cloud storage, or direct download.</p>
                 </div>
 
                 <div class="bg-white rounded-xl p-8 shadow-lg relative">
@@ -630,7 +694,7 @@
                     <div class="absolute -top-4 -left-4 w-12 h-12 gradient-bg rounded-full flex items-center justify-center text-white font-bold text-xl shadow-lg">5</div>
                     <i class="fas fa-chart-line text-blue-600 text-4xl mb-4"></i>
                     <h3 class="text-xl font-bold mb-3">Real-Time Tracking</h3>
-                    <p class="text-gray-600">Monitor who accesses your documents with detailed analytics and alerts.</p>
+                    <p class="text-gray-600">Monitor who accesses your content with detailed analytics and alerts.</p>
                 </div>
 
                 <div class="bg-white rounded-xl p-8 shadow-lg relative">
@@ -907,7 +971,7 @@
                         </button>
                     </div>
                     <span class="text-lg font-medium text-gray-400" id="annualLabel">Annual</span>
-                    <span class="ml-2 px-3 py-1 bg-green-100 text-green-700 text-sm font-semibold rounded-full">Save 20%</span>
+                    <span class="ml-2 px-3 py-1 bg-green-100 text-green-700 text-sm font-semibold rounded-full">2 Months Free</span>
                 </div>
             </div>
 
@@ -919,10 +983,10 @@
                         $<span id="starter-price">49</span><span class="text-lg text-gray-600">/mo</span>
                     </div>
                     <div id="starter-savings" class="text-sm text-green-600 font-semibold mb-2" style="display: none;">
-                        <span class="line-through text-gray-400">$588/year</span> Save $117.60/year
+                        <span class="line-through text-gray-400">$588/year</span> Save $98/year
                     </div>
                     <p class="text-gray-600 mb-6">For individuals & creators</p>
-                    <a href="https://app.useveriflo.com/signup" class="block w-full px-6 py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition mb-6 text-center">
+                    <a href="https://app.useveriflo.com/signup?plan=starter" class="block w-full px-6 py-3 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition mb-6 text-center">
                         Get Started
                     </a>
                     <ul class="space-y-3 text-sm">
@@ -960,10 +1024,10 @@
                         $<span id="business-price">149</span><span class="text-lg text-gray-600">/mo</span>
                     </div>
                     <div id="business-savings" class="text-sm text-green-600 font-semibold mb-2" style="display: none;">
-                        <span class="line-through text-gray-400">$1,788/year</span> Save $357.60/year
+                        <span class="line-through text-gray-400">$1,788/year</span> Save $298/year
                     </div>
                     <p class="text-gray-600 mb-6">For growing businesses</p>
-                    <a href="https://app.useveriflo.com/signup" class="block w-full px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition mb-6 text-center">
+                    <a href="https://app.useveriflo.com/signup?plan=professional" class="block w-full px-6 py-3 border-2 border-blue-600 text-blue-600 rounded-lg font-semibold hover:bg-blue-600 hover:text-white transition mb-6 text-center">
                         Get Started
                     </a>
                     <ul class="space-y-3 text-sm">
@@ -1063,9 +1127,9 @@
     <section class="py-20 bg-gradient-to-br from-blue-900 to-blue-950 text-white">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6">Why Document Attestation & Verification Matter</h2>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Why Content Attestation & Verification Matter</h2>
                 <p class="text-xl text-white/90 max-w-3xl mx-auto">
-                    In our digital world, the ability to prove a document is authentic and trace its origins is no longer optional—it's essential
+                    In our digital world, the ability to prove your content is authentic and trace its origins is no longer optional—it's essential
                 </p>
             </div>
 
@@ -1080,7 +1144,7 @@
                             This erosion of trust costs the global economy over $133 billion annually in document fraud alone. Fake diplomas, forged contracts, manipulated financial statements, and counterfeit certifications undermine everything from hiring decisions to legal proceedings.
                         </p>
                         <p class="font-semibold text-white">
-                            Without verifiable proof of authenticity, any digital document is just pixels on a screen—no matter how official it looks.
+                            Without verifiable proof of authenticity, any digital content is just pixels on a screen—no matter how official it looks.
                         </p>
                     </div>
                 </div>
@@ -1088,7 +1152,7 @@
                     <h3 class="text-3xl font-bold mb-6">The Leaking Epidemic</h3>
                     <div class="space-y-6 text-lg text-white/90">
                         <p>
-                            Simultaneously, confidential information leaks have become the norm rather than the exception. 60% of businesses experience document leaks, with an average cost of $4.88 million per incident. Trade secrets, client data, financial projections, and sensitive communications end up on public forums, competitor hands, or news outlets.
+                            Simultaneously, confidential information leaks have become the norm rather than the exception. 60% of businesses experience content leaks, with an average cost of $4.88 million per incident. Trade secrets, client data, financial projections, and sensitive communications end up on public forums, competitor hands, or news outlets.
                         </p>
                         <p>
                             Traditional protection methods fail spectacularly. Watermarks get cropped out. DLP systems can't identify the actual leaker. NDAs provide no real enforcement mechanism. Companies are left helpless, unable to prove who violated their trust.
@@ -1118,7 +1182,7 @@
                         </div>
                         <h4 class="text-xl font-bold mb-3 text-center">Timestamped Forever</h4>
                         <p class="text-white/90 text-center">
-                            Every document gets a cryptographic timestamp proving exactly when it existed, who created it, and its exact content at that moment.
+                            Every file gets a cryptographic timestamp proving exactly when it existed, who created it, and its exact content at that moment.
                         </p>
                     </div>
                     <div>
@@ -1150,7 +1214,7 @@
                         </li>
                         <li class="flex items-start space-x-2">
                             <i class="fas fa-check-circle text-green-300 mt-1"></i>
-                            <span><strong>Dispute resolution:</strong> Prove document authenticity and timeline without ambiguity</span>
+                            <span><strong>Dispute resolution:</strong> Prove content authenticity and timeline without ambiguity</span>
                         </li>
                         <li class="flex items-start space-x-2">
                             <i class="fas fa-check-circle text-green-300 mt-1"></i>
@@ -1191,10 +1255,10 @@
                     <div>
                         <h4 class="text-2xl font-bold mb-3">The Cost of Doing Nothing</h4>
                         <p class="text-lg text-white/90 mb-4">
-                            Every day without document protection increases your risk exposure. A single leak can cost millions in legal fees, lost business, and reputational damage. A single fraudulent document accepted as genuine can invalidate contracts, derail deals, or result in hiring the wrong person.
+                            Every day without content protection increases your risk exposure. A single leak can cost millions in legal fees, lost business, and reputational damage. A single fraudulent document accepted as genuine can invalidate contracts, derail deals, or result in hiring the wrong person.
                         </p>
                         <p class="text-lg font-semibold text-white">
-                            The question isn't whether you can afford document protection—it's whether you can afford to operate without it.
+                            The question isn't whether you can afford content protection—it's whether you can afford to operate without it.
                         </p>
                     </div>
                 </div>
@@ -1284,7 +1348,7 @@
         <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Talk About Your Document Security</h2>
+                    <h2 class="text-4xl md:text-5xl font-bold mb-6">Let's Talk About Your Content Security</h2>
                     <p class="text-xl text-gray-600 mb-6">
                         Whether you're protecting confidential business information, verifying credentials, or preventing leaks, we're here to help.
                     </p>
@@ -1376,7 +1440,7 @@
                         </div>
                         <div>
                             <label class="block text-sm font-semibold text-gray-700 mb-2">Message</label>
-                            <textarea name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition resize-none" placeholder="Tell us about your document security needs..."></textarea>
+                            <textarea name="message" rows="4" class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-600 focus:border-transparent outline-none transition resize-none" placeholder="Tell us about your content security needs..."></textarea>
                         </div>
                         <button type="submit" class="w-full px-6 py-4 gradient-bg text-white rounded-lg font-semibold hover:opacity-90 transition shadow-lg">
                             Send Message
@@ -1444,7 +1508,7 @@
     <!-- CTA Section -->
     <section class="py-20 gradient-bg text-white">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Protect Your Documents?</h2>
+            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Protect Your Content?</h2>
             <p class="text-xl mb-8 text-white/90">
                 Join organizations worldwide using Veriflo to verify authenticity and stop leaks
             </p>
@@ -1541,11 +1605,11 @@
         const pricingData = {
             starter: {
                 monthly: 49,
-                annual: 39.20  // 20% discount: 49 * 12 * 0.8 / 12 = 39.20
+                annual: 40.83  // 2 months free: 49 * 10 / 12 = 40.83
             },
             business: {
                 monthly: 149,
-                annual: 119.20  // 20% discount: 149 * 12 * 0.8 / 12 = 119.20
+                annual: 124.17  // 2 months free: 149 * 10 / 12 = 124.17
             }
         };
 

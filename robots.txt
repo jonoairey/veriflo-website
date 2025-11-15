@@ -9,8 +9,9 @@ Disallow: /admin/
 Disallow: /private/
 Disallow: /.git/
 
-# Sitemap location
+# Sitemap location (both www and non-www)
 Sitemap: https://useveriflo.com/sitemap.xml
+Sitemap: https://www.useveriflo.com/sitemap.xml
 
 # Crawl delay (optional - helps prevent server overload)
 # Uncomment if needed

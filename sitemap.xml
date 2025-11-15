@@ -5,7 +5,14 @@
     <!-- Homepage -->
     <url>
         <loc>https://useveriflo.com/</loc>
-        <lastmod>2025-11-02</lastmod>
+        <lastmod>2025-11-15</lastmod>
+        <changefreq>weekly</changefreq>
+        <priority>1.0</priority>
+    </url>
+
+    <url>
+        <loc>https://useveriflo.com/index.html</loc>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>1.0</priority>
     </url>
@@ -13,28 +20,28 @@
     <!-- Main Pages -->
     <url>
         <loc>https://useveriflo.com/about.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/blog.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>weekly</changefreq>
         <priority>0.7</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/veriflo-pricing.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.9</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/veriflo-use-cases.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -42,14 +49,14 @@
     <!-- Legal Pages -->
     <url>
         <loc>https://useveriflo.com/privacy-policy.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/terms-of-service.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>yearly</changefreq>
         <priority>0.3</priority>
     </url>
@@ -57,35 +64,35 @@
     <!-- Content Creator Pages -->
     <url>
         <loc>https://useveriflo.com/onlyfans-leak-protection.html</loc>
-        <lastmod>2025-11-02</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/youtube-content-protection.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/music-leak-prevention.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/photography-protection.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/course-creator-protection.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
@@ -93,49 +100,49 @@
     <!-- Business Solution Pages -->
     <url>
         <loc>https://useveriflo.com/legal-document-protection.html</loc>
-        <lastmod>2025-11-02</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/supply-chain-document-security.html</loc>
-        <lastmod>2025-11-02</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/sensitive-business-documents.html</loc>
-        <lastmod>2025-11-02</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/corporate-leak-prevention.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/financial-document-verification.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/healthcare-record-protection.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
 
     <url>
         <loc>https://useveriflo.com/university-diploma-verification.html</loc>
-        <lastmod>2025-01-28</lastmod>
+        <lastmod>2025-11-15</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>

@@ -3,328 +3,177 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Music & Audio Leak Prevention - Veriflo</title>
-    <meta name="description" content="Prevent music leaks before release with Veriflo. Track who leaked your unreleased tracks, protect demos, and verify authentic versions with blockchain.">
-    <meta name="keywords" content="music leak prevention, unreleased music protection, demo protection, music piracy prevention, artist content security">
-    <meta name="author" content="Veriflo">
-    <meta name="theme-color" content="#3b82f6">
-    <meta property="og:title" content="Music Leak Prevention - Protect Unreleased Tracks | Veriflo">
-    <meta property="og:description" content="Stop music leaks before release. Identify leakers with forensic audio fingerprinting. Protect your unreleased tracks.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://useveriflo.com/music-leak-prevention.html">
-    <meta property="og:image" content="https://useveriflo.com/images/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>Music Leak Prevention - Protect Unreleased Tracks | Veriflo</title>
+    <meta name="description" content="Protect unreleased music from leaking. Invisible fingerprinting identifies who shares your tracks - with evidence for legal action.">
     <link rel="canonical" href="https://useveriflo.com/music-leak-prevention.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Music Leak Prevention - Protect Unreleased Tracks | Veriflo">
+    <meta property="og:description" content="Protect unreleased music from leaking. Invisible audio fingerprinting identifies who shares your tracks.">
+    <meta property="og:url" content="https://useveriflo.com/music-leak-prevention.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://useveriflo.com/images/og-music.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Music Leak Prevention - Protect Unreleased Tracks">
+    <meta name="twitter:description" content="Protect unreleased music with invisible audio fingerprinting.">
+    <meta name="keywords" content="music leak prevention, unreleased track protection, audio fingerprinting, music piracy prevention, record label security">
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Does fingerprinting affect audio quality?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Our audio fingerprinting is imperceptible to human hearing and doesn't affect the listening experience. The fingerprint operates below audible thresholds while remaining detectable by our forensic tools."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if someone converts the file format?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our fingerprints survive format conversion, compression, and even recording through speakers. Whether leaked as MP3, WAV, FLAC, or screen-recorded from streaming, we can identify the source."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I share with collaborators securely?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Create unique fingerprinted copies for each collaborator - producers, engineers, label A&R, playlist curators. If a track leaks before release, you'll know exactly where it came from."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use this for music sent to press/bloggers?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. This is one of our most common use cases. Send fingerprinted promo copies to press contacts and bloggers. If someone breaks embargo or shares without permission, you have evidence."
+                }
+            }
+        ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero-pattern { background-color: #3b82f6; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-
-        /* Dropdown Menu Styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            min-width: 280px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            z-index: 1000;
-            margin-top: 0;
-            padding: 0.5rem 0;
-            padding-top: 0.75rem;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #374151;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            display: block;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f3f4f6;
-            color: #2563eb;
-        }
-
-        .dropdown-divider {
-            height: 1px;
-            background-color: #e5e7eb;
-            margin: 0.5rem 0;
-        }
-
-        .dropdown-header {
-            padding: 0.5rem 1.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+        body{font-family:'Space Grotesk',sans-serif;background:linear-gradient(180deg,#0a0f1a 0%,#0f172a 50%,#1e293b 100%);min-height:100vh}
+        .grid-bg{background-image:linear-gradient(rgba(236,72,153,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(236,72,153,0.03) 1px,transparent 1px);background-size:60px 60px}
+        .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:pulse 4s ease-in-out infinite}
+        @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:0.8}}
+        .gradient-text{background:linear-gradient(135deg,#ec4899,#db2777);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .glass-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s ease}
+        .glass-card:hover{background:rgba(255,255,255,0.06);transform:translateY(-4px)}
+        .nav-blur{background:rgba(10,15,26,0.85);backdrop-filter:blur(20px)}
+        .btn-glow{box-shadow:0 0 30px rgba(236,72,153,0.4)}
+        html{scroll-behavior:smooth}
     </style>
 </head>
-<body class="antialiased">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+<body class="antialiased text-white overflow-x-hidden">
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div class="glow-orb w-96 h-96 bg-pink-500/20 top-20 -left-48 fixed"></div>
+    <div class="glow-orb w-80 h-80 bg-fuchsia-500/20 top-1/3 -right-40 fixed" style="animation-delay:-2s"></div>
+
+    <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <span class="text-2xl font-bold gradient-text">Veriflo</span>
+                    <span class="text-2xl font-bold">Veriflo</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
-                    <a href="index.html#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
-                    <div class="dropdown">
-                        <a href="index.html#use-cases" class="text-gray-700 hover:text-blue-600 transition cursor-pointer">
-                            Use Cases <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="onlyfans-leak-protection.html">OnlyFans & Digital Creators</a>
-                            <a href="legal-document-protection.html">Legal & Law Firms</a>
-                            <a href="supply-chain-document-security.html">Supply Chain Security</a>
-                            <a href="sensitive-business-documents.html">Sensitive Business Documents</a>
-                        </div>
-                    </div>
-                    <a href="index.html#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
-                    <a href="https://app.useveriflo.com/login" class="text-gray-700 hover:text-blue-600 transition font-medium">
-                        Login
-                    </a>
-                    <a href="https://app.useveriflo.com/signup" class="px-6 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition font-medium">
-                        Get Started
-                    </a>
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-3 bg-gradient-to-r from-pink-500 to-fuchsia-500 rounded-xl font-semibold btn-glow hover:opacity-90 transition">Get Started</a>
                 </div>
-                <button class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
             </div>
         </div>
     </nav>
 
-    <section class="hero-pattern pt-32 pb-20 text-white">
+    <section class="pt-32 pb-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <div class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
-                        <i class="fas fa-music text-pink-400 mr-2"></i>FOR MUSIC PRODUCERS & ARTISTS
-                    </div>
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Stop Music Piracy. Catch Who Leaked Your Tracks.</h1>
-                    <p class="text-xl mb-8 text-white/90 leading-relaxed">Your unreleased tracks, demos, and exclusive content are being leaked before release day. Veriflo embeds invisible fingerprints in your audio files to identify exactly who shared them—with evidence that holds up in court.</p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-50 transition shadow-lg">Protect My Music</button>
-                        <button class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition border-2 border-white/30">See How It Works</button>
-                    </div>
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-pink-500/10 border border-pink-500/30 rounded-full mb-8">
+                    <i class="fas fa-music text-pink-400"></i>
+                    <span class="text-sm text-pink-300">For Musicians & Labels</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">Stop <span class="gradient-text">Music Leaks</span> & Catch Leakers</h1>
+                <p class="text-xl text-gray-400 mb-10 font-dm leading-relaxed">Your unreleased tracks are being shared before launch. Veriflo's invisible audio fingerprinting identifies exactly who leaked - with evidence for legal action.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://app.useveriflo.com/signup" class="px-8 py-4 bg-gradient-to-r from-pink-500 to-fuchsia-500 rounded-xl font-semibold btn-glow text-center hover:opacity-90 transition">Start Protecting Music</a>
+                    <a href="index.html#contact" class="px-8 py-4 bg-white/5 border border-white/20 rounded-xl font-semibold text-center hover:bg-white/10 transition">See Demo</a>
+                </div>
+                <div class="mt-10 grid grid-cols-3 gap-6">
+                    <div class="text-center"><div class="text-3xl font-bold text-pink-400">98.5%</div><div class="text-sm text-gray-500">Accuracy</div></div>
+                    <div class="text-center"><div class="text-3xl font-bold text-pink-400">Inaudible</div><div class="text-sm text-gray-500">Zero Quality Loss</div></div>
+                    <div class="text-center"><div class="text-3xl font-bold text-pink-400">$49</div><div class="text-sm text-gray-500">Per Month</div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white">
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">The Music Leak Crisis</h2>
-                <p class="text-xl text-gray-600">80% of artists have had unreleased music leaked. The cost is devastating.</p>
-            </div>
+            <div class="text-center mb-16"><h2 class="text-4xl font-bold mb-6">Music <span class="gradient-text">Use Cases</span></h2></div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-red-50 rounded-xl p-8 border-l-4 border-red-500">
-                    <h3 class="text-xl font-bold mb-3">Pre-Release Leaks</h3>
-                    <p class="text-gray-700 mb-4">Send demos to labels, producers, or features? One leak ruins your release strategy, streaming numbers, and buzz.</p>
-                    <div class="text-3xl font-bold text-red-600 mb-2">$50K-500K</div>
-                    <p class="text-sm text-gray-600">Average revenue lost per major leak</p>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-compact-disc text-pink-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Unreleased Tracks</h3>
+                    <p class="text-gray-400 font-dm mb-4">Protect new releases shared with collaborators before launch.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-pink-400 mr-2"></i>Album previews</li>
+                        <li><i class="fas fa-check text-pink-400 mr-2"></i>Single releases</li>
+                        <li><i class="fas fa-check text-pink-400 mr-2"></i>Collaboration drafts</li>
+                    </ul>
                 </div>
-                <div class="bg-orange-50 rounded-xl p-8 border-l-4 border-orange-500">
-                    <h3 class="text-xl font-bold mb-3">Exclusive Content Shared</h3>
-                    <p class="text-gray-700 mb-4">Patreon exclusives, early access tracks, stems, and instrumentals leaked by subscribers for clout.</p>
-                    <div class="text-3xl font-bold text-orange-600 mb-2">72%</div>
-                    <p class="text-sm text-gray-600">Of artists lose subscribers after leaks</p>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-users text-pink-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Press & Promo</h3>
+                    <p class="text-gray-400 font-dm mb-4">Track who leaks advance copies sent to press and radio.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-pink-400 mr-2"></i>Press copies</li>
+                        <li><i class="fas fa-check text-pink-400 mr-2"></i>Radio promos</li>
+                        <li><i class="fas fa-check text-pink-400 mr-2"></i>Reviewer copies</li>
+                    </ul>
                 </div>
-                <div class="bg-red-50 rounded-xl p-8 border-l-4 border-red-500">
-                    <h3 class="text-xl font-bold mb-3">Can't Find the Leaker</h3>
-                    <p class="text-gray-700 mb-4">You know someone in your circle leaked it. But who? Without proof, you can't take action.</p>
-                    <div class="text-3xl font-bold text-red-600 mb-2">Never</div>
-                    <p class="text-sm text-gray-600">How long until you identify them (without Veriflo)</p>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-sliders-h text-pink-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Studio Sessions</h3>
+                    <p class="text-gray-400 font-dm mb-4">Protect works-in-progress shared during production.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-pink-400 mr-2"></i>Session files</li>
+                        <li><i class="fas fa-check text-pink-400 mr-2"></i>Mix versions</li>
+                        <li><i class="fas fa-check text-pink-400 mr-2"></i>Master copies</li>
+                    </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">How Veriflo Protects Your Music</h2>
-                <p class="text-xl text-gray-600">Invisible audio watermarking that survives everything</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-2xl font-bold">1</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Fingerprint Every Copy</h3>
-                    <p class="text-gray-700 mb-4">Upload your track before sending to anyone. We create unique copies with invisible audio fingerprints embedded in the waveform—imperceptible to listeners, unremovable by leakers.</p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Works with MP3, WAV, FLAC, all formats</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Survives compression & re-encoding</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>No quality loss—audiophile approved</div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-2xl font-bold">2</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Monitor Leak Sites</h3>
-                    <p class="text-gray-700 mb-4">Our AI scans Reddit, Discord, SoundCloud, file-sharing sites, and 500+ platforms 24/7 for leaked versions of your fingerprinted tracks.</p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Instant email alerts when leaked</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Finds snippets, full tracks, remixes</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Monitors private Discord servers</div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-2xl font-bold">3</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Identify & Take Action</h3>
-                    <p class="text-gray-700 mb-4">When leaked, we extract the fingerprint and tell you exactly who it was—label exec, producer, feature, or fan—with court-ready evidence.</p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>98.5% attribution accuracy</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Automated DMCA takedowns</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Evidence for legal action</div>
-                    </div>
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12 text-center border border-pink-500/30">
+                <h2 class="text-4xl font-bold mb-6">Protect Your Music</h2>
+                <p class="text-xl text-gray-400 mb-10 font-dm">Join artists and labels using Veriflo to stop leaks</p>
+                <a href="https://app.useveriflo.com/signup" class="inline-block px-10 py-4 bg-gradient-to-r from-pink-500 to-fuchsia-500 text-white rounded-xl font-bold text-lg btn-glow hover:opacity-90 transition">Start for $49/month</a>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mt-8">
+                    <div><i class="fas fa-check-circle text-pink-400 mr-2"></i>All audio formats</div>
+                    <div><i class="fas fa-check-circle text-pink-400 mr-2"></i>No quality loss</div>
+                    <div><i class="fas fa-check-circle text-pink-400 mr-2"></i>Legal evidence</div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Perfect For All Music Professionals</h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
-                    <div class="text-3xl mb-3">🎤</div>
-                    <h3 class="text-lg font-bold mb-2">Recording Artists</h3>
-                    <p class="text-sm text-gray-600">Protect unreleased albums, demos, and exclusive drops</p>
-                </div>
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
-                    <div class="text-3xl mb-3">🎧</div>
-                    <h3 class="text-lg font-bold mb-2">Producers & Beatmakers</h3>
-                    <p class="text-sm text-gray-600">Stop beat leasing customers from sharing</p>
-                </div>
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
-                    <div class="text-3xl mb-3">🎼</div>
-                    <h3 class="text-lg font-bold mb-2">Composers</h3>
-                    <p class="text-sm text-gray-600">Protect scores, stems, and orchestral recordings</p>
-                </div>
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
-                    <div class="text-3xl mb-3">🎙️</div>
-                    <h3 class="text-lg font-bold mb-2">Podcasters</h3>
-                    <p class="text-sm text-gray-600">Track who shares premium podcast episodes</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 gradient-bg text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Protect Your Music Today</h2>
-            <p class="text-xl mb-8 text-white/90">Stop losing revenue and release momentum to leaks</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl">Get Started Now</button>
-                <a href="index.html#contact" class="px-10 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-white/20 transition border-2 border-white/30 text-center">Schedule Demo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-5 gap-8 mb-8">
-                <div>
-                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <span class="text-xl font-bold">Veriflo</span>
-                    </a>
-                    <p class="text-gray-400 text-sm">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Product</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="index.html#features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="index.html#pricing" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition">API</a></li>
-                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Content Creators</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="onlyfans-leak-protection.html" class="hover:text-white transition">OnlyFans Protection</a></li>
-                        <li><a href="youtube-content-protection.html" class="hover:text-white transition">YouTube Creators</a></li>
-                        <li><a href="music-leak-prevention.html" class="hover:text-white transition">Music & Audio</a></li>
-                        <li><a href="photography-protection.html" class="hover:text-white transition">Photography</a></li>
-                        <li><a href="course-creator-protection.html" class="hover:text-white transition">Online Courses</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Business Solutions</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="legal-document-protection.html" class="hover:text-white transition">Legal & Law Firms</a></li>
-                        <li><a href="corporate-leak-prevention.html" class="hover:text-white transition">Corporate Documents</a></li>
-                        <li><a href="financial-document-verification.html" class="hover:text-white transition">Financial Services</a></li>
-                        <li><a href="healthcare-record-protection.html" class="hover:text-white transition">Healthcare</a></li>
-                        <li><a href="university-diploma-verification.html" class="hover:text-white transition">Universities</a></li>
-                    </ul>
-                </div>
-                                <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">&copy; 2025 Veriflo. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                </div>
-            </div>
+    <footer class="py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            © 2025 Veriflo. All rights reserved. <a href="faq.html" class="hover:text-white ml-4">FAQ</a> <a href="privacy-policy.html" class="hover:text-white ml-4">Privacy</a> <a href="terms-of-service.html" class="hover:text-white ml-4">Terms</a>
         </div>
     </footer>
 </body>

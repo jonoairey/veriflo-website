@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Frequently Asked Questions | Veriflo</title>
+    <meta name="description" content="Frequently asked questions about Veriflo's document verification, forensic fingerprinting, and leak attribution services.">
+    <link rel="canonical" href="https://useveriflo.com/faq.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="FAQ - Frequently Asked Questions | Veriflo">
+    <meta property="og:description" content="Frequently asked questions about Veriflo's document verification and leak attribution services.">
+    <meta property="og:url" content="https://useveriflo.com/faq.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://useveriflo.com/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="FAQ - Frequently Asked Questions | Veriflo">
+    <meta name="twitter:description" content="Frequently asked questions about Veriflo's document verification and forensic fingerprinting.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body{font-family:'Space Grotesk',sans-serif;background:linear-gradient(180deg,#0a0f1a 0%,#0f172a 50%,#1e293b 100%);min-height:100vh}
+        .grid-bg{background-image:linear-gradient(rgba(59,130,246,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.03) 1px,transparent 1px);background-size:60px 60px}
+        .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:pulse 4s ease-in-out infinite}
+        @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:0.8}}
+        .gradient-text{background:linear-gradient(135deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .glass-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s ease}
+        .glass-card:hover{background:rgba(255,255,255,0.06);transform:translateY(-4px)}
+        .nav-blur{background:rgba(10,15,26,0.85);backdrop-filter:blur(20px)}
+        .btn-glow{box-shadow:0 0 30px rgba(59,130,246,0.4)}
+        html{scroll-behavior:smooth}
+        .faq-item{border-bottom:1px solid rgba(255,255,255,0.1)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+        .faq-item.active .faq-answer{max-height:500px}
+        .faq-item.active .faq-icon{transform:rotate(180deg)}
+    </style>
+</head>
+<body class="antialiased text-white overflow-x-hidden">
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div class="glow-orb w-96 h-96 bg-blue-500/20 top-20 -left-48 fixed"></div>
+    <div class="glow-orb w-80 h-80 bg-purple-500/20 top-1/3 -right-40 fixed" style="animation-delay:-2s"></div>
+
+    <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
+                    </div>
+                    <span class="text-2xl font-bold">Veriflo</span>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/login" class="text-gray-300 hover:text-white transition">Login</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold btn-glow hover:opacity-90 transition">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <section class="pt-32 pb-16 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-8">Frequently Asked <span class="gradient-text">Questions</span></h1>
+            <p class="text-xl text-gray-400 font-dm leading-relaxed">Everything you need to know about Veriflo's document protection</p>
+        </div>
+    </section>
+
+    <section class="pb-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Technology Section -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 gradient-text">Technology</h2>
+                <div class="space-y-4">
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">How does the fingerprinting work?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">Our proprietary 5-layer forensic fingerprinting embeds invisible markers at multiple levels: metadata, steganographic (pixel-level), structural, perceptual hash, and blockchain. Each copy gets a unique fingerprint tied to the recipient. Even if someone screenshots, crops, or edits the content, enough layers survive to identify the source with 98.5% accuracy.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Is the fingerprint visible to recipients?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">No. Unlike visible watermarks, our fingerprints are completely invisible to the human eye. Recipients see and use your content normally - they have no idea it's protected. This is crucial because visible watermarks can be cropped or edited out.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">How does blockchain verification work?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">When you upload a document, we create a cryptographic hash of the content and write it to the Polygon blockchain. This creates an immutable timestamp proving the document existed at that moment. Anyone can verify authenticity by scanning the QR code or entering the verification ID - the blockchain confirms the document hasn't been altered.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">What file types do you support?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">We support all major file types up to 500MB: PDFs, Word documents, images (JPG, PNG, TIFF, etc.), videos (MP4, MOV, etc.), audio files (MP3, WAV, etc.), and even source code. If your file type isn't listed, contact us - we're constantly adding support for new formats.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Legal & Evidence Section -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 gradient-text">Legal & Evidence</h2>
+                <div class="space-y-4">
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Is the evidence court-admissible?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">Yes. Our forensic reports are designed to meet legal evidence standards. We provide detailed chain-of-custody documentation, technical methodology explanations, and expert-ready reports. Several law firms use Veriflo specifically for litigation support. Enterprise customers get access to our legal team for testimony support.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">How do I identify a leaker?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">If you find your content leaked, upload the leaked version to our analysis tool. We'll extract the fingerprint and match it to your distribution records, identifying exactly which recipient's copy was leaked. You'll receive a forensic report with all the evidence needed for legal action or internal investigation.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Can I take legal action against leakers?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">Yes. Our forensic reports provide the evidence needed to pursue legal action. This includes breach of contract claims, copyright infringement, and in some cases criminal charges. We recommend consulting with a qualified attorney to understand your options based on your specific situation and jurisdiction.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Privacy & Security Section -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 gradient-text">Privacy & Security</h2>
+                <div class="space-y-4">
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">What about GDPR and data privacy?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">We're fully GDPR compliant and SOC 2 Type II certified. Your documents are encrypted at rest (AES-256) and in transit (TLS 1.3). We never access your content except for processing. For Enterprise customers, we offer data residency options in EU, US, or other regions.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Is my content stored securely?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">Absolutely. All documents are encrypted using AES-256 encryption at rest and TLS 1.3 in transit. Our infrastructure is SOC 2 Type II certified, and we undergo regular security audits. Enterprise customers can choose specific data residency regions for compliance requirements.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Do you access or view my documents?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">No. Your documents are processed automatically by our systems. Human staff never access your content unless you specifically request support assistance with a particular document, and only with your explicit permission.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing & Plans Section -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 gradient-text">Pricing & Plans</h2>
+                <div class="space-y-4">
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Can I try before I buy?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">Yes! Start with our Starter plan - no long-term commitment required. You can cancel anytime. For Enterprise customers, we offer a pilot program to test with your specific use cases before committing.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">What's included in each plan?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">Starter ($49/mo) includes 50 files/month with full blockchain verification and fingerprinting. Professional ($149/mo) adds 250 files/month, bulk upload, API access, and DMCA automation. Enterprise offers unlimited files, white-label branding, SSO, and dedicated support. See our <a href="index.html#pricing" class="text-blue-400 hover:underline">pricing page</a> for full details.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Can I cancel anytime?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">Yes. All plans are month-to-month with no long-term contracts. You can cancel anytime from your account settings. Annual plans offer 2 months free and can be cancelled with a prorated refund.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Integration Section -->
+            <div class="mb-12">
+                <h2 class="text-2xl font-bold mb-6 gradient-text">Integration & Setup</h2>
+                <div class="space-y-4">
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">How long does setup take?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">You can start protecting documents in 30 seconds. Sign up, upload your first file, and it's immediately protected with blockchain verification and forensic fingerprinting. No technical setup or IT team required.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Do you have an API?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">Yes. Professional and Enterprise plans include API access for automated document protection. You can integrate Veriflo into your existing workflows, document management systems, or custom applications. Full API documentation is available upon signup.</p>
+                        </div>
+                    </div>
+                    <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                        <div class="flex justify-between items-center">
+                            <h3 class="font-bold text-lg">Can I integrate with my existing systems?</h3>
+                            <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                        </div>
+                        <div class="faq-answer">
+                            <p class="text-gray-400 font-dm mt-4">Enterprise plans include custom integrations with document management systems like SharePoint, Google Drive, Dropbox, and more. We also support SSO/SAML for enterprise authentication. Contact our sales team to discuss your specific integration needs.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12 text-center">
+                <h2 class="text-3xl font-bold mb-4">Still Have Questions?</h2>
+                <p class="text-gray-400 mb-8 font-dm">Our team is here to help you get started</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="index.html#contact" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold btn-glow hover:opacity-90 transition">Contact Us</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-8 py-4 bg-white/5 border border-white/20 rounded-xl font-semibold hover:bg-white/10 transition">Get Started</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            © 2025 Veriflo. All rights reserved. 
+            <a href="faq.html" class="hover:text-white ml-4">FAQ</a>
+            <a href="privacy-policy.html" class="hover:text-white ml-4">Privacy</a> 
+            <a href="terms-of-service.html" class="hover:text-white ml-4">Terms</a>
+        </div>
+    </footer>
+
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

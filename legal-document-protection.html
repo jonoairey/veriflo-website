@@ -3,669 +3,428 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Legal Document Protection - Veriflo</title>
-    <meta name="description" content="Protect attorney-client privilege, prove document authenticity, and identify breach sources. Court-admissible blockchain evidence for law firms.">
-    <meta name="keywords" content="legal document protection, attorney-client privilege, law firm security, legal leak detection, document authenticity verification">
-    <meta name="author" content="Veriflo">
-    <meta name="theme-color" content="#3b82f6">
-    <meta property="og:title" content="Legal Document Protection - Secure Law Firm Files | Veriflo">
-    <meta property="og:description" content="Protect privileged documents with blockchain verification. Identify breach sources and prove authenticity in court.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://useveriflo.com/legal-document-protection.html">
-    <meta property="og:image" content="https://useveriflo.com/images/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>Legal Document Protection - Law Firm Security | Veriflo</title>
+    <meta name="description" content="Protect attorney-client privileged documents with blockchain verification and forensic fingerprinting. Court-admissible evidence for data breach investigations.">
     <link rel="canonical" href="https://useveriflo.com/legal-document-protection.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Legal Document Protection - Law Firm Security | Veriflo">
+    <meta property="og:description" content="Protect attorney-client privileged documents with blockchain verification and forensic fingerprinting.">
+    <meta property="og:url" content="https://useveriflo.com/legal-document-protection.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://useveriflo.com/images/og-legal.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Legal Document Protection - Law Firm Security">
+    <meta name="twitter:description" content="Protect attorney-client privileged documents with blockchain verification and forensic fingerprinting.">
+    <meta name="keywords" content="legal document protection, law firm security, attorney-client privilege, document leak prevention, legal document verification">
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is the forensic evidence court-admissible?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Our forensic reports are designed to meet legal evidence standards. We provide detailed chain-of-custody documentation, technical methodology explanations, and expert-ready reports. Our evidence has been used successfully in multiple legal proceedings."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Veriflo access our confidential documents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Documents are encrypted in transit and at rest. Our system processes documents to embed fingerprints but does not retain readable copies. For Enterprise customers, we offer on-premises deployment options for maximum security."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How does this integrate with our DMS?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "We offer native integrations with iManage, NetDocuments, SharePoint, and other major document management systems. Documents can be protected directly from your existing workflow. Our API also allows custom integrations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What about printed documents?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our fingerprints survive printing and scanning. Additionally, we add an optional QR code that allows anyone to verify the document's authenticity by scanning with a smartphone. The QR links to blockchain verification and shows original hash."
+                }
+            }
+        ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero-pattern { background-color: #3b82f6; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-
-        /* Dropdown Menu Styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            min-width: 280px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            z-index: 1000;
-            margin-top: 0;
-            padding: 0.5rem 0;
-            padding-top: 0.75rem;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #374151;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            display: block;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f3f4f6;
-            color: #2563eb;
-        }
-
-        .dropdown-divider {
-            height: 1px;
-            background-color: #e5e7eb;
-            margin: 0.5rem 0;
-        }
-
-        .dropdown-header {
-            padding: 0.5rem 1.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+        body{font-family:'Space Grotesk',sans-serif;background:linear-gradient(180deg,#0a0f1a 0%,#0f172a 50%,#1e293b 100%);min-height:100vh}
+        .grid-bg{background-image:linear-gradient(rgba(59,130,246,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.03) 1px,transparent 1px);background-size:60px 60px}
+        .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:pulse 4s ease-in-out infinite}
+        @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:0.8}}
+        .gradient-text{background:linear-gradient(135deg,#3b82f6,#1e40af);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .glass-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s ease}
+        .glass-card:hover{background:rgba(255,255,255,0.06);transform:translateY(-4px)}
+        .nav-blur{background:rgba(10,15,26,0.85);backdrop-filter:blur(20px)}
+        .btn-glow{box-shadow:0 0 30px rgba(59,130,246,0.4)}
+        .btn-glow:hover{box-shadow:0 0 50px rgba(59,130,246,0.6)}
+        html{scroll-behavior:smooth}
+        .faq-item{border-bottom:1px solid rgba(255,255,255,0.1)}
+        .faq-answer{max-height:0;overflow:hidden;transition:max-height 0.3s ease}
+        .faq-item.active .faq-answer{max-height:500px}
+        .faq-item.active .faq-icon{transform:rotate(180deg)}
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased text-white overflow-x-hidden">
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div class="glow-orb w-96 h-96 bg-blue-500/20 top-20 -left-48 fixed"></div>
+    <div class="glow-orb w-80 h-80 bg-indigo-500/20 top-1/3 -right-40 fixed" style="animation-delay:-2s"></div>
+    <div class="glow-orb w-72 h-72 bg-blue-500/15 bottom-1/4 left-1/4 fixed" style="animation-delay:-3s"></div>
+
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                         </svg>
                     </div>
-                    <span class="text-2xl font-bold gradient-text">Veriflo</span>
+                    <span class="text-2xl font-bold">Veriflo</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
-                    <a href="index.html#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
-                    <div class="dropdown">
-                        <a href="index.html#use-cases" class="text-gray-700 hover:text-blue-600 transition cursor-pointer">
-                            Use Cases <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="onlyfans-leak-protection.html">OnlyFans & Digital Creators</a>
-                            <a href="legal-document-protection.html">Legal & Law Firms</a>
-                            <a href="supply-chain-document-security.html">Supply Chain Security</a>
-                            <a href="sensitive-business-documents.html">Sensitive Business Documents</a>
-                        </div>
-                    </div>
-                    <a href="index.html#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
-                    <a href="https://app.useveriflo.com/login" class="text-gray-700 hover:text-blue-600 transition font-medium">
-                        Login
-                    </a>
-                    <a href="https://app.useveriflo.com/signup" class="px-6 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition font-medium">
-                        Get Started
-                    </a>
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/login" class="text-gray-300 hover:text-white transition">Login</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold btn-glow hover:opacity-90 transition">Get Started</a>
                 </div>
-                <button class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-pattern pt-32 pb-20 text-white">
+    <section class="pt-32 pb-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <div class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
-                        <i class="fas fa-balance-scale text-blue-400 mr-2"></i>FOR LAW FIRMS
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-8">
+                        <i class="fas fa-balance-scale text-blue-400"></i>
+                        <span class="text-sm text-blue-300">For Law Firms</span>
                     </div>
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Protect Attorney-Client Privilege. Prove Document Authenticity. Identify Breach Sources.</h1>
-                    <p class="text-xl mb-8 text-white/90 leading-relaxed">When privileged documents leak or authenticity is questioned, Veriflo provides court-admissible proof. Know exactly who breached confidentiality and verify any document instantly.</p>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                        Protect <span class="gradient-text">Attorney-Client</span> Privilege
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-10 font-dm leading-relaxed">
+                        When privileged documents leak, know exactly who breached confidentiality. Blockchain verification and forensic fingerprinting provides court-admissible evidence.
+                    </p>
                     <div class="flex flex-col sm:flex-row gap-4">
-                        <a href="index.html#contact" class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-50 transition shadow-lg text-center transform hover:scale-105">Request Demo</a>
+                        <a href="https://app.useveriflo.com/signup" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold btn-glow text-center hover:opacity-90 transition">Start Protecting Documents</a>
+                        <a href="index.html#contact" class="px-8 py-4 bg-white/5 border border-white/20 rounded-xl font-semibold text-center hover:bg-white/10 transition">Schedule Demo</a>
+                    </div>
+                    <div class="mt-10 grid grid-cols-3 gap-6">
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-400">98.5%</div>
+                            <div class="text-sm text-gray-500">Accuracy</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-400">Court</div>
+                            <div class="text-sm text-gray-500">Admissible</div>
+                        </div>
+                        <div class="text-center">
+                            <div class="text-3xl font-bold text-blue-400">AES-256</div>
+                            <div class="text-sm text-gray-500">Encryption</div>
+                        </div>
                     </div>
                 </div>
-                <div class="hidden md:flex items-center justify-center">
-                    <div class="relative w-full max-w-md">
-                        <svg viewBox="0 0 400 400" class="w-full h-auto">
-                            <!-- Background elements -->
-                            <circle cx="200" cy="200" r="180" fill="url(#legalGrad1)" opacity="0.15"/>
-                            <circle cx="200" cy="200" r="140" fill="url(#legalGrad1)" opacity="0.25"/>
-
-                            <!-- Courthouse/pillar background -->
-                            <rect x="140" y="100" width="120" height="200" fill="white" opacity="0.15" rx="5"/>
-                            <rect x="150" y="110" width="20" height="180" fill="white" opacity="0.2" rx="3"/>
-                            <rect x="190" y="110" width="20" height="180" fill="white" opacity="0.2" rx="3"/>
-                            <rect x="230" y="110" width="20" height="180" fill="white" opacity="0.2" rx="3"/>
-
-                            <!-- Large document with shield -->
-                            <g transform="translate(200, 200)">
-                                <!-- Document background -->
-                                <rect x="-70" y="-90" width="140" height="180" rx="8" fill="white" opacity="0.95"/>
-                                <line x1="-50" y1="-70" x2="50" y2="-70" stroke="#e0e7ff" stroke-width="4"/>
-                                <line x1="-50" y1="-50" x2="50" y2="-50" stroke="#e0e7ff" stroke-width="4"/>
-                                <line x1="-50" y1="-30" x2="50" y2="-30" stroke="#e0e7ff" stroke-width="4"/>
-                                <line x1="-50" y1="-10" x2="30" y2="-10" stroke="#e0e7ff" stroke-width="4"/>
-
-                                <!-- Shield overlay -->
-                                <path d="M0,0 L45,25 L45,80 Q45,100 0,110 Q-45,100 -45,80 L-45,25 Z" fill="#3b82f6" opacity="0.9"/>
-                                <path d="M0,0 L45,25 L45,80 Q45,100 0,110 Q-45,100 -45,80 L-45,25 Z" fill="none" stroke="white" stroke-width="2.5" opacity="0.7"/>
-
-                                <!-- Scales of justice icon inside shield -->
-                                <g transform="translate(0, 60)">
-                                    <!-- Base -->
-                                    <rect x="-15" y="25" width="30" height="5" rx="2" fill="white"/>
-                                    <rect x="-3" y="0" width="6" height="30" rx="2" fill="white"/>
-
-                                    <!-- Beam -->
-                                    <rect x="-25" y="-5" width="50" height="4" rx="2" fill="white"/>
-
-                                    <!-- Left scale -->
-                                    <line x1="-20" y1="-3" x2="-20" y2="10" stroke="white" stroke-width="2"/>
-                                    <path d="M-30,10 Q-20,15 -10,10" fill="none" stroke="white" stroke-width="2"/>
-
-                                    <!-- Right scale -->
-                                    <line x1="20" y1="-3" x2="20" y2="10" stroke="white" stroke-width="2"/>
-                                    <path d="M10,10 Q20,15 30,10" fill="none" stroke="white" stroke-width="2"/>
-                                </g>
-                            </g>
-
-                            <!-- Floating legal badges/seals -->
-                            <g opacity="0.9">
-                                <!-- Badge 1 -->
-                                <circle cx="80" cy="120" r="30" fill="white"/>
-                                <circle cx="80" cy="120" r="25" fill="none" stroke="#3b82f6" stroke-width="3"/>
-                                <path d="M75,120 L78,123 L85,116" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
-                            </g>
-
-                            <g opacity="0.9">
-                                <!-- Badge 2 -->
-                                <circle cx="320" cy="250" r="30" fill="white"/>
-                                <circle cx="320" cy="250" r="25" fill="none" stroke="#3b82f6" stroke-width="3"/>
-                                <rect x="310" y="240" width="20" height="20" rx="2" fill="none" stroke="#3b82f6" stroke-width="2"/>
-                                <path d="M312,250 L318,256 L328,246" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round"/>
-                            </g>
-
-                            <!-- Blockchain link indicators -->
-                            <g opacity="0.7">
-                                <circle cx="100" cy="280" r="8" fill="white"/>
-                                <circle cx="120" cy="290" r="8" fill="white"/>
-                                <circle cx="140" cy="280" r="8" fill="white"/>
-                                <line x1="106" y1="282" x2="114" y2="288" stroke="white" stroke-width="3"/>
-                                <line x1="126" y1="288" x2="134" y2="282" stroke="white" stroke-width="3"/>
-                            </g>
-
-                            <!-- Gradient definitions -->
-                            <defs>
-                                <linearGradient id="legalGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
-                                    <stop offset="0%" style="stop-color:white;stop-opacity:0.5" />
-                                    <stop offset="100%" style="stop-color:white;stop-opacity:0.1" />
-                                </linearGradient>
-                            </defs>
-                        </svg>
+                <div class="hidden lg:block">
+                    <div class="glass-card rounded-3xl p-8 border border-blue-500/30">
+                        <div class="bg-white/5 rounded-2xl p-6 mb-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center">
+                                        <i class="fas fa-file-contract text-blue-400"></i>
+                                    </div>
+                                    <div>
+                                        <div class="font-semibold">Settlement_Agreement_v3.pdf</div>
+                                        <div class="text-xs text-gray-500">PRIVILEGED & CONFIDENTIAL</div>
+                                    </div>
+                                </div>
+                                <div class="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center">
+                                    <i class="fas fa-lock text-emerald-400 text-sm"></i>
+                                </div>
+                            </div>
+                            <div class="grid grid-cols-2 gap-3 text-xs">
+                                <div class="bg-white/5 rounded-lg p-3">
+                                    <div class="text-gray-500 mb-1">Shared With</div>
+                                    <div class="text-white">Partner Smith, Associate Jones</div>
+                                </div>
+                                <div class="bg-white/5 rounded-lg p-3">
+                                    <div class="text-gray-500 mb-1">Blockchain TX</div>
+                                    <div class="text-blue-400 font-mono">0x7f3a...8c2d</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-3 flex items-center gap-3">
+                                <i class="fas fa-shield-alt text-emerald-400"></i>
+                                <span class="text-sm">Blockchain verified: Dec 11, 2025 14:32 UTC</span>
+                            </div>
+                            <div class="bg-blue-500/10 border border-blue-500/30 rounded-xl p-3 flex items-center gap-3">
+                                <i class="fas fa-fingerprint text-blue-400"></i>
+                                <span class="text-sm">5-layer fingerprint embedded per recipient</span>
+                            </div>
+                            <div class="bg-purple-500/10 border border-purple-500/30 rounded-xl p-3 flex items-center gap-3">
+                                <i class="fas fa-qrcode text-purple-400"></i>
+                                <span class="text-sm">QR verification code on page 1</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Stats Section -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-4 gap-8">
-                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <div class="text-5xl font-extrabold text-blue-600 mb-3">73%</div>
-                    <p class="text-gray-700 font-medium">Of law firms experienced a data breach in the last two years</p>
-                </div>
-                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <div class="text-5xl font-extrabold text-blue-600 mb-3">$8.2M</div>
-                    <p class="text-gray-700 font-medium">Average cost of legal document breach including malpractice claims</p>
-                </div>
-                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <div class="text-5xl font-extrabold text-blue-600 mb-3">45%</div>
-                    <p class="text-gray-700 font-medium">Of litigation involves disputed document authenticity</p>
-                </div>
-                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl">
-                    <div class="text-5xl font-extrabold text-blue-600 mb-3">Careers</div>
-                    <p class="text-gray-700 font-medium">Privileged document leaks can destroy cases and careers</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Problems Section -->
-    <section class="py-20 bg-gray-50">
+    <!-- The Problem Stats -->
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Current Methods Are Failing</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Traditional document security measures cannot protect against today's sophisticated threats</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">The <span class="gradient-text">Legal Data Breach</span> Problem</h2>
+                <p class="text-xl text-gray-400 font-dm">Law firms are high-value targets for data theft</p>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
-                    <div class="text-red-600 mb-3">
-                        <i class="fas fa-envelope text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Email Encryption</h3>
-                    <p class="text-gray-600 text-sm">Doesn't prevent authorized recipients from leaking documents to opposing parties</p>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="text-5xl font-bold text-red-400 mb-4">25%</div>
+                    <h3 class="text-xl font-bold mb-2">Firms Breached</h3>
+                    <p class="text-gray-400 font-dm text-sm">Of law firms have experienced a data breach</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
-                    <div class="text-red-600 mb-3">
-                        <i class="fas fa-database text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Document Management</h3>
-                    <p class="text-gray-600 text-sm">Systems track access but not distribution or sharing outside the platform</p>
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="text-5xl font-bold text-red-400 mb-4">$4.8M</div>
+                    <h3 class="text-xl font-bold mb-2">Avg. Breach Cost</h3>
+                    <p class="text-gray-400 font-dm text-sm">Average cost per data breach incident</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
-                    <div class="text-red-600 mb-3">
-                        <i class="fas fa-tint text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Watermarks</h3>
-                    <p class="text-gray-600 text-sm">Easily removed with basic tools and provide no legal proof of origin</p>
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="text-5xl font-bold text-red-400 mb-4">287</div>
+                    <h3 class="text-xl font-bold mb-2">Days to Detect</h3>
+                    <p class="text-gray-400 font-dm text-sm">Average time to identify a breach source</p>
                 </div>
-                <div class="bg-white p-6 rounded-xl shadow-md border-l-4 border-red-500">
-                    <div class="text-red-600 mb-3">
-                        <i class="fas fa-search text-3xl"></i>
-                    </div>
-                    <h3 class="text-lg font-bold mb-2">Forensic Investigations</h3>
-                    <p class="text-gray-600 text-sm">Cost $100K+ and take months with no guarantee of identifying the source</p>
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="text-5xl font-bold text-emerald-400 mb-4">4hrs</div>
+                    <h3 class="text-xl font-bold mb-2">With Veriflo</h3>
+                    <p class="text-gray-400 font-dm text-sm">Average time to identify leak source</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Solutions Section -->
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+    <!-- Use Cases -->
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">The Veriflo Legal Solution</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Court-admissible protection that meets all ethical obligations</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Legal <span class="gradient-text">Use Cases</span></h2>
+                <p class="text-xl text-gray-400 font-dm">Protect every type of privileged document</p>
             </div>
             <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-link text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Blockchain Authentication</h3>
-                    <p class="text-gray-700 mb-4">Every document gets immutable blockchain proof timestamped and permanently recorded. Court-admissible evidence that cannot be disputed or altered.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Immutable timestamps</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Chain of custody tracking</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Legally admissible evidence</li>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-file-signature text-blue-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Contracts & Agreements</h3>
+                    <p class="text-gray-400 font-dm mb-4">Settlement agreements, merger documents, partnership contracts. Know if confidential terms leak during negotiations.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>M&A documentation</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Settlement terms</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Partnership agreements</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-fingerprint text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Forensic Leak Attribution</h3>
-                    <p class="text-gray-700 mb-4">Know exactly who breached confidentiality within hours. Complete evidence packages ready for bar complaints and litigation.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Identify source in hours</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Court-ready evidence packages</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Bar complaint documentation</li>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-gavel text-blue-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Litigation Documents</h3>
+                    <p class="text-gray-400 font-dm mb-4">Case strategy memos, witness statements, evidence files. Protect work product from opposing counsel.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Case strategy documents</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Witness depositions</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Expert reports</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <i class="fas fa-shield-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-3">Confidentiality Without Compromise</h3>
-                    <p class="text-gray-700 mb-4">Track every recipient without visible marks. Complete audit trails for ethics compliance and malpractice prevention.</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Invisible tracking</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Complete audit trails</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Ethics compliance reporting</li>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-user-tie text-blue-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Client Communications</h3>
+                    <p class="text-gray-400 font-dm mb-4">Legal opinions, advice letters, board presentations. Maintain attorney-client privilege with proof.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Legal memoranda</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Board presentations</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Regulatory filings</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Critical Legal Use Cases -->
-    <section class="py-20 bg-white">
+    <!-- Features -->
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Critical Legal Use Cases</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Comprehensive protection across every practice area and document type</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Enterprise <span class="gradient-text">Features</span></h2>
+                <p class="text-xl text-gray-400 font-dm">Built for the security and compliance needs of law firms</p>
             </div>
-            <div class="grid md:grid-cols-2 gap-8">
-                <!-- Discovery & Litigation -->
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4">
-                            <i class="fas fa-gavel text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold">Discovery & Litigation</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-file-alt text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Production Documents</div>
-                                <p class="text-sm text-gray-600">Track all discovery productions with chain of custody</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-user-lock text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Privileged Communications</div>
-                                <p class="text-sm text-gray-600">Protect work product and attorney-client communications</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-user-tie text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Expert Reports</div>
-                                <p class="text-sm text-gray-600">Verify authenticity and prevent unauthorized distribution</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-comment-dots text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Deposition Transcripts</div>
-                                <p class="text-sm text-gray-600">Ensure transcript integrity and authorized access only</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-link text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Evidence Chain of Custody</div>
-                                <p class="text-sm text-gray-600">Maintain unbroken chain with blockchain verification</p>
-                            </div>
-                        </li>
-                    </ul>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="glass-card rounded-2xl p-6">
+                    <i class="fas fa-shield-alt text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2 text-lg">Blockchain Verification</h4>
+                    <p class="text-gray-400 font-dm text-sm">Immutable timestamp on Polygon blockchain proves document existed and was unaltered at specific time.</p>
                 </div>
-
-                <!-- Transactional Practice -->
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4">
-                            <i class="fas fa-handshake text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold">Transactional Practice</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-file-contract text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Contracts</div>
-                                <p class="text-sm text-gray-600">Verify execution and prevent unauthorized modifications</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-search-dollar text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Due Diligence</div>
-                                <p class="text-sm text-gray-600">Track sensitive M&A and transaction documents</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-folder-open text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Closing Documents</div>
-                                <p class="text-sm text-gray-600">Ensure all closing documents are authentic and unaltered</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-lock text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Escrow Instructions</div>
-                                <p class="text-sm text-gray-600">Protect confidential escrow and closing instructions</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-certificate text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Opinion Letters</div>
-                                <p class="text-sm text-gray-600">Verify authenticity of legal opinions and memoranda</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="glass-card rounded-2xl p-6">
+                    <i class="fas fa-fingerprint text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2 text-lg">Forensic Fingerprinting</h4>
+                    <p class="text-gray-400 font-dm text-sm">5-layer invisible markers survive printing, scanning, screenshots. Identify the leak source with 98.5% accuracy.</p>
                 </div>
-
-                <!-- Client Communications -->
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4">
-                            <i class="fas fa-users text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold">Client Communications</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-pen-fancy text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Engagement Letters</div>
-                                <p class="text-sm text-gray-600">Verify scope of representation and fee agreements</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-clipboard-list text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Advisory Memos</div>
-                                <p class="text-sm text-gray-600">Protect confidential legal advice and strategy documents</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-dollar-sign text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Billing Statements</div>
-                                <p class="text-sm text-gray-600">Maintain confidentiality of billing and time records</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-file-signature text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Retainer Agreements</div>
-                                <p class="text-sm text-gray-600">Document retention and trust account arrangements</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="glass-card rounded-2xl p-6">
+                    <i class="fas fa-qrcode text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2 text-lg">QR Verification</h4>
+                    <p class="text-gray-400 font-dm text-sm">Optional QR code on printed documents allows instant authenticity verification via smartphone.</p>
                 </div>
-
-                <!-- Internal Operations -->
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 shadow-lg">
-                    <div class="flex items-center mb-4">
-                        <div class="w-12 h-12 gradient-bg rounded-lg flex items-center justify-center mr-4">
-                            <i class="fas fa-building text-white text-xl"></i>
-                        </div>
-                        <h3 class="text-2xl font-bold">Internal Operations</h3>
-                    </div>
-                    <ul class="space-y-3">
-                        <li class="flex items-start">
-                            <i class="fas fa-user-friends text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Partnership Agreements</div>
-                                <p class="text-sm text-gray-600">Protect sensitive partner compensation and governance</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-money-check-alt text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Compensation Data</div>
-                                <p class="text-sm text-gray-600">Track access to confidential financial information</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-chess text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Strategic Plans</div>
-                                <p class="text-sm text-gray-600">Prevent leaks of firm strategy and expansion plans</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-list text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Client Lists</div>
-                                <p class="text-sm text-gray-600">Protect confidential client rosters and relationships</p>
-                            </div>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-lightbulb text-blue-600 mr-3 mt-1"></i>
-                            <div>
-                                <div class="font-semibold">Case Strategies</div>
-                                <p class="text-sm text-gray-600">Safeguard litigation and negotiation strategies</p>
-                            </div>
-                        </li>
-                    </ul>
+                <div class="glass-card rounded-2xl p-6">
+                    <i class="fas fa-file-export text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2 text-lg">Forensic Reports</h4>
+                    <p class="text-gray-400 font-dm text-sm">Court-admissible reports with chain of custody documentation for litigation support.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <i class="fas fa-users text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2 text-lg">Access Controls</h4>
+                    <p class="text-gray-400 font-dm text-sm">Granular permissions by matter, client, or user. Full audit trail of who accessed what.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <i class="fas fa-plug text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2 text-lg">DMS Integration</h4>
+                    <p class="text-gray-400 font-dm text-sm">Integrates with iManage, NetDocuments, and other document management systems.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <i class="fas fa-lock text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2 text-lg">Enterprise Security</h4>
+                    <p class="text-gray-400 font-dm text-sm">Enterprise-grade security with AES-256 encryption at rest and in transit.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <i class="fas fa-key text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2 text-lg">SSO & SAML</h4>
+                    <p class="text-gray-400 font-dm text-sm">Single sign-on integration with your existing identity provider. SAML 2.0 support.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-6">
+                    <i class="fas fa-clock text-blue-400 text-3xl mb-4"></i>
+                    <h4 class="font-bold mb-2 text-lg">Retention Policies</h4>
+                    <p class="text-gray-400 font-dm text-sm">Configure automatic retention and deletion policies to meet compliance requirements.</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Why Leading Firms Choose Veriflo -->
-    <section class="py-20 bg-gray-50">
+    <!-- How It Works -->
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Why Leading Firms Choose Veriflo</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Trusted by AmLaw firms and boutique practices worldwide</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">How It <span class="gradient-text">Works</span></h2>
             </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-landmark text-white text-2xl"></i>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl font-bold">1</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Court-Tested Technology</h3>
-                    <p class="text-gray-600">Admitted as evidence in federal and state courts across multiple jurisdictions</p>
+                    <h3 class="font-bold mb-2 text-lg">Upload Document</h3>
+                    <p class="text-gray-400 font-dm text-sm">Upload confidential document via secure portal or DMS integration</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-balance-scale-right text-white text-2xl"></i>
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl font-bold">2</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Bar-Compliant Security</h3>
-                    <p class="text-gray-600">Meets all state bar cybersecurity and confidentiality requirements</p>
+                    <h3 class="font-bold mb-2 text-lg">Assign Recipients</h3>
+                    <p class="text-gray-400 font-dm text-sm">Select which parties receive the document - each gets unique fingerprint</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-qrcode text-white text-2xl"></i>
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl font-bold">3</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Instant Verification</h3>
-                    <p class="text-gray-600">Verify document authenticity in seconds with QR code scanning</p>
+                    <h3 class="font-bold mb-2 text-lg">Distribute Securely</h3>
+                    <p class="text-gray-400 font-dm text-sm">Share via secure link, email, or print with embedded QR code</p>
                 </div>
-                <div class="bg-white p-8 rounded-xl shadow-lg text-center">
-                    <div class="w-16 h-16 gradient-bg rounded-full flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-check text-white text-2xl"></i>
+                <div class="glass-card rounded-2xl p-6 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-4 shadow-lg">
+                        <span class="text-2xl font-bold">4</span>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Malpractice Prevention</h3>
-                    <p class="text-gray-600">Protect against claims with comprehensive audit trails and proof</p>
+                    <h3 class="font-bold mb-2 text-lg">Investigate Leaks</h3>
+                    <p class="text-gray-400 font-dm text-sm">If leaked, upload the leaked copy - we identify the source immediately</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Implementation Section -->
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+    <!-- Compliance -->
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Seamless Implementation</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Integrate with your existing systems in days, not months</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="mb-4">
-                        <i class="fas fa-puzzle-piece text-blue-600 text-4xl"></i>
+            <div class="glass-card rounded-3xl p-12">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">Built for <span class="gradient-text">Compliance</span></h2>
+                        <p class="text-xl text-gray-400 mb-8 font-dm">Meets the stringent security requirements of modern law firms</p>
+                        <ul class="space-y-4">
+                            <li class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-emerald-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">AES-256 Encryption</h4>
+                                    <p class="text-gray-400 text-sm font-dm">Military-grade encryption at rest and in transit</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-emerald-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Complete Audit Trail</h4>
+                                    <p class="text-gray-400 text-sm font-dm">Every access logged for compliance reporting</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-emerald-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Role-Based Access</h4>
+                                    <p class="text-gray-400 text-sm font-dm">Granular permissions and access controls</p>
+                                </div>
+                            </li>
+                            <li class="flex items-center gap-4">
+                                <div class="w-10 h-10 bg-emerald-500/20 rounded-full flex items-center justify-center flex-shrink-0">
+                                    <i class="fas fa-check text-emerald-400"></i>
+                                </div>
+                                <div>
+                                    <h4 class="font-bold">Secure Infrastructure</h4>
+                                    <p class="text-gray-400 text-sm font-dm">Enterprise-grade cloud infrastructure</p>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                    <h3 class="text-xl font-bold mb-3">Document Management Integration</h3>
-                    <p class="text-gray-700 mb-4">Native plugins for all major platforms:</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>iManage</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>NetDocuments</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Worldox</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>SharePoint</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Custom DMS systems</li>
-                    </ul>
-                </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="mb-4">
-                        <i class="fas fa-sliders-h text-blue-600 text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Practice Area Customization</h3>
-                    <p class="text-gray-700 mb-4">Tailored workflows for:</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Litigation teams</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Transactional practice</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Intellectual property</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Employment law</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Any practice area</li>
-                    </ul>
-                </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="mb-4">
-                        <i class="fas fa-chart-line text-blue-600 text-4xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Billing Integration</h3>
-                    <p class="text-gray-700 mb-4">Connect with major platforms:</p>
-                    <ul class="space-y-2 text-gray-600">
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Elite 3E</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Aderant</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>Clio</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>TimeSolv</li>
-                        <li><i class="fas fa-check text-green-600 mr-2"></i>API for custom systems</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Ethical Obligations Met -->
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Ethical Obligations Met</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Veriflo helps you comply with all professional responsibility requirements</p>
-            </div>
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300 border-l-4 border-blue-600">
-                    <div class="flex items-start mb-4">
-                        <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0 shadow-md">
-                            <i class="fas fa-user-lock text-white text-2xl"></i>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-white/5 rounded-2xl p-6 text-center">
+                            <i class="fas fa-lock text-blue-400 text-4xl mb-4"></i>
+                            <div class="font-bold">AES-256</div>
+                            <div class="text-xs text-gray-500">Encryption</div>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2 text-blue-900">ABA Model Rule 1.6</h3>
-                            <p class="text-gray-700">Confidentiality of Information - Maintain client confidentiality with forensic tracking and breach detection</p>
+                        <div class="bg-white/5 rounded-2xl p-6 text-center">
+                            <i class="fas fa-history text-blue-400 text-4xl mb-4"></i>
+                            <div class="font-bold">Full Audit</div>
+                            <div class="text-xs text-gray-500">Trail</div>
                         </div>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300 border-l-4 border-blue-600">
-                    <div class="flex items-start mb-4">
-                        <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0 shadow-md">
-                            <i class="fas fa-laptop-code text-white text-2xl"></i>
+                        <div class="bg-white/5 rounded-2xl p-6 text-center">
+                            <i class="fas fa-user-lock text-blue-400 text-4xl mb-4"></i>
+                            <div class="font-bold">Access</div>
+                            <div class="text-xs text-gray-500">Controls</div>
                         </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2 text-blue-900">Competence in Technology</h3>
-                            <p class="text-gray-700">Comment 8 to Model Rule 1.1 - Stay current with technology benefits and risks affecting practice</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300 border-l-4 border-blue-600">
-                    <div class="flex items-start mb-4">
-                        <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0 shadow-md">
-                            <i class="fas fa-shield-virus text-white text-2xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2 text-blue-900">Reasonable Security Measures</h3>
-                            <p class="text-gray-700">Implement reasonable efforts to prevent unauthorized access to client information</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 shadow-lg transform hover:scale-105 transition-all duration-300 border-l-4 border-blue-600">
-                    <div class="flex items-start mb-4">
-                        <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mr-4 flex-shrink-0 shadow-md">
-                            <i class="fas fa-users-cog text-white text-2xl"></i>
-                        </div>
-                        <div>
-                            <h3 class="text-xl font-bold mb-2 text-blue-900">Supervision Compliance</h3>
-                            <p class="text-gray-700">Rules 5.1 and 5.3 - Supervise associates and staff to ensure ethical compliance with tracking and accountability</p>
+                        <div class="bg-white/5 rounded-2xl p-6 text-center">
+                            <i class="fas fa-server text-blue-400 text-4xl mb-4"></i>
+                            <div class="font-bold">99.9%</div>
+                            <div class="text-xs text-gray-500">Uptime SLA</div>
                         </div>
                     </div>
                 </div>
@@ -673,130 +432,125 @@
         </div>
     </section>
 
-    <!-- ROI Section -->
-    <section class="py-20 bg-gray-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <!-- FAQ -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Return on Investment</h2>
-                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Veriflo pays for itself by preventing a single incident</p>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Legal <span class="gradient-text">FAQ</span></h2>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-xl border-t-4 border-green-500">
-                    <div class="text-center mb-4">
-                        <div class="text-5xl font-bold text-green-600 mb-2">$150K+</div>
-                        <div class="text-sm text-gray-500 uppercase tracking-wide">Value</div>
+            <div class="space-y-4">
+                <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-lg">Is the forensic evidence court-admissible?</h3>
+                        <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-center">Prevent One Malpractice Claim</h3>
-                    <p class="text-gray-600 text-center">Average malpractice defense costs plus increased premiums and reputational damage</p>
-                </div>
-                <div class="bg-white rounded-xl p-8 shadow-xl border-t-4 border-blue-500">
-                    <div class="text-center mb-4">
-                        <div class="text-5xl font-bold text-blue-600 mb-2">$90K+</div>
-                        <div class="text-sm text-gray-500 uppercase tracking-wide">Value Saved</div>
+                    <div class="faq-answer">
+                        <p class="text-gray-400 font-dm mt-4">Yes. Our forensic reports are designed to meet legal evidence standards. We provide detailed chain-of-custody documentation, technical methodology explanations, and expert-ready reports. Our evidence has been used successfully in multiple legal proceedings.</p>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-center">Win One Authenticity Challenge</h3>
-                    <p class="text-gray-600 text-center">Cost of forensic experts, investigation time, and potential case loss avoided</p>
                 </div>
-                <div class="bg-white rounded-xl p-8 shadow-xl border-t-4 border-purple-500">
-                    <div class="text-center mb-4">
-                        <div class="text-5xl font-bold text-purple-600 mb-2">$500K+</div>
-                        <div class="text-sm text-gray-500 uppercase tracking-wide">Lifetime Value</div>
+                <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-lg">Can Veriflo access our confidential documents?</h3>
+                        <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
                     </div>
-                    <h3 class="text-xl font-bold mb-3 text-center">Stop One Privilege Breach</h3>
-                    <p class="text-gray-600 text-center">Case loss, sanctions, client relationships, and firm reputation preserved</p>
+                    <div class="faq-answer">
+                        <p class="text-gray-400 font-dm mt-4">No. Documents are encrypted in transit and at rest. Our system processes documents to embed fingerprints but does not retain readable copies. For Enterprise customers, we offer on-premises deployment options for maximum security.</p>
+                    </div>
                 </div>
-            </div>
-            <div class="mt-12 text-center">
-                <div class="bg-gradient-to-r from-blue-600 to-blue-700 rounded-xl p-8 text-white max-w-3xl mx-auto">
-                    <div class="text-3xl font-bold mb-2">Total Potential ROI</div>
-                    <div class="text-6xl font-bold mb-4">$740,000+</div>
-                    <p class="text-xl text-blue-100">From preventing just three incidents - Veriflo typically costs less than one billable hour per attorney per month</p>
+                <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-lg">How does this integrate with our DMS?</h3>
+                        <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-400 font-dm mt-4">We offer native integrations with iManage, NetDocuments, SharePoint, and other major document management systems. Documents can be protected directly from your existing workflow. Our API also allows custom integrations.</p>
+                    </div>
+                </div>
+                <div class="faq-item glass-card rounded-2xl p-6 cursor-pointer" onclick="toggleFaq(this)">
+                    <div class="flex justify-between items-center">
+                        <h3 class="font-bold text-lg">What about printed documents?</h3>
+                        <i class="fas fa-chevron-down faq-icon transition-transform text-gray-400"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p class="text-gray-400 font-dm mt-4">Our fingerprints survive printing and scanning. Additionally, we add an optional QR code that allows anyone to verify the document's authenticity by scanning with a smartphone. The QR links to blockchain verification and shows original hash.</p>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 gradient-bg text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Protect Your Practice Today</h2>
-            <p class="text-xl mb-8 text-white/90">Join leading law firms using Veriflo to protect privileged communications and maintain client trust</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <a href="index.html#contact" class="px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl transform hover:scale-105">Request Demo</a>
+    <!-- Final CTA -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12 text-center border border-blue-500/30">
+                <div class="w-20 h-20 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/30">
+                    <i class="fas fa-balance-scale text-white text-3xl"></i>
+                </div>
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">Protect Your Firm's Reputation</h2>
+                <p class="text-xl text-gray-400 mb-10 font-dm">Schedule a demo to see how Veriflo protects privileged documents</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="mailto:sales@useveriflo.com?subject=Law%20Firm%20Demo%20Request" class="px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-xl font-bold text-lg btn-glow hover:opacity-90 transition">Schedule Demo</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-10 py-4 bg-white/5 border border-white/20 text-white rounded-xl font-bold text-lg hover:bg-white/10 transition">Try Professional Plan</a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mt-8">
+                    <div><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Enterprise security</div>
+                    <div><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Court-admissible evidence</div>
+                    <div><i class="fas fa-check-circle text-emerald-400 mr-2"></i>DMS integration</div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="py-16 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-5 gap-8 mb-8">
+            <div class="grid md:grid-cols-4 gap-12 mb-12">
                 <div>
-                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
+                    <a href="index.html" class="flex items-center space-x-3 mb-6">
+                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
                             <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                             </svg>
                         </div>
                         <span class="text-xl font-bold">Veriflo</span>
                     </a>
-                    <p class="text-gray-400 text-sm">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
+                    <p class="text-gray-500 font-dm text-sm">The truth layer for digital content. Blockchain verification and forensic fingerprinting.</p>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Product</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="index.html#features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="index.html#pricing" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition">API</a></li>
-                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
+                    <h4 class="font-semibold mb-4">For Business</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="legal-document-protection.html" class="text-gray-500 hover:text-white transition">Legal & Law Firms</a></li>
+                        <li><a href="corporate-leak-prevention.html" class="text-gray-500 hover:text-white transition">Enterprise</a></li>
+                        <li><a href="healthcare-record-protection.html" class="text-gray-500 hover:text-white transition">Healthcare</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Content Creators</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="onlyfans-leak-protection.html" class="hover:text-white transition">OnlyFans Protection</a></li>
-                        <li><a href="youtube-content-protection.html" class="hover:text-white transition">YouTube Creators</a></li>
-                        <li><a href="music-leak-prevention.html" class="hover:text-white transition">Music & Audio</a></li>
-                        <li><a href="photography-protection.html" class="hover:text-white transition">Photography</a></li>
-                        <li><a href="course-creator-protection.html" class="hover:text-white transition">Online Courses</a></li>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="index.html#features" class="text-gray-500 hover:text-white transition">Features</a></li>
+                        <li><a href="index.html#pricing" class="text-gray-500 hover:text-white transition">Pricing</a></li>
+                        <li><a href="index.html#contact" class="text-gray-500 hover:text-white transition">Contact</a></li>
                     </ul>
                 </div>
                 <div>
-                    <h4 class="font-bold mb-4">Business Solutions</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="legal-document-protection.html" class="hover:text-white transition">Legal & Law Firms</a></li>
-                        <li><a href="corporate-leak-prevention.html" class="hover:text-white transition">Corporate Documents</a></li>
-                        <li><a href="financial-document-verification.html" class="hover:text-white transition">Financial Services</a></li>
-                        <li><a href="healthcare-record-protection.html" class="hover:text-white transition">Healthcare</a></li>
-                        <li><a href="university-diploma-verification.html" class="hover:text-white transition">Universities</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
+                    <h4 class="font-semibold mb-4">Legal</h4>
+                    <ul class="space-y-3 text-sm">
+                        <li><a href="faq.html" class="text-gray-500 hover:text-white transition">FAQ</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-500 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-gray-500 hover:text-white transition">Terms of Service</a></li>
                     </ul>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">&copy; 2025 Veriflo. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                </div>
+            <div class="text-center text-gray-500 text-sm border-t border-white/5 pt-8">
+                © 2025 Veriflo. All rights reserved.
             </div>
         </div>
     </footer>
+
+    <script>
+        function toggleFaq(element) {
+            element.classList.toggle('active');
+        }
+    </script>
 </body>
 </html>

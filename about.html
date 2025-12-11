@@ -3,166 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Veriflo</title>
-    <meta name="description" content="Learn about Veriflo's mission to restore trust in digital content through blockchain verification and advanced forensic fingerprinting technology. Meet our team and discover our values.">
-    <meta name="keywords" content="about veriflo, company mission, document security team, blockchain technology, content verification company">
-    <meta name="author" content="Veriflo">
-    <meta name="theme-color" content="#3b82f6">
-    <meta property="og:title" content="About Veriflo - Restoring Trust in Digital Content">
-    <meta property="og:description" content="Veriflo combines blockchain verification with forensic fingerprinting to protect confidential content and identify leakers.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://useveriflo.com/about.html">
-    <meta property="og:image" content="https://useveriflo.com/images/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>About Veriflo - The Truth Layer for Digital Content</title>
+    <meta name="description" content="Veriflo combines blockchain verification with forensic fingerprinting to solve document fraud and confidential leaks. Learn about our mission.">
     <link rel="canonical" href="https://useveriflo.com/about.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="About Veriflo - The Truth Layer for Digital Content">
+    <meta property="og:description" content="Veriflo combines blockchain verification with forensic fingerprinting to solve document fraud and leaks.">
+    <meta property="og:url" content="https://useveriflo.com/about.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://useveriflo.com/images/og-image.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="About Veriflo - The Truth Layer for Digital Content">
+    <meta name="twitter:description" content="Learn about Veriflo's mission to solve document fraud and confidential leaks.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero-pattern { background-color: #3b82f6; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-
-        /* Dropdown Menu Styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            min-width: 280px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            z-index: 1000;
-            margin-top: 0;
-            padding: 0.5rem 0;
-            padding-top: 0.75rem;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #374151;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            display: block;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f3f4f6;
-            color: #2563eb;
-        }
-
-        .dropdown-divider {
-            height: 1px;
-            background-color: #e5e7eb;
-            margin: 0.5rem 0;
-        }
-
-        .dropdown-header {
-            padding: 0.5rem 1.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+        body{font-family:'Space Grotesk',sans-serif;background:linear-gradient(180deg,#0a0f1a 0%,#0f172a 50%,#1e293b 100%);min-height:100vh}
+        .grid-bg{background-image:linear-gradient(rgba(59,130,246,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.03) 1px,transparent 1px);background-size:60px 60px}
+        .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:pulse 4s ease-in-out infinite}
+        @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:0.8}}
+        .gradient-text{background:linear-gradient(135deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .glass-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s ease}
+        .glass-card:hover{background:rgba(255,255,255,0.06);transform:translateY(-4px)}
+        .nav-blur{background:rgba(10,15,26,0.85);backdrop-filter:blur(20px)}
+        .btn-glow{box-shadow:0 0 30px rgba(59,130,246,0.4)}
+        html{scroll-behavior:smooth}
     </style>
 </head>
-<body class="antialiased">
+<body class="antialiased text-white overflow-x-hidden">
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div class="glow-orb w-96 h-96 bg-blue-500/20 top-20 -left-48 fixed"></div>
+    <div class="glow-orb w-80 h-80 bg-purple-500/20 top-1/3 -right-40 fixed" style="animation-delay:-2s"></div>
+
     <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+    <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
                         </svg>
                     </div>
-                    <span class="text-2xl font-bold gradient-text">Veriflo</span>
+                    <span class="text-2xl font-bold">Veriflo</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
-                    <a href="index.html#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
-                    <div class="dropdown">
-                        <a href="index.html#use-cases" class="text-gray-700 hover:text-blue-600 transition cursor-pointer">
-                            Use Cases <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="onlyfans-leak-protection.html">OnlyFans & Digital Creators</a>
-                            <a href="legal-document-protection.html">Legal & Law Firms</a>
-                            <a href="supply-chain-document-security.html">Supply Chain Security</a>
-                            <a href="sensitive-business-documents.html">Sensitive Business Documents</a>
-                        </div>
-                    </div>
-                    <a href="index.html#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
-                    <button class="px-6 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition font-medium">
-                        Get Started Now
-                    </button>
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/login" class="text-gray-300 hover:text-white transition">Login</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold btn-glow hover:opacity-90 transition">Get Started</a>
                 </div>
-                <button class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
             </div>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero-pattern pt-32 pb-20 text-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">About Veriflo</h1>
-                <p class="text-xl text-white/90 leading-relaxed max-w-3xl mx-auto">
-                    We're building the truth layer for digital content. Our mission is to make document fraud impossible and leaks traceable.
-                </p>
-            </div>
+    <section class="pt-32 pb-16 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-bold mb-8">
+                About <span class="gradient-text">Veriflo</span>
+            </h1>
+            <p class="text-xl text-gray-400 font-dm leading-relaxed">
+                We're building the trust infrastructure for the digital age.
+            </p>
         </div>
     </section>
 
     <!-- Mission Section -->
-    <section class="py-20 bg-white">
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
+            <div class="grid md:grid-cols-2 gap-16 items-center">
                 <div>
-                    <h2 class="text-4xl font-bold mb-6 text-gray-900">Our Mission</h2>
-                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-                        In a world where digital documents can be easily forged and leaked, trust is broken. Businesses lose millions to document fraud. Creators lose revenue to piracy. Confidential information gets leaked without consequence.
+                    <h2 class="text-4xl font-bold mb-6">Our <span class="gradient-text">Mission</span></h2>
+                    <p class="text-xl text-gray-400 mb-6 font-dm leading-relaxed">
+                        In a world where digital content can be copied infinitely and documents can be forged convincingly, trust has become the scarcest resource.
                     </p>
-                    <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-                        Veriflo exists to restore trust in digital content. We combine blockchain verification with forensic fingerprinting to create a system where documents are provably authentic and leaks are traceable to their source.
+                    <p class="text-gray-400 mb-6 font-dm leading-relaxed">
+                        Veriflo exists to restore that trust. We combine blockchain verification with forensic fingerprinting to create the universal truth layer for digital content - proving what's real and identifying who breaks trust.
                     </p>
-                    <p class="text-lg text-gray-700 leading-relaxed">
-                        Every document deserves to be trusted. Every creator deserves to protect their work. Every business deserves to know when confidential information is compromised.
+                    <p class="text-gray-400 font-dm leading-relaxed">
+                        Whether you're a content creator protecting your livelihood, a law firm safeguarding privileged communications, or an enterprise securing trade secrets - Veriflo gives you the power to prove authenticity and identify betrayal.
                     </p>
                 </div>
-                <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-2xl p-8">
+                <div class="glass-card rounded-3xl p-8">
                     <div class="grid grid-cols-2 gap-6">
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-blue-600 mb-2">$133B</div>
-                            <p class="text-gray-700 text-sm">Annual document fraud losses</p>
+                        <div class="text-center p-6 bg-white/5 rounded-2xl">
+                            <div class="text-4xl font-bold gradient-text mb-2">$133B</div>
+                            <div class="text-sm text-gray-400">Annual document fraud</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-blue-600 mb-2">60%</div>
-                            <p class="text-gray-700 text-sm">Companies experience leaks</p>
+                        <div class="text-center p-6 bg-white/5 rounded-2xl">
+                            <div class="text-4xl font-bold gradient-text mb-2">$4.88M</div>
+                            <div class="text-sm text-gray-400">Avg. breach cost</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-blue-600 mb-2">98.5%</div>
-                            <p class="text-gray-700 text-sm">Attribution accuracy</p>
+                        <div class="text-center p-6 bg-white/5 rounded-2xl">
+                            <div class="text-4xl font-bold gradient-text mb-2">98.5%</div>
+                            <div class="text-sm text-gray-400">Attribution accuracy</div>
                         </div>
-                        <div class="text-center">
-                            <div class="text-4xl font-bold text-blue-600 mb-2">&lt;1s</div>
-                            <p class="text-gray-700 text-sm">Verification time</p>
+                        <div class="text-center p-6 bg-white/5 rounded-2xl">
+                            <div class="text-4xl font-bold gradient-text mb-2">30s</div>
+                            <div class="text-sm text-gray-400">Setup time</div>
                         </div>
                     </div>
                 </div>
@@ -170,228 +110,189 @@
         </div>
     </section>
 
-    <!-- Our Story Section -->
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold mb-8 text-center text-gray-900">Our Story</h2>
-            <div class="bg-white rounded-xl p-8 shadow-lg">
-                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-                    Veriflo was founded by a team of security researchers, blockchain engineers, and legal professionals who witnessed firsthand the devastating impact of document fraud and leaks.
-                </p>
-                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-                    After seeing a major M&A deal nearly collapse due to leaked documents, and watching content creators lose their livelihoods to piracy, we knew there had to be a better way. Traditional watermarks could be removed. DLP systems cost six figures and still didn't work. Legal action was slow and expensive.
-                </p>
-                <p class="text-lg text-gray-700 mb-4 leading-relaxed">
-                    We built Veriflo to solve both problems at once: proving documents are authentic through blockchain verification, and identifying leakers through invisible forensic fingerprinting that survives any manipulation.
-                </p>
-                <p class="text-lg text-gray-700 leading-relaxed">
-                    Today, we're protecting millions of documents for businesses, creators, and institutions worldwide. Our technology has been used as evidence in court cases, recovered millions in damages, and prevented countless fraudulent transactions.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Values Section -->
-    <section class="py-20 bg-white">
+    <!-- The Problem -->
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h2 class="text-4xl font-bold mb-12 text-center text-gray-900">Our Values</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center">
-                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-shield-alt text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Security First</h3>
-                    <p class="text-gray-700">
-                        We build with security at the core. Your data is encrypted, our fingerprints are unremovable, and our blockchain proof is immutable.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-balance-scale text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Privacy & Ethics</h3>
-                    <p class="text-gray-700">
-                        We respect privacy while enabling accountability. Our technology tracks documents, not people, and we're GDPR and CCPA compliant.
-                    </p>
-                </div>
-                <div class="text-center">
-                    <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mx-auto mb-4">
-                        <i class="fas fa-rocket text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3 text-gray-900">Innovation</h3>
-                    <p class="text-gray-700">
-                        We're constantly pushing boundaries. Five-layer fingerprinting, multi-chain verification, and AI-powered detection are just the beginning.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Technology Section -->
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4 text-gray-900">Our Technology</h2>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                    Veriflo combines cutting-edge blockchain technology with advanced forensic science
-                </p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">The <span class="gradient-text">Problem</span> We Solve</h2>
             </div>
             <div class="grid md:grid-cols-2 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600">Blockchain Verification</h3>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
-                            <span>Multi-chain attestation (Ethereum, Polygon, Arweave)</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
-                            <span>Immutable proof of existence and authenticity</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
-                            <span>Court-admissible blockchain certificates</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
-                            <span>Instant global verification in under 1 second</span>
-                        </li>
+                <div class="glass-card rounded-3xl p-8">
+                    <div class="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-file-alt text-red-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Document Fraud</h3>
+                    <p class="text-gray-400 font-dm mb-4">
+                        Document fraud costs businesses $133 billion annually. Fake invoices, forged credentials, and altered contracts erode trust in every industry.
+                    </p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>Invoice fraud up 65% since 2020</li>
+                        <li><i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>Credential fraud affecting 1 in 4 hires</li>
+                        <li><i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>Contract disputes from altered documents</li>
                     </ul>
                 </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <h3 class="text-2xl font-bold mb-4 text-blue-600">Forensic Fingerprinting</h3>
-                    <ul class="space-y-3 text-gray-700">
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
-                            <span>5-layer invisible fingerprinting technology</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
-                            <span>Survives screenshots, editing, and format conversion</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
-                            <span>98.5% accurate leak attribution</span>
-                        </li>
-                        <li class="flex items-start">
-                            <i class="fas fa-check text-blue-600 mt-1 mr-3"></i>
-                            <span>AI-powered detection across 500+ platforms</span>
-                        </li>
+                <div class="glass-card rounded-3xl p-8">
+                    <div class="w-16 h-16 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-user-secret text-red-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Confidential Leaks</h3>
+                    <p class="text-gray-400 font-dm mb-4">
+                        The average data breach costs $4.88 million. Insider threats and document leaks destroy careers, companies, and trust relationships.
+                    </p>
+                    <ul class="space-y-2 text-gray-400 text-sm">
+                        <li><i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>60% of breaches involve insiders</li>
+                        <li><i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>277 days average to identify breach source</li>
+                        <li><i class="fas fa-exclamation-triangle text-red-400 mr-2"></i>Leakers operate with impunity</li>
                     </ul>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Team Section -->
-    <section class="py-20 bg-white">
+    <!-- Our Solution -->
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-12">
-                <h2 class="text-4xl font-bold mb-4 text-gray-900">Our Team</h2>
-                <p class="text-xl text-gray-700 max-w-3xl mx-auto">
-                    Built by security researchers, blockchain engineers, and legal experts
-                </p>
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Our <span class="gradient-text">Solution</span></h2>
+                <p class="text-xl text-gray-400 font-dm">Dual-purpose protection in one platform</p>
             </div>
-            <div class="bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl p-8 text-center">
-                <p class="text-lg text-gray-700 mb-6">
-                    Our team combines decades of experience in cybersecurity, blockchain development, digital forensics, and legal technology. We've worked at leading tech companies, security firms, and law practices before coming together to build Veriflo.
-                </p>
-                <p class="text-lg text-gray-700">
-                    We're backed by top investors who believe in our mission to create a more trustworthy digital world.
-                </p>
+            <div class="grid md:grid-cols-2 gap-8">
+                <div class="glass-card rounded-3xl p-8 border border-blue-500/30">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
+                        <i class="fas fa-certificate text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Blockchain Verification</h3>
+                    <p class="text-gray-400 font-dm mb-6">
+                        Every document gets a cryptographic hash written to the Polygon blockchain, creating an immutable timestamp that proves the document existed and was unaltered at a specific moment.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Tamper-evident verification</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>QR code instant checking</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Legal certificates</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-3xl p-8 border border-purple-500/30">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-pink-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-purple-500/30">
+                        <i class="fas fa-fingerprint text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Forensic Fingerprinting</h3>
+                    <p class="text-gray-400 font-dm mb-6">
+                        Our proprietary 5-layer fingerprinting embeds invisible markers in every copy. If content leaks, we identify exactly which recipient's copy was shared - with 98.5% accuracy.
+                    </p>
+                    <ul class="space-y-3">
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Survives screenshots & edits</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Completely invisible</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Court-admissible evidence</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- CTA Section -->
-    <section class="py-20 gradient-bg text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Join Us in Building Trust</h2>
-            <p class="text-xl mb-8 text-white/90">
-                Whether you're protecting confidential business documents or securing creative content, Veriflo is here to help.
-            </p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl">
-                    Get Started Now
-                </button>
-                <a href="index.html#contact" class="px-10 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-white/20 transition border-2 border-white/30">
-                    Contact Us
-                </a>
+    <!-- Values -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Our <span class="gradient-text">Values</span></h2>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-shield-alt text-blue-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Trust Above All</h3>
+                    <p class="text-gray-400 font-dm">We're building trust infrastructure. That means we hold ourselves to the highest standards of security, privacy, and integrity.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-lightbulb text-purple-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Innovation First</h3>
+                    <p class="text-gray-400 font-dm">We combine cutting-edge blockchain with proprietary forensics to solve problems others can't. Our 5-layer fingerprinting is unique in the industry.</p>
+                </div>
+                <div class="glass-card rounded-2xl p-8 text-center">
+                    <div class="w-16 h-16 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-users text-emerald-400 text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-4">Customer Success</h3>
+                    <p class="text-gray-400 font-dm">From individual creators to Fortune 500 enterprises, we're obsessed with making our customers successful in protecting what matters most.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12">
+                <div class="text-center mb-10">
+                    <h2 class="text-4xl font-bold mb-4">Get in <span class="gradient-text">Touch</span></h2>
+                    <p class="text-gray-400 font-dm">We'd love to hear from you</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8 text-center">
+                    <div>
+                        <div class="w-14 h-14 bg-blue-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-envelope text-blue-400 text-xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Email</h4>
+                        <a href="mailto:hello@useveriflo.com" class="text-blue-400 hover:text-blue-300 transition">hello@useveriflo.com</a>
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 bg-purple-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-building text-purple-400 text-xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Enterprise Sales</h4>
+                        <a href="mailto:sales@useveriflo.com" class="text-purple-400 hover:text-purple-300 transition">sales@useveriflo.com</a>
+                    </div>
+                    <div>
+                        <div class="w-14 h-14 bg-emerald-500/20 rounded-2xl flex items-center justify-center mx-auto mb-4">
+                            <i class="fas fa-headset text-emerald-400 text-xl"></i>
+                        </div>
+                        <h4 class="font-bold mb-2">Support</h4>
+                        <a href="mailto:support@useveriflo.com" class="text-emerald-400 hover:text-emerald-300 transition">support@useveriflo.com</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12 text-center border border-blue-500/30">
+                <h2 class="text-4xl font-bold mb-6">Ready to Build Trust?</h2>
+                <p class="text-xl text-gray-400 mb-10 font-dm">Join thousands protecting their content with Veriflo</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://app.useveriflo.com/signup" class="px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-xl font-bold text-lg btn-glow hover:opacity-90 transition">Get Started Now</a>
+                    <a href="index.html#contact" class="px-10 py-4 bg-white/5 border border-white/20 text-white rounded-xl font-bold text-lg hover:bg-white/10 transition">Contact Us</a>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
+    <footer class="py-16 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-5 gap-8 mb-8">
-                <div>
-                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <span class="text-xl font-bold">Veriflo</span>
-                    </a>
-                    <p class="text-gray-400 text-sm">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Product</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="index.html#features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="index.html#pricing" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition">API</a></li>
-                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Content Creators</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="onlyfans-leak-protection.html" class="hover:text-white transition">OnlyFans Protection</a></li>
-                        <li><a href="youtube-content-protection.html" class="hover:text-white transition">YouTube Creators</a></li>
-                        <li><a href="music-leak-prevention.html" class="hover:text-white transition">Music & Audio</a></li>
-                        <li><a href="photography-protection.html" class="hover:text-white transition">Photography</a></li>
-                        <li><a href="course-creator-protection.html" class="hover:text-white transition">Online Courses</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Business Solutions</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="legal-document-protection.html" class="hover:text-white transition">Legal & Law Firms</a></li>
-                        <li><a href="corporate-leak-prevention.html" class="hover:text-white transition">Corporate Documents</a></li>
-                        <li><a href="financial-document-verification.html" class="hover:text-white transition">Financial Services</a></li>
-                        <li><a href="healthcare-record-protection.html" class="hover:text-white transition">Healthcare</a></li>
-                        <li><a href="university-diploma-verification.html" class="hover:text-white transition">Universities</a></li>
-                    </ul>
-                </div>
-                                <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-                    </ul>
+            <div class="flex flex-wrap justify-between items-center">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
+                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
+                        </svg>
+                    </div>
+                    <span class="text-xl font-bold">Veriflo</span>
+                </a>
+                <div class="flex gap-6 text-gray-500 text-sm">
+                    <a href="faq.html" class="hover:text-white transition">FAQ</a>
+                    <a href="privacy-policy.html" class="hover:text-white transition">Privacy</a>
+                    <a href="terms-of-service.html" class="hover:text-white transition">Terms</a>
+                    <a href="index.html#contact" class="hover:text-white transition">Contact</a>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">&copy; 2025 Veriflo. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                </div>
+            <div class="text-center text-gray-500 text-sm mt-8">
+                © 2025 Veriflo. All rights reserved.
             </div>
         </div>
     </footer>
-
 </body>
 </html>

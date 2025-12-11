@@ -1,17 +1,16 @@
-# robots.txt for useveriflo.com
+# Robots.txt for Veriflo
+# https://useveriflo.com
 
-# Allow all search engines to crawl the site
 User-agent: *
 Allow: /
-
-# Disallow crawling of any future admin or private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /.git/
 
 # Sitemap location
 Sitemap: https://useveriflo.com/sitemap.xml
 
-# Crawl delay (optional - helps prevent server overload)
-# Uncomment if needed
-# Crawl-delay: 1
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Block any admin or private directories if they exist
+Disallow: /admin/
+Disallow: /private/
+Disallow: /*.json$

@@ -3,271 +3,207 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Healthcare Record Protection - Veriflo</title>
-    <meta name="description" content="Protect HIPAA-compliant healthcare records with blockchain verification. Secure patient data, track access, and maintain audit trails for regulatory compliance.">
-    <meta name="keywords" content="healthcare record protection, hipaa compliance, medical document security, patient data protection, healthcare blockchain">
-    <meta name="author" content="Veriflo">
-    <meta name="theme-color" content="#3b82f6">
-    <meta property="og:title" content="Healthcare Record Protection - HIPAA Compliant Security | Veriflo">
-    <meta property="og:description" content="HIPAA-compliant document protection with blockchain verification. Secure patient records and track access.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://useveriflo.com/healthcare-record-protection.html">
-    <meta property="og:image" content="https://useveriflo.com/images/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>Healthcare Record Protection - Secure Medical Documents | Veriflo</title>
+    <meta name="description" content="Protect patient records and medical documents with blockchain verification. Enterprise-grade security with forensic leak attribution.">
     <link rel="canonical" href="https://useveriflo.com/healthcare-record-protection.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Healthcare Record Protection - Medical Document Security | Veriflo">
+    <meta property="og:description" content="Protect patient records and medical documents with blockchain verification and forensic leak attribution.">
+    <meta property="og:url" content="https://useveriflo.com/healthcare-record-protection.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://useveriflo.com/images/og-healthcare.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Healthcare Record Protection - Medical Document Security">
+    <meta name="twitter:description" content="Protect patient records with blockchain verification and forensic fingerprinting.">
+    <meta name="keywords" content="healthcare record protection, medical document security, patient data protection, PHI security, healthcare leak prevention">
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does Veriflo protect patient privacy?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Documents are encrypted using AES-256 encryption at rest and in transit. Our forensic fingerprinting is invisible and doesn't alter medical content. We provide complete audit trails for compliance reporting."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can Veriflo integrate with our EHR system?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. We offer API integrations that work with major EHR systems. Documents can be protected directly from your existing workflow without disrupting clinical operations."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What happens if a patient record is leaked?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Upload the leaked document to Veriflo and our forensic analysis identifies exactly which copy was leaked and who received it. We provide detailed reports suitable for breach investigations and regulatory reporting."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is Veriflo suitable for clinical trials documentation?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes. Our blockchain verification provides immutable timestamps proving when documents existed, which is valuable for regulatory submissions. Forensic fingerprinting tracks document distribution to trial sites and partners."
+                }
+            }
+        ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero-pattern { background-color: #3b82f6; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-
-        /* Dropdown Menu Styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            min-width: 280px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            z-index: 1000;
-            margin-top: 0;
-            padding: 0.5rem 0;
-            padding-top: 0.75rem;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #374151;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            display: block;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f3f4f6;
-            color: #2563eb;
-        }
-
-        .dropdown-divider {
-            height: 1px;
-            background-color: #e5e7eb;
-            margin: 0.5rem 0;
-        }
-
-        .dropdown-header {
-            padding: 0.5rem 1.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+        body{font-family:'Space Grotesk',sans-serif;background:linear-gradient(180deg,#0a0f1a 0%,#0f172a 50%,#1e293b 100%);min-height:100vh}
+        .grid-bg{background-image:linear-gradient(rgba(16,185,129,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(16,185,129,0.03) 1px,transparent 1px);background-size:60px 60px}
+        .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:pulse 4s ease-in-out infinite}
+        @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:0.8}}
+        .gradient-text{background:linear-gradient(135deg,#10b981,#059669);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .glass-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s ease}
+        .glass-card:hover{background:rgba(255,255,255,0.06);transform:translateY(-4px)}
+        .nav-blur{background:rgba(10,15,26,0.85);backdrop-filter:blur(20px)}
+        .btn-glow{box-shadow:0 0 30px rgba(16,185,129,0.4)}
+        html{scroll-behavior:smooth}
     </style>
 </head>
-<body class="antialiased">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+<body class="antialiased text-white overflow-x-hidden">
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div class="glow-orb w-96 h-96 bg-emerald-500/20 top-20 -left-48 fixed"></div>
+    <div class="glow-orb w-80 h-80 bg-teal-500/20 top-1/3 -right-40 fixed" style="animation-delay:-2s"></div>
+
+    <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <span class="text-2xl font-bold gradient-text">Veriflo</span>
+                    <span class="text-2xl font-bold">Veriflo</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
-                    <a href="index.html#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
-                    <div class="dropdown">
-                        <a href="index.html#use-cases" class="text-gray-700 hover:text-blue-600 transition cursor-pointer">
-                            Use Cases <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="onlyfans-leak-protection.html">OnlyFans & Digital Creators</a>
-                            <a href="legal-document-protection.html">Legal & Law Firms</a>
-                            <a href="supply-chain-document-security.html">Supply Chain Security</a>
-                            <a href="sensitive-business-documents.html">Sensitive Business Documents</a>
-                        </div>
-                    </div>
-                    <a href="index.html#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
-                    <a href="https://app.useveriflo.com/login" class="text-gray-700 hover:text-blue-600 transition font-medium">
-                        Login
-                    </a>
-                    <a href="https://app.useveriflo.com/signup" class="px-6 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition font-medium">
-                        Get Started
-                    </a>
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-3 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl font-semibold btn-glow hover:opacity-90 transition">Get Started</a>
                 </div>
-                <button class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
             </div>
         </div>
     </nav>
 
-    <section class="hero-pattern pt-32 pb-20 text-white">
+    <section class="pt-32 pb-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <div>
-                    <div class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
-                        <i class="fas fa-heartbeat text-red-400 mr-2"></i>FOR HEALTHCARE
-                    </div>
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Secure Patient Records. Identify HIPAA Violators.</h1>
-                    <p class="text-xl mb-8 text-white/90 leading-relaxed">Patient records are being accessed and shared improperly, costing millions in HIPAA fines. Veriflo identifies exactly who accessed and leaked medical records with audit-ready evidence.</p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-50 transition shadow-lg">Get Started</button>
-                        <a href="index.html#contact" class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition border-2 border-white/30 text-center">Schedule Demo</a>
-                    </div>
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-emerald-500/10 border border-emerald-500/30 rounded-full mb-8">
+                    <i class="fas fa-hospital text-emerald-400"></i>
+                    <span class="text-sm text-emerald-300">For Healthcare</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">Protect <span class="gradient-text">Patient Records</span> & PHI</h1>
+                <p class="text-xl text-gray-400 mb-10 font-dm leading-relaxed">Enterprise-grade document protection with blockchain verification and forensic fingerprinting. Identify unauthorized PHI disclosures with court-ready evidence.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="mailto:sales@useveriflo.com?subject=Healthcare%20Demo" class="px-8 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 rounded-xl font-semibold btn-glow text-center hover:opacity-90 transition">Schedule Healthcare Demo</a>
+                    <a href="index.html#contact" class="px-8 py-4 bg-white/5 border border-white/20 rounded-xl font-semibold text-center hover:bg-white/10 transition">Contact Sales</a>
+                </div>
+                <div class="mt-10 grid grid-cols-3 gap-6">
+                    <div class="text-center"><div class="text-3xl font-bold text-emerald-400">AES-256</div><div class="text-sm text-gray-500">Encryption</div></div>
+                    <div class="text-center"><div class="text-3xl font-bold text-emerald-400">98.5%</div><div class="text-sm text-gray-500">Attribution</div></div>
+                    <div class="text-center"><div class="text-3xl font-bold text-emerald-400">Audit</div><div class="text-sm text-gray-500">Trail</div></div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">$4.2M</div>
-                    <p class="text-gray-700">Average HIPAA breach fine avoided</p>
-                </div>
-                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">78%</div>
-                    <p class="text-gray-700">Of healthcare breaches involve insiders</p>
-                </div>
-                <div class="text-center p-8 bg-gradient-to-br from-blue-50 to-cyan-50 rounded-xl">
-                    <div class="text-4xl font-bold text-blue-600 mb-2">100%</div>
-                    <p class="text-gray-700">HIPAA compliance with automated audit trails</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">How Veriflo Helps</h2>
+                <h2 class="text-4xl font-bold mb-6">Healthcare <span class="gradient-text">Data Breach</span> Crisis</h2>
             </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-2xl font-bold">1</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Track Every Access</h3>
-                    <p class="text-gray-700">Know exactly who accessed which patient records, when, and from where with forensic-grade logging.</p>
+            <div class="grid md:grid-cols-4 gap-6">
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="text-5xl font-bold text-red-400 mb-4">$10.9M</div>
+                    <h3 class="text-xl font-bold mb-2">Avg. Breach Cost</h3>
+                    <p class="text-gray-400 font-dm text-sm">Healthcare breaches cost more than any other industry</p>
                 </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-2xl font-bold">2</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Identify Leakers</h3>
-                    <p class="text-gray-700">When records are leaked or improperly shared, identify the exact employee or contractor responsible.</p>
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="text-5xl font-bold text-red-400 mb-4">725</div>
+                    <h3 class="text-xl font-bold mb-2">Breaches in 2023</h3>
+                    <p class="text-gray-400 font-dm text-sm">Major healthcare data breaches reported</p>
                 </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-2xl font-bold">3</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">HIPAA Compliance</h3>
-                    <p class="text-gray-700">Automated compliance reporting, breach notifications, and evidence packages for regulatory requirements.</p>
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="text-5xl font-bold text-red-400 mb-4">58%</div>
+                    <h3 class="text-xl font-bold mb-2">Insider Caused</h3>
+                    <p class="text-gray-400 font-dm text-sm">Of healthcare breaches involve insiders</p>
+                </div>
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="text-5xl font-bold text-emerald-400 mb-4">4hrs</div>
+                    <h3 class="text-xl font-bold mb-2">With Veriflo</h3>
+                    <p class="text-gray-400 font-dm text-sm">Average time to identify leak source</p>
                 </div>
             </div>
         </div>
     </section>
 
-    <section class="py-20 gradient-bg text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Ready to Get Started?</h2>
-            <p class="text-xl mb-8 text-white/90">Protect your documents and identify leaks with court-admissible evidence</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl">Get Started Now</button>
-                <a href="index.html#contact" class="px-10 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-white/20 transition border-2 border-white/30 text-center">Schedule Demo</a>
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16"><h2 class="text-4xl font-bold mb-6">Healthcare <span class="gradient-text">Use Cases</span></h2></div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-file-medical-alt text-emerald-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Patient Records</h3>
+                    <p class="text-gray-400 font-dm mb-4">Protect electronic health records shared between providers.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>EHR documents</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Lab results</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Imaging reports</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-pills text-emerald-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Clinical Trials</h3>
+                    <p class="text-gray-400 font-dm mb-4">Secure clinical trial data, protocols, and results.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Trial protocols</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Research data</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>FDA submissions</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-user-md text-emerald-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Provider Credentials</h3>
+                    <p class="text-gray-400 font-dm mb-4">Verify medical licenses and certifications with blockchain.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Medical licenses</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Board certifications</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>DEA registrations</li>
+                    </ul>
+                </div>
             </div>
         </div>
     </section>
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-5 gap-8 mb-8">
-                <div>
-                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <span class="text-xl font-bold">Veriflo</span>
-                    </a>
-                    <p class="text-gray-400 text-sm">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Product</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="index.html#features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="index.html#pricing" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition">API</a></li>
-                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Content Creators</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="onlyfans-leak-protection.html" class="hover:text-white transition">OnlyFans Protection</a></li>
-                        <li><a href="youtube-content-protection.html" class="hover:text-white transition">YouTube Creators</a></li>
-                        <li><a href="music-leak-prevention.html" class="hover:text-white transition">Music & Audio</a></li>
-                        <li><a href="photography-protection.html" class="hover:text-white transition">Photography</a></li>
-                        <li><a href="course-creator-protection.html" class="hover:text-white transition">Online Courses</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Business Solutions</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="legal-document-protection.html" class="hover:text-white transition">Legal & Law Firms</a></li>
-                        <li><a href="corporate-leak-prevention.html" class="hover:text-white transition">Corporate Documents</a></li>
-                        <li><a href="financial-document-verification.html" class="hover:text-white transition">Financial Services</a></li>
-                        <li><a href="healthcare-record-protection.html" class="hover:text-white transition">Healthcare</a></li>
-                        <li><a href="university-diploma-verification.html" class="hover:text-white transition">Universities</a></li>
-                    </ul>
-                </div>
-                                <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-                    </ul>
+
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12 text-center border border-emerald-500/30">
+                <h2 class="text-4xl font-bold mb-6">Protect Patient Privacy</h2>
+                <p class="text-xl text-gray-400 mb-10 font-dm">Schedule a demo to see secure document protection for healthcare</p>
+                <a href="mailto:sales@useveriflo.com?subject=Healthcare%20Demo" class="inline-block px-10 py-4 bg-gradient-to-r from-emerald-500 to-teal-500 text-white rounded-xl font-bold text-lg btn-glow hover:opacity-90 transition">Schedule Healthcare Demo</a>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mt-8">
+                    <div><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Enterprise Security</div>
+                    <div><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Full Audit Trail</div>
+                    <div><i class="fas fa-check-circle text-emerald-400 mr-2"></i>EHR Integration</div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">&copy; 2025 Veriflo. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
-                </div>
-            </div>
+        </div>
+    </section>
+
+    <footer class="py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            © 2025 Veriflo. All rights reserved. <a href="faq.html" class="hover:text-white ml-4">FAQ</a> <a href="privacy-policy.html" class="hover:text-white ml-4">Privacy</a> <a href="terms-of-service.html" class="hover:text-white ml-4">Terms</a>
         </div>
     </footer>
 </body>

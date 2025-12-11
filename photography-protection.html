@@ -3,328 +3,217 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photography Protection - Veriflo</title>
-    <meta name="description" content="Protect your photography from theft with invisible watermarking and blockchain verification. Track image leaks, prove ownership, and automate DMCA takedowns.">
-    <meta name="keywords" content="photography protection, image leak detection, photo watermarking, photographer security, copyright protection">
-    <meta name="author" content="Veriflo">
-    <meta name="theme-color" content="#3b82f6">
-    <meta property="og:title" content="Photography Protection - Stop Image Theft | Veriflo">
-    <meta property="og:description" content="Invisible watermarks protect your photos. Blockchain proves ownership. Automatic leak detection and DMCA enforcement.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://useveriflo.com/photography-protection.html">
-    <meta property="og:image" content="https://useveriflo.com/images/og-image.jpg">
-    <meta name="twitter:card" content="summary_large_image">
+    <title>Photography Protection - Stop Image Theft | Veriflo</title>
+    <meta name="description" content="Protect your photography with invisible fingerprinting. Track who steals your images and get court-ready evidence for copyright claims.">
     <link rel="canonical" href="https://useveriflo.com/photography-protection.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Photography Protection - Stop Image Theft | Veriflo">
+    <meta property="og:description" content="Protect your photography with invisible fingerprinting. Track image theft with court-ready evidence.">
+    <meta property="og:url" content="https://useveriflo.com/photography-protection.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://useveriflo.com/images/og-photography.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Photography Protection - Stop Image Theft">
+    <meta name="twitter:description" content="Protect your photography with invisible fingerprinting.">
+    <meta name="keywords" content="photography protection, image theft prevention, photo copyright protection, photographer security, image fingerprinting">
+    <!-- FAQ Schema for Rich Snippets -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Is the fingerprint visible in my photos?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No. Unlike visible watermarks that ruin your images, our fingerprints are completely invisible. Your photos look exactly the same while carrying embedded tracking data."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What if someone crops or edits my image?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our 5-layer fingerprinting survives cropping, resizing, color adjustments, compression, and format conversion. Even heavily edited images retain enough fingerprint data for identification."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I use this for client delivery?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes! Create fingerprinted galleries for each client. If images end up on unauthorized websites or social accounts, you can trace exactly which client shared them."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this help with copyright claims?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Absolutely. Our blockchain verification proves you created the image at a specific time, and forensic fingerprinting shows the chain of custody. This evidence supports DMCA takedowns and legal action."
+                }
+            }
+        ]
+    }
+    </script>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-        .hero-pattern { background-color: #3b82f6; background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E"); }
-
-        /* Dropdown Menu Styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            min-width: 280px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            z-index: 1000;
-            margin-top: 0;
-            padding: 0.5rem 0;
-            padding-top: 0.75rem;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #374151;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            display: block;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f3f4f6;
-            color: #2563eb;
-        }
-
-        .dropdown-divider {
-            height: 1px;
-            background-color: #e5e7eb;
-            margin: 0.5rem 0;
-        }
-
-        .dropdown-header {
-            padding: 0.5rem 1.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+        body{font-family:'Space Grotesk',sans-serif;background:linear-gradient(180deg,#0a0f1a 0%,#0f172a 50%,#1e293b 100%);min-height:100vh}
+        .grid-bg{background-image:linear-gradient(rgba(168,85,247,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(168,85,247,0.03) 1px,transparent 1px);background-size:60px 60px}
+        .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:pulse 4s ease-in-out infinite}
+        @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:0.8}}
+        .gradient-text{background:linear-gradient(135deg,#a855f7,#9333ea);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .glass-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s ease}
+        .glass-card:hover{background:rgba(255,255,255,0.06);transform:translateY(-4px)}
+        .nav-blur{background:rgba(10,15,26,0.85);backdrop-filter:blur(20px)}
+        .btn-glow{box-shadow:0 0 30px rgba(168,85,247,0.4)}
+        html{scroll-behavior:smooth}
     </style>
 </head>
-<body class="antialiased">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+<body class="antialiased text-white overflow-x-hidden">
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div class="glow-orb w-96 h-96 bg-purple-500/20 top-20 -left-48 fixed"></div>
+    <div class="glow-orb w-80 h-80 bg-violet-500/20 top-1/3 -right-40 fixed" style="animation-delay:-2s"></div>
+
+    <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <span class="text-2xl font-bold gradient-text">Veriflo</span>
+                    <span class="text-2xl font-bold">Veriflo</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
-                    <a href="index.html#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
-                    <div class="dropdown">
-                        <a href="index.html#use-cases" class="text-gray-700 hover:text-blue-600 transition cursor-pointer">
-                            Use Cases <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="onlyfans-leak-protection.html">OnlyFans & Digital Creators</a>
-                            <a href="legal-document-protection.html">Legal & Law Firms</a>
-                            <a href="supply-chain-document-security.html">Supply Chain Security</a>
-                            <a href="sensitive-business-documents.html">Sensitive Business Documents</a>
-                        </div>
-                    </div>
-                    <a href="index.html#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
-                    <a href="https://app.useveriflo.com/login" class="text-gray-700 hover:text-blue-600 transition font-medium">
-                        Login
-                    </a>
-                    <a href="https://app.useveriflo.com/signup" class="px-6 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition font-medium">
-                        Get Started
-                    </a>
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-3 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl font-semibold btn-glow hover:opacity-90 transition">Get Started</a>
                 </div>
-                <button class="md:hidden text-gray-700">
-                    <i class="fas fa-bars text-xl"></i>
-                </button>
             </div>
         </div>
     </nav>
 
-    <section class="hero-pattern pt-32 pb-20 text-white">
+    <section class="pt-32 pb-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="max-w-3xl">
+                <div class="inline-flex items-center gap-2 px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-full mb-8">
+                    <i class="fas fa-camera text-purple-400"></i>
+                    <span class="text-sm text-purple-300">For Photographers</span>
+                </div>
+                <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">Protect Your <span class="gradient-text">Photography</span> From Theft</h1>
+                <p class="text-xl text-gray-400 mb-10 font-dm leading-relaxed">Your images are being stolen and used without permission. Veriflo's invisible fingerprinting tracks exactly who shares your work - with evidence for copyright claims.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://app.useveriflo.com/signup" class="px-8 py-4 bg-gradient-to-r from-purple-500 to-violet-500 rounded-xl font-semibold btn-glow text-center hover:opacity-90 transition">Start Protecting Images</a>
+                    <a href="index.html#contact" class="px-8 py-4 bg-white/5 border border-white/20 rounded-xl font-semibold text-center hover:bg-white/10 transition">See Demo</a>
+                </div>
+                <div class="mt-10 grid grid-cols-3 gap-6">
+                    <div class="text-center"><div class="text-3xl font-bold text-purple-400">98.5%</div><div class="text-sm text-gray-500">Accuracy</div></div>
+                    <div class="text-center"><div class="text-3xl font-bold text-purple-400">Invisible</div><div class="text-sm text-gray-500">No Quality Loss</div></div>
+                    <div class="text-center"><div class="text-3xl font-bold text-purple-400">$49</div><div class="text-sm text-gray-500">Per Month</div></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16"><h2 class="text-4xl font-bold mb-6">Photography <span class="gradient-text">Use Cases</span></h2></div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-user-friends text-purple-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Client Galleries</h3>
+                    <p class="text-gray-400 font-dm mb-4">Protect client proofs from being shared without purchase.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Wedding galleries</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Portrait sessions</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Event photography</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-store text-purple-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Stock Photography</h3>
+                    <p class="text-gray-400 font-dm mb-4">Track who shares your licensed stock images without authorization.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Licensed images</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Premium collections</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Exclusive shoots</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-palette text-purple-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Fine Art</h3>
+                    <p class="text-gray-400 font-dm mb-4">Protect digital art and fine art photography from unauthorized reproduction.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Limited editions</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Gallery submissions</li>
+                        <li><i class="fas fa-check text-purple-400 mr-2"></i>Print files</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-24 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-2 gap-12 items-center">
                 <div>
-                    <div class="inline-block px-4 py-2 bg-white/10 backdrop-blur-sm rounded-full text-sm font-semibold mb-6">
-                        <i class="fas fa-camera text-blue-400 mr-2"></i>FOR PHOTOGRAPHERS
-                    </div>
-                    <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">Stop Photo Theft. Find Who Shared Your Work.</h1>
-                    <p class="text-xl mb-8 text-white/90 leading-relaxed">Your photos are being stolen by clients, shared without permission, and used commercially without payment. Veriflo embeds invisible fingerprints to identify exactly who leaked your images—even after cropping, editing, and screenshots.</p>
-                    <div class="flex flex-col sm:flex-row gap-4">
-                        <button class="px-8 py-4 bg-white text-blue-600 rounded-lg font-semibold hover:bg-gray-50 transition shadow-lg">Protect My Photos</button>
-                        <button class="px-8 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-semibold hover:bg-white/20 transition border-2 border-white/30">See How It Works</button>
-                    </div>
+                    <h2 class="text-4xl font-bold mb-6">Why <span class="gradient-text">Invisible</span> Matters</h2>
+                    <p class="text-xl text-gray-400 mb-8 font-dm">Unlike ugly watermarks, Veriflo's fingerprints are completely invisible - your art stays pristine.</p>
+                    <ul class="space-y-4">
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-purple-400 text-sm"></i></div>
+                            <div><h4 class="font-bold mb-1">No Quality Loss</h4><p class="text-gray-400 font-dm text-sm">Your images look exactly the same - clients notice nothing</p></div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-purple-400 text-sm"></i></div>
+                            <div><h4 class="font-bold mb-1">Survives Editing</h4><p class="text-gray-400 font-dm text-sm">Fingerprints survive cropping, filters, and resizing</p></div>
+                        </li>
+                        <li class="flex items-start gap-4">
+                            <div class="w-8 h-8 bg-purple-500/20 rounded-full flex items-center justify-center flex-shrink-0 mt-1"><i class="fas fa-check text-purple-400 text-sm"></i></div>
+                            <div><h4 class="font-bold mb-1">Court-Ready Evidence</h4><p class="text-gray-400 font-dm text-sm">Forensic reports support copyright infringement claims</p></div>
+                        </li>
+                    </ul>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">The Photography Theft Problem</h2>
-                <p class="text-xl text-gray-600">Your work is valuable. Clients and followers don't always respect that.</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-red-50 rounded-xl p-8 border-l-4 border-red-500">
-                    <h3 class="text-xl font-bold mb-3">Clients Share Without Permission</h3>
-                    <p class="text-gray-700 mb-4">Wedding clients share unwatermarked proofs. Portrait clients post edited images they didn't purchase. Your copyright is ignored.</p>
-                    <div class="text-3xl font-bold text-red-600 mb-2">$15K+</div>
-                    <p class="text-sm text-gray-600">Average annual loss from unauthorized sharing</p>
-                </div>
-                <div class="bg-orange-50 rounded-xl p-8 border-l-4 border-orange-500">
-                    <h3 class="text-xl font-bold mb-3">Commercial Use Without Payment</h3>
-                    <p class="text-gray-700 mb-4">Businesses use your photos on websites, ads, and social media without licensing. They screenshot, crop watermarks, and claim ignorance.</p>
-                    <div class="text-3xl font-bold text-orange-600 mb-2">89%</div>
-                    <p class="text-sm text-gray-600">Of photographers report image theft</p>
-                </div>
-                <div class="bg-red-50 rounded-xl p-8 border-l-4 border-red-500">
-                    <h3 class="text-xl font-bold mb-3">Watermarks Don't Work</h3>
-                    <p class="text-gray-700 mb-4">Cropped, cloned out, or AI-removed in seconds. Traditional watermarks provide zero real protection.</p>
-                    <div class="text-3xl font-bold text-red-600 mb-2">5 Seconds</div>
-                    <p class="text-sm text-gray-600">Time to remove visible watermarks with AI tools</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-gradient-to-br from-blue-50 to-cyan-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">How Veriflo Protects Your Photography</h2>
-                <p class="text-xl text-gray-600">Invisible, unremovable fingerprints in every pixel</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-2xl font-bold">1</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Fingerprint Each Client's Copy</h3>
-                    <p class="text-gray-700 mb-4">Send unique versions of your photos to each client. Invisible steganographic markers embedded in the image pixels—imperceptible to the eye, impossible to remove.</p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Survives cropping & editing</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Works with RAW, JPEG, PNG, TIFF</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>No visible watermark needed</div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-2xl font-bold">2</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Monitor for Theft</h3>
-                    <p class="text-gray-700 mb-4">Our AI scans Google Images, Pinterest, Instagram, stock photo sites, and 500+ platforms for unauthorized use of your fingerprinted photos.</p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>24/7 reverse image search</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Finds edited/cropped versions</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Real-time theft alerts</div>
-                    </div>
-                </div>
-                <div class="bg-white rounded-xl p-8 shadow-lg">
-                    <div class="w-14 h-14 gradient-bg rounded-lg flex items-center justify-center mb-4">
-                        <span class="text-white text-2xl font-bold">3</span>
-                    </div>
-                    <h3 class="text-xl font-bold mb-3">Identify & Invoice</h3>
-                    <p class="text-gray-700 mb-4">Extract the fingerprint to see exactly which client or website leaked/stole your photo. Get court-ready evidence for DMCA or invoice for commercial use.</p>
-                    <div class="space-y-2 text-sm">
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>98.5% attribution accuracy</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Automated DMCA takedowns</div>
-                        <div class="flex items-center text-green-600"><i class="fas fa-check mr-2"></i>Evidence for invoicing</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 bg-white">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl font-bold mb-4">Perfect For All Photography Businesses</h2>
-            </div>
-            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
-                    <div class="text-3xl mb-3">💒</div>
-                    <h3 class="text-lg font-bold mb-2">Wedding Photographers</h3>
-                    <p class="text-sm text-gray-600">Stop clients from sharing unwatermarked proofs</p>
-                </div>
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
-                    <div class="text-3xl mb-3">📸</div>
-                    <h3 class="text-lg font-bold mb-2">Portrait & Headshot</h3>
-                    <p class="text-sm text-gray-600">Track who shares images they didn't purchase</p>
-                </div>
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
-                    <div class="text-3xl mb-3">🏢</div>
-                    <h3 class="text-lg font-bold mb-2">Commercial Photographers</h3>
-                    <p class="text-sm text-gray-600">Catch businesses using photos without licensing</p>
-                </div>
-                <div class="bg-gradient-to-br from-gray-50 to-white rounded-xl p-6 border border-gray-200">
-                    <div class="text-3xl mb-3">🎨</div>
-                    <h3 class="text-lg font-bold mb-2">Stock Photographers</h3>
-                    <p class="text-sm text-gray-600">Identify piracy and unauthorized redistribution</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="py-20 gradient-bg text-white">
-        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 class="text-4xl md:text-5xl font-bold mb-6">Protect Your Photography Business</h2>
-            <p class="text-xl mb-8 text-white/90">Stop losing money to image theft and unauthorized sharing</p>
-            <div class="flex flex-col sm:flex-row gap-4 justify-center">
-                <button class="px-10 py-4 bg-white text-blue-600 rounded-lg font-bold text-lg hover:bg-gray-50 transition shadow-xl">Get Started Now</button>
-                <a href="index.html#contact" class="px-10 py-4 bg-white/10 backdrop-blur-sm text-white rounded-lg font-bold text-lg hover:bg-white/20 transition border-2 border-white/30 text-center">Schedule Demo</a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-5 gap-8 mb-8">
-                <div>
-                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
+                <div class="glass-card rounded-3xl p-8 border border-purple-500/30">
+                    <h3 class="text-xl font-bold mb-6 text-center">Watermarks vs Veriflo</h3>
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="bg-red-500/10 border border-red-500/30 rounded-xl p-4 text-center">
+                            <i class="fas fa-times-circle text-red-400 text-2xl mb-2"></i>
+                            <div class="text-sm font-semibold text-red-300">Visible Watermark</div>
+                            <div class="text-xs text-gray-500 mt-1">Ruins image, easily removed</div>
                         </div>
-                        <span class="text-xl font-bold">Veriflo</span>
-                    </a>
-                    <p class="text-gray-400 text-sm">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Product</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="index.html#features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="index.html#pricing" class="hover:text-white transition">Pricing</a></li>
-                        <li><a href="#" class="hover:text-white transition">API</a></li>
-                        <li><a href="#" class="hover:text-white transition">Integrations</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Content Creators</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="onlyfans-leak-protection.html" class="hover:text-white transition">OnlyFans Protection</a></li>
-                        <li><a href="youtube-content-protection.html" class="hover:text-white transition">YouTube Creators</a></li>
-                        <li><a href="music-leak-prevention.html" class="hover:text-white transition">Music & Audio</a></li>
-                        <li><a href="photography-protection.html" class="hover:text-white transition">Photography</a></li>
-                        <li><a href="course-creator-protection.html" class="hover:text-white transition">Online Courses</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Business Solutions</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="legal-document-protection.html" class="hover:text-white transition">Legal & Law Firms</a></li>
-                        <li><a href="corporate-leak-prevention.html" class="hover:text-white transition">Corporate Documents</a></li>
-                        <li><a href="financial-document-verification.html" class="hover:text-white transition">Financial Services</a></li>
-                        <li><a href="healthcare-record-protection.html" class="hover:text-white transition">Healthcare</a></li>
-                        <li><a href="university-diploma-verification.html" class="hover:text-white transition">Universities</a></li>
-                    </ul>
-                </div>
-                                <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-                    </ul>
+                        <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-4 text-center">
+                            <i class="fas fa-check-circle text-emerald-400 text-2xl mb-2"></i>
+                            <div class="text-sm font-semibold text-emerald-300">Veriflo Fingerprint</div>
+                            <div class="text-xs text-gray-500 mt-1">Invisible, permanent</div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="border-t border-gray-800 pt-8 flex flex-col md:flex-row justify-between items-center">
-                <p class="text-gray-400 text-sm">&copy; 2025 Veriflo. All rights reserved.</p>
-                <div class="flex space-x-6 mt-4 md:mt-0">
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-twitter text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-linkedin text-xl"></i>
-                    </a>
-                    <a href="#" class="text-gray-400 hover:text-white transition">
-                        <i class="fab fa-github text-xl"></i>
-                    </a>
+        </div>
+    </section>
+
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12 text-center border border-purple-500/30">
+                <h2 class="text-4xl font-bold mb-6">Start Protecting Your Photography</h2>
+                <p class="text-xl text-gray-400 mb-10 font-dm">Join photographers using Veriflo to protect their work</p>
+                <a href="https://app.useveriflo.com/signup" class="inline-block px-10 py-4 bg-gradient-to-r from-purple-500 to-violet-500 text-white rounded-xl font-bold text-lg btn-glow hover:opacity-90 transition">Start for $49/month</a>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mt-8">
+                    <div><i class="fas fa-check-circle text-purple-400 mr-2"></i>Bulk upload</div>
+                    <div><i class="fas fa-check-circle text-purple-400 mr-2"></i>No quality loss</div>
+                    <div><i class="fas fa-check-circle text-purple-400 mr-2"></i>Legal evidence</div>
                 </div>
             </div>
+        </div>
+    </section>
+
+    <footer class="py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            © 2025 Veriflo. All rights reserved. <a href="faq.html" class="hover:text-white ml-4">FAQ</a> <a href="privacy-policy.html" class="hover:text-white ml-4">Privacy</a> <a href="terms-of-service.html" class="hover:text-white ml-4">Terms</a>
         </div>
     </footer>
 </body>

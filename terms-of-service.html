@@ -3,287 +3,197 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Terms of Service - Veriflo</title>
-    <meta name="description" content="Veriflo's terms of service outline the rules and regulations for using our document protection platform. Read our terms before signing up.">
-    <meta name="keywords" content="veriflo terms of service, terms and conditions, user agreement, service terms">
-    <meta name="author" content="Veriflo">
-    <meta name="theme-color" content="#3b82f6">
-    <meta property="og:title" content="Veriflo Terms of Service - User Agreement">
-    <meta property="og:description" content="Terms and conditions for using Veriflo's document protection platform.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://useveriflo.com/terms-of-service.html">
-    <meta name="twitter:card" content="summary">
+    <title>Terms of Service | Veriflo</title>
+    <meta name="description" content="Veriflo's terms of service. Read our terms and conditions for using the platform.">
     <link rel="canonical" href="https://useveriflo.com/terms-of-service.html">
-    <meta name="robots" content="noindex, follow">
+    <meta name="robots" content="index, follow">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
     <style>
-        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
-        body { font-family: 'Inter', sans-serif; }
-        .gradient-bg { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); }
-        .gradient-text { background: linear-gradient(135deg, #3b82f6 0%, #1e40af 100%); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
-
-        /* Dropdown Menu Styles */
-        .dropdown {
-            position: relative;
-            display: inline-block;
-        }
-
-        .dropdown-content {
-            display: none;
-            position: absolute;
-            top: 100%;
-            left: 50%;
-            transform: translateX(-50%);
-            background-color: white;
-            min-width: 280px;
-            box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-            border-radius: 8px;
-            z-index: 1000;
-            margin-top: 0;
-            padding: 0.5rem 0;
-            padding-top: 0.75rem;
-        }
-
-        .dropdown:hover .dropdown-content {
-            display: block;
-        }
-
-        .dropdown-content a {
-            color: #374151;
-            padding: 0.75rem 1.5rem;
-            text-decoration: none;
-            display: block;
-            transition: all 0.2s ease;
-        }
-
-        .dropdown-content a:hover {
-            background-color: #f3f4f6;
-            color: #2563eb;
-        }
-
-        .dropdown-divider {
-            height: 1px;
-            background-color: #e5e7eb;
-            margin: 0.5rem 0;
-        }
-
-        .dropdown-header {
-            padding: 0.5rem 1.5rem;
-            font-size: 0.75rem;
-            font-weight: 600;
-            color: #6b7280;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-        }
+        body{font-family:'Space Grotesk',sans-serif;background:linear-gradient(180deg,#0a0f1a 0%,#0f172a 50%,#1e293b 100%);min-height:100vh}
+        .grid-bg{background-image:linear-gradient(rgba(59,130,246,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.03) 1px,transparent 1px);background-size:60px 60px}
+        .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:pulse 4s ease-in-out infinite}
+        @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:0.8}}
+        .gradient-text{background:linear-gradient(135deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+        .glass-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1)}
+        .nav-blur{background:rgba(10,15,26,0.85);backdrop-filter:blur(20px)}
+        .btn-glow{box-shadow:0 0 30px rgba(59,130,246,0.4)}
+        .prose{font-family:'DM Sans',sans-serif}
+        .prose h2{font-family:'Space Grotesk',sans-serif;font-size:1.5rem;font-weight:700;margin-top:2rem;margin-bottom:1rem;color:white}
+        .prose h3{font-family:'Space Grotesk',sans-serif;font-size:1.25rem;font-weight:600;margin-top:1.5rem;margin-bottom:0.75rem;color:white}
+        .prose p{margin-bottom:1rem;color:#9ca3af;line-height:1.75}
+        .prose ul{margin-bottom:1rem;padding-left:1.5rem;color:#9ca3af}
+        .prose li{margin-bottom:0.5rem}
+        html{scroll-behavior:smooth}
     </style>
 </head>
-<body class="antialiased bg-gray-50">
-    <!-- Navigation -->
-    <nav class="fixed w-full bg-white/95 backdrop-blur-sm shadow-sm z-50">
+<body class="antialiased text-white overflow-x-hidden">
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div class="glow-orb w-96 h-96 bg-blue-500/20 top-20 -left-48 fixed"></div>
+    <div class="glow-orb w-80 h-80 bg-purple-500/20 top-1/3 -right-40 fixed" style="animation-delay:-2s"></div>
+
+    <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <a href="index.html" class="flex items-center space-x-2 hover:opacity-80 transition">
-                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center space-x-3">
+                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
+                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path></svg>
                     </div>
-                    <span class="text-2xl font-bold gradient-text">Veriflo</span>
+                    <span class="text-2xl font-bold">Veriflo</span>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="index.html#features" class="text-gray-700 hover:text-blue-600 transition">Features</a>
-                    <a href="index.html#how-it-works" class="text-gray-700 hover:text-blue-600 transition">How It Works</a>
-                    <div class="dropdown">
-                        <a href="index.html#use-cases" class="text-gray-700 hover:text-blue-600 transition cursor-pointer">
-                            Use Cases <i class="fas fa-chevron-down text-xs ml-1"></i>
-                        </a>
-                        <div class="dropdown-content">
-                            <a href="onlyfans-leak-protection.html">OnlyFans & Digital Creators</a>
-                            <a href="legal-document-protection.html">Legal & Law Firms</a>
-                            <a href="supply-chain-document-security.html">Supply Chain Security</a>
-                            <a href="sensitive-business-documents.html">Sensitive Business Documents</a>
-                        </div>
-                    </div>
-                    <a href="index.html#pricing" class="text-gray-700 hover:text-blue-600 transition">Pricing</a>
-                    <button class="px-6 py-2 gradient-bg text-white rounded-lg hover:opacity-90 transition font-medium">Get Started Now</button>
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold btn-glow hover:opacity-90 transition">Get Started</a>
                 </div>
             </div>
         </div>
     </nav>
 
-    <!-- Header -->
-    <div class="pt-32 pb-12 bg-gradient-to-br from-blue-50 to-cyan-50">
+    <section class="pt-32 pb-16 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <h1 class="text-5xl font-bold mb-4 text-gray-900">Terms of Service</h1>
-            <p class="text-lg text-gray-600">Last Updated: October 22, 2024</p>
+            <h1 class="text-4xl md:text-5xl font-bold mb-4">Terms of <span class="gradient-text">Service</span></h1>
+            <p class="text-gray-400 font-dm">Last updated: December 10, 2025</p>
         </div>
-    </div>
+    </section>
 
-    <!-- Content -->
-    <div class="py-16 bg-white">
+    <section class="pb-24 relative">
         <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="prose prose-lg max-w-none">
-                
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">1. Acceptance of Terms</h2>
-                    <p class="text-gray-700 mb-4">
-                        By accessing or using Veriflo's services, you agree to be bound by these Terms of Service. If you do not agree to these terms, please do not use our platform.
-                    </p>
-                </section>
+            <div class="glass-card rounded-3xl p-8 md:p-12">
+                <div class="prose max-w-none">
+                    <p>Welcome to Veriflo. These Terms of Service ("Terms") govern your access to and use of our document verification and protection platform. By using Veriflo, you agree to these Terms.</p>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">2. Description of Service</h2>
-                    <p class="text-gray-700 mb-4">
-                        Veriflo provides a document verification and leak attribution platform that uses blockchain technology and forensic fingerprinting to:
-                    </p>
-                    <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                        <li>Create immutable blockchain attestations for documents</li>
-                        <li>Embed forensic fingerprints for leak attribution</li>
-                        <li>Track document access and usage</li>
-                        <li>Detect and attribute document leaks</li>
-                        <li>Generate legal evidence packages</li>
+                    <h2>1. Acceptance of Terms</h2>
+                    <p>By accessing or using Veriflo, you agree to be bound by these Terms and our Privacy Policy. If you do not agree, do not use our services. If you are using Veriflo on behalf of an organization, you represent that you have authority to bind that organization to these Terms.</p>
+
+                    <h2>2. Description of Services</h2>
+                    <p>Veriflo provides:</p>
+                    <ul>
+                        <li><strong>Document Verification:</strong> Blockchain-based attestation to prove document authenticity and creation time</li>
+                        <li><strong>Forensic Fingerprinting:</strong> Invisible marking technology to identify document leak sources</li>
+                        <li><strong>Secure Distribution:</strong> Protected document sharing with recipient tracking</li>
+                        <li><strong>Leak Attribution:</strong> Forensic analysis to identify who shared protected documents</li>
                     </ul>
-                </section>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">3. User Accounts</h2>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800 mt-6">3.1 Account Creation</h3>
-                    <p class="text-gray-700 mb-4">
-                        You must create an account to use our services. You agree to provide accurate, current, and complete information and to update this information as necessary.
-                    </p>
-                    
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800 mt-6">3.2 Account Security</h3>
-                    <p class="text-gray-700 mb-4">
-                        You are responsible for maintaining the confidentiality of your account credentials and for all activities that occur under your account. Notify us immediately of any unauthorized access.
-                    </p>
-                </section>
+                    <h2>3. Account Registration</h2>
+                    <p>To use Veriflo, you must:</p>
+                    <ul>
+                        <li>Provide accurate and complete registration information</li>
+                        <li>Maintain the security of your account credentials</li>
+                        <li>Promptly notify us of any unauthorized access</li>
+                        <li>Be at least 18 years old or the age of majority in your jurisdiction</li>
+                    </ul>
+                    <p>You are responsible for all activity under your account.</p>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">4. Acceptable Use</h2>
-                    <p class="text-gray-700 mb-4">You agree not to:</p>
-                    <ul class="list-disc pl-6 space-y-2 text-gray-700 mb-4">
-                        <li>Use the service for any illegal or unauthorized purpose</li>
-                        <li>Upload malicious files or content</li>
-                        <li>Attempt to circumvent security measures</li>
-                        <li>Reverse engineer or copy our technology</li>
+                    <h2>4. Acceptable Use</h2>
+                    <p>You agree NOT to use Veriflo to:</p>
+                    <ul>
+                        <li>Violate any applicable laws or regulations</li>
+                        <li>Infringe on intellectual property rights of others</li>
+                        <li>Upload malicious code, viruses, or harmful content</li>
                         <li>Harass, abuse, or harm others</li>
-                        <li>Violate intellectual property rights</li>
-                        <li>Interfere with platform operations</li>
+                        <li>Distribute illegal content or materials</li>
+                        <li>Attempt to circumvent security measures</li>
+                        <li>Make false accusations or fraudulent claims based on our reports</li>
+                        <li>Resell or redistribute our services without authorization</li>
                     </ul>
-                </section>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">5. Intellectual Property</h2>
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800 mt-6">5.1 Our Rights</h3>
-                    <p class="text-gray-700 mb-4">
-                        Veriflo and its technology, including fingerprinting algorithms, blockchain integration, and platform design, are protected by copyright, trademark, and other intellectual property laws. You may not copy, modify, or distribute our technology.
-                    </p>
-                    
-                    <h3 class="text-2xl font-bold mb-3 text-gray-800 mt-6">5.2 Your Content</h3>
-                    <p class="text-gray-700 mb-4">
-                        You retain all rights to documents you upload. By using our service, you grant us a limited license to process your documents for verification and fingerprinting purposes.
-                    </p>
-                </section>
+                    <h2>5. Your Content</h2>
+                    <p>You retain ownership of all documents and content you upload to Veriflo. By using our services, you grant us a limited license to:</p>
+                    <ul>
+                        <li>Process your documents to provide verification and fingerprinting services</li>
+                        <li>Store your documents securely</li>
+                        <li>Generate blockchain attestations and forensic reports</li>
+                    </ul>
+                    <p>You represent that you have the right to upload and process all content you submit.</p>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">6. Fees and Payment</h2>
-                    <p class="text-gray-700 mb-4">
-                        Certain features require paid subscriptions. Fees are billed in advance and are non-refundable except as required by law. We reserve the right to change pricing with 30 days notice.
-                    </p>
-                </section>
+                    <h2>6. Forensic Reports and Legal Use</h2>
+                    <p>Regarding our forensic fingerprinting and leak attribution services:</p>
+                    <ul>
+                        <li>Our reports provide evidence of document distribution patterns</li>
+                        <li>We make no guarantees regarding admissibility in any specific legal proceeding</li>
+                        <li>You are responsible for how you use our reports</li>
+                        <li>We recommend consulting legal counsel before taking action based on our reports</li>
+                        <li>We are not liable for any actions you take based on our analysis</li>
+                    </ul>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">7. Termination</h2>
-                    <p class="text-gray-700 mb-4">
-                        We may suspend or terminate your account for violations of these terms. You may cancel your account at any time. Upon termination, your right to use the service ceases immediately.
-                    </p>
-                </section>
+                    <h2>7. Subscription and Payment</h2>
+                    <ul>
+                        <li>Paid subscriptions are billed in advance on a monthly or annual basis</li>
+                        <li>Prices are subject to change with 30 days notice</li>
+                        <li>Refunds are handled on a case-by-case basis</li>
+                        <li>We may suspend accounts with overdue payments</li>
+                        <li>You can cancel your subscription at any time; access continues until the end of the billing period</li>
+                    </ul>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">8. Disclaimers</h2>
-                    <p class="text-gray-700 mb-4">
-                        THE SERVICE IS PROVIDED "AS IS" WITHOUT WARRANTIES OF ANY KIND. WE DO NOT GUARANTEE THAT THE SERVICE WILL BE UNINTERRUPTED, ERROR-FREE, OR SECURE. USE AT YOUR OWN RISK.
-                    </p>
-                </section>
+                    <h2>8. Service Availability</h2>
+                    <p>We strive for high availability but do not guarantee uninterrupted service. We may:</p>
+                    <ul>
+                        <li>Perform scheduled maintenance with advance notice</li>
+                        <li>Experience occasional outages or service interruptions</li>
+                        <li>Modify, suspend, or discontinue features with reasonable notice</li>
+                    </ul>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">9. Limitation of Liability</h2>
-                    <p class="text-gray-700 mb-4">
-                        TO THE MAXIMUM EXTENT PERMITTED BY LAW, VERIFLO SHALL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, OR CONSEQUENTIAL DAMAGES ARISING FROM YOUR USE OF THE SERVICE.
-                    </p>
-                </section>
+                    <h2>9. Intellectual Property</h2>
+                    <p>Veriflo and its technology, including our fingerprinting algorithms, platform code, and branding, are owned by us and protected by intellectual property laws. You may not copy, modify, or reverse engineer our technology.</p>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">10. Governing Law</h2>
-                    <p class="text-gray-700 mb-4">
-                        These terms are governed by the laws of [Your Jurisdiction]. Any disputes shall be resolved in the courts of [Your Jurisdiction].
-                    </p>
-                </section>
+                    <h2>10. Limitation of Liability</h2>
+                    <p>TO THE MAXIMUM EXTENT PERMITTED BY LAW:</p>
+                    <ul>
+                        <li>Veriflo is provided "as is" without warranties of any kind</li>
+                        <li>We are not liable for indirect, incidental, or consequential damages</li>
+                        <li>Our total liability is limited to the amount you paid us in the 12 months preceding the claim</li>
+                        <li>We are not responsible for actions taken based on our forensic reports</li>
+                    </ul>
 
-                <section class="mb-12">
-                    <h2 class="text-3xl font-bold mb-4 text-gray-900">11. Contact Information</h2>
-                    <div class="bg-gradient-to-br from-blue-50 to-cyan-50 p-6 rounded-lg">
-                        <p class="text-gray-800 mb-2"><strong>Veriflo Legal Team</strong></p>
-                        <p class="text-gray-700 mb-1">Email: <a href="mailto:legal@useveriflo.com" class="text-blue-600 hover:text-blue-700">legal@useveriflo.com</a></p>
-                        <p class="text-gray-700">Support: <a href="mailto:support@useveriflo.com" class="text-blue-600 hover:text-blue-700">support@useveriflo.com</a></p>
-                    </div>
-                </section>
+                    <h2>11. Indemnification</h2>
+                    <p>You agree to indemnify and hold Veriflo harmless from claims arising from:</p>
+                    <ul>
+                        <li>Your use of our services</li>
+                        <li>Your violation of these Terms</li>
+                        <li>Your violation of any third-party rights</li>
+                        <li>Actions you take based on our forensic reports</li>
+                    </ul>
 
+                    <h2>12. Termination</h2>
+                    <p>We may suspend or terminate your account if you violate these Terms. Upon termination:</p>
+                    <ul>
+                        <li>Your right to use Veriflo ceases immediately</li>
+                        <li>We may delete your data after a reasonable period</li>
+                        <li>Blockchain attestations remain permanent</li>
+                        <li>Provisions that should survive termination will remain in effect</li>
+                    </ul>
+
+                    <h2>13. Dispute Resolution</h2>
+                    <p>Any disputes will be resolved through binding arbitration in accordance with applicable rules. You waive any right to participate in class actions. This provision does not apply where prohibited by law.</p>
+
+                    <h2>14. Changes to Terms</h2>
+                    <p>We may modify these Terms at any time. Material changes will be communicated via email or platform notification. Continued use after changes constitutes acceptance.</p>
+
+                    <h2>15. General Provisions</h2>
+                    <ul>
+                        <li>These Terms constitute the entire agreement between you and Veriflo</li>
+                        <li>Our failure to enforce any provision does not waive our right to do so later</li>
+                        <li>If any provision is found unenforceable, the remaining provisions remain in effect</li>
+                        <li>These Terms are governed by applicable law</li>
+                    </ul>
+
+                    <h2>16. Contact Us</h2>
+                    <p>For questions about these Terms:</p>
+                    <ul>
+                        <li>Email: <a href="mailto:legal@useveriflo.com" class="text-blue-400 hover:underline">legal@useveriflo.com</a></li>
+                        <li>General inquiries: <a href="mailto:hello@useveriflo.com" class="text-blue-400 hover:underline">hello@useveriflo.com</a></li>
+                    </ul>
+                </div>
             </div>
         </div>
-    </div>
+    </section>
 
-    <!-- Footer (same as other pages) -->
-    <footer class="bg-gray-900 text-white py-12">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="grid md:grid-cols-5 gap-8 mb-8">
-                <div>
-                    <a href="index.html" class="flex items-center space-x-2 mb-4 hover:opacity-80 transition">
-                        <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center shadow-lg">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <span class="text-xl font-bold">Veriflo</span>
-                    </a>
-                    <p class="text-gray-400 text-sm">The truth layer for digital content.</p>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Product</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="index.html#features" class="hover:text-white transition">Features</a></li>
-                        <li><a href="index.html#pricing" class="hover:text-white transition">Pricing</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Content Creators</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="onlyfans-leak-protection.html" class="hover:text-white transition">OnlyFans Protection</a></li>
-                        <li><a href="youtube-content-protection.html" class="hover:text-white transition">YouTube Creators</a></li>
-                    </ul>
-                </div>
-                <div>
-                    <h4 class="font-bold mb-4">Business Solutions</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="legal-document-protection.html" class="hover:text-white transition">Legal & Law Firms</a></li>
-                        <li><a href="corporate-leak-prevention.html" class="hover:text-white transition">Corporate Documents</a></li>
-                    </ul>
-                </div>
-                                <div>
-                    <h4 class="font-bold mb-4">Company</h4>
-                    <ul class="space-y-2 text-gray-400 text-sm">
-                        <li><a href="about.html" class="hover:text-white transition">About</a></li>
-                        <li><a href="blog.html" class="hover:text-white transition">Blog</a></li>
-                        <li><a href="index.html#contact" class="hover:text-white transition">Contact</a></li>
-                        <li><a href="privacy-policy.html" class="hover:text-white transition">Privacy Policy</a></li>
-                        <li><a href="terms-of-service.html" class="hover:text-white transition">Terms of Service</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="border-t border-gray-800 pt-8 text-center"><p class="text-gray-400 text-sm">&copy; 2025 Veriflo. All rights reserved.</p></div>
+    <footer class="py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-gray-500 text-sm">
+            © 2025 Veriflo. All rights reserved. <a href="faq.html" class="hover:text-white ml-4">FAQ</a> <a href="privacy-policy.html" class="hover:text-white ml-4">Privacy</a> <a href="terms-of-service.html" class="hover:text-white ml-4">Terms</a>
         </div>
     </footer>
-
 </body>
 </html>

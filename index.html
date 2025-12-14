@@ -15,6 +15,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Veriflo - Document Protection & Leak Detection Software">
     <meta name="twitter:description" content="Blockchain verification and forensic fingerprinting for document protection. Prove authenticity, identify leakers.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <!-- Performance: Preload fonts and critical resources -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -133,13 +136,17 @@
     <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <span class="text-2xl font-bold">Veriflo</span>
+                <a href="index.html" class="flex items-center hover:opacity-80 transition">
+                    <svg class="h-9" viewBox="0 0 260 70">
+                        <defs>
+                            <linearGradient id="headerCheckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6"/>
+                                <stop offset="100%" style="stop-color:#1e40af"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M4 34 L24 34 L38 54 L72 6 L92 6 L46 68 L4 34Z" fill="url(#headerCheckGrad)"/>
+                        <text x="88" y="52" font-family="Space Grotesk, Inter, -apple-system, sans-serif" font-size="46" font-weight="700" fill="#ffffff" letter-spacing="-2">eriflo</text>
+                    </svg>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="#features" class="text-gray-300 hover:text-white transition">Features</a>
@@ -179,15 +186,11 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
             <div class="grid lg:grid-cols-2 gap-16 items-center">
                 <div>
-                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-8">
-                        <span class="w-2 h-2 bg-emerald-400 rounded-full animate-pulse"></span>
-                        <span class="text-sm text-blue-300">Blockchain-Verified Protection</span>
-                    </div>
                     <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold mb-8 leading-tight">
                         The <span class="gradient-text">Truth Layer</span> for Digital Content
                     </h1>
                     <p class="text-xl text-gray-400 mb-10 leading-relaxed font-dm max-w-xl">
-                        Prove your content is authentic with blockchain verification. Identify who leaked it with invisible forensic fingerprinting.
+                        In a world of deepfakes and digital fraud, authenticity is your most valuable asset. We're the defense layer — verifying what's real, exposing who can't be trusted, and giving you the proof to fight back.
                     </p>
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="https://app.useveriflo.com/signup" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold hover:opacity-90 transition shadow-lg shadow-blue-500/30 btn-glow text-center">Get Started Now</a>
@@ -272,6 +275,75 @@
         </div>
     </section>
 
+    <!-- Verify. Trace. Enforce. Section -->
+    <section id="features" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl md:text-5xl font-bold mb-6">
+                    <span class="gradient-text">Verify.</span> 
+                    <span class="gradient-text">Trace.</span> 
+                    <span class="gradient-text">Enforce.</span>
+                </h2>
+                <p class="text-xl text-gray-400 font-dm max-w-3xl mx-auto">Complete content protection in three powerful steps</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Verify -->
+                <div class="glass-card rounded-3xl p-8 relative overflow-hidden border-t-4 border-blue-500">
+                    <div class="absolute top-4 right-4 text-6xl font-bold text-white/5">1</div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
+                        <i class="fas fa-certificate text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Verify</h3>
+                    <p class="text-blue-400 font-semibold mb-4">Prove Authenticity</p>
+                    <p class="text-gray-400 font-dm mb-6">Blockchain verification creates immutable proof your content is real and unaltered. Instant QR code verification anyone can check.</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-blue-400"></i>Immutable blockchain record</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-blue-400"></i>Instant QR verification</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-blue-400"></i>Court-admissible proof</li>
+                    </ul>
+                </div>
+
+                <!-- Trace -->
+                <div class="glass-card rounded-3xl p-8 relative overflow-hidden border-t-4 border-cyan-500">
+                    <div class="absolute top-4 right-4 text-6xl font-bold text-white/5">2</div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-cyan-500 to-cyan-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-cyan-500/30">
+                        <i class="fas fa-fingerprint text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Trace</h3>
+                    <p class="text-cyan-400 font-semibold mb-4">Identify the Source</p>
+                    <p class="text-gray-400 font-dm mb-6">5-layer forensic fingerprinting traces any leak back to the exact recipient with 98.5% accuracy. Survives screenshots and editing.</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-cyan-400"></i>Invisible fingerprinting</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-cyan-400"></i>98.5% attribution accuracy</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-cyan-400"></i>Survives all manipulation</li>
+                    </ul>
+                </div>
+
+                <!-- Enforce -->
+                <div class="glass-card rounded-3xl p-8 relative overflow-hidden border-t-4 border-purple-500">
+                    <div class="absolute top-4 right-4 text-6xl font-bold text-white/5">3</div>
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-purple-500/30">
+                        <i class="fas fa-gavel text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Enforce</h3>
+                    <p class="text-purple-400 font-semibold mb-4">Takedown & Remediate</p>
+                    <p class="text-gray-400 font-dm mb-6">Automated DMCA notices and legal documentation to remove leaked content fast. Court-ready forensic reports for legal action.</p>
+                    <ul class="space-y-3 text-sm">
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-purple-400"></i>One-click DMCA notices</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-purple-400"></i>Legal evidence packages</li>
+                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-purple-400"></i>Fast content removal</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center">
+                <p class="text-gray-500 font-dm mb-6">The only platform offering all three — verification, attribution, AND enforcement.</p>
+                <a href="https://app.useveriflo.com/signup" class="inline-block px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold hover:opacity-90 transition shadow-lg shadow-blue-500/30 btn-glow">Start Protecting Your Content</a>
+            </div>
+        </div>
+    </section>
+
     <!-- Media Types Section -->
     <section class="py-16 relative">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -290,56 +362,7 @@
         </div>
     </section>
 
-    <!-- Features Section -->
-    <section id="features" class="py-24 relative">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center mb-16">
-                <h2 class="text-4xl md:text-5xl font-bold mb-6"><span class="gradient-text">Dual-Purpose</span> Protection</h2>
-                <p class="text-xl text-gray-400 max-w-3xl mx-auto font-dm">The only platform offering both authenticity verification AND leak attribution</p>
-            </div>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="glass-card rounded-3xl p-8">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-blue-500/30">
-                        <i class="fas fa-certificate text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Blockchain Authenticity</h3>
-                    <p class="text-gray-400 mb-6 font-dm">Immutable proof that your content is real and unaltered</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Multi-chain blockchain (Polygon)</li>
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>QR code instant verification</li>
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Legal verification certificates</li>
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Tamper-evident hashing</li>
-                    </ul>
-                </div>
-                <div class="glass-card rounded-3xl p-8">
-                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-purple-500/30">
-                        <i class="fas fa-fingerprint text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Leak Attribution</h3>
-                    <p class="text-gray-400 mb-6 font-dm">98.5% accurate identification of exactly who leaked your content</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>5-layer forensic fingerprinting</li>
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Survives screenshots & edits</li>
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Court-admissible evidence</li>
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Invisible to recipients</li>
-                    </ul>
-                </div>
-                <div class="glass-card rounded-3xl p-8">
-                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-cyan-500 rounded-2xl flex items-center justify-center mb-6 shadow-lg shadow-emerald-500/30">
-                        <i class="fas fa-radar text-white text-2xl"></i>
-                    </div>
-                    <h3 class="text-2xl font-bold mb-4">Automated Monitoring</h3>
-                    <p class="text-gray-400 mb-6 font-dm">24/7 scanning across the web for your leaked content</p>
-                    <ul class="space-y-3">
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Real-time leak detection</li>
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Automated DMCA generation</li>
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Instant email alerts</li>
-                        <li class="flex items-center gap-3 text-gray-300"><i class="fas fa-check text-emerald-400"></i>Forensic report generation</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+    
 
     <!-- 5-Layer Fingerprinting Visual -->
     <section class="py-24 relative">
@@ -697,13 +720,17 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid md:grid-cols-5 gap-12 mb-12">
                 <div class="md:col-span-2">
-                    <a href="index.html" class="flex items-center space-x-3 mb-6">
-                        <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
-                            <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                            </svg>
-                        </div>
-                        <span class="text-xl font-bold">Veriflo</span>
+                    <a href="index.html" class="flex items-center mb-6 hover:opacity-80 transition">
+                        <svg class="h-8" viewBox="0 0 260 70">
+                            <defs>
+                                <linearGradient id="footerCheckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#3b82f6"/>
+                                    <stop offset="100%" style="stop-color:#1e40af"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M4 34 L24 34 L38 54 L72 6 L92 6 L46 68 L4 34Z" fill="url(#footerCheckGrad)"/>
+                            <text x="88" y="52" font-family="Space Grotesk, Inter, -apple-system, sans-serif" font-size="46" font-weight="700" fill="#ffffff" letter-spacing="-2">eriflo</text>
+                        </svg>
                     </a>
                     <p class="text-gray-500 font-dm mb-4">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
                     <div class="flex space-x-4">

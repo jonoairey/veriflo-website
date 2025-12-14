@@ -15,6 +15,9 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="About Veriflo - The Truth Layer for Digital Content">
     <meta name="twitter:description" content="Learn about Veriflo's mission to solve document fraud and confidential leaks.">
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
@@ -40,13 +43,17 @@
     <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
-                <a href="index.html" class="flex items-center space-x-3">
-                    <div class="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center shadow-lg shadow-blue-500/30">
-                        <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <span class="text-2xl font-bold">Veriflo</span>
+                <a href="index.html" class="flex items-center hover:opacity-80 transition">
+                    <svg class="h-9" viewBox="0 0 260 70">
+                        <defs>
+                            <linearGradient id="headerCheckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6"/>
+                                <stop offset="100%" style="stop-color:#1e40af"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M4 34 L24 34 L38 54 L72 6 L92 6 L46 68 L4 34Z" fill="url(#headerCheckGrad)"/>
+                        <text x="88" y="52" font-family="Space Grotesk, Inter, -apple-system, sans-serif" font-size="46" font-weight="700" fill="#ffffff" letter-spacing="-2">eriflo</text>
+                    </svg>
                 </a>
                 <div class="hidden md:flex items-center space-x-8">
                     <a href="index.html#features" class="text-gray-300 hover:text-white transition">Features</a>
@@ -274,13 +281,17 @@
     <footer class="py-16 border-t border-white/5">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex flex-wrap justify-between items-center">
-                <a href="index.html" class="flex items-center space-x-3">
-                    <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-700 rounded-xl flex items-center justify-center">
-                        <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"></path>
-                        </svg>
-                    </div>
-                    <span class="text-xl font-bold">Veriflo</span>
+                <a href="index.html" class="flex items-center hover:opacity-80 transition">
+                    <svg class="h-8" viewBox="0 0 260 70">
+                        <defs>
+                            <linearGradient id="footerCheckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6"/>
+                                <stop offset="100%" style="stop-color:#1e40af"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M4 34 L24 34 L38 54 L72 6 L92 6 L46 68 L4 34Z" fill="url(#footerCheckGrad)"/>
+                        <text x="88" y="52" font-family="Space Grotesk, Inter, -apple-system, sans-serif" font-size="46" font-weight="700" fill="#ffffff" letter-spacing="-2">eriflo</text>
+                    </svg>
                 </a>
                 <div class="flex gap-6 text-gray-500 text-sm">
                     <a href="faq.html" class="hover:text-white transition">FAQ</a>

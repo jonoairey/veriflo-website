@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Verification for Issuers - Make Your Documents Instantly Verifiable | Veriflo</title>
+    <meta name="description" content="Issue documents anyone can verify in 2 seconds. Eliminate verification calls, protect your brand, and give your customers peace of mind with blockchain-verified documents.">
+    <link rel="canonical" href="https://useveriflo.com/document-issuers.html">
+    <meta name="robots" content="index, follow">
+    <meta property="og:title" content="Document Verification for Issuers | Veriflo">
+    <meta property="og:description" content="Issue documents anyone can verify in 2 seconds. Eliminate verification calls forever.">
+    <meta property="og:url" content="https://useveriflo.com/document-issuers.html">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="https://useveriflo.com/images/og-issuers.png">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Document Verification for Issuers | Veriflo">
+    <meta name="twitter:description" content="Issue documents anyone can verify in 2 seconds. Eliminate verification calls forever.">
+    <meta name="keywords" content="document verification, credential verification, certificate verification, blockchain verification, QR code verification, digital credentials">
+    <!-- FAQ Schema -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does document verification work?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Upload your document to Veriflo, and we create a unique cryptographic hash stored on the blockchain. A QR code is generated that anyone can scan to instantly verify the document is authentic and unaltered."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What types of documents can be verified?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Any document you issue: professional certifications, training certificates, employment letters, certificates of insurance, compliance certificates, membership cards, and more."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How do recipients verify a document?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Recipients simply scan the QR code with any smartphone camera. No app required. They instantly see verification status, issue date, issuer details, and confirmation the document hasn't been altered."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- Favicon -->
+    <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        body{font-family:'Space Grotesk',sans-serif;background:linear-gradient(180deg,#0a0f1a 0%,#0f172a 50%,#1e293b 100%);min-height:100vh}
+        .grid-bg{background-image:linear-gradient(rgba(59,130,246,0.03) 1px,transparent 1px),linear-gradient(90deg,rgba(59,130,246,0.03) 1px,transparent 1px);background-size:60px 60px}
+        .glow-orb{position:absolute;border-radius:50%;filter:blur(80px);animation:pulse 4s ease-in-out infinite}
+        @keyframes pulse{0%,100%{opacity:0.5}50%{opacity:0.8}}
+        .gradient-text{background:linear-gradient(135deg,#3b82f6,#06b6d4);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+        .glass-card{background:rgba(255,255,255,0.03);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);transition:all 0.3s ease}
+        .glass-card:hover{background:rgba(255,255,255,0.06);transform:translateY(-4px)}
+        .nav-blur{background:rgba(10,15,26,0.85);backdrop-filter:blur(20px)}
+        .btn-glow{box-shadow:0 0 30px rgba(59,130,246,0.4)}
+        .btn-glow:hover{box-shadow:0 0 50px rgba(59,130,246,0.6)}
+        html{scroll-behavior:smooth}
+        .dropdown{position:relative}
+        .dropdown-content{visibility:hidden;opacity:0;position:absolute;top:100%;left:50%;transform:translateX(-50%);background:rgba(15,23,42,0.95);backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,0.1);min-width:280px;border-radius:16px;z-index:1000;padding-top:16px;padding-bottom:8px;transition:opacity 0.2s ease, visibility 0.2s ease}
+        .dropdown-content::before{content:'';position:absolute;top:-16px;left:0;right:0;height:24px}
+        .dropdown-content.show{visibility:visible;opacity:1}
+        .dropdown-content a{color:rgba(255,255,255,0.7);padding:12px 20px;display:block;transition:all 0.2s}
+        .dropdown-content a:hover{background:rgba(59,130,246,0.2);color:white}
+    </style>
+</head>
+<body class="antialiased text-white overflow-x-hidden">
+    <div class="fixed inset-0 grid-bg pointer-events-none"></div>
+    <div class="glow-orb w-96 h-96 bg-blue-500/20 top-20 -left-48 fixed"></div>
+    <div class="glow-orb w-80 h-80 bg-cyan-500/20 top-1/3 -right-40 fixed" style="animation-delay:-2s"></div>
+    <div class="glow-orb w-72 h-72 bg-purple-500/20 bottom-1/4 left-1/4 fixed" style="animation-delay:-3s"></div>
+
+    <!-- Navigation -->
+    <nav class="fixed w-full nav-blur z-50 border-b border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="index.html" class="flex items-center hover:opacity-80 transition">
+                    <svg class="h-9" viewBox="0 0 260 70">
+                        <defs>
+                            <linearGradient id="headerCheckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#3b82f6"/>
+                                <stop offset="100%" style="stop-color:#1e40af"/>
+                            </linearGradient>
+                        </defs>
+                        <path d="M4 34 L24 34 L38 54 L72 6 L92 6 L46 68 L4 34Z" fill="url(#headerCheckGrad)"/>
+                        <text x="88" y="52" font-family="Space Grotesk, Inter, -apple-system, sans-serif" font-size="46" font-weight="700" fill="#ffffff" letter-spacing="-2">eriflo</text>
+                    </svg>
+                </a>
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="index.html#features" class="text-gray-300 hover:text-white transition">Features</a>
+                    <a href="index.html#how-it-works" class="text-gray-300 hover:text-white transition">How It Works</a>
+                    <div class="dropdown">
+                        <a href="index.html#use-cases" class="text-gray-300 hover:text-white transition cursor-pointer flex items-center gap-1">Use Cases <i class="fas fa-chevron-down text-xs"></i></a>
+                        <div class="dropdown-content">
+                            <a href="document-issuers.html"><i class="fas fa-file-certificate mr-2 text-blue-400"></i>Document Issuers</a>
+                            <a href="onlyfans-leak-protection.html"><i class="fas fa-heart mr-2 text-pink-400"></i>OnlyFans & Creators</a>
+                            <a href="legal-document-protection.html"><i class="fas fa-balance-scale mr-2 text-blue-400"></i>Legal & Law Firms</a>
+                            <a href="corporate-leak-prevention.html"><i class="fas fa-building mr-2 text-purple-400"></i>Enterprise</a>
+                            <a href="healthcare-record-protection.html"><i class="fas fa-heartbeat mr-2 text-emerald-400"></i>Healthcare</a>
+                            <a href="university-diploma-verification.html"><i class="fas fa-graduation-cap mr-2 text-yellow-400"></i>Universities</a>
+                            <a href="financial-document-verification.html"><i class="fas fa-chart-line mr-2 text-cyan-400"></i>Financial Services</a>
+                        </div>
+                    </div>
+                    <a href="index.html#pricing" class="text-gray-300 hover:text-white transition">Pricing</a>
+                    <a href="https://app.useveriflo.com/login" class="text-gray-300 hover:text-white transition">Login</a>
+                    <a href="https://app.useveriflo.com/signup" class="px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold hover:opacity-90 transition shadow-lg shadow-blue-500/30 btn-glow">Get Started</a>
+                </div>
+                <button class="md:hidden text-white" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')">
+                    <i class="fas fa-bars text-2xl"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="hidden md:hidden pb-4">
+                <a href="index.html#features" class="block py-2 text-gray-300">Features</a>
+                <a href="index.html#how-it-works" class="block py-2 text-gray-300">How It Works</a>
+                <a href="index.html#use-cases" class="block py-2 text-gray-300">Use Cases</a>
+                <a href="index.html#pricing" class="block py-2 text-gray-300">Pricing</a>
+                <a href="https://app.useveriflo.com/signup" class="block mt-4 px-6 py-3 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold text-center">Get Started</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="pt-32 pb-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <div class="inline-flex items-center gap-2 px-4 py-2 bg-blue-500/10 border border-blue-500/30 rounded-full mb-8">
+                        <i class="fas fa-file-certificate text-blue-400"></i>
+                        <span class="text-sm text-blue-300">For Document Issuers</span>
+                    </div>
+                    <h1 class="text-5xl md:text-6xl font-bold mb-8 leading-tight">
+                        Issue Documents <span class="gradient-text">Anyone Can Verify</span> in 2 Seconds
+                    </h1>
+                    <p class="text-xl text-gray-400 mb-10 font-dm leading-relaxed">
+                        Your certificates, credentials, and documents deserve to be trusted instantly. Add a QR code. Eliminate verification calls forever. Give everyone peace of mind.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <a href="https://app.useveriflo.com/signup" class="px-8 py-4 bg-gradient-to-r from-blue-500 to-blue-700 rounded-xl font-semibold btn-glow text-center hover:opacity-90 transition">Start Verifying Documents</a>
+                        <a href="index.html#contact" class="px-8 py-4 bg-white/5 border border-white/20 rounded-xl font-semibold text-center hover:bg-white/10 transition">Schedule Demo</a>
+                    </div>
+                    <div class="flex items-center gap-8 mt-10 text-sm text-gray-500">
+                        <div class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-400"></i> No app required to verify</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check-circle text-emerald-400"></i> Works on any document</div>
+                    </div>
+                </div>
+                <div class="hidden lg:block">
+                    <div class="glass-card rounded-3xl p-8 relative">
+                        <!-- Document Preview -->
+                        <div class="bg-white/5 rounded-2xl p-6 mb-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <div class="flex items-center gap-3">
+                                    <div class="w-10 h-10 bg-blue-500/20 rounded-lg flex items-center justify-center"><i class="fas fa-certificate text-blue-400"></i></div>
+                                    <div>
+                                        <div class="font-semibold">Professional_Certificate.pdf</div>
+                                        <div class="text-xs text-gray-500">Issued by Your Organization</div>
+                                    </div>
+                                </div>
+                                <div class="w-8 h-8 bg-emerald-500/20 rounded-full flex items-center justify-center"><i class="fas fa-check text-emerald-400 text-sm"></i></div>
+                            </div>
+                            <div class="bg-gradient-to-br from-blue-500/10 to-cyan-500/10 rounded-xl p-6 border border-blue-500/20">
+                                <div class="text-center mb-4">
+                                    <div class="text-xs text-gray-500 mb-1">CERTIFICATE OF COMPLETION</div>
+                                    <div class="text-lg font-bold">John Smith</div>
+                                    <div class="text-sm text-gray-400">Has successfully completed</div>
+                                    <div class="text-blue-400 font-semibold">Advanced Professional Training</div>
+                                </div>
+                                <div class="flex justify-center">
+                                    <div class="w-20 h-20 bg-white/10 rounded-lg flex items-center justify-center border-2 border-blue-500/30">
+                                        <i class="fas fa-qrcode text-blue-400 text-3xl"></i>
+                                    </div>
+                                </div>
+                                <div class="text-center mt-2 text-xs text-gray-500">Scan to verify instantly</div>
+                            </div>
+                        </div>
+                        <!-- Verification Status -->
+                        <div class="grid grid-cols-2 gap-4">
+                            <div class="bg-emerald-500/10 border border-emerald-500/30 rounded-xl p-4 text-center">
+                                <i class="fas fa-shield-alt text-emerald-400 text-xl mb-2"></i>
+                                <div class="text-xs font-semibold text-emerald-300">Blockchain Verified</div>
+                            </div>
+                            <div class="bg-blue-500/10 border border-blue-500/30 rounded-xl p-4 text-center">
+                                <i class="fas fa-clock text-blue-400 text-xl mb-2"></i>
+                                <div class="text-xs font-semibold text-blue-300">2 Second Verification</div>
+                            </div>
+                        </div>
+                        <div class="absolute -top-4 -right-4 px-4 py-2 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full text-sm font-semibold shadow-lg">
+                            <i class="fas fa-check mr-1"></i> Verified
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Value Props -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Why <span class="gradient-text">Issuers Choose</span> Veriflo</h2>
+                <p class="text-xl text-gray-400 font-dm max-w-3xl mx-auto">Make life easier for everyone who touches your documents</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-blue-500/30">
+                        <i class="fas fa-phone-slash text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Eliminate Verification Calls</h3>
+                    <p class="text-gray-400 font-dm">Stop wasting hours answering "is this document real?" Every document verifies itself via QR code.</p>
+                    <div class="mt-6 p-4 bg-blue-500/10 rounded-xl">
+                        <div class="text-3xl font-bold text-blue-400">85%</div>
+                        <div class="text-sm text-gray-500">Reduction in verification requests</div>
+                    </div>
+                </div>
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-emerald-500 to-emerald-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-emerald-500/30">
+                        <i class="fas fa-shield-alt text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Protect Your Brand</h3>
+                    <p class="text-gray-400 font-dm">Fraudulent documents using your name damage trust. Verifiable documents prove you're the real issuer.</p>
+                    <div class="mt-6 p-4 bg-emerald-500/10 rounded-xl">
+                        <div class="text-3xl font-bold text-emerald-400">100%</div>
+                        <div class="text-sm text-gray-500">Confidence in authenticity</div>
+                    </div>
+                </div>
+                <div class="glass-card rounded-3xl p-8 text-center">
+                    <div class="w-16 h-16 bg-gradient-to-br from-purple-500 to-purple-700 rounded-2xl flex items-center justify-center mx-auto mb-6 shadow-lg shadow-purple-500/30">
+                        <i class="fas fa-heart text-white text-2xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-4">Delight Your Customers</h3>
+                    <p class="text-gray-400 font-dm">Recipients can prove their credentials instantly to anyone—employers, banks, landlords. No waiting.</p>
+                    <div class="mt-6 p-4 bg-purple-500/10 rounded-xl">
+                        <div class="text-3xl font-bold text-purple-400">2 sec</div>
+                        <div class="text-sm text-gray-500">Instant verification for holders</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Who It's For -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Built for <span class="gradient-text">Document Issuers</span></h2>
+                <p class="text-xl text-gray-400 font-dm">Any organization that issues documents people need to trust</p>
+            </div>
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-award text-blue-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Professional Certification Bodies</h3>
+                    <p class="text-gray-400 font-dm mb-4">CPA boards, nursing associations, IT certifications, trade licenses. Make your credentials stand out as instantly verifiable.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Professional licenses</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Industry certifications</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Continuing education credits</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-file-contract text-cyan-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Insurance Brokers & Agents</h3>
+                    <p class="text-gray-400 font-dm mb-4">Certificates of Insurance are frequently forged. Issue COIs that contractors and vendors can verify in seconds.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Certificates of Insurance</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Policy documents</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Coverage confirmations</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-building text-purple-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Corporate HR Departments</h3>
+                    <p class="text-gray-400 font-dm mb-4">Employment verification letters, income confirmations, and reference letters that banks and landlords can trust instantly.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Employment letters</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Income verification</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Reference letters</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-chalkboard-teacher text-yellow-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Training Providers & RTOs</h3>
+                    <p class="text-gray-400 font-dm mb-4">Training certificates and completion records that employers can verify without calling your office.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Training certificates</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Compliance completions</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Safety certifications</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-users text-pink-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Membership Organizations</h3>
+                    <p class="text-gray-400 font-dm mb-4">Professional associations, trade groups, and membership bodies. Prove active membership status instantly.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Membership cards</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Good standing letters</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Accreditation certificates</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-2xl p-8">
+                    <i class="fas fa-clipboard-check text-emerald-400 text-4xl mb-6"></i>
+                    <h3 class="text-xl font-bold mb-4">Compliance & Audit Firms</h3>
+                    <p class="text-gray-400 font-dm mb-4">ISO certificates, audit reports, and compliance attestations that can be verified without contacting your firm.</p>
+                    <ul class="space-y-2 text-sm text-gray-300">
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>ISO certifications</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Audit reports</li>
+                        <li><i class="fas fa-check text-emerald-400 mr-2"></i>Compliance certificates</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12">
+                <div class="text-center mb-12">
+                    <h2 class="text-4xl font-bold mb-4">How It <span class="gradient-text">Works</span></h2>
+                    <p class="text-gray-400 font-dm">Three simple steps to verifiable documents</p>
+                </div>
+                <div class="grid md:grid-cols-3 gap-8">
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6"><span class="text-2xl font-bold">1</span></div>
+                        <h3 class="text-xl font-bold mb-3">Upload Document</h3>
+                        <p class="text-gray-400 font-dm">Upload any document you issue—certificates, letters, credentials. Supports all file types.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6"><span class="text-2xl font-bold">2</span></div>
+                        <h3 class="text-xl font-bold mb-3">Get QR Code</h3>
+                        <p class="text-gray-400 font-dm">We create a blockchain record and generate a unique QR code. Add it to your document.</p>
+                    </div>
+                    <div class="text-center">
+                        <div class="w-16 h-16 bg-gradient-to-br from-blue-500 to-blue-700 rounded-2xl flex items-center justify-center mx-auto mb-6"><span class="text-2xl font-bold">3</span></div>
+                        <h3 class="text-xl font-bold mb-3">Anyone Can Verify</h3>
+                        <p class="text-gray-400 font-dm">Recipients share the document. Anyone scans the QR to instantly confirm it's real.</p>
+                    </div>
+                </div>
+                <div class="mt-12 p-6 bg-emerald-500/10 border border-emerald-500/30 rounded-2xl">
+                    <div class="flex items-center justify-center gap-4">
+                        <i class="fas fa-mobile-alt text-emerald-400 text-2xl"></i>
+                        <div>
+                            <div class="font-semibold text-emerald-300">No App Required</div>
+                            <div class="text-sm text-gray-400">Verifiers just scan with any smartphone camera. That's it.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- The Three-Sided Value -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-6">Everyone <span class="gradient-text">Benefits</span></h2>
+                <p class="text-xl text-gray-400 font-dm">One verification creates value for three parties</p>
+            </div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="glass-card rounded-3xl p-8 border-t-4 border-blue-500">
+                    <div class="text-blue-400 text-sm font-semibold uppercase mb-4">You (The Issuer)</div>
+                    <h3 class="text-2xl font-bold mb-4">Issue With Confidence</h3>
+                    <ul class="space-y-3 text-gray-400 font-dm">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-blue-400 mt-1"></i>Eliminate verification call burden</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-blue-400 mt-1"></i>Protect your brand from forgeries</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-blue-400 mt-1"></i>Stand out with verified credentials</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-blue-400 mt-1"></i>Reduce administrative costs</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-3xl p-8 border-t-4 border-emerald-500">
+                    <div class="text-emerald-400 text-sm font-semibold uppercase mb-4">Document Holder</div>
+                    <h3 class="text-2xl font-bold mb-4">Share With Peace of Mind</h3>
+                    <ul class="space-y-3 text-gray-400 font-dm">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i>Documents accepted instantly</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i>No waiting for verification</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i>Reuse with any third party</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-emerald-400 mt-1"></i>Prove authenticity anywhere</li>
+                    </ul>
+                </div>
+                <div class="glass-card rounded-3xl p-8 border-t-4 border-purple-500">
+                    <div class="text-purple-400 text-sm font-semibold uppercase mb-4">Third Party Verifier</div>
+                    <h3 class="text-2xl font-bold mb-4">Trust Instantly</h3>
+                    <ul class="space-y-3 text-gray-400 font-dm">
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-purple-400 mt-1"></i>Verify in 2 seconds</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-purple-400 mt-1"></i>No phone calls or emails</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-purple-400 mt-1"></i>Blockchain-backed proof</li>
+                        <li class="flex items-start gap-3"><i class="fas fa-check text-purple-400 mt-1"></i>Works 24/7, globally</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ROI Section -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <h2 class="text-4xl font-bold mb-6">The ROI Is <span class="gradient-text">Clear</span></h2>
+                        <p class="text-gray-400 font-dm mb-8">Organizations using verifiable credentials report significant time and cost savings.</p>
+                        <div class="space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 bg-blue-500/20 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl font-bold text-blue-400">50%</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Reduction in Direct Costs</div>
+                                    <div class="text-sm text-gray-500">Less staff time on verification requests</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 bg-emerald-500/20 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl font-bold text-emerald-400">12</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Staff Days Saved Monthly</div>
+                                    <div class="text-sm text-gray-500">No more manual verification processes</div>
+                                </div>
+                            </div>
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                                    <span class="text-2xl font-bold text-purple-400">70%</span>
+                                </div>
+                                <div>
+                                    <div class="font-semibold">Cost Savings</div>
+                                    <div class="text-sm text-gray-500">On printing, postage, and administration</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/20">
+                        <div class="text-center mb-6">
+                            <div class="text-sm text-gray-500 uppercase mb-2">Example: Certification Body</div>
+                            <div class="text-4xl font-bold gradient-text">$15,000/year</div>
+                            <div class="text-gray-400">Saved in verification costs</div>
+                        </div>
+                        <div class="space-y-3 text-sm">
+                            <div class="flex justify-between"><span class="text-gray-500">Verification calls before:</span><span>200/month</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">Verification calls after:</span><span>30/month</span></div>
+                            <div class="flex justify-between"><span class="text-gray-500">Staff time saved:</span><span>40 hrs/month</span></div>
+                            <div class="flex justify-between border-t border-white/10 pt-3 mt-3"><span class="text-gray-500">Veriflo cost:</span><span>$149/month</span></div>
+                            <div class="flex justify-between font-bold text-emerald-400"><span>Net annual savings:</span><span>$13,000+</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="glass-card rounded-3xl p-12 text-center border border-blue-500/30">
+                <h2 class="text-4xl font-bold mb-6">Ready to Make Your Documents <span class="gradient-text">Instantly Verifiable</span>?</h2>
+                <p class="text-xl text-gray-400 mb-10 font-dm">Join organizations worldwide issuing trusted, verified documents</p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="https://app.useveriflo.com/signup" class="px-10 py-4 bg-gradient-to-r from-blue-500 to-blue-700 text-white rounded-xl font-bold text-lg shadow-lg shadow-blue-500/30 btn-glow hover:opacity-90 transition">Get Started Now</a>
+                    <a href="index.html#contact" class="px-10 py-4 bg-white/5 border border-white/20 text-white rounded-xl font-bold text-lg hover:bg-white/10 transition">Schedule Demo</a>
+                </div>
+                <div class="flex flex-wrap justify-center gap-6 text-sm text-gray-500 mt-8">
+                    <div><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Setup in 30 seconds</div>
+                    <div><i class="fas fa-check-circle text-emerald-400 mr-2"></i>No app required for verifiers</div>
+                    <div><i class="fas fa-check-circle text-emerald-400 mr-2"></i>Cancel anytime</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-16 border-t border-white/5">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid md:grid-cols-5 gap-12 mb-12">
+                <div class="md:col-span-2">
+                    <a href="index.html" class="flex items-center mb-6 hover:opacity-80 transition">
+                        <svg class="h-8" viewBox="0 0 260 70">
+                            <defs>
+                                <linearGradient id="footerCheckGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#3b82f6"/>
+                                    <stop offset="100%" style="stop-color:#1e40af"/>
+                                </linearGradient>
+                            </defs>
+                            <path d="M4 34 L24 34 L38 54 L72 6 L92 6 L46 68 L4 34Z" fill="url(#footerCheckGrad)"/>
+                            <text x="88" y="52" font-family="Space Grotesk, Inter, -apple-system, sans-serif" font-size="46" font-weight="700" fill="#ffffff" letter-spacing="-2">eriflo</text>
+                        </svg>
+                    </a>
+                    <p class="text-gray-500 font-dm mb-4">The truth layer for digital content. Blockchain verification and forensic fingerprinting in one platform.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-twitter text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-linkedin text-xl"></i></a>
+                        <a href="#" class="text-gray-500 hover:text-white transition"><i class="fab fa-github text-xl"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Product</h4>
+                    <ul class="space-y-3">
+                        <li><a href="index.html#features" class="text-gray-500 hover:text-white transition">Features</a></li>
+                        <li><a href="index.html#pricing" class="text-gray-500 hover:text-white transition">Pricing</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-white transition">API</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-white transition">Integrations</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Use Cases</h4>
+                    <ul class="space-y-3">
+                        <li><a href="document-issuers.html" class="text-gray-500 hover:text-white transition">Document Issuers</a></li>
+                        <li><a href="onlyfans-leak-protection.html" class="text-gray-500 hover:text-white transition">Content Creators</a></li>
+                        <li><a href="legal-document-protection.html" class="text-gray-500 hover:text-white transition">Legal</a></li>
+                        <li><a href="corporate-leak-prevention.html" class="text-gray-500 hover:text-white transition">Enterprise</a></li>
+                        <li><a href="university-diploma-verification.html" class="text-gray-500 hover:text-white transition">Universities</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="font-semibold mb-4">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-white transition">About</a></li>
+                        <li><a href="blog.html" class="text-gray-500 hover:text-white transition">Blog</a></li>
+                        <li><a href="faq.html" class="text-gray-500 hover:text-white transition">FAQ</a></li>
+                        <li><a href="index.html#contact" class="text-gray-500 hover:text-white transition">Contact</a></li>
+                        <li><a href="privacy-policy.html" class="text-gray-500 hover:text-white transition">Privacy Policy</a></li>
+                        <li><a href="terms-of-service.html" class="text-gray-500 hover:text-white transition">Terms of Service</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center text-gray-500 text-sm border-t border-white/5 pt-8">
+                © 2025 Veriflo. All rights reserved.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Dropdown navigation
+        (function() {
+            const dropdown = document.querySelector('.dropdown');
+            const dropdownContent = document.querySelector('.dropdown-content');
+            let timeoutId = null;
+
+            if (dropdown && dropdownContent) {
+                dropdown.addEventListener('mouseenter', function() {
+                    clearTimeout(timeoutId);
+                    dropdownContent.classList.add('show');
+                });
+
+                dropdown.addEventListener('mouseleave', function() {
+                    timeoutId = setTimeout(function() {
+                        dropdownContent.classList.remove('show');
+                    }, 300);
+                });
+
+                dropdownContent.addEventListener('mouseenter', function() {
+                    clearTimeout(timeoutId);
+                });
+
+                dropdownContent.addEventListener('mouseleave', function() {
+                    timeoutId = setTimeout(function() {
+                        dropdownContent.classList.remove('show');
+                    }, 300);
+                });
+            }
+        })();
+    </script>
+</body>
+</html>

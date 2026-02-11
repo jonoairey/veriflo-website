@@ -23,6 +23,7 @@ export default function HowItWorksPage() {
       number: '1',
       title: 'Upload Your Document',
       icon: <Upload className="h-8 w-8" />,
+      image: '/images/step-upload.png',
       description: 'Start by uploading your confidential document to Veriflo. We support PDF, Word, Excel, PowerPoint, images, and more.',
       details: [
         'Drag and drop or click to upload',
@@ -36,6 +37,7 @@ export default function HowItWorksPage() {
       number: '2',
       title: 'Add Recipients & Enable Fingerprinting',
       icon: <Users className="h-8 w-8" />,
+      image: '/images/step-recipients.png',
       description: 'Select who should receive copies of your document and configure sharing preferences.',
       details: [
         'Add individual recipients by email',
@@ -49,6 +51,7 @@ export default function HowItWorksPage() {
       number: '3',
       title: 'Share with Secure Links',
       icon: <LinkIcon className="h-8 w-8" />,
+      image: '/images/step-share.png',
       description: 'Generate unique, tracked sharing links for each recipient. You control every aspect of access.',
       details: [
         'One unique link per recipient',
@@ -62,6 +65,7 @@ export default function HowItWorksPage() {
       number: '4',
       title: 'Monitor Access & Activity',
       icon: <Eye className="h-8 w-8" />,
+      image: '/images/step-monitor.png',
       description: 'Watch in real-time as recipients view your documents. Track exactly who accessed what and when.',
       details: [
         'Real-time access notifications',
@@ -75,6 +79,7 @@ export default function HowItWorksPage() {
       number: '5',
       title: 'Verify & Identify Leaks',
       icon: <Shield className="h-8 w-8" />,
+      image: '/images/step-verify.png',
       description: 'If you suspect a leak, upload the leaked document to instantly identify which recipient it came from.',
       details: [
         'Upload suspected leaked document',
@@ -138,30 +143,18 @@ export default function HowItWorksPage() {
                 </div>
                 <div className="relative hidden lg:block">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-600 rounded-xl blur-3xl opacity-10" />
-                  <Card className="border-slate-800 bg-slate-900/50 relative">
-                    <CardContent className="pt-8 pb-8">
-                      <div className="aspect-video bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-lg border border-blue-500/20 flex items-center justify-center">
-                        <div className="text-slate-700 opacity-20">
-                          {step.icon}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="relative rounded-xl overflow-hidden border border-blue-500/20">
+                    <img src={step.image} alt={step.title} className="w-full h-auto rounded-lg" />
+                  </div>
                 </div>
               </>
             ) : (
               <>
                 <div className="relative hidden lg:block order-2">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-600 rounded-xl blur-3xl opacity-10" />
-                  <Card className="border-slate-800 bg-slate-900/50 relative">
-                    <CardContent className="pt-8 pb-8">
-                      <div className="aspect-video bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-lg border border-blue-500/20 flex items-center justify-center">
-                        <div className="text-slate-700 opacity-20">
-                          {step.icon}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="relative rounded-xl overflow-hidden border border-blue-500/20">
+                    <img src={step.image} alt={step.title} className="w-full h-auto rounded-lg" />
+                  </div>
                 </div>
                 <div className="order-1 lg:order-2">
                   <div className="flex items-center gap-4 mb-6">

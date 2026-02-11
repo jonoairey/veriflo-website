@@ -24,6 +24,7 @@ export default function FeaturesPage() {
     {
       id: 'fingerprinting',
       icon: <Fingerprint className="h-8 w-8" />,
+      image: '/images/feature-fingerprinting.png',
       title: 'Invisible Fingerprinting',
       shortDesc: 'Multi-layer forensic fingerprints that survive screenshots, compression, and cropping.',
       fullDesc: 'Our advanced fingerprinting technology embeds unique identifiers within your documents that persist through various transformations. These forensic markers are imperceptible to the human eye but allow us to identify the exact copy and recipient of any leaked document.',
@@ -38,6 +39,7 @@ export default function FeaturesPage() {
     {
       id: 'secure-sharing',
       icon: <LinkIcon className="h-8 w-8" />,
+      image: '/images/feature-sharing.png',
       title: 'Secure Document Sharing',
       shortDesc: 'Time-limited, revocable links with access tracking and view counts.',
       fullDesc: 'Share your confidential documents through unique, tracked links that you control completely. Set expiration dates, revoke access instantly, and view detailed analytics about who accessed your documents and when.',
@@ -52,6 +54,7 @@ export default function FeaturesPage() {
     {
       id: 'leak-detection',
       icon: <Shield className="h-8 w-8" />,
+      image: '/images/feature-leak-detection.png',
       title: 'Leak Verification',
       shortDesc: 'Upload suspected leaks and instantly identify which recipient\'s copy.',
       fullDesc: 'When you suspect a document has been leaked, simply upload the leaked version. Our system scans for the unique fingerprints within it and tells you exactly which recipient the document came from, enabling you to take swift action.',
@@ -66,6 +69,7 @@ export default function FeaturesPage() {
     {
       id: 'tracking',
       icon: <BarChart3 className="h-8 w-8" />,
+      image: '/images/feature-tracking.png',
       title: 'Real-Time Access Tracking',
       shortDesc: 'See exactly who opened your documents, when, from where, and on what device.',
       fullDesc: 'Get comprehensive visibility into every interaction with your shared documents. Track who opened documents, how long they viewed them, what devices they used, and where they were located when accessing the documents.',
@@ -81,6 +85,7 @@ export default function FeaturesPage() {
     {
       id: 'collaboration',
       icon: <Users className="h-8 w-8" />,
+      image: '/images/feature-collaboration.png',
       title: 'Team Collaboration',
       shortDesc: 'Share documents across your organization with role-based access controls.',
       fullDesc: 'Manage document sharing and access across your entire team with granular permission controls. Assign roles, manage team members, and maintain security while enabling seamless collaboration.',
@@ -96,6 +101,7 @@ export default function FeaturesPage() {
     {
       id: 'security',
       icon: <Lock className="h-8 w-8" />,
+      image: '/images/feature-security.png',
       title: 'Enterprise Security & Compliance',
       shortDesc: 'SOC 2 ready, AES-256 encryption, and comprehensive audit logging.',
       fullDesc: 'Enterprise-grade security features ensure your sensitive documents are protected with industry-leading standards. Full audit trails, encryption, and compliance certifications give you peace of mind.',
@@ -157,30 +163,18 @@ export default function FeaturesPage() {
                 </div>
                 <div className="relative hidden lg:block">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-600 rounded-xl blur-3xl opacity-20" />
-                  <Card className="border-slate-800 bg-slate-900/50 relative">
-                    <CardContent className="pt-8 pb-8">
-                      <div className="aspect-square bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-lg border border-blue-500/20 flex items-center justify-center">
-                        <div className="text-slate-700 opacity-20">
-                          {feature.icon}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="relative rounded-xl overflow-hidden border border-blue-500/20">
+                    <img src={feature.image} alt={feature.title} className="w-full h-auto rounded-lg" />
+                  </div>
                 </div>
               </>
             ) : (
               <>
                 <div className="relative hidden lg:block order-2">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-600 rounded-xl blur-3xl opacity-20" />
-                  <Card className="border-slate-800 bg-slate-900/50 relative">
-                    <CardContent className="pt-8 pb-8">
-                      <div className="aspect-square bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-lg border border-blue-500/20 flex items-center justify-center">
-                        <div className="text-slate-700 opacity-20">
-                          {feature.icon}
-                        </div>
-                      </div>
-                    </CardContent>
-                  </Card>
+                  <div className="relative rounded-xl overflow-hidden border border-blue-500/20">
+                    <img src={feature.image} alt={feature.title} className="w-full h-auto rounded-lg" />
+                  </div>
                 </div>
                 <div className="order-1 lg:order-2">
                   <div className="flex h-16 w-16 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400 mb-6">

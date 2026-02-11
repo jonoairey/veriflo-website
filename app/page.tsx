@@ -34,10 +34,8 @@ export default function HomePage() {
           </div>
           <div className="relative hidden lg:block">
             <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-600 rounded-xl blur-3xl opacity-20" />
-            <div className="relative bg-gradient-to-br from-blue-900/30 to-emerald-900/30 border border-blue-500/20 rounded-xl p-8">
-              <div className="aspect-square bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-lg border border-blue-500/20 flex items-center justify-center">
-                <Fingerprint className="h-24 w-24 text-blue-400" />
-              </div>
+            <div className="relative rounded-xl overflow-hidden border border-blue-500/20">
+              <img src="/images/hero-dashboard.png" alt="Veriflo Dashboard - Secure document sharing platform" className="w-full h-auto rounded-xl" />
             </div>
           </div>
         </div>

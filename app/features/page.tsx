@@ -21,76 +21,6 @@ export const metadata = {
   description: 'Protect outgoing documents with invisible fingerprinting and verify incoming documents for tampering. Complete document security with leak detection, integrity scoring, and real-time tracking.',
 };
 
-function IntegrityCheckIllustration() {
-  return (
-    <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-      <rect width="480" height="360" rx="12" fill="#0F172A" />
-      {/* Score card */}
-      <rect x="100" y="30" width="280" height="300" rx="12" fill="#1E293B" stroke="#334155" strokeWidth="1.5" />
-      {/* Header */}
-      <text x="240" y="62" textAnchor="middle" fill="#E2E8F0" fontSize="14" fontWeight="600" fontFamily="system-ui">Integrity Check Result</text>
-      {/* Score circle */}
-      <circle cx="240" cy="140" r="55" stroke="#334155" strokeWidth="6" />
-      <circle cx="240" cy="140" r="55" stroke="#10B981" strokeWidth="6" strokeDasharray="314" strokeDashoffset="50" strokeLinecap="round" transform="rotate(-90 240 140)" />
-      <text x="240" y="135" textAnchor="middle" fill="#E2E8F0" fontSize="32" fontWeight="700" fontFamily="system-ui">85</text>
-      <text x="240" y="155" textAnchor="middle" fill="#64748B" fontSize="11" fontFamily="system-ui">INTEGRITY SCORE</text>
-      {/* Risk level badge */}
-      <rect x="190" y="210" width="100" height="26" rx="13" fill="#10B981" fillOpacity="0.15" />
-      <text x="240" y="228" textAnchor="middle" fill="#10B981" fontSize="12" fontWeight="600" fontFamily="system-ui">Low Risk</text>
-      {/* Findings */}
-      <line x1="130" y1="250" x2="350" y2="250" stroke="#334155" strokeWidth="1" />
-      <circle cx="145" cy="272" r="4" fill="#10B981" />
-      <text x="157" y="276" fill="#CBD5E1" fontSize="11" fontFamily="system-ui">Metadata consistent</text>
-      <circle cx="145" cy="292" r="4" fill="#10B981" />
-      <text x="157" y="296" fill="#CBD5E1" fontSize="11" fontFamily="system-ui">Creation date verified</text>
-      <circle cx="145" cy="312" r="4" fill="#F59E0B" />
-      <text x="157" y="316" fill="#CBD5E1" fontSize="11" fontFamily="system-ui">Minor: different producer tool</text>
-    </svg>
-  );
-}
-
-function TamperDetectionIllustration() {
-  return (
-    <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
-      <rect width="480" height="360" rx="12" fill="#0F172A" />
-      {/* Left: Original document */}
-      <rect x="30" y="50" width="140" height="180" rx="6" fill="#1E293B" stroke="#10B981" strokeWidth="1.5" />
-      <text x="100" y="40" textAnchor="middle" fill="#10B981" fontSize="10" fontWeight="600" fontFamily="system-ui">ORIGINAL</text>
-      <path d="M50 85 L150 85 M50 100 L140 100 M50 115 L150 115 M50 130 L135 130 M50 145 L150 145 M50 160 L145 160 M50 175 L150 175 M50 190 L140 190" stroke="#334155" strokeWidth="1.5" strokeLinecap="round" />
-      {/* Checkmark overlay */}
-      <circle cx="145" cy="205" r="12" fill="#10B981" fillOpacity="0.2" />
-      <path d="M139 205 L143 209 L151 201" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
-      {/* Arrow */}
-      <path d="M190 140 L210 140" stroke="#64748B" strokeWidth="2" strokeLinecap="round" />
-      <text x="200" y="160" textAnchor="middle" fill="#64748B" fontSize="10" fontFamily="system-ui">vs</text>
-      {/* Right: Tampered document */}
-      <rect x="230" y="50" width="140" height="180" rx="6" fill="#1E293B" stroke="#EF4444" strokeWidth="1.5" />
-      <text x="300" y="40" textAnchor="middle" fill="#EF4444" fontSize="10" fontWeight="600" fontFamily="system-ui">TAMPERED</text>
-      <path d="M250 85 L350 85 M250 100 L340 100" stroke="#334155" strokeWidth="1.5" strokeLinecap="round" />
-      {/* Highlighted tampered lines */}
-      <rect x="245" y="108" width="120" height="16" rx="2" fill="#EF4444" fillOpacity="0.1" />
-      <path d="M250 115 L350 115" stroke="#EF4444" strokeWidth="1.5" strokeLinecap="round" />
-      <rect x="245" y="123" width="105" height="16" rx="2" fill="#EF4444" fillOpacity="0.1" />
-      <path d="M250 130 L335 130" stroke="#EF4444" strokeWidth="1.5" strokeLinecap="round" />
-      <path d="M250 145 L350 145 M250 160 L345 160 M250 175 L350 175 M250 190 L340 190" stroke="#334155" strokeWidth="1.5" strokeLinecap="round" />
-      {/* Warning overlay */}
-      <circle cx="345" cy="205" r="12" fill="#EF4444" fillOpacity="0.2" />
-      <text x="345" y="210" textAnchor="middle" fill="#EF4444" fontSize="14" fontWeight="700" fontFamily="system-ui">!</text>
-      {/* Bottom panel: Forensic findings */}
-      <rect x="30" y="255" width="340" height="80" rx="8" fill="#1E293B" stroke="#334155" strokeWidth="1.5" />
-      <text x="50" y="278" fill="#E2E8F0" fontSize="11" fontWeight="600" fontFamily="system-ui">Forensic Findings</text>
-      <circle cx="50" cy="298" r="4" fill="#EF4444" />
-      <text x="62" y="302" fill="#94A3B8" fontSize="10" fontFamily="system-ui">Modified 3 days after creation</text>
-      <circle cx="50" cy="318" r="4" fill="#F59E0B" />
-      <text x="62" y="322" fill="#94A3B8" fontSize="10" fontFamily="system-ui">Creator: Word → Producer: PDF Editor Pro</text>
-      {/* Magnifying glass icon */}
-      <circle cx="420" cy="160" r="30" stroke="#3B82F6" strokeWidth="2" fill="#3B82F6" fillOpacity="0.05" />
-      <circle cx="415" cy="155" r="14" stroke="#3B82F6" strokeWidth="2" fill="none" />
-      <line x1="425" y1="165" x2="435" y2="175" stroke="#3B82F6" strokeWidth="2.5" strokeLinecap="round" />
-    </svg>
-  );
-}
-
 export default function FeaturesPage() {
   const features = [
     {
@@ -141,8 +71,7 @@ export default function FeaturesPage() {
     {
       id: 'integrity-check',
       icon: <ShieldCheck className="h-8 w-8" />,
-      image: null,
-      illustration: <IntegrityCheckIllustration />,
+      image: '/images/feature-integrity.png',
       title: 'Document Integrity Check',
       shortDesc: 'Verify incoming documents for signs of tampering before making critical decisions.',
       fullDesc: 'Upload any incoming document — contracts, financial statements, invoices, certificates — and get an instant integrity score. Veriflo runs forensic analysis on PDF metadata, creation dates, software signatures, and structural patterns to flag documents that may have been manipulated.',
@@ -158,8 +87,7 @@ export default function FeaturesPage() {
     {
       id: 'tamper-detection',
       icon: <FileSearch className="h-8 w-8" />,
-      image: null,
-      illustration: <TamperDetectionIllustration />,
+      image: '/images/feature-tamper-detection.png',
       title: 'Forensic Tamper Detection',
       shortDesc: 'Deep analysis detects altered dates, metadata inconsistencies, and document manipulation.',
       fullDesc: 'Our forensic engine goes beyond surface-level checks. It detects incremental saves that indicate post-creation editing, identifies mismatches between document creator and producer software, flags JavaScript or embedded files hidden inside PDFs, and spots metadata that has been stripped or altered — all signs of potential document fraud.',
@@ -270,7 +198,7 @@ export default function FeaturesPage() {
                 <div className="relative hidden lg:block">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-600 rounded-xl blur-3xl opacity-20" />
                   <div className="relative rounded-xl overflow-hidden border border-blue-500/20">
-                    {feature.illustration ? feature.illustration : <img src={feature.image!} alt={feature.title} className="w-full h-auto rounded-lg" />}
+                    <img src={feature.image} alt={feature.title} className="w-full h-auto rounded-lg" />
                   </div>
                 </div>
               </>
@@ -279,7 +207,7 @@ export default function FeaturesPage() {
                 <div className="relative hidden lg:block order-2">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-emerald-600 rounded-xl blur-3xl opacity-20" />
                   <div className="relative rounded-xl overflow-hidden border border-blue-500/20">
-                    {feature.illustration ? feature.illustration : <img src={feature.image!} alt={feature.title} className="w-full h-auto rounded-lg" />}
+                    <img src={feature.image} alt={feature.title} className="w-full h-auto rounded-lg" />
                   </div>
                 </div>
                 <div className="order-1 lg:order-2">

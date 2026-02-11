@@ -45,95 +45,151 @@ export default function HomePage() {
       {/* Stats Counter */}
       <StatsCounter />
 
-      {/* How It Works - 3 Steps */}
+      {/* How It Works - Two Flows */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">How It Works</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Three simple steps to secure document sharing
+            Two workflows, one platform — protect what goes out and verify what comes in
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
-          {[
-            {
-              step: '1',
-              title: 'Upload',
-              description: 'Upload your confidential document. We handle PDF, images, and Office files.',
-            },
-            {
-              step: '2',
-              title: 'Share',
-              description: 'Send fingerprinted copies to each recipient. Every copy is uniquely marked.',
-            },
-            {
-              step: '3',
-              title: 'Track & Verify',
-              description: 'Monitor who views your documents. If a leak occurs, identify the source instantly.',
-            },
-          ].map((step, idx) => (
-            <div key={idx} className="text-center">
-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/20 text-2xl font-bold text-blue-400 mx-auto mb-4">
-                {step.step}
+        <div className="grid gap-12 md:grid-cols-2">
+          {/* Outgoing Flow */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
+                <Shield className="h-5 w-5" />
               </div>
-              <h3 className="text-lg font-semibold text-white">{step.title}</h3>
-              <p className="mt-2 text-gray-400">{step.description}</p>
+              <h3 className="text-xl font-bold text-white">Protect Outgoing</h3>
             </div>
-          ))}
+            <div className="space-y-6">
+              {[
+                { step: '1', title: 'Upload', description: 'Upload your confidential document. We handle PDF, images, and Office files.' },
+                { step: '2', title: 'Share', description: 'Send fingerprinted copies to each recipient. Every copy is uniquely marked.' },
+                { step: '3', title: 'Track & Verify', description: 'Monitor who views your documents. If a leak occurs, identify the source instantly.' },
+              ].map((step, idx) => (
+                <div key={idx} className="flex gap-4 items-start">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500/20 text-lg font-bold text-blue-400 flex-shrink-0">
+                    {step.step}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white">{step.title}</h4>
+                    <p className="mt-1 text-sm text-gray-400">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Incoming Flow */}
+          <div>
+            <div className="flex items-center gap-3 mb-6">
+              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
+                <ShieldVerify className="h-5 w-5" />
+              </div>
+              <h3 className="text-xl font-bold text-white">Verify Incoming</h3>
+            </div>
+            <div className="space-y-6">
+              {[
+                { step: '1', title: 'Upload to Verify', description: 'Drop any incoming document into the Integrity Check tool — contracts, invoices, statements.' },
+                { step: '2', title: 'Forensic Analysis', description: 'Veriflo scans metadata, dates, structure, and content for signs of tampering in seconds.' },
+                { step: '3', title: 'Integrity Score', description: 'Get a 0-100 score with risk level and detailed findings. Know if it\'s genuine before you act.' },
+              ].map((step, idx) => (
+                <div key={idx} className="flex gap-4 items-start">
+                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 text-lg font-bold text-emerald-400 flex-shrink-0">
+                    {step.step}
+                  </div>
+                  <div>
+                    <h4 className="font-semibold text-white">{step.title}</h4>
+                    <p className="mt-1 text-sm text-gray-400">{step.description}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 text-center">
+          <Button asChild size="lg" variant="ghost">
+            <Link href="/how-it-works" className="text-white hover:text-blue-300">
+              See Full Walkthrough <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
         </div>
       </section>
 
-      {/* Features Grid - 6 Cards */}
+      {/* Features Grid - 8 Cards */}
       <section id="features" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">Powerful Features</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Everything you need to protect and track confidential documents
+            Everything you need to protect outgoing documents and verify incoming ones
           </p>
         </div>
 
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {[
             {
               icon: <Fingerprint className="h-6 w-6" />,
               title: 'Invisible Fingerprinting',
               description:
                 'Multi-layer forensic fingerprints survive screenshots, compression, and cropping.',
+              color: 'blue',
             },
             {
               icon: <LinkIcon className="h-6 w-6" />,
               title: 'Secure Sharing Links',
               description:
                 'Time-limited, revocable links with access tracking and view counts.',
+              color: 'blue',
             },
             {
               icon: <Shield className="h-6 w-6" />,
               title: 'Leak Verification',
               description:
                 'Upload a suspected leak and instantly identify which recipient\'s copy it came from.',
+              color: 'blue',
             },
             {
               icon: <BarChart3 className="h-6 w-6" />,
               title: 'Real-Time Tracking',
               description:
                 'See exactly who opened your documents, when, from where, and on what device.',
+              color: 'blue',
+            },
+            {
+              icon: <ShieldVerify className="h-6 w-6" />,
+              title: 'Integrity Check',
+              description:
+                'Upload any incoming document and get an instant integrity score with detailed findings.',
+              color: 'emerald',
+            },
+            {
+              icon: <Eye className="h-6 w-6" />,
+              title: 'Tamper Detection',
+              description:
+                'Detect altered dates, metadata inconsistencies, and signs of document manipulation.',
+              color: 'emerald',
             },
             {
               icon: <Users className="h-6 w-6" />,
               title: 'Team Collaboration',
               description:
                 'Share documents across your organization with role-based access controls.',
+              color: 'blue',
             },
             {
               icon: <ShieldCheck className="h-6 w-6" />,
               title: 'Enterprise Ready',
               description:
                 'SOC 2 ready, AES-256 encryption, and comprehensive audit logging.',
+              color: 'blue',
             },
           ].map((feature, idx) => (
             <Card key={idx} className="border-slate-800 bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
               <CardContent className="pt-8">
-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400 mb-4">
+                <div className={`flex h-12 w-12 items-center justify-center rounded-lg mb-4 ${feature.color === 'emerald' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-blue-500/20 text-blue-400'}`}>
                   {feature.icon}
                 </div>
                 <h3 className="text-lg font-semibold text-white">{feature.title}</h3>

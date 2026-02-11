@@ -72,7 +72,7 @@ export function Navbar() {
               </div>
             </div>
             <Link href="/pricing" className="text-sm font-medium text-white hover:text-blue-300 transition-colors">
-              Pricing
+              Contact
             </Link>
             <a href={`${PLATFORM_URL}/verify`} className="text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors">
               Verify a Document
@@ -127,7 +127,7 @@ export function Navbar() {
                 </div>
               )}
               <Link href="/pricing" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
-                Pricing
+                Contact
               </Link>
               <a href={`${PLATFORM_URL}/verify`} className="block px-4 py-2 rounded-lg text-emerald-400 hover:bg-slate-800 transition-colors">
                 Verify a Document

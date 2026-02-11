@@ -1,8 +1,9 @@
 import React from 'react';
 import Link from 'next/link';
-import { Shield, Lock, Eye, Zap, CheckCircle, ArrowRight, Fingerprint, LinkIcon, BarChart3, Users, Shield as ShieldCheck, Database } from 'lucide-react';
+import { Shield, Lock, Eye, Zap, CheckCircle, ArrowRight, Fingerprint, LinkIcon, BarChart3, Users, Shield as ShieldCheck, Database, Send } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
+import { ContactForm } from '@/components/marketing/contact-form';
 
 export default function HomePage() {
   return (
@@ -187,108 +188,47 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Pricing Section */}
-      <section id="pricing" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">Simple, Transparent Pricing</h2>
-          <p className="mt-4 text-xl text-gray-400">
-            Choose the plan that fits your needs
-          </p>
-        </div>
+      {/* Contact Section */}
+      <section id="contact" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="grid gap-12 lg:grid-cols-2 items-start">
+          <div>
+            <h2 className="text-4xl font-bold text-white">Get in Touch</h2>
+            <p className="mt-4 text-xl text-gray-400">
+              Tell us about your document security needs and we&apos;ll find the right solution for your team.
+            </p>
 
-        <div className="grid gap-8 md:grid-cols-3">
-          {[
-            {
-              name: 'Free',
-              price: '$0',
-              description: 'Perfect to get started',
-              features: [
-                '5 documents',
-                '10 distributions/mo',
-                'Basic fingerprinting',
-                'Email support',
-              ],
-              cta: 'Start Free',
-              ctaHref: 'https://app.useveriflo.com/signup',
-            },
-            {
-              name: 'Pro',
-              price: '$49',
-              description: 'For growing teams',
-              featured: true,
-              features: [
-                '100 documents',
-                '500 distributions/mo',
-                'Watermarks & fingerprinting',
-                '5 team seats',
-                'Leak verification',
-                'Real-time tracking',
-              ],
-              cta: 'Start Pro Trial',
-              ctaHref: 'https://app.useveriflo.com/signup',
-            },
-            {
-              name: 'Enterprise',
-              price: '$149',
-              description: 'For organizations',
-              features: [
-                'Unlimited documents',
-                'Unlimited distributions',
-                '25 team seats',
-                'API access',
-                'Custom branding',
-                'Dedicated support',
-              ],
-              cta: 'Contact Sales',
-              ctaHref: 'https://app.useveriflo.com/signup',
-            },
-          ].map((plan, idx) => (
-            <Card
-              key={idx}
-              className={`border-slate-800 ${
-                plan.featured ? 'bg-gradient-to-b from-blue-500/20 to-slate-900/50 border-blue-500/50' : 'bg-slate-900/50'
-              }`}
-            >
-              <CardContent className="pt-8">
-                <h3 className="text-2xl font-bold text-white">{plan.name}</h3>
-                <div className="mt-2 text-4xl font-bold text-white">
-                  {plan.price}
-                  {plan.price !== '$0' && <span className="text-lg text-gray-400">/mo</span>}
+            <div className="mt-10 space-y-6">
+              {[
+                {
+                  icon: <Shield className="h-6 w-6" />,
+                  title: 'Custom Plans',
+                  description: 'We tailor pricing and features to your specific requirements — from startups to enterprises.',
+                },
+                {
+                  icon: <Users className="h-6 w-6" />,
+                  title: 'Dedicated Onboarding',
+                  description: 'Our team will help you set up, integrate, and get your first documents protected.',
+                },
+                {
+                  icon: <Fingerprint className="h-6 w-6" />,
+                  title: 'Free Pilot',
+                  description: 'Try Veriflo with your own documents before committing. No credit card required.',
+                },
+              ].map((item, idx) => (
+                <div key={idx} className="flex gap-4">
+                  <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400 flex-shrink-0">
+                    {item.icon}
+                  </div>
+                  <div>
+                    <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                    <p className="mt-1 text-gray-400">{item.description}</p>
+                  </div>
                 </div>
-                <p className="mt-2 text-gray-400">{plan.description}</p>
-                <Button
-                  variant={plan.featured ? 'primary' : 'secondary'}
-                  className="mt-6 w-full"
-                  asChild
-                >
-                  <a href={plan.ctaHref}>{plan.cta}</a>
-                </Button>
-                <ul className="mt-6 space-y-3">
-                  {plan.features.map((feature, fidx) => (
-                    <li key={fidx} className="flex items-center gap-2 text-gray-300">
-                      <CheckCircle className="h-5 w-5 text-emerald-500" />
-                      {feature}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
-
-      {/* Final CTA Section */}
-      <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
-        <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Ready to share confidently?</h2>
-          <p className="mt-4 text-lg text-blue-100">
-            Start protecting your documents in under 60 seconds.
-          </p>
-          <div className="mt-8 flex gap-4 justify-center">
-            <Button asChild size="lg" variant="primary">
-              <a href="https://app.useveriflo.com/signup">Get Started Free</a>
-            </Button>
+              ))}
+            </div>
           </div>
+
+          <ContactForm />
         </div>
       </section>
     </div>

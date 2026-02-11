@@ -11,12 +11,14 @@ import {
   Lock,
   Eye,
   CheckCircle,
-  ArrowRight
+  ArrowRight,
+  ShieldCheck,
+  FileSearch,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Features - Veriflo | Document Security & Leak Detection',
-  description: 'Explore Veriflo\'s comprehensive features for secure document sharing, invisible fingerprinting, leak detection, and real-time access tracking.',
+  title: 'Features - Veriflo | Two-Way Document Trust Platform',
+  description: 'Protect outgoing documents with invisible fingerprinting and verify incoming documents for tampering. Complete document security with leak detection, integrity scoring, and real-time tracking.',
 };
 
 export default function FeaturesPage() {
@@ -64,6 +66,38 @@ export default function FeaturesPage() {
         'Detailed leak analysis reports',
         'Time-stamped leak detection logs',
         'Integration with your security workflows',
+      ],
+    },
+    {
+      id: 'integrity-check',
+      icon: <ShieldCheck className="h-8 w-8" />,
+      image: '/images/feature-integrity.png',
+      title: 'Document Integrity Check',
+      shortDesc: 'Verify incoming documents for signs of tampering before making critical decisions.',
+      fullDesc: 'Upload any incoming document — contracts, financial statements, invoices, certificates — and get an instant integrity score. Veriflo runs forensic analysis on PDF metadata, creation dates, software signatures, and structural patterns to flag documents that may have been manipulated.',
+      benefits: [
+        'Instant integrity scoring from 0-100',
+        'Risk level classification (clean, low, medium, high, critical)',
+        'PDF metadata and structure analysis',
+        'Creation/modification date gap detection',
+        'Editing software and tool detection',
+        'Suspicious pattern identification',
+      ],
+    },
+    {
+      id: 'tamper-detection',
+      icon: <FileSearch className="h-8 w-8" />,
+      image: '/images/feature-tamper-detection.png',
+      title: 'Forensic Tamper Detection',
+      shortDesc: 'Deep analysis detects altered dates, metadata inconsistencies, and document manipulation.',
+      fullDesc: 'Our forensic engine goes beyond surface-level checks. It detects incremental saves that indicate post-creation editing, identifies mismatches between document creator and producer software, flags JavaScript or embedded files hidden inside PDFs, and spots metadata that has been stripped or altered — all signs of potential document fraud.',
+      benefits: [
+        'Incremental save detection (multiple %%EOF markers)',
+        'Creator/producer software mismatch analysis',
+        'Hidden JavaScript and embedded file detection',
+        'Image EXIF metadata and compression analysis',
+        'Hash comparison against known originals',
+        'Veriflo fingerprint verification on incoming docs',
       ],
     },
     {
@@ -122,10 +156,10 @@ export default function FeaturesPage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-            Complete Document Security
+            Two-Way Document Trust
           </h1>
           <p className="mt-6 text-xl text-gray-300">
-            Everything you need to protect your confidential documents, track access, and identify leaks instantly.
+            Protect what goes out with invisible fingerprinting and leak detection. Verify what comes in with tamper detection and integrity scoring. Complete document security in both directions.
           </p>
           <div className="mt-8 flex gap-4 justify-center">
             <Button asChild size="lg" variant="primary">
@@ -220,6 +254,8 @@ export default function FeaturesPage() {
               {[
                 { feature: 'Invisible Fingerprinting', veriflo: true, email: false, cloud: false },
                 { feature: 'Leak Detection', veriflo: true, email: false, cloud: false },
+                { feature: 'Document Integrity Check', veriflo: true, email: false, cloud: false },
+                { feature: 'Tamper Detection', veriflo: true, email: false, cloud: false },
                 { feature: 'Real-Time Tracking', veriflo: true, email: false, cloud: false },
                 { feature: 'Access Revocation', veriflo: true, email: false, cloud: false },
                 { feature: 'Expiring Links', veriflo: true, email: false, cloud: true },

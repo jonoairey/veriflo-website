@@ -10,15 +10,17 @@ import {
   Shield,
   ArrowRight,
   CheckCircle,
+  ShieldCheck,
+  FileSearch,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'How It Works - Veriflo | Secure Document Sharing Process',
-  description: 'Learn how Veriflo secures your documents with invisible fingerprinting, share them safely with tracking, and verify leaks instantly.',
+  title: 'How It Works - Veriflo | Two-Way Document Trust',
+  description: 'Learn how Veriflo protects outgoing documents with invisible fingerprinting and verifies incoming documents for tampering with forensic integrity checks.',
 };
 
 export default function HowItWorksPage() {
-  const steps = [
+  const outgoingSteps = [
     {
       number: '1',
       title: 'Upload Your Document',
@@ -91,23 +93,85 @@ export default function HowItWorksPage() {
     },
   ];
 
+  const incomingSteps = [
+    {
+      number: '1',
+      title: 'Upload a Document to Verify',
+      icon: <Upload className="h-8 w-8" />,
+      image: '/images/step-integrity-upload.png',
+      description: 'Drag and drop any incoming document — contracts, financial statements, invoices, certificates — into the Integrity Check tool.',
+      details: [
+        'Supports PDF, images (JPEG, PNG), and more',
+        'Drag and drop or click to upload',
+        'No account needed for basic checks',
+        'Documents are not stored permanently',
+      ],
+      whatHappens: 'Veriflo begins forensic analysis immediately. The document is scanned for metadata, structural patterns, and signs of manipulation.',
+    },
+    {
+      number: '2',
+      title: 'Forensic Analysis Runs Automatically',
+      icon: <FileSearch className="h-8 w-8" />,
+      image: '/images/step-integrity-analysis.png',
+      description: 'Our engine performs multiple forensic checks on the document in seconds, examining metadata, structure, and content for signs of tampering.',
+      details: [
+        'PDF metadata and creation date analysis',
+        'Creator/producer software mismatch detection',
+        'Incremental save and structural anomalies',
+        'Image EXIF data and compression analysis',
+        'Hidden JavaScript and embedded file detection',
+        'Hash comparison against known originals',
+      ],
+      whatHappens: 'Each check produces findings that are classified as informational, warning, or danger. These feed into an overall integrity score.',
+    },
+    {
+      number: '3',
+      title: 'Get Your Integrity Score',
+      icon: <ShieldCheck className="h-8 w-8" />,
+      image: '/images/step-integrity-score.png',
+      description: 'Receive an instant integrity score from 0 to 100, with a clear risk level and detailed findings explaining exactly what was detected.',
+      details: [
+        'Score from 0-100 with visual gauge',
+        'Risk levels: Clean, Low, Medium, High, Critical',
+        'Expandable findings with severity ratings',
+        'Technical details for deeper investigation',
+        'Veriflo fingerprint detection (if present)',
+        'Exportable results for your records',
+      ],
+      whatHappens: 'You get a clear, actionable assessment of whether the document appears genuine or shows signs of manipulation — so you can make informed decisions before acting on it.',
+    },
+  ];
+
   return (
     <div className="space-y-20 py-20">
       {/* Hero Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-            Simple, Secure, Traceable
+            Protect Outgoing. Verify Incoming.
           </h1>
           <p className="mt-6 text-xl text-gray-300">
-            Protect your confidential documents in 5 easy steps. Get from zero to secure document sharing in under 60 seconds.
+            Two workflows, one platform. Fingerprint and track the documents you send out, and verify the documents you receive for signs of tampering.
           </p>
         </div>
       </section>
 
-      {/* Steps */}
+      {/* Section Divider: Outgoing */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-4 mb-4">
+          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400">
+            <Shield className="h-7 w-7" />
+          </div>
+          <div>
+            <h2 className="text-3xl font-bold text-white">Protect Outgoing Documents</h2>
+            <p className="text-gray-400 mt-1">Fingerprint, share, track, and identify leaks</p>
+          </div>
+        </div>
+      </section>
+
+      {/* Outgoing Steps */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-        {steps.map((step, idx) => (
+        {outgoingSteps.map((step, idx) => (
           <div key={idx} className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-start">
             {idx % 2 === 0 ? (
               <>
@@ -192,6 +256,108 @@ export default function HowItWorksPage() {
         ))}
       </section>
 
+      {/* Section Divider: Incoming */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="border-t border-slate-800 pt-16">
+          <div className="flex items-center gap-4 mb-4">
+            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400">
+              <ShieldCheck className="h-7 w-7" />
+            </div>
+            <div>
+              <h2 className="text-3xl font-bold text-white">Verify Incoming Documents</h2>
+              <p className="text-gray-400 mt-1">Check for tampering, fraud, and manipulation before you act</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Incoming Steps */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
+        {incomingSteps.map((step, idx) => (
+          <div key={idx} className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-start">
+            {idx % 2 === 0 ? (
+              <>
+                <div>
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-2xl font-bold text-emerald-400">
+                      {step.number}
+                    </div>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
+                      {step.icon}
+                    </div>
+                  </div>
+                  <h2 className="text-3xl font-bold text-white">{step.title}</h2>
+                  <p className="mt-4 text-lg text-gray-300">{step.description}</p>
+
+                  <div className="mt-8">
+                    <h3 className="font-semibold text-white mb-4">You can:</h3>
+                    <ul className="space-y-2">
+                      {step.details.map((detail, didx) => (
+                        <li key={didx} className="flex items-center gap-2 text-gray-300">
+                          <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-8 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
+                    <p className="text-sm text-emerald-300">
+                      <span className="font-semibold">What Happens:</span> {step.whatHappens}
+                    </p>
+                  </div>
+                </div>
+                <div className="relative hidden lg:block">
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-xl blur-3xl opacity-10" />
+                  <div className="relative rounded-xl overflow-hidden border border-emerald-500/20">
+                    <img src={step.image} alt={step.title} className="w-full h-auto rounded-lg" />
+                  </div>
+                </div>
+              </>
+            ) : (
+              <>
+                <div className="relative hidden lg:block order-2">
+                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-xl blur-3xl opacity-10" />
+                  <div className="relative rounded-xl overflow-hidden border border-emerald-500/20">
+                    <img src={step.image} alt={step.title} className="w-full h-auto rounded-lg" />
+                  </div>
+                </div>
+                <div className="order-1 lg:order-2">
+                  <div className="flex items-center gap-4 mb-6">
+                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-2xl font-bold text-emerald-400">
+                      {step.number}
+                    </div>
+                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
+                      {step.icon}
+                    </div>
+                  </div>
+                  <h2 className="text-3xl font-bold text-white">{step.title}</h2>
+                  <p className="mt-4 text-lg text-gray-300">{step.description}</p>
+
+                  <div className="mt-8">
+                    <h3 className="font-semibold text-white mb-4">You can:</h3>
+                    <ul className="space-y-2">
+                      {step.details.map((detail, didx) => (
+                        <li key={didx} className="flex items-center gap-2 text-gray-300">
+                          <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
+                          {detail}
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+
+                  <div className="mt-8 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
+                    <p className="text-sm text-emerald-300">
+                      <span className="font-semibold">What Happens:</span> {step.whatHappens}
+                    </p>
+                  </div>
+                </div>
+              </>
+            )}
+          </div>
+        ))}
+      </section>
+
       {/* Key Principles */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -212,8 +378,8 @@ export default function HowItWorksPage() {
               description: 'Never trust an unsecured document. Every copy is uniquely marked so leaks are instantly traceable.',
             },
             {
-              title: 'Privacy First',
-              description: 'We only collect metadata necessary for security and tracking. Your document content is private.',
+              title: 'Verify Before You Trust',
+              description: 'Don\'t assume incoming documents are genuine. Run integrity checks to detect tampering before making decisions.',
             },
             {
               title: 'Instant Notifications',
@@ -263,8 +429,16 @@ export default function HowItWorksPage() {
               a: 'Our fingerprinting technology is highly accurate. We can identify the source recipient with certainty, even if the document has been compressed, cropped, or screenshotted.',
             },
             {
+              q: 'How does the integrity check work?',
+              a: 'Upload any incoming document and Veriflo runs forensic analysis on its metadata, structure, and content. It checks for things like mismatched creation dates, editing software traces, incremental saves, and hidden embedded content — then gives you an integrity score from 0 to 100 with detailed findings.',
+            },
+            {
+              q: 'What does the integrity score mean?',
+              a: 'A score of 80-100 means the document appears clean. 60-79 is low risk with minor findings. 40-59 is medium risk warranting investigation. Below 40 indicates significant signs of manipulation. Each finding is explained so you can make an informed judgment.',
+            },
+            {
               q: 'Is there a learning curve?',
-              a: 'No. Most users protect their first document in under 60 seconds. The interface is intuitive and guides you through each step.',
+              a: 'No. Most users protect their first document in under 60 seconds, and running an integrity check is even simpler — just drag and drop. The interface is intuitive and guides you through each step.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">

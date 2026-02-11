@@ -65,7 +65,7 @@ export default function InvoiceVerificationPage() {
     {
       title: 'Tamper Detection',
       description:
-        'Our multi-layer verification checks PDF metadata checksums, structural integrity, and pixel-level fingerprints. If anything has been altered, we flag it.',
+        'Our multi-layer verification checks PDF metadata checksums, structural integrity, and pixel-level fingerprints. Veriflo flags inconsistencies and gives you an instant integrity score from 0 to 100, so you know exactly how confident you can be in the document\'s authenticity.',
     },
     {
       title: 'Zero-Friction for Recipients',
@@ -78,6 +78,7 @@ export default function InvoiceVerificationPage() {
     'Eliminate invoice fraud risk for your business and your clients',
     'Give customers confidence that payment details are genuine',
     'Detect tampered invoices before payments are made',
+    'Get instant integrity scores on every incoming invoice and supporting document',
     'No software or accounts required for recipients to verify',
     'Build trust with clients through provable document integrity',
     'Complete audit trail of every invoice sent and verified',
@@ -328,6 +329,10 @@ export default function InvoiceVerificationPage() {
             {
               q: 'How does it detect tampered invoices?',
               a: 'Veriflo embeds multi-layer forensic fingerprints in the PDF metadata, structure, and pixel data. Any modification — even changing a single character — breaks these checksums and gets flagged as tampered.',
+            },
+            {
+              q: 'What does the integrity score mean for invoices?',
+              a: 'Every document you check gets a score from 0 to 100. A score of 80-100 means the invoice appears clean. Below 60 indicates medium risk — the document shows signs of modification that warrant investigation. Each finding is explained so your team can make an informed judgment.',
             },
             {
               q: 'Can the fingerprint be seen on the invoice?',

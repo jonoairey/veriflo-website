@@ -67,6 +67,11 @@ export default function BoardMaterialsPage() {
       description:
         'Revoke access instantly when board members leave. Archive materials securely after board terms end.',
     },
+    {
+      title: 'Verify Document Authenticity',
+      description:
+        'Run integrity checks on documents submitted to the board — financial reports, audit findings, and third-party assessments — to ensure they haven\'t been tampered with.',
+    },
   ];
 
   const benefits = [
@@ -76,6 +81,7 @@ export default function BoardMaterialsPage() {
     'Track which board members are most engaged',
     'Identify leaks of confidential board information',
     'Meet SEC and governance compliance requirements',
+    'Verify the integrity of documents submitted to the board before review',
   ];
 
   return (
@@ -267,6 +273,10 @@ export default function BoardMaterialsPage() {
               title: 'Governance Documents',
               description: 'Distribute bylaws, charter amendments, and governance policies with proper documentation.',
             },
+            {
+              title: 'Verify Submitted Documents',
+              description: 'Run integrity checks on financial reports, audit findings, and other documents submitted for board review to ensure they haven\'t been altered.',
+            },
           ].map((material, idx) => (
             <div key={idx} className="flex gap-6 items-start">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
@@ -308,6 +318,10 @@ export default function BoardMaterialsPage() {
             {
               q: 'Can we archive old board materials?',
               a: 'Yes. Archive materials indefinitely or set automatic retention policies. All archival actions are logged for audit purposes.',
+            },
+            {
+              q: 'Can we verify documents submitted to the board for tampering?',
+              a: 'Yes. Veriflo\'s Integrity Check analyzes any document for signs of manipulation — altered dates, metadata inconsistencies, and structural anomalies. This adds an extra layer of assurance that board materials are authentic and unaltered.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">

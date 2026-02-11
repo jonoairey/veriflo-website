@@ -67,6 +67,11 @@ export default function LegalPage() {
       description:
         'If privileged information appears publicly, upload it and get instant proof of which party it came from for breach documentation.',
     },
+    {
+      title: 'Verify Document Integrity',
+      description:
+        'Run forensic analysis on incoming contracts, evidence, and opposing counsel documents to detect tampering, altered dates, and metadata manipulation.',
+    },
   ];
 
   const benefits = [
@@ -76,6 +81,7 @@ export default function LegalPage() {
     'Provide irrefutable evidence of document access for litigation',
     'Protect trade secrets and confidential business information',
     'Streamline discovery process with complete documentation',
+    'Verify incoming legal documents for signs of tampering before relying on them',
   ];
 
   return (
@@ -238,6 +244,11 @@ export default function LegalPage() {
               title: 'Verify Leaks',
               description: 'If confidential information appears publicly, verify it came from authorized parties with forensic fingerprints.',
             },
+            {
+              step: '7',
+              title: 'Verify Incoming Documents',
+              description: 'Run integrity checks on contracts, evidence, and documents from opposing parties to detect any signs of manipulation before relying on them.',
+            },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
@@ -302,6 +313,10 @@ export default function LegalPage() {
             {
               q: 'Can I export the full audit trail?',
               a: 'Yes. Export comprehensive audit reports in multiple formats suitable for discovery, regulatory submissions, and litigation purposes.',
+            },
+            {
+              q: 'Can I check if a document from opposing counsel has been altered?',
+              a: 'Yes. Upload any document to Veriflo\'s Integrity Check and get an instant forensic analysis. It detects altered dates, metadata inconsistencies, editing software traces, and structural manipulation — giving you a clear integrity score before you rely on any document.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">

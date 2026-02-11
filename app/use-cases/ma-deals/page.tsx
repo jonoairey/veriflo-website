@@ -67,6 +67,11 @@ export default function MADealsPage() {
       description:
         'Comprehensive logs of all document access for compliance, audit, and investigation purposes.',
     },
+    {
+      title: 'Verify Deal Documents',
+      description:
+        'Run integrity checks on incoming financial statements, valuations, and contracts from counterparties to detect any signs of manipulation before closing.',
+    },
   ];
 
   const benefits = [
@@ -76,6 +81,7 @@ export default function MADealsPage() {
     'Control document access across large deal teams',
     'Meet buyer and seller compliance requirements',
     'Protect financial models and valuation data',
+    'Verify counterparty documents for tampering before making deal decisions',
   ];
 
   return (
@@ -273,6 +279,11 @@ export default function MADealsPage() {
               title: 'Verify Leaks',
               description: 'If information appears in the market, upload it and immediately identify which party leaked the documents.',
             },
+            {
+              step: '7',
+              title: 'Verify Counterparty Documents',
+              description: 'Run integrity checks on financial statements, valuations, and contracts received from the other side to detect any tampering or manipulation before closing.',
+            },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
@@ -314,6 +325,10 @@ export default function MADealsPage() {
             {
               q: 'What about document retention after the deal closes?',
               a: 'You control the timeline. Archive the deal room, keep documents indefinitely, or delete everything. All actions are logged.',
+            },
+            {
+              q: 'Can I verify financial documents from the other side of the deal?',
+              a: 'Absolutely. Upload any incoming document to the Integrity Check tool and get an instant analysis. Veriflo detects tampered dates, metadata inconsistencies, and structural manipulation — critical for due diligence on financial statements and valuations.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">

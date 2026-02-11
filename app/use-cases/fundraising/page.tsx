@@ -67,6 +67,11 @@ export default function FundraisingPage() {
       description:
         'If your pitch deck appears online or reaches competitors, upload it to Veriflo and identify which investor\'s copy was leaked.',
     },
+    {
+      title: 'Verify Incoming Documents',
+      description:
+        'Run integrity checks on term sheets, investor agreements, and other incoming documents to detect tampering before you sign.',
+    },
   ];
 
   const benefits = [
@@ -76,6 +81,7 @@ export default function FundraisingPage() {
     'Detect leaks instantly and trace the source',
     'Maintain negotiating power by protecting strategy',
     'Meet investor data security requirements',
+    'Verify incoming term sheets and agreements for signs of manipulation',
   ];
 
   return (
@@ -238,6 +244,11 @@ export default function FundraisingPage() {
               title: 'Control Access',
               description: 'If negotiations don\'t pan out, revoke access instantly. If a leak occurs, identify the source immediately.',
             },
+            {
+              step: '7',
+              title: 'Verify Incoming Documents',
+              description: 'When you receive term sheets or investor agreements, run an integrity check to verify they haven\'t been tampered with before signing.',
+            },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
@@ -279,6 +290,10 @@ export default function FundraisingPage() {
             {
               q: 'Is there a cost for using Veriflo during fundraising?',
               a: 'You can start for free with up to 5 documents and 10 distributions/month. That\'s plenty for most seed and Series A rounds.',
+            },
+            {
+              q: 'Can I verify documents I receive from investors?',
+              a: 'Yes. Veriflo\'s Integrity Check lets you upload any incoming document — term sheets, investor agreements, side letters — and get an instant integrity score that flags any signs of tampering or manipulation.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">

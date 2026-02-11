@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { Shield, Menu, X, ChevronDown } from 'lucide-react';
+import { Shield, Menu, X, ChevronDown, ShieldCheck, Fingerprint } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import clsx from 'clsx';
 
@@ -11,6 +11,7 @@ const PLATFORM_URL = process.env.NEXT_PUBLIC_PLATFORM_URL || 'https://app.usever
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
   const [useCasesOpen, setUseCasesOpen] = useState(false);
 
   useEffect(() => {
@@ -20,6 +21,23 @@ export function Navbar() {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
+
+  const products = [
+    {
+      name: 'Veriflo Seal',
+      href: '/products/seal',
+      description: 'Certify document authenticity',
+      icon: <ShieldCheck className="h-5 w-5 text-emerald-400" />,
+      color: 'emerald',
+    },
+    {
+      name: 'Veriflo Shield',
+      href: '/products/shield',
+      description: 'Secure sharing & leak detection',
+      icon: <Fingerprint className="h-5 w-5 text-blue-400" />,
+      color: 'blue',
+    },
+  ];
 
   const useCases = [
     { name: 'Fundraising & Pitch Decks', href: '/use-cases/fundraising' },
@@ -52,12 +70,32 @@ export function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/features" className="text-sm font-medium text-white hover:text-blue-300 transition-colors">
-              Features
-            </Link>
-            <Link href="/how-it-works" className="text-sm font-medium text-white hover:text-blue-300 transition-colors">
-              How It Works
-            </Link>
+            {/* Products Dropdown */}
+            <div className="relative group">
+              <button className="flex items-center gap-1 text-sm font-medium text-white hover:text-blue-300 transition-colors">
+                Products
+                <ChevronDown className="h-4 w-4" />
+              </button>
+              <div className="absolute left-0 mt-2 w-72 bg-slate-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-slate-800 p-2">
+                {products.map((product) => (
+                  <Link
+                    key={product.name}
+                    href={product.href}
+                    className="flex items-start gap-3 px-3 py-3 rounded-lg hover:bg-slate-800 transition-colors"
+                  >
+                    <div className={`flex h-9 w-9 items-center justify-center rounded-lg flex-shrink-0 ${product.color === 'emerald' ? 'bg-emerald-500/20' : 'bg-blue-500/20'}`}>
+                      {product.icon}
+                    </div>
+                    <div>
+                      <div className="text-sm font-semibold text-white">{product.name}</div>
+                      <div className="text-xs text-gray-400 mt-0.5">{product.description}</div>
+                    </div>
+                  </Link>
+                ))}
+              </div>
+            </div>
+
+            {/* Use Cases Dropdown */}
             <div className="relative group">
               <button className="flex items-center gap-1 text-sm font-medium text-white hover:text-blue-300 transition-colors">
                 Use Cases
@@ -68,13 +106,17 @@ export function Navbar() {
                   <Link
                     key={useCase.name}
                     href={useCase.href}
-                    className="block px-4 py-2.5 text-sm text-white hover:bg-slate-800 first:rounded-t-lg last:rounded-b-lg transition-colors"
+                    className="block px-4 py-2.5 text-sm text-white hover:bg-slate-800 first:rounded-tl-lg last:rounded-br-lg transition-colors"
                   >
                     {useCase.name}
                   </Link>
                 ))}
               </div>
             </div>
+
+            <Link href="/how-it-works" className="text-sm font-medium text-white hover:text-blue-300 transition-colors">
+              How It Works
+            </Link>
             <Link href="/pricing" className="text-sm font-medium text-white hover:text-blue-300 transition-colors">
               Contact
             </Link>
@@ -104,12 +146,30 @@ export function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-slate-800 bg-slate-950/90 backdrop-blur-md">
             <div className="space-y-1 px-4 py-4">
-              <Link href="/features" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
-                Features
-              </Link>
-              <Link href="/how-it-works" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
-                How It Works
-              </Link>
+              {/* Mobile Products */}
+              <button
+                onClick={() => setProductsOpen(!productsOpen)}
+                className="w-full text-left px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors flex items-center justify-between"
+              >
+                Products
+                <ChevronDown className={clsx('h-4 w-4 transition-transform', productsOpen && 'rotate-180')} />
+              </button>
+              {productsOpen && (
+                <div className="pl-4 space-y-1">
+                  {products.map((product) => (
+                    <Link
+                      key={product.name}
+                      href={product.href}
+                      className="flex items-center gap-2 px-4 py-2 rounded-lg text-sm text-gray-300 hover:bg-slate-800 transition-colors"
+                    >
+                      {product.icon}
+                      {product.name}
+                    </Link>
+                  ))}
+                </div>
+              )}
+
+              {/* Mobile Use Cases */}
               <button
                 onClick={() => setUseCasesOpen(!useCasesOpen)}
                 className="w-full text-left px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors flex items-center justify-between"
@@ -130,6 +190,10 @@ export function Navbar() {
                   ))}
                 </div>
               )}
+
+              <Link href="/how-it-works" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
+                How It Works
+              </Link>
               <Link href="/pricing" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
                 Contact
               </Link>

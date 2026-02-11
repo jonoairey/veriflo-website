@@ -9,8 +9,10 @@ export function Footer() {
 
   const sections = [
     {
-      title: 'Product',
+      title: 'Products',
       links: [
+        { name: 'Veriflo Seal', href: '/products/seal' },
+        { name: 'Veriflo Shield', href: '/products/shield' },
         { name: 'Features', href: '/features' },
         { name: 'How It Works', href: '/how-it-works' },
         { name: 'Contact', href: '/pricing' },
@@ -59,7 +61,7 @@ export function Footer() {
               </span>
             </div>
             <p className="text-sm text-gray-400">
-              Share confidential documents confidently with forensic watermarking and leak detection.
+              Two-way document trust. Protect outgoing documents with Veriflo Shield. Certify authenticity with Veriflo Seal.
             </p>
           </div>
           {sections.map((section) => (

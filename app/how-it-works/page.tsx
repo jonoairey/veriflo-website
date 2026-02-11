@@ -19,6 +19,107 @@ export const metadata = {
   description: 'Learn how Veriflo protects outgoing documents with invisible fingerprinting and verifies incoming documents for tampering with forensic integrity checks.',
 };
 
+function IntegrityUploadIllustration() {
+  return (
+    <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+      <rect width="480" height="360" rx="12" fill="#0F172A" />
+      {/* Upload zone */}
+      <rect x="80" y="60" width="320" height="200" rx="12" stroke="#10B981" strokeWidth="2" strokeDasharray="8 4" fill="#0F172A" />
+      <rect x="80" y="60" width="320" height="200" rx="12" fill="#10B981" fillOpacity="0.05" />
+      {/* Upload arrow */}
+      <path d="M240 180 L240 130" stroke="#10B981" strokeWidth="3" strokeLinecap="round" />
+      <path d="M220 150 L240 130 L260 150" stroke="#10B981" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+      {/* Document icon */}
+      <rect x="215" y="175" width="50" height="60" rx="4" fill="#1E293B" stroke="#334155" strokeWidth="1.5" />
+      <path d="M225 195 L255 195 M225 205 L250 205 M225 215 L255 215" stroke="#64748B" strokeWidth="1.5" strokeLinecap="round" />
+      {/* Corner fold */}
+      <path d="M249 175 L265 175 L265 191 L249 191 Z" fill="#1E293B" stroke="#334155" strokeWidth="1.5" />
+      <path d="M249 175 L249 191 L265 191" fill="#0F172A" stroke="#334155" strokeWidth="1.5" />
+      {/* Text */}
+      <text x="240" y="290" textAnchor="middle" fill="#94A3B8" fontSize="14" fontFamily="system-ui">Drop any document to verify</text>
+      {/* File type badges */}
+      <rect x="130" y="310" width="44" height="22" rx="4" fill="#10B981" fillOpacity="0.15" />
+      <text x="152" y="325" textAnchor="middle" fill="#10B981" fontSize="10" fontWeight="600" fontFamily="system-ui">PDF</text>
+      <rect x="184" y="310" width="44" height="22" rx="4" fill="#10B981" fillOpacity="0.15" />
+      <text x="206" y="325" textAnchor="middle" fill="#10B981" fontSize="10" fontWeight="600" fontFamily="system-ui">JPEG</text>
+      <rect x="238" y="310" width="44" height="22" rx="4" fill="#10B981" fillOpacity="0.15" />
+      <text x="260" y="325" textAnchor="middle" fill="#10B981" fontSize="10" fontWeight="600" fontFamily="system-ui">PNG</text>
+      <rect x="292" y="310" width="44" height="22" rx="4" fill="#10B981" fillOpacity="0.15" />
+      <text x="314" y="325" textAnchor="middle" fill="#10B981" fontSize="10" fontWeight="600" fontFamily="system-ui">DOCX</text>
+    </svg>
+  );
+}
+
+function ForensicAnalysisIllustration() {
+  return (
+    <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+      <rect width="480" height="360" rx="12" fill="#0F172A" />
+      {/* Document being scanned */}
+      <rect x="60" y="40" width="160" height="200" rx="6" fill="#1E293B" stroke="#334155" strokeWidth="1.5" />
+      <path d="M80 80 L200 80 M80 100 L190 100 M80 120 L200 120 M80 140 L180 140 M80 160 L200 160 M80 180 L195 180 M80 200 L200 200" stroke="#334155" strokeWidth="1.5" strokeLinecap="round" />
+      {/* Scan line */}
+      <line x1="55" y1="140" x2="225" y2="140" stroke="#10B981" strokeWidth="2" opacity="0.6" />
+      <rect x="55" y="130" width="170" height="20" fill="#10B981" fillOpacity="0.08" />
+      {/* Analysis results panel */}
+      <rect x="260" y="40" width="180" height="280" rx="8" fill="#1E293B" stroke="#334155" strokeWidth="1.5" />
+      <text x="280" y="68" fill="#E2E8F0" fontSize="12" fontWeight="600" fontFamily="system-ui">Forensic Checks</text>
+      {/* Check items */}
+      <circle cx="284" cy="100" r="8" fill="#10B981" fillOpacity="0.2" />
+      <path d="M280 100 L283 103 L289 97" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="300" y="104" fill="#94A3B8" fontSize="11" fontFamily="system-ui">Metadata analysis</text>
+      <circle cx="284" cy="130" r="8" fill="#10B981" fillOpacity="0.2" />
+      <path d="M280 130 L283 133 L289 127" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="300" y="134" fill="#94A3B8" fontSize="11" fontFamily="system-ui">Creation date check</text>
+      <circle cx="284" cy="160" r="8" fill="#F59E0B" fillOpacity="0.2" />
+      <text x="281" y="164" fill="#F59E0B" fontSize="12" fontWeight="700" fontFamily="system-ui">!</text>
+      <text x="300" y="164" fill="#94A3B8" fontSize="11" fontFamily="system-ui">Creator/producer</text>
+      <circle cx="284" cy="190" r="8" fill="#10B981" fillOpacity="0.2" />
+      <path d="M280 190 L283 193 L289 187" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="300" y="194" fill="#94A3B8" fontSize="11" fontFamily="system-ui">Incremental saves</text>
+      <circle cx="284" cy="220" r="8" fill="#10B981" fillOpacity="0.2" />
+      <path d="M280 220 L283 223 L289 217" stroke="#10B981" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
+      <text x="300" y="224" fill="#94A3B8" fontSize="11" fontFamily="system-ui">Hidden JavaScript</text>
+      <circle cx="284" cy="250" r="8" fill="#EF4444" fillOpacity="0.2" />
+      <text x="280" y="254" fill="#EF4444" fontSize="12" fontWeight="700" fontFamily="system-ui">✕</text>
+      <text x="300" y="254" fill="#94A3B8" fontSize="11" fontFamily="system-ui">EXIF data stripped</text>
+      {/* Progress bar */}
+      <rect x="280" y="286" width="140" height="6" rx="3" fill="#334155" />
+      <rect x="280" y="286" width="105" height="6" rx="3" fill="#10B981" />
+      <text x="280" y="306" fill="#64748B" fontSize="10" fontFamily="system-ui">Analyzing... 75%</text>
+    </svg>
+  );
+}
+
+function IntegrityScoreIllustration() {
+  return (
+    <svg viewBox="0 0 480 360" fill="none" xmlns="http://www.w3.org/2000/svg" className="w-full h-auto">
+      <rect width="480" height="360" rx="12" fill="#0F172A" />
+      {/* Score card */}
+      <rect x="120" y="30" width="240" height="300" rx="12" fill="#1E293B" stroke="#334155" strokeWidth="1.5" />
+      {/* Score circle */}
+      <circle cx="240" cy="120" r="60" stroke="#334155" strokeWidth="6" />
+      <circle cx="240" cy="120" r="60" stroke="#10B981" strokeWidth="6" strokeDasharray="340" strokeDashoffset="55" strokeLinecap="round" transform="rotate(-90 240 120)" />
+      <text x="240" y="115" textAnchor="middle" fill="#E2E8F0" fontSize="36" fontWeight="700" fontFamily="system-ui">85</text>
+      <text x="240" y="138" textAnchor="middle" fill="#64748B" fontSize="12" fontFamily="system-ui">out of 100</text>
+      {/* Risk level badge */}
+      <rect x="185" y="195" width="110" height="28" rx="14" fill="#10B981" fillOpacity="0.15" />
+      <text x="240" y="214" textAnchor="middle" fill="#10B981" fontSize="13" fontWeight="600" fontFamily="system-ui">Low Risk</text>
+      {/* Findings summary */}
+      <line x1="150" y1="240" x2="330" y2="240" stroke="#334155" strokeWidth="1" />
+      <text x="150" y="262" fill="#94A3B8" fontSize="11" fontFamily="system-ui">Findings</text>
+      {/* Finding bars */}
+      <circle cx="160" cy="282" r="4" fill="#10B981" />
+      <text x="172" y="286" fill="#CBD5E1" fontSize="11" fontFamily="system-ui">5 clean checks</text>
+      <circle cx="160" cy="302" r="4" fill="#F59E0B" />
+      <text x="172" y="306" fill="#CBD5E1" fontSize="11" fontFamily="system-ui">1 minor warning</text>
+      {/* Shield icon at top */}
+      <rect x="216" y="42" width="48" height="48" rx="24" fill="#10B981" fillOpacity="0.1" />
+      <path d="M240 52 L252 58 L252 68 C252 75 247 81 240 84 C233 81 228 75 228 68 L228 58 Z" stroke="#10B981" strokeWidth="2" fill="none" />
+      <path d="M234 67 L238 71 L246 63" stroke="#10B981" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" />
+    </svg>
+  );
+}
+
 export default function HowItWorksPage() {
   const outgoingSteps = [
     {
@@ -273,7 +374,13 @@ export default function HowItWorksPage() {
 
       {/* Incoming Steps */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
-        {incomingSteps.map((step, idx) => (
+        {incomingSteps.map((step, idx) => {
+          const illustrations = [
+            <IntegrityUploadIllustration key="upload" />,
+            <ForensicAnalysisIllustration key="analysis" />,
+            <IntegrityScoreIllustration key="score" />,
+          ];
+          return (
           <div key={idx} className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-start">
             {idx % 2 === 0 ? (
               <>
@@ -310,7 +417,7 @@ export default function HowItWorksPage() {
                 <div className="relative hidden lg:block">
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-xl blur-3xl opacity-10" />
                   <div className="relative rounded-xl overflow-hidden border border-emerald-500/20">
-                    <img src={step.image} alt={step.title} className="w-full h-auto rounded-lg" />
+                    {illustrations[idx]}
                   </div>
                 </div>
               </>
@@ -319,7 +426,7 @@ export default function HowItWorksPage() {
                 <div className="relative hidden lg:block order-2">
                   <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-xl blur-3xl opacity-10" />
                   <div className="relative rounded-xl overflow-hidden border border-emerald-500/20">
-                    <img src={step.image} alt={step.title} className="w-full h-auto rounded-lg" />
+                    {illustrations[idx]}
                   </div>
                 </div>
                 <div className="order-1 lg:order-2">
@@ -355,7 +462,8 @@ export default function HowItWorksPage() {
               </>
             )}
           </div>
-        ))}
+          );
+        })}
       </section>
 
       {/* Key Principles */}

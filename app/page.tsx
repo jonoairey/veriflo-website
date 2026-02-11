@@ -14,10 +14,10 @@ export default function HomePage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Share Confidential Documents Confidently
+              Trust Every Document. In Both Directions.
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Invisible fingerprinting meets secure sharing. Know exactly who has access to your sensitive documents — and who leaked them.
+              Fingerprint and track the documents you send out — so you know who leaked them. Verify the documents you receive — so you know they&apos;re authentic, not tampered with or forged.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -48,20 +48,23 @@ export default function HomePage() {
       {/* How It Works - Two Flows */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">How It Works</h2>
+          <h2 className="text-4xl font-bold text-white">Two Products. Complete Trust.</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Two workflows, one platform — protect what goes out and verify what comes in
+            Veriflo Shield protects what goes out. Veriflo Seal verifies what comes in.
           </p>
         </div>
 
         <div className="grid gap-12 md:grid-cols-2">
-          {/* Outgoing Flow */}
+          {/* Shield Flow */}
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
-                <Shield className="h-5 w-5" />
+                <Fingerprint className="h-5 w-5" />
               </div>
-              <h3 className="text-xl font-bold text-white">Protect Outgoing</h3>
+              <div>
+                <h3 className="text-xl font-bold text-white">Veriflo Shield</h3>
+                <p className="text-xs text-gray-500">Secure sharing & leak detection</p>
+              </div>
             </div>
             <div className="space-y-6">
               {[
@@ -82,13 +85,16 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Incoming Flow */}
+          {/* Seal Flow */}
           <div>
             <div className="flex items-center gap-3 mb-6">
               <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
                 <ShieldVerify className="h-5 w-5" />
               </div>
-              <h3 className="text-xl font-bold text-white">Verify Incoming</h3>
+              <div>
+                <h3 className="text-xl font-bold text-white">Veriflo Seal</h3>
+                <p className="text-xs text-gray-500">Document authenticity & verification</p>
+              </div>
             </div>
             <div className="space-y-6">
               {[
@@ -200,61 +206,67 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Two-Way Trust Section */}
+      {/* Product Cards Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">Protect Outgoing. Verify Incoming.</h2>
+          <h2 className="text-4xl font-bold text-white">Two Products. One Platform.</h2>
           <p className="mt-4 text-xl text-gray-400">
             The only platform that secures documents in both directions
           </p>
         </div>
 
         <div className="grid gap-8 md:grid-cols-2">
-          <Card className="border-slate-800 bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
-            <CardContent className="pt-8 pb-8">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400 mb-6">
-                <Shield className="h-7 w-7" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Send with Confidence</h3>
-              <p className="text-gray-400 mb-6">
-                Every outgoing document carries an invisible forensic fingerprint. Track access, monitor engagement, and instantly identify the source of any leak.
-              </p>
-              <ul className="space-y-3">
-                {['Invisible fingerprinting', 'Access tracking & analytics', 'Leak source identification'].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                    <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
+          <Link href="/products/shield">
+            <Card className="border-slate-800 bg-slate-900/50 hover:bg-slate-800/70 transition-colors h-full cursor-pointer group">
+              <CardContent className="pt-8 pb-8">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400 mb-6">
+                  <Fingerprint className="h-7 w-7" />
+                </div>
+                <p className="text-sm font-semibold text-blue-400 mb-1">Veriflo Shield</p>
+                <h3 className="text-2xl font-bold text-white mb-4">Share &amp; Protect Documents</h3>
+                <p className="text-gray-400 mb-6">
+                  Every outgoing document carries an invisible forensic fingerprint. Track who views it, monitor access in real-time, and instantly identify the source of any leak.
+                </p>
+                <ul className="space-y-3 mb-6">
+                  {['Invisible fingerprinting', 'Real-time access tracking', 'Instant leak identification', 'Revocable sharing links'].map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-blue-400 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-blue-400 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Learn about Shield <ArrowRight className="h-4 w-4" />
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
 
-          <Card className="border-slate-800 bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
-            <CardContent className="pt-8 pb-8">
-              <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400 mb-6">
-                <ShieldVerify className="h-7 w-7" />
-              </div>
-              <h3 className="text-2xl font-bold text-white mb-4">Receive with Trust</h3>
-              <p className="text-gray-400 mb-6">
-                Verify incoming documents for signs of tampering. Detect altered dates, metadata inconsistencies, and manipulation before making critical decisions.
-              </p>
-              <ul className="space-y-3">
-                {['Tamper detection & integrity scoring', 'PDF forensic analysis', 'Metadata verification'].map((item, idx) => (
-                  <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
-                    <CheckCircle className="h-4 w-4 text-emerald-400 flex-shrink-0" />
-                    {item}
-                  </li>
-                ))}
-              </ul>
-            </CardContent>
-          </Card>
-        </div>
-
-        <div className="mt-8 text-center">
-          <Button asChild size="lg" variant="primary">
-            <a href="https://app.useveriflo.com/signup">Get Started Free</a>
-          </Button>
+          <Link href="/products/seal">
+            <Card className="border-slate-800 bg-slate-900/50 hover:bg-slate-800/70 transition-colors h-full cursor-pointer group">
+              <CardContent className="pt-8 pb-8">
+                <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400 mb-6">
+                  <ShieldVerify className="h-7 w-7" />
+                </div>
+                <p className="text-sm font-semibold text-emerald-400 mb-1">Veriflo Seal</p>
+                <h3 className="text-2xl font-bold text-white mb-4">Certify &amp; Verify Authenticity</h3>
+                <p className="text-gray-400 mb-6">
+                  Send documents through Veriflo so recipients know they&apos;re genuine. Verify any incoming document for tampering, forgery, or manipulation before you act on it.
+                </p>
+                <ul className="space-y-3 mb-6">
+                  {['Certified document sending', 'Forensic integrity scoring', 'Tamper & fraud detection', 'Metadata verification'].map((item, idx) => (
+                    <li key={idx} className="flex items-center gap-2 text-sm text-gray-300">
+                      <CheckCircle className="h-4 w-4 text-emerald-400 flex-shrink-0" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
+                <div className="text-emerald-400 font-medium flex items-center gap-1 group-hover:gap-2 transition-all">
+                  Learn about Seal <ArrowRight className="h-4 w-4" />
+                </div>
+              </CardContent>
+            </Card>
+          </Link>
         </div>
       </section>
 

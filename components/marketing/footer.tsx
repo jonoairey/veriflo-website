@@ -24,6 +24,10 @@ export function Footer() {
         { name: 'M&A Deal Rooms', href: '/use-cases/ma-deals' },
         { name: 'Board Materials', href: '/use-cases/board-materials' },
         { name: 'Invoice Verification', href: '/use-cases/invoice-verification' },
+        { name: 'Financial Services', href: '/use-cases/financial-services' },
+        { name: 'Healthcare', href: '/use-cases/healthcare' },
+        { name: 'Media & Entertainment', href: '/use-cases/media-entertainment' },
+        { name: 'Technology & SaaS', href: '/use-cases/technology' },
       ],
     },
     {

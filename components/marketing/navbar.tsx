@@ -27,6 +27,10 @@ export function Navbar() {
     { name: 'M&A Deal Rooms', href: '/use-cases/ma-deals' },
     { name: 'Board Materials', href: '/use-cases/board-materials' },
     { name: 'Invoice Verification', href: '/use-cases/invoice-verification' },
+    { name: 'Financial Services', href: '/use-cases/financial-services' },
+    { name: 'Healthcare & Life Sciences', href: '/use-cases/healthcare' },
+    { name: 'Media & Entertainment', href: '/use-cases/media-entertainment' },
+    { name: 'Technology & SaaS', href: '/use-cases/technology' },
   ];
 
   return (
@@ -59,7 +63,7 @@ export function Navbar() {
                 Use Cases
                 <ChevronDown className="h-4 w-4" />
               </button>
-              <div className="absolute left-0 mt-2 w-48 bg-slate-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-slate-800">
+              <div className="absolute left-0 mt-2 w-[28rem] grid grid-cols-2 gap-0 bg-slate-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-slate-800">
                 {useCases.map((useCase) => (
                   <Link
                     key={useCase.name}

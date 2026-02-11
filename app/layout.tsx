@@ -11,6 +11,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://www.useveriflo.com'),
   title: {
     template: '%s | Veriflo',
     default: 'Veriflo - Share Confidential Documents Confidently',
@@ -35,13 +36,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://useveriflo.com',
+    url: 'https://www.useveriflo.com',
     siteName: 'Veriflo',
     title: 'Veriflo - Share Confidential Documents Confidently',
     description: 'Securely share and verify confidential documents with forensic watermarking, leak detection, and audit trails.',
     images: [
       {
-        url: 'https://useveriflo.com/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
         alt: 'Veriflo - Secure Document Sharing',
@@ -52,7 +53,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Veriflo - Share Confidential Documents Confidently',
     description: 'Securely share and verify confidential documents with forensic watermarking, leak detection, and audit trails.',
-    images: ['https://useveriflo.com/og-image.png'],
+    images: ['/og-image.png'],
   },
   applicationName: 'Veriflo',
   category: 'business',

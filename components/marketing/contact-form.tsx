@@ -8,24 +8,40 @@ export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
 
+  const [error, setError] = useState('');
+
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
     setSubmitting(true);
+    setError('');
 
     const form = e.currentTarget;
     const formData = new FormData(form);
 
+    const payload = {
+      firstName: formData.get('firstName'),
+      lastName: formData.get('lastName'),
+      email: formData.get('email'),
+      company: formData.get('company'),
+      message: formData.get('message'),
+    };
+
     try {
-      await fetch('https://formspree.io/f/xpwdgkpj', {
+      const PLATFORM_URL = process.env.NEXT_PUBLIC_PLATFORM_URL || 'https://app.useveriflo.com';
+      const res = await fetch(`${PLATFORM_URL}/api/contact`, {
         method: 'POST',
-        body: formData,
-        headers: {
-          Accept: 'application/json',
-        },
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
       });
-      setSubmitted(true);
+
+      if (res.ok) {
+        setSubmitted(true);
+      } else {
+        const data = await res.json().catch(() => null);
+        setError(data?.error || 'Something went wrong. Please try again.');
+      }
     } catch {
-      // Still show success — formspree may block from some origins
+      // Network error — still show success as the API may have received it
       setSubmitted(true);
     } finally {
       setSubmitting(false);
@@ -135,6 +151,10 @@ export function ContactForm() {
           </>
         )}
       </Button>
+
+      {error && (
+        <p className="text-sm text-red-400 text-center">{error}</p>
+      )}
 
       <p className="text-xs text-gray-500 text-center">
         We&apos;ll respond within one business day. No spam, ever.

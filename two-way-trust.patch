@@ -1,0 +1,770 @@
+From 329f1b0cad4ff1d77ad4fbb1fc6bd5488da07241 Mon Sep 17 00:00:00 2001
+From: Jono Airey <jonoairey@gmail.com>
+Date: Wed, 11 Feb 2026 11:59:50 +0000
+Subject: [PATCH] Add two-way trust content across all marketing pages
+
+Update features, how-it-works, homepage, and all 5 original use case
+pages to communicate the integrity check and tamper detection
+capabilities. Features page now titled "Two-Way Document Trust" with
+dedicated sections. How-it-works restructured into outgoing/incoming
+flows. Homepage shows side-by-side workflow and 2 new feature cards.
+Each use case page gains a solution card, benefit, workflow step, and
+FAQ for incoming document verification.
+
+Co-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>
+---
+ app/features/page.tsx                       |  46 ++++-
+ app/how-it-works/page.tsx                   | 194 +++++++++++++++++++-
+ app/page.tsx                                | 116 +++++++++---
+ app/use-cases/board-materials/page.tsx      |  14 ++
+ app/use-cases/fundraising/page.tsx          |  15 ++
+ app/use-cases/invoice-verification/page.tsx |   7 +-
+ app/use-cases/legal/page.tsx                |  15 ++
+ app/use-cases/ma-deals/page.tsx             |  15 ++
+ 8 files changed, 376 insertions(+), 46 deletions(-)
+
+diff --git a/app/features/page.tsx b/app/features/page.tsx
+index 9ce298e..e6bbc7f 100644
+--- a/app/features/page.tsx
++++ b/app/features/page.tsx
+@@ -11,12 +11,14 @@ import {
+   Lock,
+   Eye,
+   CheckCircle,
+-  ArrowRight
++  ArrowRight,
++  ShieldCheck,
++  FileSearch,
+ } from 'lucide-react';
+ 
+ export const metadata = {
+-  title: 'Features - Veriflo | Document Security & Leak Detection',
+-  description: 'Explore Veriflo\'s comprehensive features for secure document sharing, invisible fingerprinting, leak detection, and real-time access tracking.',
++  title: 'Features - Veriflo | Two-Way Document Trust Platform',
++  description: 'Protect outgoing documents with invisible fingerprinting and verify incoming documents for tampering. Complete document security with leak detection, integrity scoring, and real-time tracking.',
+ };
+ 
+ export default function FeaturesPage() {
+@@ -66,6 +68,38 @@ export default function FeaturesPage() {
+         'Integration with your security workflows',
+       ],
+     },
++    {
++      id: 'integrity-check',
++      icon: <ShieldCheck className="h-8 w-8" />,
++      image: '/images/feature-integrity.png',
++      title: 'Document Integrity Check',
++      shortDesc: 'Verify incoming documents for signs of tampering before making critical decisions.',
++      fullDesc: 'Upload any incoming document — contracts, financial statements, invoices, certificates — and get an instant integrity score. Veriflo runs forensic analysis on PDF metadata, creation dates, software signatures, and structural patterns to flag documents that may have been manipulated.',
++      benefits: [
++        'Instant integrity scoring from 0-100',
++        'Risk level classification (clean, low, medium, high, critical)',
++        'PDF metadata and structure analysis',
++        'Creation/modification date gap detection',
++        'Editing software and tool detection',
++        'Suspicious pattern identification',
++      ],
++    },
++    {
++      id: 'tamper-detection',
++      icon: <FileSearch className="h-8 w-8" />,
++      image: '/images/feature-tamper-detection.png',
++      title: 'Forensic Tamper Detection',
++      shortDesc: 'Deep analysis detects altered dates, metadata inconsistencies, and document manipulation.',
++      fullDesc: 'Our forensic engine goes beyond surface-level checks. It detects incremental saves that indicate post-creation editing, identifies mismatches between document creator and producer software, flags JavaScript or embedded files hidden inside PDFs, and spots metadata that has been stripped or altered — all signs of potential document fraud.',
++      benefits: [
++        'Incremental save detection (multiple %%EOF markers)',
++        'Creator/producer software mismatch analysis',
++        'Hidden JavaScript and embedded file detection',
++        'Image EXIF metadata and compression analysis',
++        'Hash comparison against known originals',
++        'Veriflo fingerprint verification on incoming docs',
++      ],
++    },
+     {
+       id: 'tracking',
+       icon: <BarChart3 className="h-8 w-8" />,
+@@ -122,10 +156,10 @@ export default function FeaturesPage() {
+       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+         <div className="text-center max-w-3xl mx-auto">
+           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+-            Complete Document Security
++            Two-Way Document Trust
+           </h1>
+           <p className="mt-6 text-xl text-gray-300">
+-            Everything you need to protect your confidential documents, track access, and identify leaks instantly.
++            Protect what goes out with invisible fingerprinting and leak detection. Verify what comes in with tamper detection and integrity scoring. Complete document security in both directions.
+           </p>
+           <div className="mt-8 flex gap-4 justify-center">
+             <Button asChild size="lg" variant="primary">
+@@ -220,6 +254,8 @@ export default function FeaturesPage() {
+               {[
+                 { feature: 'Invisible Fingerprinting', veriflo: true, email: false, cloud: false },
+                 { feature: 'Leak Detection', veriflo: true, email: false, cloud: false },
++                { feature: 'Document Integrity Check', veriflo: true, email: false, cloud: false },
++                { feature: 'Tamper Detection', veriflo: true, email: false, cloud: false },
+                 { feature: 'Real-Time Tracking', veriflo: true, email: false, cloud: false },
+                 { feature: 'Access Revocation', veriflo: true, email: false, cloud: false },
+                 { feature: 'Expiring Links', veriflo: true, email: false, cloud: true },
+diff --git a/app/how-it-works/page.tsx b/app/how-it-works/page.tsx
+index 71b723f..0be32fb 100644
+--- a/app/how-it-works/page.tsx
++++ b/app/how-it-works/page.tsx
+@@ -10,15 +10,17 @@ import {
+   Shield,
+   ArrowRight,
+   CheckCircle,
++  ShieldCheck,
++  FileSearch,
+ } from 'lucide-react';
+ 
+ export const metadata = {
+-  title: 'How It Works - Veriflo | Secure Document Sharing Process',
+-  description: 'Learn how Veriflo secures your documents with invisible fingerprinting, share them safely with tracking, and verify leaks instantly.',
++  title: 'How It Works - Veriflo | Two-Way Document Trust',
++  description: 'Learn how Veriflo protects outgoing documents with invisible fingerprinting and verifies incoming documents for tampering with forensic integrity checks.',
+ };
+ 
+ export default function HowItWorksPage() {
+-  const steps = [
++  const outgoingSteps = [
+     {
+       number: '1',
+       title: 'Upload Your Document',
+@@ -91,23 +93,85 @@ export default function HowItWorksPage() {
+     },
+   ];
+ 
++  const incomingSteps = [
++    {
++      number: '1',
++      title: 'Upload a Document to Verify',
++      icon: <Upload className="h-8 w-8" />,
++      image: '/images/step-integrity-upload.png',
++      description: 'Drag and drop any incoming document — contracts, financial statements, invoices, certificates — into the Integrity Check tool.',
++      details: [
++        'Supports PDF, images (JPEG, PNG), and more',
++        'Drag and drop or click to upload',
++        'No account needed for basic checks',
++        'Documents are not stored permanently',
++      ],
++      whatHappens: 'Veriflo begins forensic analysis immediately. The document is scanned for metadata, structural patterns, and signs of manipulation.',
++    },
++    {
++      number: '2',
++      title: 'Forensic Analysis Runs Automatically',
++      icon: <FileSearch className="h-8 w-8" />,
++      image: '/images/step-integrity-analysis.png',
++      description: 'Our engine performs multiple forensic checks on the document in seconds, examining metadata, structure, and content for signs of tampering.',
++      details: [
++        'PDF metadata and creation date analysis',
++        'Creator/producer software mismatch detection',
++        'Incremental save and structural anomalies',
++        'Image EXIF data and compression analysis',
++        'Hidden JavaScript and embedded file detection',
++        'Hash comparison against known originals',
++      ],
++      whatHappens: 'Each check produces findings that are classified as informational, warning, or danger. These feed into an overall integrity score.',
++    },
++    {
++      number: '3',
++      title: 'Get Your Integrity Score',
++      icon: <ShieldCheck className="h-8 w-8" />,
++      image: '/images/step-integrity-score.png',
++      description: 'Receive an instant integrity score from 0 to 100, with a clear risk level and detailed findings explaining exactly what was detected.',
++      details: [
++        'Score from 0-100 with visual gauge',
++        'Risk levels: Clean, Low, Medium, High, Critical',
++        'Expandable findings with severity ratings',
++        'Technical details for deeper investigation',
++        'Veriflo fingerprint detection (if present)',
++        'Exportable results for your records',
++      ],
++      whatHappens: 'You get a clear, actionable assessment of whether the document appears genuine or shows signs of manipulation — so you can make informed decisions before acting on it.',
++    },
++  ];
++
+   return (
+     <div className="space-y-20 py-20">
+       {/* Hero Section */}
+       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+         <div className="text-center max-w-3xl mx-auto">
+           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+-            Simple, Secure, Traceable
++            Protect Outgoing. Verify Incoming.
+           </h1>
+           <p className="mt-6 text-xl text-gray-300">
+-            Protect your confidential documents in 5 easy steps. Get from zero to secure document sharing in under 60 seconds.
++            Two workflows, one platform. Fingerprint and track the documents you send out, and verify the documents you receive for signs of tampering.
+           </p>
+         </div>
+       </section>
+ 
+-      {/* Steps */}
++      {/* Section Divider: Outgoing */}
++      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
++        <div className="flex items-center gap-4 mb-4">
++          <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-blue-500/20 text-blue-400">
++            <Shield className="h-7 w-7" />
++          </div>
++          <div>
++            <h2 className="text-3xl font-bold text-white">Protect Outgoing Documents</h2>
++            <p className="text-gray-400 mt-1">Fingerprint, share, track, and identify leaks</p>
++          </div>
++        </div>
++      </section>
++
++      {/* Outgoing Steps */}
+       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
+-        {steps.map((step, idx) => (
++        {outgoingSteps.map((step, idx) => (
+           <div key={idx} className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-start">
+             {idx % 2 === 0 ? (
+               <>
+@@ -192,6 +256,108 @@ export default function HowItWorksPage() {
+         ))}
+       </section>
+ 
++      {/* Section Divider: Incoming */}
++      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
++        <div className="border-t border-slate-800 pt-16">
++          <div className="flex items-center gap-4 mb-4">
++            <div className="flex h-14 w-14 items-center justify-center rounded-xl bg-emerald-500/20 text-emerald-400">
++              <ShieldCheck className="h-7 w-7" />
++            </div>
++            <div>
++              <h2 className="text-3xl font-bold text-white">Verify Incoming Documents</h2>
++              <p className="text-gray-400 mt-1">Check for tampering, fraud, and manipulation before you act</p>
++            </div>
++          </div>
++        </div>
++      </section>
++
++      {/* Incoming Steps */}
++      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-16">
++        {incomingSteps.map((step, idx) => (
++          <div key={idx} className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-start">
++            {idx % 2 === 0 ? (
++              <>
++                <div>
++                  <div className="flex items-center gap-4 mb-6">
++                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-2xl font-bold text-emerald-400">
++                      {step.number}
++                    </div>
++                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
++                      {step.icon}
++                    </div>
++                  </div>
++                  <h2 className="text-3xl font-bold text-white">{step.title}</h2>
++                  <p className="mt-4 text-lg text-gray-300">{step.description}</p>
++
++                  <div className="mt-8">
++                    <h3 className="font-semibold text-white mb-4">You can:</h3>
++                    <ul className="space-y-2">
++                      {step.details.map((detail, didx) => (
++                        <li key={didx} className="flex items-center gap-2 text-gray-300">
++                          <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
++                          {detail}
++                        </li>
++                      ))}
++                    </ul>
++                  </div>
++
++                  <div className="mt-8 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
++                    <p className="text-sm text-emerald-300">
++                      <span className="font-semibold">What Happens:</span> {step.whatHappens}
++                    </p>
++                  </div>
++                </div>
++                <div className="relative hidden lg:block">
++                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-xl blur-3xl opacity-10" />
++                  <div className="relative rounded-xl overflow-hidden border border-emerald-500/20">
++                    <img src={step.image} alt={step.title} className="w-full h-auto rounded-lg" />
++                  </div>
++                </div>
++              </>
++            ) : (
++              <>
++                <div className="relative hidden lg:block order-2">
++                  <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-blue-600 rounded-xl blur-3xl opacity-10" />
++                  <div className="relative rounded-xl overflow-hidden border border-emerald-500/20">
++                    <img src={step.image} alt={step.title} className="w-full h-auto rounded-lg" />
++                  </div>
++                </div>
++                <div className="order-1 lg:order-2">
++                  <div className="flex items-center gap-4 mb-6">
++                    <div className="flex h-16 w-16 items-center justify-center rounded-full bg-emerald-500/20 text-2xl font-bold text-emerald-400">
++                      {step.number}
++                    </div>
++                    <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
++                      {step.icon}
++                    </div>
++                  </div>
++                  <h2 className="text-3xl font-bold text-white">{step.title}</h2>
++                  <p className="mt-4 text-lg text-gray-300">{step.description}</p>
++
++                  <div className="mt-8">
++                    <h3 className="font-semibold text-white mb-4">You can:</h3>
++                    <ul className="space-y-2">
++                      {step.details.map((detail, didx) => (
++                        <li key={didx} className="flex items-center gap-2 text-gray-300">
++                          <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0" />
++                          {detail}
++                        </li>
++                      ))}
++                    </ul>
++                  </div>
++
++                  <div className="mt-8 p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
++                    <p className="text-sm text-emerald-300">
++                      <span className="font-semibold">What Happens:</span> {step.whatHappens}
++                    </p>
++                  </div>
++                </div>
++              </>
++            )}
++          </div>
++        ))}
++      </section>
++
+       {/* Key Principles */}
+       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+         <div className="text-center mb-12">
+@@ -212,8 +378,8 @@ export default function HowItWorksPage() {
+               description: 'Never trust an unsecured document. Every copy is uniquely marked so leaks are instantly traceable.',
+             },
+             {
+-              title: 'Privacy First',
+-              description: 'We only collect metadata necessary for security and tracking. Your document content is private.',
++              title: 'Verify Before You Trust',
++              description: 'Don\'t assume incoming documents are genuine. Run integrity checks to detect tampering before making decisions.',
+             },
+             {
+               title: 'Instant Notifications',
+@@ -262,9 +428,17 @@ export default function HowItWorksPage() {
+               q: 'How accurate is leak detection?',
+               a: 'Our fingerprinting technology is highly accurate. We can identify the source recipient with certainty, even if the document has been compressed, cropped, or screenshotted.',
+             },
++            {
++              q: 'How does the integrity check work?',
++              a: 'Upload any incoming document and Veriflo runs forensic analysis on its metadata, structure, and content. It checks for things like mismatched creation dates, editing software traces, incremental saves, and hidden embedded content — then gives you an integrity score from 0 to 100 with detailed findings.',
++            },
++            {
++              q: 'What does the integrity score mean?',
++              a: 'A score of 80-100 means the document appears clean. 60-79 is low risk with minor findings. 40-59 is medium risk warranting investigation. Below 40 indicates significant signs of manipulation. Each finding is explained so you can make an informed judgment.',
++            },
+             {
+               q: 'Is there a learning curve?',
+-              a: 'No. Most users protect their first document in under 60 seconds. The interface is intuitive and guides you through each step.',
++              a: 'No. Most users protect their first document in under 60 seconds, and running an integrity check is even simpler — just drag and drop. The interface is intuitive and guides you through each step.',
+             },
+           ].map((faq, idx) => (
+             <details key={idx} className="group border border-slate-800 rounded-lg">
+diff --git a/app/page.tsx b/app/page.tsx
+index b42b21b..0f9e94c 100644
+--- a/app/page.tsx
++++ b/app/page.tsx
+@@ -45,95 +45,151 @@ export default function HomePage() {
+       {/* Stats Counter */}
+       <StatsCounter />
+ 
+-      {/* How It Works - 3 Steps */}
++      {/* How It Works - Two Flows */}
+       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+         <div className="text-center mb-12">
+           <h2 className="text-4xl font-bold text-white">How It Works</h2>
+           <p className="mt-4 text-xl text-gray-400">
+-            Three simple steps to secure document sharing
++            Two workflows, one platform — protect what goes out and verify what comes in
+           </p>
+         </div>
+ 
+-        <div className="grid gap-8 md:grid-cols-3">
+-          {[
+-            {
+-              step: '1',
+-              title: 'Upload',
+-              description: 'Upload your confidential document. We handle PDF, images, and Office files.',
+-            },
+-            {
+-              step: '2',
+-              title: 'Share',
+-              description: 'Send fingerprinted copies to each recipient. Every copy is uniquely marked.',
+-            },
+-            {
+-              step: '3',
+-              title: 'Track & Verify',
+-              description: 'Monitor who views your documents. If a leak occurs, identify the source instantly.',
+-            },
+-          ].map((step, idx) => (
+-            <div key={idx} className="text-center">
+-              <div className="flex h-16 w-16 items-center justify-center rounded-full bg-blue-500/20 text-2xl font-bold text-blue-400 mx-auto mb-4">
+-                {step.step}
++        <div className="grid gap-12 md:grid-cols-2">
++          {/* Outgoing Flow */}
++          <div>
++            <div className="flex items-center gap-3 mb-6">
++              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
++                <Shield className="h-5 w-5" />
+               </div>
+-              <h3 className="text-lg font-semibold text-white">{step.title}</h3>
+-              <p className="mt-2 text-gray-400">{step.description}</p>
++              <h3 className="text-xl font-bold text-white">Protect Outgoing</h3>
+             </div>
+-          ))}
++            <div className="space-y-6">
++              {[
++                { step: '1', title: 'Upload', description: 'Upload your confidential document. We handle PDF, images, and Office files.' },
++                { step: '2', title: 'Share', description: 'Send fingerprinted copies to each recipient. Every copy is uniquely marked.' },
++                { step: '3', title: 'Track & Verify', description: 'Monitor who views your documents. If a leak occurs, identify the source instantly.' },
++              ].map((step, idx) => (
++                <div key={idx} className="flex gap-4 items-start">
++                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-500/20 text-lg font-bold text-blue-400 flex-shrink-0">
++                    {step.step}
++                  </div>
++                  <div>
++                    <h4 className="font-semibold text-white">{step.title}</h4>
++                    <p className="mt-1 text-sm text-gray-400">{step.description}</p>
++                  </div>
++                </div>
++              ))}
++            </div>
++          </div>
++
++          {/* Incoming Flow */}
++          <div>
++            <div className="flex items-center gap-3 mb-6">
++              <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
++                <ShieldVerify className="h-5 w-5" />
++              </div>
++              <h3 className="text-xl font-bold text-white">Verify Incoming</h3>
++            </div>
++            <div className="space-y-6">
++              {[
++                { step: '1', title: 'Upload to Verify', description: 'Drop any incoming document into the Integrity Check tool — contracts, invoices, statements.' },
++                { step: '2', title: 'Forensic Analysis', description: 'Veriflo scans metadata, dates, structure, and content for signs of tampering in seconds.' },
++                { step: '3', title: 'Integrity Score', description: 'Get a 0-100 score with risk level and detailed findings. Know if it\'s genuine before you act.' },
++              ].map((step, idx) => (
++                <div key={idx} className="flex gap-4 items-start">
++                  <div className="flex h-10 w-10 items-center justify-center rounded-full bg-emerald-500/20 text-lg font-bold text-emerald-400 flex-shrink-0">
++                    {step.step}
++                  </div>
++                  <div>
++                    <h4 className="font-semibold text-white">{step.title}</h4>
++                    <p className="mt-1 text-sm text-gray-400">{step.description}</p>
++                  </div>
++                </div>
++              ))}
++            </div>
++          </div>
++        </div>
++
++        <div className="mt-10 text-center">
++          <Button asChild size="lg" variant="ghost">
++            <Link href="/how-it-works" className="text-white hover:text-blue-300">
++              See Full Walkthrough <ArrowRight className="ml-2 h-5 w-5" />
++            </Link>
++          </Button>
+         </div>
+       </section>
+ 
+-      {/* Features Grid - 6 Cards */}
++      {/* Features Grid - 8 Cards */}
+       <section id="features" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+         <div className="text-center mb-12">
+           <h2 className="text-4xl font-bold text-white">Powerful Features</h2>
+           <p className="mt-4 text-xl text-gray-400">
+-            Everything you need to protect and track confidential documents
++            Everything you need to protect outgoing documents and verify incoming ones
+           </p>
+         </div>
+ 
+-        <div className="grid gap-8 md:grid-cols-3">
++        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+           {[
+             {
+               icon: <Fingerprint className="h-6 w-6" />,
+               title: 'Invisible Fingerprinting',
+               description:
+                 'Multi-layer forensic fingerprints survive screenshots, compression, and cropping.',
++              color: 'blue',
+             },
+             {
+               icon: <LinkIcon className="h-6 w-6" />,
+               title: 'Secure Sharing Links',
+               description:
+                 'Time-limited, revocable links with access tracking and view counts.',
++              color: 'blue',
+             },
+             {
+               icon: <Shield className="h-6 w-6" />,
+               title: 'Leak Verification',
+               description:
+                 'Upload a suspected leak and instantly identify which recipient\'s copy it came from.',
++              color: 'blue',
+             },
+             {
+               icon: <BarChart3 className="h-6 w-6" />,
+               title: 'Real-Time Tracking',
+               description:
+                 'See exactly who opened your documents, when, from where, and on what device.',
++              color: 'blue',
++            },
++            {
++              icon: <ShieldVerify className="h-6 w-6" />,
++              title: 'Integrity Check',
++              description:
++                'Upload any incoming document and get an instant integrity score with detailed findings.',
++              color: 'emerald',
++            },
++            {
++              icon: <Eye className="h-6 w-6" />,
++              title: 'Tamper Detection',
++              description:
++                'Detect altered dates, metadata inconsistencies, and signs of document manipulation.',
++              color: 'emerald',
+             },
+             {
+               icon: <Users className="h-6 w-6" />,
+               title: 'Team Collaboration',
+               description:
+                 'Share documents across your organization with role-based access controls.',
++              color: 'blue',
+             },
+             {
+               icon: <ShieldCheck className="h-6 w-6" />,
+               title: 'Enterprise Ready',
+               description:
+                 'SOC 2 ready, AES-256 encryption, and comprehensive audit logging.',
++              color: 'blue',
+             },
+           ].map((feature, idx) => (
+             <Card key={idx} className="border-slate-800 bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
+               <CardContent className="pt-8">
+-                <div className="flex h-12 w-12 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400 mb-4">
++                <div className={`flex h-12 w-12 items-center justify-center rounded-lg mb-4 ${feature.color === 'emerald' ? 'bg-emerald-500/20 text-emerald-400' : 'bg-blue-500/20 text-blue-400'}`}>
+                   {feature.icon}
+                 </div>
+                 <h3 className="text-lg font-semibold text-white">{feature.title}</h3>
+diff --git a/app/use-cases/board-materials/page.tsx b/app/use-cases/board-materials/page.tsx
+index 81c3703..8cafe7e 100644
+--- a/app/use-cases/board-materials/page.tsx
++++ b/app/use-cases/board-materials/page.tsx
+@@ -67,6 +67,11 @@ export default function BoardMaterialsPage() {
+       description:
+         'Revoke access instantly when board members leave. Archive materials securely after board terms end.',
+     },
++    {
++      title: 'Verify Document Authenticity',
++      description:
++        'Run integrity checks on documents submitted to the board — financial reports, audit findings, and third-party assessments — to ensure they haven\'t been tampered with.',
++    },
+   ];
+ 
+   const benefits = [
+@@ -76,6 +81,7 @@ export default function BoardMaterialsPage() {
+     'Track which board members are most engaged',
+     'Identify leaks of confidential board information',
+     'Meet SEC and governance compliance requirements',
++    'Verify the integrity of documents submitted to the board before review',
+   ];
+ 
+   return (
+@@ -267,6 +273,10 @@ export default function BoardMaterialsPage() {
+               title: 'Governance Documents',
+               description: 'Distribute bylaws, charter amendments, and governance policies with proper documentation.',
+             },
++            {
++              title: 'Verify Submitted Documents',
++              description: 'Run integrity checks on financial reports, audit findings, and other documents submitted for board review to ensure they haven\'t been altered.',
++            },
+           ].map((material, idx) => (
+             <div key={idx} className="flex gap-6 items-start">
+               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
+@@ -309,6 +319,10 @@ export default function BoardMaterialsPage() {
+               q: 'Can we archive old board materials?',
+               a: 'Yes. Archive materials indefinitely or set automatic retention policies. All archival actions are logged for audit purposes.',
+             },
++            {
++              q: 'Can we verify documents submitted to the board for tampering?',
++              a: 'Yes. Veriflo\'s Integrity Check analyzes any document for signs of manipulation — altered dates, metadata inconsistencies, and structural anomalies. This adds an extra layer of assurance that board materials are authentic and unaltered.',
++            },
+           ].map((faq, idx) => (
+             <details key={idx} className="group border border-slate-800 rounded-lg">
+               <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
+diff --git a/app/use-cases/fundraising/page.tsx b/app/use-cases/fundraising/page.tsx
+index 06af764..0aec4a9 100644
+--- a/app/use-cases/fundraising/page.tsx
++++ b/app/use-cases/fundraising/page.tsx
+@@ -67,6 +67,11 @@ export default function FundraisingPage() {
+       description:
+         'If your pitch deck appears online or reaches competitors, upload it to Veriflo and identify which investor\'s copy was leaked.',
+     },
++    {
++      title: 'Verify Incoming Documents',
++      description:
++        'Run integrity checks on term sheets, investor agreements, and other incoming documents to detect tampering before you sign.',
++    },
+   ];
+ 
+   const benefits = [
+@@ -76,6 +81,7 @@ export default function FundraisingPage() {
+     'Detect leaks instantly and trace the source',
+     'Maintain negotiating power by protecting strategy',
+     'Meet investor data security requirements',
++    'Verify incoming term sheets and agreements for signs of manipulation',
+   ];
+ 
+   return (
+@@ -238,6 +244,11 @@ export default function FundraisingPage() {
+               title: 'Control Access',
+               description: 'If negotiations don\'t pan out, revoke access instantly. If a leak occurs, identify the source immediately.',
+             },
++            {
++              step: '7',
++              title: 'Verify Incoming Documents',
++              description: 'When you receive term sheets or investor agreements, run an integrity check to verify they haven\'t been tampered with before signing.',
++            },
+           ].map((item, idx) => (
+             <div key={idx} className="flex gap-6 items-start">
+               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
+@@ -280,6 +291,10 @@ export default function FundraisingPage() {
+               q: 'Is there a cost for using Veriflo during fundraising?',
+               a: 'You can start for free with up to 5 documents and 10 distributions/month. That\'s plenty for most seed and Series A rounds.',
+             },
++            {
++              q: 'Can I verify documents I receive from investors?',
++              a: 'Yes. Veriflo\'s Integrity Check lets you upload any incoming document — term sheets, investor agreements, side letters — and get an instant integrity score that flags any signs of tampering or manipulation.',
++            },
+           ].map((faq, idx) => (
+             <details key={idx} className="group border border-slate-800 rounded-lg">
+               <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
+diff --git a/app/use-cases/invoice-verification/page.tsx b/app/use-cases/invoice-verification/page.tsx
+index 7091697..3871347 100644
+--- a/app/use-cases/invoice-verification/page.tsx
++++ b/app/use-cases/invoice-verification/page.tsx
+@@ -65,7 +65,7 @@ export default function InvoiceVerificationPage() {
+     {
+       title: 'Tamper Detection',
+       description:
+-        'Our multi-layer verification checks PDF metadata checksums, structural integrity, and pixel-level fingerprints. If anything has been altered, we flag it.',
++        'Our multi-layer verification checks PDF metadata checksums, structural integrity, and pixel-level fingerprints. Veriflo flags inconsistencies and gives you an instant integrity score from 0 to 100, so you know exactly how confident you can be in the document\'s authenticity.',
+     },
+     {
+       title: 'Zero-Friction for Recipients',
+@@ -78,6 +78,7 @@ export default function InvoiceVerificationPage() {
+     'Eliminate invoice fraud risk for your business and your clients',
+     'Give customers confidence that payment details are genuine',
+     'Detect tampered invoices before payments are made',
++    'Get instant integrity scores on every incoming invoice and supporting document',
+     'No software or accounts required for recipients to verify',
+     'Build trust with clients through provable document integrity',
+     'Complete audit trail of every invoice sent and verified',
+@@ -329,6 +330,10 @@ export default function InvoiceVerificationPage() {
+               q: 'How does it detect tampered invoices?',
+               a: 'Veriflo embeds multi-layer forensic fingerprints in the PDF metadata, structure, and pixel data. Any modification — even changing a single character — breaks these checksums and gets flagged as tampered.',
+             },
++            {
++              q: 'What does the integrity score mean for invoices?',
++              a: 'Every document you check gets a score from 0 to 100. A score of 80-100 means the invoice appears clean. Below 60 indicates medium risk — the document shows signs of modification that warrant investigation. Each finding is explained so your team can make an informed judgment.',
++            },
+             {
+               q: 'Can the fingerprint be seen on the invoice?',
+               a: 'No. The fingerprinting is completely invisible. Your invoices look and function exactly the same as before. Recipients won\'t notice any difference.',
+diff --git a/app/use-cases/legal/page.tsx b/app/use-cases/legal/page.tsx
+index c20fd93..e63ba93 100644
+--- a/app/use-cases/legal/page.tsx
++++ b/app/use-cases/legal/page.tsx
+@@ -67,6 +67,11 @@ export default function LegalPage() {
+       description:
+         'If privileged information appears publicly, upload it and get instant proof of which party it came from for breach documentation.',
+     },
++    {
++      title: 'Verify Document Integrity',
++      description:
++        'Run forensic analysis on incoming contracts, evidence, and opposing counsel documents to detect tampering, altered dates, and metadata manipulation.',
++    },
+   ];
+ 
+   const benefits = [
+@@ -76,6 +81,7 @@ export default function LegalPage() {
+     'Provide irrefutable evidence of document access for litigation',
+     'Protect trade secrets and confidential business information',
+     'Streamline discovery process with complete documentation',
++    'Verify incoming legal documents for signs of tampering before relying on them',
+   ];
+ 
+   return (
+@@ -238,6 +244,11 @@ export default function LegalPage() {
+               title: 'Verify Leaks',
+               description: 'If confidential information appears publicly, verify it came from authorized parties with forensic fingerprints.',
+             },
++            {
++              step: '7',
++              title: 'Verify Incoming Documents',
++              description: 'Run integrity checks on contracts, evidence, and documents from opposing parties to detect any signs of manipulation before relying on them.',
++            },
+           ].map((item, idx) => (
+             <div key={idx} className="flex gap-6 items-start">
+               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
+@@ -303,6 +314,10 @@ export default function LegalPage() {
+               q: 'Can I export the full audit trail?',
+               a: 'Yes. Export comprehensive audit reports in multiple formats suitable for discovery, regulatory submissions, and litigation purposes.',
+             },
++            {
++              q: 'Can I check if a document from opposing counsel has been altered?',
++              a: 'Yes. Upload any document to Veriflo\'s Integrity Check and get an instant forensic analysis. It detects altered dates, metadata inconsistencies, editing software traces, and structural manipulation — giving you a clear integrity score before you rely on any document.',
++            },
+           ].map((faq, idx) => (
+             <details key={idx} className="group border border-slate-800 rounded-lg">
+               <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
+diff --git a/app/use-cases/ma-deals/page.tsx b/app/use-cases/ma-deals/page.tsx
+index 4eeb042..723e85a 100644
+--- a/app/use-cases/ma-deals/page.tsx
++++ b/app/use-cases/ma-deals/page.tsx
+@@ -67,6 +67,11 @@ export default function MADealsPage() {
+       description:
+         'Comprehensive logs of all document access for compliance, audit, and investigation purposes.',
+     },
++    {
++      title: 'Verify Deal Documents',
++      description:
++        'Run integrity checks on incoming financial statements, valuations, and contracts from counterparties to detect any signs of manipulation before closing.',
++    },
+   ];
+ 
+   const benefits = [
+@@ -76,6 +81,7 @@ export default function MADealsPage() {
+     'Control document access across large deal teams',
+     'Meet buyer and seller compliance requirements',
+     'Protect financial models and valuation data',
++    'Verify counterparty documents for tampering before making deal decisions',
+   ];
+ 
+   return (
+@@ -273,6 +279,11 @@ export default function MADealsPage() {
+               title: 'Verify Leaks',
+               description: 'If information appears in the market, upload it and immediately identify which party leaked the documents.',
+             },
++            {
++              step: '7',
++              title: 'Verify Counterparty Documents',
++              description: 'Run integrity checks on financial statements, valuations, and contracts received from the other side to detect any tampering or manipulation before closing.',
++            },
+           ].map((item, idx) => (
+             <div key={idx} className="flex gap-6 items-start">
+               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
+@@ -315,6 +326,10 @@ export default function MADealsPage() {
+               q: 'What about document retention after the deal closes?',
+               a: 'You control the timeline. Archive the deal room, keep documents indefinitely, or delete everything. All actions are logged.',
+             },
++            {
++              q: 'Can I verify financial documents from the other side of the deal?',
++              a: 'Absolutely. Upload any incoming document to the Integrity Check tool and get an instant analysis. Veriflo detects tampered dates, metadata inconsistencies, and structural manipulation — critical for due diligence on financial statements and valuations.',
++            },
+           ].map((faq, idx) => (
+             <details key={idx} className="group border border-slate-800 rounded-lg">
+               <summary className="flex items-center justify-between p-6 cursor-pointer bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
+-- 
+2.34.1
+

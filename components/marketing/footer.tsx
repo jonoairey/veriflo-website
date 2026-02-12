@@ -9,27 +9,25 @@ export function Footer() {
 
   const sections = [
     {
-      title: 'Products',
+      title: 'Product',
       links: [
-        { name: 'Veriflo Seal', href: '/products/seal' },
-        { name: 'Veriflo Shield', href: '/products/shield' },
         { name: 'Features', href: '/features' },
         { name: 'How It Works', href: '/how-it-works' },
-        { name: 'Contact', href: '/pricing' },
+        { name: 'Pricing', href: '/pricing' },
       ],
     },
     {
       title: 'Use Cases',
       links: [
-        { name: 'Fundraising & Pitch Decks', href: '/use-cases/fundraising' },
-        { name: 'Legal & Litigation', href: '/use-cases/legal' },
-        { name: 'M&A Deal Rooms', href: '/use-cases/ma-deals' },
-        { name: 'Board Materials', href: '/use-cases/board-materials' },
-        { name: 'Invoice Verification', href: '/use-cases/invoice-verification' },
         { name: 'Financial Services', href: '/use-cases/financial-services' },
         { name: 'Healthcare', href: '/use-cases/healthcare' },
+        { name: 'Technology', href: '/use-cases/technology' },
         { name: 'Media & Entertainment', href: '/use-cases/media-entertainment' },
-        { name: 'Technology & SaaS', href: '/use-cases/technology' },
+        { name: 'Legal', href: '/use-cases/legal' },
+        { name: 'Invoice Verification', href: '/use-cases/invoice-verification' },
+        { name: 'Fundraising', href: '/use-cases/fundraising' },
+        { name: 'M&A Deals', href: '/use-cases/ma-deals' },
+        { name: 'Board Materials', href: '/use-cases/board-materials' },
       ],
     },
     {
@@ -52,16 +50,18 @@ export function Footer() {
   return (
     <footer className="border-t border-slate-800 bg-slate-950 text-white">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-12">
-        <div className="mb-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-5">
-          <div>
+        <div className="mb-12 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-6">
+          <div className="lg:col-span-2">
             <div className="flex items-center gap-2 mb-4">
-              <Shield className="h-6 w-6 text-blue-500" />
-              <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-lg font-bold text-transparent">
-                Veriflo
-              </span>
+              <Shield className="h-6 w-6 text-emerald-500" />
+              <div>
+                <span className="bg-gradient-to-r from-emerald-400 to-emerald-500 bg-clip-text text-lg font-bold text-transparent">
+                  Veriflo
+                </span>
+              </div>
             </div>
             <p className="text-sm text-gray-400">
-              Two-way document trust. Protect outgoing documents with Veriflo Shield. Certify authenticity with Veriflo Seal.
+              Verify incoming documents for tampering, fraud, and manipulation. Instant integrity scoring powered by forensic analysis.
             </p>
           </div>
           {sections.map((section) => (

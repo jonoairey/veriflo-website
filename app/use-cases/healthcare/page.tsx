@@ -6,77 +6,76 @@ import {
   Heart,
   AlertCircle,
   FileWarning,
-  Scale,
-  Lock,
+  ShieldAlert,
   CheckCircle,
   ArrowRight,
-  ShieldCheck,
+  Zap,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Healthcare & Life Sciences - Veriflo | Secure Document Trust',
+  title: 'Document Verification for Healthcare - Veriflo',
   description:
-    'Protect patient data, clinical trial documents, and research IP with invisible fingerprinting and tamper detection. HIPAA-compliant document security.',
+    'Verify insurance claims, medical records, and healthcare documents you receive. Detect fraudulent claims, manipulated records, fake prescriptions, and forged credentials.',
 };
 
 export default function HealthcarePage() {
   const painPoints = [
     {
       icon: <AlertCircle className="h-6 w-6" />,
-      title: 'Patient Data Breaches',
+      title: 'Fraudulent Insurance Claims',
       description:
-        'Patient records, test results, and medical histories are high-value targets. A single breach can result in millions in HIPAA fines and irreparable trust damage.',
+        'Patients submit fake or manipulated insurance claims. Detecting forged claim forms and falsified supporting documents requires forensic analysis.',
     },
     {
       icon: <FileWarning className="h-6 w-6" />,
-      title: 'Clinical Trial Leaks',
+      title: 'Manipulated Medical Records',
       description:
-        'Leaked trial data, drug formulations, or research findings can destroy competitive advantage worth billions in R&D investment.',
+        'Medical records are altered to support false claims or change treatment history. These tampering patterns are detectable through metadata analysis.',
     },
     {
-      icon: <Scale className="h-6 w-6" />,
-      title: 'HIPAA Violations',
+      icon: <ShieldAlert className="h-6 w-6" />,
+      title: 'Fake Prescriptions & Credentials',
       description:
-        'Untracked document sharing creates compliance gaps. Every access and distribution must be logged to meet HIPAA and HITECH requirements.',
+        'Forged prescriptions and fabricated provider credentials put patient safety at risk. Verifying document authenticity prevents dangerous fraud.',
     },
     {
-      icon: <Lock className="h-6 w-6" />,
-      title: 'Document Fraud',
+      icon: <AlertCircle className="h-6 w-6" />,
+      title: 'Compliance & Audit Gaps',
       description:
-        'Falsified medical records, manipulated lab results, and altered prescriptions can endanger patient safety and expose organizations to liability.',
+        'Healthcare organizations struggle to demonstrate due diligence in document verification. Systematic checks create audit trails and regulatory credibility.',
     },
   ];
 
   const solutions = [
     {
-      title: 'HIPAA-Ready Tracking',
+      title: 'Integrity Scoring',
       description:
-        'Every document access is logged with user, timestamp, device, and location. Generate compliance reports instantly for auditors.',
+        'Every document gets a 0-100 integrity score with risk levels. Quickly flag suspicious insurance forms, medical records, and claims.',
+    },
+    {
+      title: 'Template Matching',
+      description:
+        'Recognizes standard insurance claim forms and common medical document templates. Detects structural deviations that indicate forgery.',
+    },
+    {
+      title: 'Metadata Forensics',
+      description:
+        'Reveals creation dates, editing software traces, and modification patterns that expose fraudulent or tampered documents.',
     },
     {
       title: 'Tamper Detection',
       description:
-        'Verify incoming medical documents, lab results, and insurance claims for signs of manipulation before they enter your systems.',
-    },
-    {
-      title: 'Invisible Fingerprinting',
-      description:
-        'Protect outgoing documents with invisible fingerprints. If patient data or research is leaked, trace the source immediately.',
-    },
-    {
-      title: 'Secure Distribution',
-      description:
-        'Control who can access sensitive documents, set expiration dates, and revoke access instantly when needed.',
+        'Identifies altered dates, modified values, stripped metadata, and other signs of manipulation in incoming documents.',
     },
   ];
 
   const benefits = [
-    'Protect patient data with HIPAA-compliant document tracking',
-    'Detect tampered medical records and lab results',
-    'Secure clinical trial data and research IP from leaks',
-    'Generate audit trails for regulatory compliance',
-    'Verify authenticity of incoming insurance claims and documents',
-    'Reduce fraud and protect patient safety',
+    'Catch fraudulent insurance claims before processing',
+    'Detect manipulated medical records and false claims',
+    'Verify authenticity of provider credentials and qualifications',
+    'Identify AI-generated fake prescriptions and documents',
+    'Generate audit trails proving document verification was performed',
+    'Reduce fraud losses and protect patient safety',
   ];
 
   return (
@@ -86,10 +85,10 @@ export default function HealthcarePage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Protect Healthcare Documents
+              Document Verification for Healthcare
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Secure patient records, clinical trial data, and research IP with invisible fingerprinting. Verify incoming documents for tampering to prevent fraud and protect patient safety.
+              Verify insurance claims, medical records, and healthcare documents you receive. Detect fraud, manipulation, and forgeries before they affect patient care or your bottom line.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -118,9 +117,9 @@ export default function HealthcarePage() {
       {/* Pain Points */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">The Risks in Healthcare</h2>
+          <h2 className="text-4xl font-bold text-white">Healthcare Document Fraud</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Healthcare organizations face unique security and compliance challenges
+            Fraudulent claims and falsified documents threaten healthcare organizations and patient safety
           </p>
         </div>
 
@@ -183,15 +182,14 @@ export default function HealthcarePage() {
               <CardContent className="pt-8 pb-8">
                 <div className="space-y-4">
                   <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-blue-300 mb-2">Real Example</div>
+                    <div className="text-sm font-semibold text-blue-300 mb-2">Fraud Prevention</div>
                     <p className="text-sm text-gray-300">
-                      A healthcare network detected manipulated insurance claims by running incoming documents through Veriflo's integrity check, preventing over $2M in fraudulent payouts.
-                    </p>
+                      A healthcare provider caught 12 fraudulent insurance claims monthly using Veriflo. Each verified document prevents false payments and protects against liability.</p>
                   </div>
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-emerald-300 mb-2">Competitive Edge</div>
+                    <div className="text-sm font-semibold text-emerald-300 mb-2">Patient Safety</div>
                     <p className="text-sm text-gray-300">
-                      Healthcare organizations using document integrity verification demonstrate commitment to patient safety and data security, building trust with patients and partners.
+                      Detecting forged prescriptions and fake provider credentials protects patients from dangerous fraud while maintaining compliance and operational integrity.
                     </p>
                   </div>
                 </div>
@@ -204,50 +202,44 @@ export default function HealthcarePage() {
       {/* Use Case Flow */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Healthcare Document Security Workflow</h2>
+          <h2 className="text-3xl font-bold text-white">Document Verification Workflow</h2>
         </div>
 
         <div className="space-y-6">
           {[
             {
               step: '1',
-              title: 'Classify & Upload',
+              title: 'Receive Claim or Document',
               description:
-                'Identify sensitive documents—patient records, trial data, research papers—and upload to Veriflo.',
+                'Insurance claim, medical record, prescription, or provider credential arrives for verification.',
             },
             {
               step: '2',
-              title: 'Apply Protection',
+              title: 'Verify Authenticity',
               description:
-                'Each document is fingerprinted with an invisible, unique identifier tied to its intended recipient.',
+                'Upload the document to Veriflo for forensic analysis of metadata, structure, and content.',
             },
             {
               step: '3',
-              title: 'Secure Distribution',
+              title: 'Score Risk',
               description:
-                'Share documents with specific recipients. Each gets a uniquely tracked copy with access controls.',
+                'Receive a 0-100 integrity score with risk level assessment (Clean, Low, Medium, High, Critical).',
             },
             {
               step: '4',
-              title: 'Verify Incoming Documents',
+              title: 'Flag & Investigate',
               description:
-                'Run integrity checks on incoming medical records, lab results, and claims to detect tampering.',
+                'Documents with Medium+ risk are flagged for human review. Detailed findings explain what triggered the risk.',
             },
             {
               step: '5',
-              title: 'Monitor & Alert',
+              title: 'Generate Audit Report',
               description:
-                'Track access patterns in real-time. Receive alerts for unusual access or potential breaches.',
-            },
-            {
-              step: '6',
-              title: 'Audit & Comply',
-              description:
-                'Generate comprehensive audit reports for HIPAA compliance, internal reviews, and regulatory inquiries.',
+                'Export a branded PDF report documenting the verification process and findings for your compliance files.',
             },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex-shrink-0">
                 {item.step}
               </div>
               <div className="flex-1">
@@ -268,24 +260,24 @@ export default function HealthcarePage() {
         <div className="space-y-6">
           {[
             {
-              q: 'Is Veriflo HIPAA compliant?',
-              a: 'Veriflo provides the document tracking and audit trail capabilities needed for HIPAA compliance. All document access is logged with user attribution, timestamps, and access details.',
+              q: 'What does an integrity score mean for healthcare documents?',
+              a: 'A score of 80+ (Clean) indicates minimal signs of tampering. Scores of 60-79 (Low) suggest minor anomalies. Below 60 (Medium/High) indicates potential fraud. Each score includes detailed findings explaining the risk factors.',
             },
             {
-              q: 'Can it detect manipulated lab results?',
-              a: 'Yes. Our integrity check analyzes PDF metadata, creation dates, and structural patterns to flag documents that show signs of manipulation, including altered dates and editing software traces.',
+              q: 'Can Veriflo detect AI-generated medical documents?',
+              a: 'Yes. Veriflo uses 7-signal text and 6-signal image analysis to identify synthetic AI-generated documents. These are flagged separately with an AI-content risk score.',
             },
             {
-              q: 'How does this protect clinical trial data?',
-              a: 'Every copy of trial documents shared with researchers, partners, or regulators carries a unique invisible fingerprint. If data is leaked, you can identify exactly which copy was compromised.',
+              q: 'Does this work with insurance claim forms?',
+              a: 'Yes. Veriflo recognizes standard insurance claim templates and medical document formats. It detects structural deviations and content manipulation in incoming claims.',
             },
             {
-              q: 'What about electronic health records (EHR)?',
-              a: 'Veriflo works with exported documents from any EHR system. Upload PDFs, reports, or any document format for fingerprinting and integrity verification.',
+              q: 'Can we integrate with our claims processing system?',
+              a: 'Yes. Veriflo offers a REST API for automated verification of incoming claims and documents as part of your claims intake workflow.',
             },
             {
-              q: 'Can we use this for insurance claim verification?',
-              a: 'Absolutely. Upload incoming claim documents to run an integrity check that flags potential manipulation, helping reduce fraud before claims are processed.',
+              q: 'What metadata forensics help with healthcare documents?',
+              a: 'Veriflo reveals creation dates, editing software traces, and modification patterns. A prescription created today but dated months ago is flagged automatically.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">
@@ -306,9 +298,9 @@ export default function HealthcarePage() {
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Protect healthcare documents today</h2>
+          <h2 className="text-3xl font-bold text-white">Verify healthcare documents today</h2>
           <p className="mt-4 text-lg text-blue-100">
-            Start your free trial and upload your first document in under 60 seconds.
+            Start your free trial and verify your first document in under 60 seconds. Reduce fraud and protect patient safety.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">

@@ -8,7 +8,6 @@ import {
   Shield,
   CheckCircle,
   ArrowRight,
-  Fingerprint,
   Eye,
   Lock,
   DollarSign,
@@ -18,9 +17,9 @@ import {
 const PLATFORM_URL = process.env.NEXT_PUBLIC_PLATFORM_URL || 'https://app.useveriflo.com';
 
 export const metadata = {
-  title: 'Invoice Verification - Veriflo | Stop Invoice Fraud',
+  title: 'Invoice Verification & Fraud Detection - Veriflo',
   description:
-    'Protect your business from invoice fraud with Veriflo. Recipients can instantly verify that invoices are genuine and bank details haven\'t been tampered with.',
+    'Verify invoices you receive. Detect fake invoices, tampered payment details, and manipulated amounts with forensic document analysis.',
 };
 
 export default function InvoiceVerificationPage() {
@@ -45,65 +44,65 @@ export default function InvoiceVerificationPage() {
     },
     {
       icon: <Eye className="h-6 w-6" />,
-      title: 'No Way to Verify Authenticity',
+      title: 'No Way to Verify Incoming Invoices',
       description:
-        'Email alone gives recipients no way to confirm an invoice is genuine. "Can you confirm your bank details?" calls are exactly what fraudsters anticipate.',
+        'You receive invoices from vendors but have no way to verify they\'re genuine. Manual verification is slow. Fraudsters rely on speed and volume to bypass detection.',
     },
   ];
 
   const solutions = [
     {
-      title: 'Forensic Fingerprinting',
+      title: 'Metadata Forensics',
       description:
-        'Every invoice you send through Veriflo gets an invisible forensic fingerprint embedded in the PDF metadata, pixels, and structure. Any modification breaks the fingerprint.',
-    },
-    {
-      title: 'Instant Verification',
-      description:
-        'Recipients upload the invoice to your public verification page and get an immediate result: genuine and untampered, or flagged as modified.',
+        'Analyzes PDF creation dates, editing software traces, incremental saves, and modification patterns to detect tampering.',
     },
     {
       title: 'Tamper Detection',
       description:
-        'Our multi-layer verification checks PDF metadata checksums, structural integrity, and pixel-level fingerprints. Veriflo flags inconsistencies and gives you an instant integrity score from 0 to 100, so you know exactly how confident you can be in the document\'s authenticity.',
+        'Multi-layer verification checks PDF metadata, structural integrity, and content consistency. Flags any modification with confidence scoring.',
     },
     {
-      title: 'Zero-Friction for Recipients',
+      title: 'Template Matching',
       description:
-        'No account needed. No login. Recipients simply drag and drop the invoice onto the verification page and get a result in seconds.',
+        'Recognizes standard invoice templates from major providers. Detects structural deviations that indicate forgery or manipulation.',
+    },
+    {
+      title: 'Integrity Scoring',
+      description:
+        'Every invoice receives a 0-100 score (Clean 80+, Low 60+, Medium 40+, High 20+, Critical <20). Quickly identify suspicious invoices.',
     },
   ];
 
   const benefits = [
-    'Eliminate invoice fraud risk for your business and your clients',
-    'Give customers confidence that payment details are genuine',
-    'Detect tampered invoices before payments are made',
-    'Get instant integrity scores on every incoming invoice and supporting document',
-    'No software or accounts required for recipients to verify',
-    'Build trust with clients through provable document integrity',
-    'Complete audit trail of every invoice sent and verified',
+    'Detect fake invoices before payments are made',
+    'Identify tampered bank details and payment instructions',
+    'Get instant integrity scores on all incoming vendor invoices',
+    'Catch AI-generated fake invoices with content analysis',
+    'Template matching for invoices from major providers',
+    'Export verification reports for audit trails and compliance',
+    'Integrate via API for automated invoice verification workflows',
   ];
 
   const whoItsFor = [
     {
       icon: <Building2 className="h-6 w-6" />,
-      title: 'Accounting Firms',
-      description: 'Send client invoices and tax documents with built-in verification.',
+      title: 'B2B Companies',
+      description: 'Verify invoices from vendors before processing high-value payments.',
     },
     {
       icon: <FileText className="h-6 w-6" />,
-      title: 'B2B Companies',
-      description: 'Protect high-value invoices sent to enterprise clients.',
+      title: 'Accounting Firms',
+      description: 'Verify vendor invoices and tax documents to protect your clients.',
     },
     {
       icon: <Lock className="h-6 w-6" />,
-      title: 'Law Firms',
-      description: 'Ensure legal fee invoices and trust account details are tamper-proof.',
+      title: 'Corporate Finance',
+      description: 'Automated invoice verification for large-scale procurement workflows.',
     },
     {
       icon: <DollarSign className="h-6 w-6" />,
-      title: 'Freelancers & Contractors',
-      description: 'Protect your payment details when invoicing new clients.',
+      title: 'CFOs & Controllers',
+      description: 'Reduce invoice fraud and unauthorized payments with systematic verification.',
     },
   ];
 
@@ -118,19 +117,19 @@ export default function InvoiceVerificationPage() {
               $26B+ lost to invoice fraud annually
             </div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Stop Invoice Fraud Before It Starts
+              Invoice Verification & Fraud Detection
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Fingerprint every invoice you send. Recipients verify authenticity instantly — no account needed. If bank details have been tampered with, they&apos;ll know before they pay.
+              Verify invoices you receive. Detect fake invoices, tampered payment details, and manipulated amounts with forensic analysis before you pay.
             </p>
             <div className="mt-8 flex gap-4 flex-wrap">
               <Button asChild size="lg" variant="primary">
                 <a href={`${PLATFORM_URL}/signup`}>Get Started Free</a>
               </Button>
               <Button asChild size="lg" variant="ghost">
-                <a href={`${PLATFORM_URL}/verify`} className="text-white hover:text-emerald-300">
-                  Try Verification Now <ArrowRight className="ml-2 h-5 w-5" />
-                </a>
+                <Link href="/how-it-works" className="text-white hover:text-emerald-300">
+                  See How It Works <ArrowRight className="ml-2 h-5 w-5" />
+                </Link>
               </Button>
             </div>
           </div>
@@ -142,15 +141,15 @@ export default function InvoiceVerificationPage() {
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-start gap-3">
                     <Shield className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-sm font-semibold text-emerald-300">Verified — Authentic</div>
-                      <p className="text-xs text-gray-400 mt-1">This invoice was sent by Acme Corp and has not been modified. Bank details are genuine.</p>
+                      <div className="text-sm font-semibold text-emerald-300">Clean — Score 85</div>
+                      <p className="text-xs text-gray-400 mt-1">This invoice shows minimal tampering risk. Metadata is consistent. Safe to process payment.</p>
                     </div>
                   </div>
                   <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg flex items-start gap-3">
                     <AlertTriangle className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-sm font-semibold text-red-300">Warning — Tampered</div>
-                      <p className="text-xs text-gray-400 mt-1">This invoice has been modified since it was sent. Do NOT trust the bank details. Contact the sender directly.</p>
+                      <div className="text-sm font-semibold text-red-300">High Risk — Score 25</div>
+                      <p className="text-xs text-gray-400 mt-1">This invoice shows signs of tampering. Bank details may have been altered. Do NOT pay. Investigate further.</p>
                     </div>
                   </div>
                 </div>
@@ -189,7 +188,7 @@ export default function InvoiceVerificationPage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">How Invoice Verification Works</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Three steps to fraud-proof invoicing
+            Three simple steps to verify incoming invoices
           </p>
         </div>
 
@@ -197,24 +196,24 @@ export default function InvoiceVerificationPage() {
           {[
             {
               step: '1',
-              icon: <Fingerprint className="h-8 w-8 text-blue-400" />,
-              title: 'Send Through Veriflo',
+              icon: <FileText className="h-8 w-8 text-blue-400" />,
+              title: 'Receive Invoice',
               description:
-                'Upload your invoice and distribute it through Veriflo. Each copy gets a unique forensic fingerprint embedded invisibly in the PDF.',
+                'An invoice arrives from a vendor. Before processing payment, upload it to Veriflo for verification.',
             },
             {
               step: '2',
-              icon: <FileText className="h-8 w-8 text-blue-400" />,
-              title: 'Client Receives Invoice',
+              icon: <Shield className="h-8 w-8 text-blue-400" />,
+              title: 'Run Forensic Analysis',
               description:
-                'Your client receives the invoice as normal. It looks and functions exactly like any other PDF invoice — the fingerprint is invisible.',
+                'Veriflo analyzes metadata, creation dates, editing software traces, and structural integrity. Get an instant integrity score.',
             },
             {
               step: '3',
-              icon: <Shield className="h-8 w-8 text-emerald-400" />,
-              title: 'Verify Before Paying',
+              icon: <CheckCircle className="h-8 w-8 text-emerald-400" />,
+              title: 'Verify & Approve',
               description:
-                'Before paying, the client uploads the invoice to your verification page. They get instant confirmation that it\'s genuine and unmodified.',
+                'Review the integrity score and findings. Approve payment if Clean (80+), or investigate if flagged as suspicious.',
             },
           ].map((item, idx) => (
             <div key={idx} className="text-center">
@@ -272,15 +271,15 @@ export default function InvoiceVerificationPage() {
               <CardContent className="pt-8 pb-8">
                 <div className="space-y-4">
                   <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-blue-300 mb-2">The Cost of One Fraudulent Invoice</div>
+                    <div className="text-sm font-semibold text-blue-300 mb-2">Cost of Invoice Fraud</div>
                     <p className="text-sm text-gray-300">
-                      The average invoice fraud costs businesses $130,000 per incident. A single intercepted wire transfer can devastate a small business. Prevention costs a fraction of the potential loss.
+                      The average invoice fraud incident costs $130,000. One intercepted wire transfer can devastate a business. Veriflo verification costs pennies compared to the potential loss.
                     </p>
                   </div>
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-emerald-300 mb-2">Build Client Trust</div>
+                    <div className="text-sm font-semibold text-emerald-300 mb-2">Operational Efficiency</div>
                     <p className="text-sm text-gray-300">
-                      Clients appreciate vendors who take payment security seriously. Adding invoice verification to your workflow demonstrates professionalism and builds lasting trust.
+                      Automated invoice verification integrates into procurement workflows via API. Reduce manual review time and catch fraud at scale without slowing operations.
                     </p>
                   </div>
                 </div>
@@ -323,28 +322,28 @@ export default function InvoiceVerificationPage() {
         <div className="space-y-6">
           {[
             {
-              q: 'Does the recipient need a Veriflo account to verify an invoice?',
-              a: 'No. Verification is completely free and requires no account. Recipients simply upload the invoice to the public verification page and get an instant result.',
+              q: 'What does an integrity score of 80+ mean?',
+              a: 'A score of 80+ (Clean) indicates the invoice shows minimal signs of tampering or anomalies and is likely safe to pay. Scores of 60-79 (Low risk) suggest minor metadata inconsistencies worth reviewing. Below 60 indicates Medium or High risk requiring investigation.',
             },
             {
-              q: 'How does it detect tampered invoices?',
-              a: 'Veriflo embeds multi-layer forensic fingerprints in the PDF metadata, structure, and pixel data. Any modification — even changing a single character — breaks these checksums and gets flagged as tampered.',
+              q: 'How does Veriflo detect tampered invoices?',
+              a: 'Veriflo analyzes PDF metadata, creation dates, editing software traces, structural integrity, and content consistency. It detects date inconsistencies, modified values, editing software traces, and structural manipulation.',
             },
             {
-              q: 'What does the integrity score mean for invoices?',
-              a: 'Every document you check gets a score from 0 to 100. A score of 80-100 means the invoice appears clean. Below 60 indicates medium risk — the document shows signs of modification that warrant investigation. Each finding is explained so your team can make an informed judgment.',
+              q: 'Can Veriflo recognize invoices from my vendors?',
+              a: 'Yes. Veriflo includes 15+ built-in templates for common invoice formats and providers. Template matching helps detect structural deviations that indicate forgery.',
             },
             {
-              q: 'Can the fingerprint be seen on the invoice?',
-              a: 'No. The fingerprinting is completely invisible. Your invoices look and function exactly the same as before. Recipients won\'t notice any difference.',
+              q: 'Can we integrate with our accounting software?',
+              a: 'Yes. Veriflo offers a REST API (POST /api/v1/verify) for automated invoice verification as part of your accounting workflow.',
             },
             {
-              q: 'What if someone intercepts and modifies the invoice?',
-              a: 'That\'s exactly what this prevents. If a man-in-the-middle modifies bank details, the verification check will fail and show a tamper warning, telling the recipient not to trust the payment details.',
+              q: 'How quickly do we get results?',
+              a: 'Results are instant. Upload an invoice and receive an integrity score and detailed forensic findings within seconds.',
             },
             {
-              q: 'How much does it cost?',
-              a: 'You can start for free with up to 5 documents and 10 distributions per month. Pro plans start at $49/mo for businesses that send more invoices.',
+              q: 'What about AI-generated fake invoices?',
+              a: 'Veriflo uses 7-signal text and 6-signal image analysis to identify synthetic AI-generated invoices. These are flagged separately with an AI-content risk score.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">
@@ -365,18 +364,18 @@ export default function InvoiceVerificationPage() {
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Protect your invoices today</h2>
+          <h2 className="text-3xl font-bold text-white">Verify invoices today</h2>
           <p className="mt-4 text-lg text-blue-100">
-            Start sending fraud-proof invoices in under 60 seconds. Free to get started.
+            Start your free trial and verify your first invoice in under 60 seconds. Detect fraud and protect your business.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">
               <a href={`${PLATFORM_URL}/signup`}>Get Started Free</a>
             </Button>
             <Button asChild size="lg" variant="ghost">
-              <a href={`${PLATFORM_URL}/verify`} className="text-white hover:text-blue-100">
-                Try Verification <ArrowRight className="ml-2 h-5 w-5" />
-              </a>
+              <Link href="/" className="text-white hover:text-blue-100">
+                Back to Home <ArrowRight className="ml-2 h-5 w-5" />
+              </Link>
             </Button>
           </div>
         </div>

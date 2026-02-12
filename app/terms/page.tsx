@@ -79,10 +79,10 @@ export default function TermsPage() {
               By uploading documents to our Service, you retain all rights to your content. However, you grant Veriflo a limited license to:
             </p>
             <ul className="list-disc list-inside space-y-2 mb-4">
-              <li>Store and encrypt your documents</li>
-              <li>Transmit documents to authorized recipients</li>
-              <li>Generate fingerprints for leak detection</li>
-              <li>Collect metadata about document access</li>
+              <li>Store and encrypt your documents during analysis</li>
+              <li>Perform forensic analysis including metadata extraction and tamper detection</li>
+              <li>Generate integrity scores and verification reports</li>
+              <li>Collect usage metadata for service improvement</li>
               <li>Provide the Service to you</li>
             </ul>
 
@@ -168,7 +168,7 @@ export default function TermsPage() {
               <li>Warranties of merchantability or fitness for a particular purpose</li>
               <li>Non-infringement of third-party rights</li>
               <li>Uninterrupted or error-free operation</li>
-              <li>Guaranteed leak detection or forensic accuracy</li>
+              <li>Guaranteed verification accuracy or forensic completeness</li>
             </ul>
           </section>
 

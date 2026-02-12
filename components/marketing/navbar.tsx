@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
 import { Shield, Menu, X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
@@ -8,10 +8,23 @@ import clsx from 'clsx';
 
 const PLATFORM_URL = process.env.NEXT_PUBLIC_PLATFORM_URL || 'https://app.useveriflo.com';
 
+const USE_CASES = [
+  { name: 'Financial Services', href: '/use-cases/financial-services' },
+  { name: 'Healthcare', href: '/use-cases/healthcare' },
+  { name: 'Technology', href: '/use-cases/technology' },
+  { name: 'Media & Entertainment', href: '/use-cases/media-entertainment' },
+  { name: 'Legal', href: '/use-cases/legal' },
+  { name: 'Fundraising', href: '/use-cases/fundraising' },
+  { name: 'M&A Deals', href: '/use-cases/ma-deals' },
+  { name: 'Board Materials', href: '/use-cases/board-materials' },
+  { name: 'Invoice Verification', href: '/use-cases/invoice-verification' },
+];
+
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [useCasesOpen, setUseCasesOpen] = useState(false);
+  const dropdownRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -21,17 +34,16 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  const useCases = [
-    { name: 'Fundraising & Pitch Decks', href: '/use-cases/fundraising' },
-    { name: 'Legal & Litigation', href: '/use-cases/legal' },
-    { name: 'M&A Deal Rooms', href: '/use-cases/ma-deals' },
-    { name: 'Board Materials', href: '/use-cases/board-materials' },
-    { name: 'Invoice Verification', href: '/use-cases/invoice-verification' },
-    { name: 'Financial Services', href: '/use-cases/financial-services' },
-    { name: 'Healthcare & Life Sciences', href: '/use-cases/healthcare' },
-    { name: 'Media & Entertainment', href: '/use-cases/media-entertainment' },
-    { name: 'Technology & SaaS', href: '/use-cases/technology' },
-  ];
+  // Close dropdown on outside click
+  useEffect(() => {
+    const handleClickOutside = (e: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
+        setUseCasesOpen(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, []);
 
   return (
     <nav
@@ -45,40 +57,48 @@ export function Navbar() {
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="flex h-16 items-center justify-between">
           <Link href="/" className="flex items-center gap-2">
-            <Shield className="h-6 w-6 text-blue-500" />
-            <span className="bg-gradient-to-r from-blue-400 to-blue-600 bg-clip-text text-xl font-bold text-transparent">
+            <Shield className="h-6 w-6 text-emerald-500" />
+            <span className="bg-gradient-to-r from-emerald-400 to-emerald-500 bg-clip-text text-xl font-bold text-transparent">
               Veriflo
             </span>
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
-            <Link href="/features" className="text-sm font-medium text-white hover:text-blue-300 transition-colors">
+            <Link href="/features" className="text-sm font-medium text-white hover:text-emerald-300 transition-colors">
               Features
             </Link>
-            <Link href="/how-it-works" className="text-sm font-medium text-white hover:text-blue-300 transition-colors">
+            <Link href="/how-it-works" className="text-sm font-medium text-white hover:text-emerald-300 transition-colors">
               How It Works
             </Link>
-            <div className="relative group">
-              <button className="flex items-center gap-1 text-sm font-medium text-white hover:text-blue-300 transition-colors">
+
+            {/* Use Cases Dropdown */}
+            <div className="relative" ref={dropdownRef}>
+              <button
+                onClick={() => setUseCasesOpen(!useCasesOpen)}
+                className="flex items-center gap-1 text-sm font-medium text-white hover:text-emerald-300 transition-colors"
+              >
                 Use Cases
-                <ChevronDown className="h-4 w-4" />
+                <ChevronDown className={clsx('h-4 w-4 transition-transform', useCasesOpen && 'rotate-180')} />
               </button>
-              <div className="absolute left-1/2 -translate-x-1/2 mt-2 w-[420px] bg-slate-900 rounded-lg shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 border border-slate-800 p-2">
-                <div className="grid grid-cols-2 gap-1">
-                  {useCases.map((useCase) => (
+
+              {useCasesOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-64 bg-slate-900 border border-slate-700 rounded-lg shadow-xl py-2 z-50">
+                  {USE_CASES.map((uc) => (
                     <Link
-                      key={useCase.name}
-                      href={useCase.href}
-                      className="block px-3 py-2.5 text-sm text-white hover:bg-slate-800 rounded-md transition-colors"
+                      key={uc.href}
+                      href={uc.href}
+                      onClick={() => setUseCasesOpen(false)}
+                      className="block px-4 py-2 text-sm text-gray-300 hover:text-white hover:bg-slate-800 transition-colors"
                     >
-                      {useCase.name}
+                      {uc.name}
                     </Link>
                   ))}
                 </div>
-              </div>
+              )}
             </div>
-            <Link href="/pricing" className="text-sm font-medium text-white hover:text-blue-300 transition-colors">
-              Contact
+
+            <Link href="/pricing" className="text-sm font-medium text-white hover:text-emerald-300 transition-colors">
+              Pricing
             </Link>
             <a href={`${PLATFORM_URL}/verify`} className="text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors">
               Verify a Document
@@ -95,7 +115,7 @@ export function Navbar() {
           </div>
 
           <button
-            className="md:hidden text-white hover:text-blue-300 transition-colors"
+            className="md:hidden text-white hover:text-emerald-300 transition-colors"
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -112,28 +132,26 @@ export function Navbar() {
               <Link href="/how-it-works" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
                 How It Works
               </Link>
-              <button
-                onClick={() => setUseCasesOpen(!useCasesOpen)}
-                className="w-full text-left px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors flex items-center justify-between"
-              >
-                Use Cases
-                <ChevronDown className={clsx('h-4 w-4 transition-transform', useCasesOpen && 'rotate-180')} />
-              </button>
-              {useCasesOpen && (
-                <div className="pl-4 space-y-1">
-                  {useCases.map((useCase) => (
+
+              {/* Mobile Use Cases */}
+              <div className="px-4 py-2">
+                <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Use Cases</p>
+                <div className="space-y-1 pl-2">
+                  {USE_CASES.map((uc) => (
                     <Link
-                      key={useCase.name}
-                      href={useCase.href}
-                      className="block px-4 py-2 rounded-lg text-sm text-gray-300 hover:bg-slate-800 transition-colors"
+                      key={uc.href}
+                      href={uc.href}
+                      onClick={() => setMobileMenuOpen(false)}
+                      className="block py-1.5 text-sm text-gray-400 hover:text-white transition-colors"
                     >
-                      {useCase.name}
+                      {uc.name}
                     </Link>
                   ))}
                 </div>
-              )}
+              </div>
+
               <Link href="/pricing" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
-                Contact
+                Pricing
               </Link>
               <a href={`${PLATFORM_URL}/verify`} className="block px-4 py-2 rounded-lg text-emerald-400 hover:bg-slate-800 transition-colors">
                 Verify a Document

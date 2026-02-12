@@ -4,84 +4,78 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   TrendingUp,
-  Lock,
-  Eye,
   AlertCircle,
   CheckCircle,
   ArrowRight,
-  Users,
-  BarChart3,
+  FileCheck,
+  Zap,
+  ShieldAlert,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Fundraising & Pitch Decks - Veriflo | Secure Document Sharing',
-  description: 'Protect your pitch decks, financial forecasts, and investor materials with Veriflo\'s secure document sharing and leak detection.',
+  title: 'Document Verification for Fundraising & Due Diligence - Veriflo',
+  description:
+    'Verify term sheets, cap tables, and due diligence documents received from investors. Detect inflated financials and manipulated cap tables.',
 };
 
 export default function FundraisingPage() {
   const painPoints = [
     {
       icon: <AlertCircle className="h-6 w-6" />,
-      title: 'Pitch Deck Leaks',
+      title: 'Inflated Financial Documents',
       description:
-        'Sensitive pitch decks and valuations get shared with multiple investors. One leak exposes your strategy to competitors.',
+        'Revenue documents and financial claims received from investors or counterparties may be doctored to misrepresent performance or cash position.',
     },
     {
-      icon: <Eye className="h-6 w-6" />,
-      title: 'Unknown Access',
+      icon: <FileCheck className="h-6 w-6" />,
+      title: 'Manipulated Cap Tables',
       description:
-        'You send documents to investors but don\'t know who actually viewed them, when, or how long they spent reviewing.',
+        'Cap tables and ownership documents may be altered after initial issuance, creating disputes over actual ownership and dilution.',
     },
     {
-      icon: <Users className="h-6 w-6" />,
-      title: 'Uncontrolled Sharing',
+      icon: <ShieldAlert className="h-6 w-6" />,
+      title: 'Forged Investor Documents',
       description:
-        'Investors forward your materials to partners, advisors, or even competitors. You have no visibility or control.',
+        'Fake term sheets, LOIs, and commitment letters are created to scam founders. Hard to distinguish from legitimate investor documents.',
     },
     {
-      icon: <TrendingUp className="h-6 w-6" />,
-      title: 'Competitive Intelligence',
+      icon: <Zap className="h-6 w-6" />,
+      title: 'Recently-Created "Historical" Docs',
       description:
-        'Financial forecasts, market analysis, and growth plans are valuable intelligence that could damage your negotiating position.',
+        'Documents claiming to be bank statements, financial records, or historical documents are actually created moments before being sent.',
     },
   ];
 
   const solutions = [
     {
-      title: 'Watermark Every Copy',
+      title: 'Integrity Scoring',
       description:
-        'Every version of your pitch deck sent to investors has an invisible fingerprint. If leaked, you instantly know the source.',
+        'Score due diligence documents on a 0-100 scale. Identify clean documents vs. those with medium, high, or critical risk flags.',
     },
     {
-      title: 'Track Access & Engagement',
+      title: 'Metadata Forensics',
       description:
-        'See exactly who opened your pitch deck, when, and for how long. Identify seriously interested investors vs. casual browsers.',
+        'Detect recently-created documents claiming old dates. Uncover creation timestamps, software traces, and incremental save histories.',
     },
     {
-      title: 'Control Distribution',
+      title: 'AI-Content Detection',
       description:
-        'Set expiration dates on your materials. Revoke access instantly if negotiations fall through or an investor passes.',
+        'Identify AI-generated text in financial documents and synthetically created cap tables. Score for likelihood of fabrication.',
     },
     {
-      title: 'Verify Leaks',
+      title: 'Template Matching',
       description:
-        'If your pitch deck appears online or reaches competitors, upload it to Veriflo and identify which investor\'s copy was leaked.',
-    },
-    {
-      title: 'Verify Incoming Documents',
-      description:
-        'Run integrity checks on term sheets, investor agreements, and other incoming documents to detect tampering before you sign.',
+        'Verify bank statements, tax forms, and financial statements match authentic templates. Detect structural anomalies in common formats.',
     },
   ];
 
   const benefits = [
-    'Protect confidential financial data and growth projections',
-    'Identify which investors are most engaged with your materials',
-    'Control who can access your documents and when',
-    'Detect leaks instantly and trace the source',
-    'Maintain negotiating power by protecting strategy',
-    'Meet investor data security requirements',
-    'Verify incoming term sheets and agreements for signs of manipulation',
+    'Verify term sheets and investment agreements before signing',
+    'Detect forged cap tables and ownership documents',
+    'Identify inflated financial documents from investors',
+    'Catch recently-created documents falsely dated as historical',
+    'Score documents to flag high-risk due diligence materials',
+    'Export verification reports for investor or legal review',
   ];
 
   return (
@@ -91,11 +85,10 @@ export default function FundraisingPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Protect Your Pitch Deck
+              Verify Fundraising & Due Diligence Documents
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Share pitch decks, financial forecasts, and investor materials with confidence. Know who has access and who leaked your information.
-            </p>
+              Verify term sheets, cap tables, and financial documents received from investors. Detect forgeries and manipulated documents before closing.</p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
                 <a href="https://app.useveriflo.com/signup">Get Started Free</a>
@@ -123,9 +116,9 @@ export default function FundraisingPage() {
       {/* Pain Points */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">The Risks of Fundraising</h2>
+          <h2 className="text-4xl font-bold text-white">Document Risks in Fundraising</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Pitch decks contain your most sensitive information
+            Forged and manipulated documents are a growing threat in capital raising
           </p>
         </div>
 
@@ -149,7 +142,7 @@ export default function FundraisingPage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">How Veriflo Helps</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Complete protection and visibility for your fundraising materials
+            Comprehensive verification for documents you receive during fundraising
           </p>
         </div>
 
@@ -188,15 +181,15 @@ export default function FundraisingPage() {
               <CardContent className="pt-8 pb-8">
                 <div className="space-y-4">
                   <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-blue-300 mb-2">Real Example</div>
+                    <div className="text-sm font-semibold text-blue-300 mb-2">Real Example: Forged Term Sheet</div>
                     <p className="text-sm text-gray-300">
-                      A Series A company shared their pitch deck with 15 potential investors. One investor leaked it to a competitor. Using Veriflo, they instantly identified which investor leaked it and took legal action.
+                      A Series A company received what appeared to be a term sheet from a well-known VC. Veriflo's AI detection and structural analysis flagged it as fabricated and created hours before being sent. The company avoided a scam.
                     </p>
                   </div>
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-emerald-300 mb-2">Competitive Edge</div>
+                    <div className="text-sm font-semibold text-emerald-300 mb-2">Catch Tampering Before Signing</div>
                     <p className="text-sm text-gray-300">
-                      Investors appreciate that you take data security seriously. Veriflo demonstrates a mature security posture that builds trust.
+                      Metadata forensics revealed that a cap table received from an investor had been modified multiple times in the last 24 hours, with key ownership percentages altered. This prevented signing a document with concealed changes.
                     </p>
                   </div>
                 </div>
@@ -209,45 +202,35 @@ export default function FundraisingPage() {
       {/* Use Case Flow */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">A Typical Fundraising Workflow</h2>
+          <h2 className="text-3xl font-bold text-white">Due Diligence Verification Workflow</h2>
         </div>
 
         <div className="space-y-6">
           {[
             {
               step: '1',
-              title: 'Prepare Your Materials',
-              description: 'Create your pitch deck, financial model, and supporting materials.',
+              title: 'Receive Due Diligence Documents',
+              description: 'You receive term sheets, cap tables, financial documents, and other materials from investors or counterparties.',
             },
             {
               step: '2',
-              title: 'Upload to Veriflo',
-              description: 'Upload your pitch deck. It\'s encrypted and ready to share.',
+              title: 'Batch Upload',
+              description: 'Upload multiple documents at once to Veriflo. They\'re processed and scored instantly.',
             },
             {
               step: '3',
-              title: 'Add Investors',
-              description: 'Enter the email addresses of investors you want to share with. Each gets a unique fingerprinted copy.',
+              title: 'Score Each Document',
+              description: 'Get 0-100 integrity scores for each document. Identify Clean, Low Risk, Medium Risk, High Risk, and Critical items.',
             },
             {
               step: '4',
-              title: 'Send Secure Links',
-              description: 'Veriflo generates a unique secure link for each investor. They receive an email with their personalized link.',
+              title: 'Flag Anomalies',
+              description: 'Review detailed forensic findings—creation dates, recent edits, software traces, and AI-generated content.',
             },
             {
               step: '5',
-              title: 'Monitor Engagement',
-              description: 'Watch in real-time as investors open your deck. See who\'s most engaged and for how long.',
-            },
-            {
-              step: '6',
-              title: 'Control Access',
-              description: 'If negotiations don\'t pan out, revoke access instantly. If a leak occurs, identify the source immediately.',
-            },
-            {
-              step: '7',
-              title: 'Verify Incoming Documents',
-              description: 'When you receive term sheets or investor agreements, run an integrity check to verify they haven\'t been tampered with before signing.',
+              title: 'Export Verification Reports',
+              description: 'Generate branded PDF reports documenting all findings. Share with legal counsel or investors as needed.',
             },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
@@ -272,28 +255,24 @@ export default function FundraisingPage() {
         <div className="space-y-6">
           {[
             {
-              q: 'Can investors tell their copy is fingerprinted?',
-              a: 'No. The fingerprinting is invisible and imperceptible. The document looks and functions exactly the same.',
+              q: 'Can I verify term sheets and LOIs?',
+              a: 'Yes. Upload any term sheet, letter of intent, or commitment letter. Veriflo will analyze it for signs of forgery, tampering, or AI generation.',
             },
             {
-              q: 'What if an investor wants to share with their team?',
-              a: 'You control this. You can set documents as view-only, disable downloads, or allow sharing depending on your preference.',
+              q: 'How does Veriflo detect fake bank statements?',
+              a: 'Veriflo uses template matching to compare bank statements against authentic formats from major banks. It detects structural anomalies, font mismatches, and format inconsistencies that indicate forgery.',
             },
             {
-              q: 'Can I see which investors opened my deck?',
-              a: 'Yes. You see exactly who opened it, when, what device they used, and how long they spent reviewing it.',
+              q: 'Can I verify cap tables?',
+              a: 'Yes. Upload cap tables to detect if they\'ve been tampered with or recently created. Metadata forensics reveal editing history and date anomalies.',
             },
             {
-              q: 'What if my pitch deck gets screenshotted?',
-              a: 'The fingerprint survives screenshots. If the deck is leaked in any format, we can identify the source investor.',
+              q: 'What if a cap table has legitimate updates?',
+              a: 'Veriflo shows the complete editing timeline. You can see when each change was made and verify that updates align with announced funding rounds or stock events.',
             },
             {
-              q: 'Is there a cost for using Veriflo during fundraising?',
-              a: 'You can start for free with up to 5 documents and 10 distributions/month. That\'s plenty for most seed and Series A rounds.',
-            },
-            {
-              q: 'Can I verify documents I receive from investors?',
-              a: 'Yes. Veriflo\'s Integrity Check lets you upload any incoming document — term sheets, investor agreements, side letters — and get an instant integrity score that flags any signs of tampering or manipulation.',
+              q: 'Are verification reports something I can share with counsel?',
+              a: 'Yes. Veriflo generates detailed forensic reports with timestamped findings that attorneys can use to assess document authenticity and integrity.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">
@@ -314,9 +293,9 @@ export default function FundraisingPage() {
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Protect your pitch deck today</h2>
+          <h2 className="text-3xl font-bold text-white">Verify your due diligence documents today</h2>
           <p className="mt-4 text-lg text-blue-100">
-            Start your free trial and upload your first document in under 60 seconds.
+            Start your free trial and verify your first document in under 60 seconds.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">

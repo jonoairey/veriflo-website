@@ -4,84 +4,78 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Briefcase,
-  Lock,
-  Eye,
   AlertCircle,
   CheckCircle,
   ArrowRight,
-  Users,
-  TrendingUp,
+  FileCheck,
+  ShieldAlert,
+  TrendingDown,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'M&A Deal Rooms - Veriflo | Secure Document Sharing',
-  description: 'Protect M&A due diligence documents with Veriflo. Secure sharing, real-time tracking, and leak verification for deal teams.',
+  title: 'Document Verification for M&A Transactions - Veriflo',
+  description:
+    'Verify M&A due diligence documents for tampering and fraud. Detect manipulated financial statements, fake compliance certifications, and forged audit reports.',
 };
 
 export default function MADealsPage() {
   const painPoints = [
     {
       icon: <AlertCircle className="h-6 w-6" />,
-      title: 'Deal Leaks',
+      title: 'Manipulated Financial Statements',
       description:
-        'M&A information is highly sensitive. A leak to competitors or the press can derail deals and tank valuations.',
+        'Financial statements in data rooms may be altered to hide liabilities or inflate revenue. Subtle changes are easy to miss in complex documents.',
     },
     {
-      icon: <Eye className="h-6 w-6" />,
-      title: 'Multiple Stakeholders',
+      icon: <FileCheck className="h-6 w-6" />,
+      title: 'Tampered Contracts',
       description:
-        'Buyers, sellers, advisors, and legal teams all need access. You lose visibility over who has the documents and how they\'re being used.',
+        'Deal contracts and agreements may be modified after signing or submitted with unauthorized changes to key terms and conditions.',
     },
     {
-      icon: <Users className="h-6 w-6" />,
-      title: 'Uncontrolled Distribution',
+      icon: <ShieldAlert className="h-6 w-6" />,
+      title: 'Forged Compliance Certifications',
       description:
-        'Advisors and team members forward documents to partners and consultants. You have no control or visibility.',
+        'Fake regulatory certifications, ISO certifications, and compliance documents are submitted to satisfy buyer due diligence requirements.',
     },
     {
-      icon: <TrendingUp className="h-6 w-6" />,
-      title: 'Valuation Impact',
+      icon: <TrendingDown className="h-6 w-6" />,
+      title: 'Fraudulent Audit Reports',
       description:
-        'If financial models or growth projections leak to the market, it directly impacts deal negotiations and pricing.',
+        'Audit reports may be fabricated or modified to overstate financial health or hide material issues discovered during actual audits.',
     },
   ];
 
   const solutions = [
     {
-      title: 'Watermark All Documents',
+      title: 'Integrity Scoring',
       description:
-        'Every version of every document has a unique fingerprint. Identify the exact source of any leak instantly.',
+        'Score all data room documents on a 0-100 scale. Instantly categorize files as Clean, Low Risk, Medium Risk, High Risk, or Critical.',
     },
     {
-      title: 'Real-Time Access Monitoring',
+      title: 'Metadata Forensics',
       description:
-        'See which team members are actively reviewing documents. Get alerts when sensitive materials are accessed.',
+        'Analyze creation dates, revision histories, and software traces. Detect documents created recently but claiming to be months or years old.',
     },
     {
-      title: 'Granular Access Control',
+      title: 'Template Matching',
       description:
-        'Control who can view, download, or print documents. Set expiration dates and revoke access instantly if the deal falls through.',
+        'Verify financial statements, tax forms, and bank statements match authentic templates from real institutions. Detect structural anomalies.',
     },
     {
-      title: 'Complete Audit Trail',
+      title: 'Tamper Detection',
       description:
-        'Comprehensive logs of all document access for compliance, audit, and investigation purposes.',
-    },
-    {
-      title: 'Verify Deal Documents',
-      description:
-        'Run integrity checks on incoming financial statements, valuations, and contracts from counterparties to detect any signs of manipulation before closing.',
+        'Identify signs of document manipulation—altered terms, embedded edits, metadata inconsistencies, and structural anomalies that indicate tampering.',
     },
   ];
 
   const benefits = [
-    'Maintain strict confidentiality throughout due diligence',
-    'Know exactly who accessed documents and when',
-    'Identify leaks instantly and trace the source',
-    'Control document access across large deal teams',
-    'Meet buyer and seller compliance requirements',
-    'Protect financial models and valuation data',
-    'Verify counterparty documents for tampering before making deal decisions',
+    'Verify financial statements in data rooms before review',
+    'Detect tampered contracts and modified agreements',
+    'Identify forged compliance certifications and audit reports',
+    'Flag high-risk documents before diligence team review',
+    'Score documents to prioritize investigation and legal review',
+    'Export verification reports for due diligence files',
   ];
 
   return (
@@ -91,10 +85,10 @@ export default function MADealsPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Secure M&A Deal Rooms
+              Verify M&A Due Diligence Documents
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Manage sensitive M&A documents with complete visibility and control. Track access across your entire deal team and identify leaks instantly.
+              Verify financial statements, contracts, and compliance documents in data rooms. Detect tampering and forged documents before closing.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -123,9 +117,9 @@ export default function MADealsPage() {
       {/* Pain Points */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">M&A Document Challenges</h2>
+          <h2 className="text-4xl font-bold text-white">Document Integrity Risks in M&A</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Due diligence demands security and visibility
+            Due diligence is only as strong as the authenticity of documents reviewed
           </p>
         </div>
 
@@ -149,7 +143,7 @@ export default function MADealsPage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">How Veriflo Helps</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Purpose-built for M&A deal room security
+            Comprehensive verification for M&A due diligence documents
           </p>
         </div>
 
@@ -188,15 +182,15 @@ export default function MADealsPage() {
               <CardContent className="pt-8 pb-8">
                 <div className="space-y-4">
                   <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-blue-300 mb-2">Real Example</div>
+                    <div className="text-sm font-semibold text-blue-300 mb-2">Real Example: Manipulated Financials</div>
                     <p className="text-sm text-gray-300">
-                      An acquisition team discovered their financial models were shared with a competitor. Using Veriflo, they identified exactly which advisor leaked the documents within minutes.
+                      An M&A team discovered financial statements in a data room that had been edited to remove liabilities. Veriflo's structural analysis and metadata forensics revealed edits made after the purported audit date. Deal was restructured based on these findings.
                     </p>
                   </div>
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-emerald-300 mb-2">Negotiating Power</div>
+                    <div className="text-sm font-semibold text-emerald-300 mb-2">Due Diligence Efficiency</div>
                     <p className="text-sm text-gray-300">
-                      Knowing exactly who accessed documents and when gives you leverage. You can detect if confidential information is being used against you.
+                      Veriflo scores all documents in a data room, allowing diligence teams to prioritize investigation on high-risk files and move through review faster.
                     </p>
                   </div>
                 </div>
@@ -206,83 +200,81 @@ export default function MADealsPage() {
         </div>
       </section>
 
-      {/* Deal Team Types */}
+      {/* Document Types */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Perfect for Every Deal Team Member</h2>
+          <h2 className="text-3xl font-bold text-white">Data Room Documents You Can Verify</h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
           {[
             {
-              role: 'Sell-Side Teams',
-              description: 'Control access to financial data, proprietary information, and customer lists. Know exactly who is reviewing your company.',
+              type: 'Financial Statements',
+              description: 'Verify quarterly and annual financial statements for tampering, altered numbers, and metadata inconsistencies.',
             },
             {
-              role: 'Buy-Side Teams',
-              description: 'Secure access to multiple target company documents. Track which team members are engaged with which targets.',
+              type: 'Tax Returns',
+              description: 'Verify 1099s, W-2s, and tax documents match authentic IRS templates and detect forged or manipulated returns.',
             },
             {
-              role: 'Investment Banks',
-              description: 'Manage documents for multiple clients simultaneously with granular access controls and audit trails.',
+              type: 'Bank Statements',
+              description: 'Verify bank statements from major institutions match authentic formats and detect fabricated statements.',
             },
             {
-              role: 'Legal & Advisors',
-              description: 'Share documents securely with clients and opposing counsel while maintaining comprehensive documentation.',
+              type: 'Contracts & Agreements',
+              description: 'Verify deal contracts, employment agreements, and customer contracts haven\'t been tampered with or modified.',
             },
-          ].map((team, idx) => (
+            {
+              type: 'Audit Reports',
+              description: 'Verify audit reports are authentic and detect whether documents have been altered or forged after original audit.',
+            },
+            {
+              type: 'Compliance Certifications',
+              description: 'Verify ISO certifications, regulatory approvals, and compliance documents are authentic and not fabricated.',
+            },
+          ].map((doc, idx) => (
             <Card key={idx} className="border-slate-800 bg-slate-900/50">
               <CardContent className="pt-8">
-                <h3 className="text-lg font-semibold text-white">{team.role}</h3>
-                <p className="mt-2 text-gray-400">{team.description}</p>
+                <h3 className="text-lg font-semibold text-white">{doc.type}</h3>
+                <p className="mt-2 text-gray-400">{doc.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
       </section>
 
-      {/* Workflow */}
+      {/* Use Case Flow */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Typical M&A Deal Room Workflow</h2>
+          <h2 className="text-3xl font-bold text-white">M&A Due Diligence Verification Workflow</h2>
         </div>
 
         <div className="space-y-6">
           {[
             {
               step: '1',
-              title: 'Launch Deal Room',
-              description: 'Create a secure deal room and organize documents by category (financials, operations, legal, etc.).',
+              title: 'Access Data Room Documents',
+              description: 'Receive access to the target company\'s data room with financial statements, contracts, and due diligence materials.',
             },
             {
               step: '2',
-              title: 'Add Team Members',
-              description: 'Invite buyers, sellers, and advisors to the deal room. Assign roles and permissions.',
+              title: 'Batch Verify Via API',
+              description: 'Use Veriflo\'s REST API to verify documents programmatically or upload critical files directly for analysis.',
             },
             {
               step: '3',
-              title: 'Upload Documents',
-              description: 'Upload all due diligence documents. Each gets a unique fingerprint for leak identification.',
+              title: 'Review Integrity Scores',
+              description: 'Get 0-100 integrity scores for each document. Score high-risk items first for diligence team prioritization.',
             },
             {
               step: '4',
-              title: 'Grant Access',
-              description: 'Share documents with specific team members. Set view-only mode, disable downloads, or allow full access as needed.',
+              title: 'Flag High-Risk Documents',
+              description: 'Documents scoring in the High Risk or Critical range are flagged for immediate investigation and legal review.',
             },
             {
               step: '5',
-              title: 'Monitor Activity',
-              description: 'Watch in real-time as team members access documents. Get alerts on unusual access patterns.',
-            },
-            {
-              step: '6',
-              title: 'Verify Leaks',
-              description: 'If information appears in the market, upload it and immediately identify which party leaked the documents.',
-            },
-            {
-              step: '7',
-              title: 'Verify Counterparty Documents',
-              description: 'Run integrity checks on financial statements, valuations, and contracts received from the other side to detect any tampering or manipulation before closing.',
+              title: 'Generate Due Diligence Report',
+              description: 'Export comprehensive verification reports documenting all findings for the deal team and legal counsel.',
             },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
@@ -307,28 +299,28 @@ export default function MADealsPage() {
         <div className="space-y-6">
           {[
             {
-              q: 'Can we have a large deal room with many stakeholders?',
-              a: 'Yes. Enterprise plans support unlimited team members and document sharing. You can have separate access levels for different stakeholders.',
+              q: 'Can I verify financial statements in bulk?',
+              a: 'Yes. Upload multiple documents or use Veriflo\'s REST API to verify documents programmatically. All are scored instantly.',
             },
             {
-              q: 'Can I organize documents by folder/category?',
-              a: 'Yes. Organize documents however you need. You can create custom folders and categories for different deal aspects.',
+              q: 'How does Veriflo detect manipulated financial statements?',
+              a: 'Veriflo uses template matching to verify statements match authentic formats from real companies and banks. Structural analysis detects altered numbers, inserted rows, and edited sections.',
             },
             {
-              q: 'What if the deal falls through?',
-              a: 'Revoke access to all documents instantly. Everyone loses access to the deal room and all materials.',
+              q: 'Can I verify contracts that have been signed?',
+              a: 'Yes. Upload signed contracts to analyze them for evidence of tampering after signing. Metadata shows when edits were made relative to signature dates.',
             },
             {
-              q: 'Can I track specific teams or individuals?',
-              a: 'Yes. Get detailed analytics showing access by individual team member, department, or organization.',
+              q: 'What if financial statements have legitimate revisions?',
+              a: 'Veriflo shows the complete revision timeline. You can see when restatements were issued and verify that revisions align with announced financial updates.',
             },
             {
-              q: 'What about document retention after the deal closes?',
-              a: 'You control the timeline. Archive the deal room, keep documents indefinitely, or delete everything. All actions are logged.',
+              q: 'Can I integrate Veriflo with our due diligence process?',
+              a: 'Yes. Veriflo offers a REST API for programmatic verification and a web interface for manual uploads. Integration takes minutes.',
             },
             {
-              q: 'Can I verify financial documents from the other side of the deal?',
-              a: 'Absolutely. Upload any incoming document to the Integrity Check tool and get an instant analysis. Veriflo detects tampered dates, metadata inconsistencies, and structural manipulation — critical for due diligence on financial statements and valuations.',
+              q: 'Are Veriflo reports suitable for closing documents?',
+              a: 'Yes. Veriflo generates detailed forensic reports with timestamped findings suitable for M&A closing files and deal documentation.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">
@@ -349,9 +341,9 @@ export default function MADealsPage() {
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Secure your next deal room today</h2>
+          <h2 className="text-3xl font-bold text-white">Verify your next deal today</h2>
           <p className="mt-4 text-lg text-blue-100">
-            Start your free trial and launch a secure deal room in under 60 seconds.
+            Start your free trial and verify your first document in under 60 seconds.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">

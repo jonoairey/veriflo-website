@@ -7,75 +7,76 @@ import {
   AlertCircle,
   ShieldAlert,
   Scale,
-  UserX,
   CheckCircle,
   ArrowRight,
+  Zap,
+  FileCheck,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Financial Services & Banking - Veriflo | Secure Document Trust',
+  title: 'Document Verification for Financial Services - Veriflo',
   description:
-    'Protect sensitive financial documents with invisible fingerprinting and verify incoming documents for tampering. Built for banks, insurers, and financial institutions.',
+    'Verify financial documents received by your institution. Detect fraudulent bank statements, manipulated pay stubs, and fake income documents with AI and forensic analysis.',
 };
 
 export default function FinancialServicesPage() {
   const painPoints = [
     {
       icon: <AlertCircle className="h-6 w-6" />,
-      title: 'Statement Leaks',
+      title: 'Fraudulent Bank Statements',
       description:
-        'Client statements, portfolio summaries, and internal reports can be forwarded or leaked, exposing sensitive financial data to unauthorized parties.',
+        'Applicants submit fake or manipulated bank statements to secure loans, credit, or housing. Current vetting processes catch only obvious forgeries.',
     },
     {
       icon: <ShieldAlert className="h-6 w-6" />,
-      title: 'Document Fraud',
+      title: 'Manipulated Pay Stubs',
       description:
-        'Fraudulent bank statements, manipulated pay stubs, and altered financial documents cost the industry billions annually in losses.',
+        'Pay stubs are edited to show higher income than reality. These documents directly influence lending decisions and can cost institutions millions.',
     },
     {
       icon: <Scale className="h-6 w-6" />,
-      title: 'Compliance Violations',
+      title: 'Fake Income Documentation',
       description:
-        'Failing to track document access and distribution can violate regulatory requirements like SOX, GDPR, and industry-specific mandates.',
+        'W-2s, 1099s, and tax returns are fabricated or altered. Detecting synthetic documents requires forensic analysis that manual review cannot provide.',
     },
     {
-      icon: <UserX className="h-6 w-6" />,
-      title: 'Insider Threats',
+      icon: <ShieldAlert className="h-6 w-6" />,
+      title: 'Compliance & Risk Gaps',
       description:
-        'Employees with access to sensitive documents can leak proprietary research, client lists, or trading strategies to competitors.',
+        'No systematic verification means undetected fraud propagates. Lenders and banks struggle to demonstrate due diligence to regulators.',
     },
   ];
 
   const solutions = [
     {
-      title: 'Invisible Fingerprinting',
+      title: 'Integrity Scoring',
       description:
-        'Every document shared internally or externally carries a unique, invisible fingerprint. If leaked, trace the source instantly.',
+        'Every document gets a 0-100 integrity score with risk levels. Clean (80+), Low (60+), Medium (40+), High (20+), or Critical risk.',
     },
     {
-      title: 'Tamper Detection',
+      title: 'Template Matching',
       description:
-        'Verify incoming documents for signs of manipulation. Detect altered dates, modified values, and suspicious metadata before making decisions.',
+        'Recognizes 15+ document templates including Chase, BofA, Wells Fargo bank statements, ADP/Gusto/Paychex pay stubs, W-2, 1099, and more.',
     },
     {
-      title: 'Audit Trail',
+      title: 'Metadata Forensics',
       description:
-        'Complete, tamper-proof record of who accessed what document, when, and from where. Meet regulatory requirements effortlessly.',
+        'Reveals creation dates, editing software traces, incremental saves, and date anomalies that indicate tampering.',
     },
     {
-      title: 'Leak Identification',
+      title: 'AI-Content Detection',
       description:
-        'If sensitive financial data appears where it shouldn\'t, upload the leaked document and identify exactly which copy was compromised.',
+        'Identifies synthetic text and AI-generated images using 7-signal text + 6-signal image analysis with zero external API dependencies.',
     },
   ];
 
   const benefits = [
-    'Protect client financial data and proprietary research',
-    'Detect fraudulent or tampered documents before processing',
-    'Maintain complete audit trails for regulatory compliance',
-    'Trace document leaks to the exact source instantly',
-    'Reduce fraud losses with incoming document verification',
-    'Meet SOX, GDPR, and industry compliance requirements',
+    'Catch fraudulent or manipulated documents before they affect decisions',
+    'Reduce lending losses and loan defaults from false income claims',
+    'Verify template matches for well-known institutions automatically',
+    'Detect AI-generated synthetic documents in seconds',
+    'Export branded PDF reports for audit trails and compliance',
+    'Integrate via REST API for automated document verification workflows',
   ];
 
   return (
@@ -85,10 +86,10 @@ export default function FinancialServicesPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Secure Financial Documents
+              Document Verification for Financial Services
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Protect sensitive statements, analyst reports, and client communications with invisible fingerprinting. Verify incoming documents for tampering before they reach your systems.
+              Verify financial documents as you receive them. Detect fraudulent bank statements, manipulated pay stubs, and fake income documents instantly with forensic analysis and AI-powered detection.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -106,7 +107,7 @@ export default function FinancialServicesPage() {
             <Card className="border-slate-800 bg-slate-900/50 relative">
               <CardContent className="pt-8 pb-8">
                 <div className="aspect-square bg-gradient-to-br from-blue-500/10 to-emerald-500/10 rounded-lg border border-blue-500/20 flex items-center justify-center">
-                  <BarChart3 className="h-24 w-24 text-blue-400" />
+                  <BarChart3 className="h-24 w-24 text-emerald-400" />
                 </div>
               </CardContent>
             </Card>
@@ -117,9 +118,9 @@ export default function FinancialServicesPage() {
       {/* Pain Points */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">The Risks in Financial Services</h2>
+          <h2 className="text-4xl font-bold text-white">The Document Fraud Problem</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Financial institutions face unprecedented threats to document security
+            Financial institutions receive thousands of documents daily. Without verification, fraudulent documents slip through.
           </p>
         </div>
 
@@ -182,15 +183,15 @@ export default function FinancialServicesPage() {
               <CardContent className="pt-8 pb-8">
                 <div className="space-y-4">
                   <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-blue-300 mb-2">Real Example</div>
+                    <div className="text-sm font-semibold text-blue-300 mb-2">Fraud Prevention</div>
                     <p className="text-sm text-gray-300">
-                      A financial advisory firm detected that client portfolio summaries were being forwarded outside the organization. Using Veriflo, they identified the source within minutes and closed the breach.
+                      A mortgage lender caught 3 fraudulent pay stubs per week using Veriflo's AI and metadata forensics. Each prevented loan would have resulted in significant loss.
                     </p>
                   </div>
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-emerald-300 mb-2">Compliance Edge</div>
+                    <div className="text-sm font-semibold text-emerald-300 mb-2">Due Diligence</div>
                     <p className="text-sm text-gray-300">
-                      Financial institutions using Veriflo generate audit-ready reports that satisfy SOX and GDPR requirements, reducing compliance preparation time significantly.
+                      Veriflo generates audit-ready reports proving document verification was performed, satisfying regulatory requirements and demonstrating operational diligence.
                     </p>
                   </div>
                 </div>
@@ -203,44 +204,39 @@ export default function FinancialServicesPage() {
       {/* Use Case Flow */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Financial Document Security Workflow</h2>
+          <h2 className="text-3xl font-bold text-white">Document Verification Workflow</h2>
         </div>
 
         <div className="space-y-6">
           {[
             {
               step: '1',
-              title: 'Upload Sensitive Documents',
-              description: 'Upload statements, reports, or client materials to Veriflo for protection.',
+              title: 'Receive Financial Document',
+              description: 'Applicant submits bank statement, pay stub, W-2, 1099, or income verification document.',
             },
             {
               step: '2',
-              title: 'Fingerprint & Distribute',
-              description: 'Each recipient gets a uniquely fingerprinted copy. Distribution is tracked automatically.',
+              title: 'Upload to Veriflo',
+              description: 'Upload the document to Veriflo via web interface, REST API, or automated workflow.',
             },
             {
               step: '3',
-              title: 'Monitor Access',
-              description: 'See who opens documents, when, and from what location. Get alerts on unusual access patterns.',
+              title: 'Get Integrity Score',
+              description: 'Receive a 0-100 integrity score with risk level assessment (Clean, Low, Medium, High, Critical).',
             },
             {
               step: '4',
-              title: 'Verify Incoming Docs',
-              description: 'Run integrity checks on incoming documents to detect tampering, metadata inconsistencies, and fraud signals.',
+              title: 'Review Forensic Findings',
+              description: 'Examine metadata forensics, template matches, AI-content signals, and tamper detection results.',
             },
             {
               step: '5',
-              title: 'Detect & Respond',
-              description: 'If a leak occurs, identify the source. If fraud is detected, flag it before it enters your workflow.',
-            },
-            {
-              step: '6',
-              title: 'Compliance Reporting',
-              description: 'Generate audit reports showing complete document lifecycle for regulators and internal compliance teams.',
+              title: 'Export Branded Report',
+              description: 'Generate a professional PDF report for your compliance files and audit trail.',
             },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex-shrink-0">
                 {item.step}
               </div>
               <div className="flex-1">
@@ -261,24 +257,24 @@ export default function FinancialServicesPage() {
         <div className="space-y-6">
           {[
             {
-              q: 'How does tamper detection work for financial documents?',
-              a: 'Veriflo analyzes PDF metadata, creation dates, software signatures, and structural patterns to identify signs of manipulation. It flags inconsistencies like mismatched dates, editing software traces, and suspicious modifications.',
+              q: 'What does an integrity score of 80+ mean?',
+              a: 'A score of 80+ (Clean risk level) indicates the document shows minimal signs of tampering or anomalies. It is likely authentic. Scores between 60-79 (Low risk) suggest minor metadata inconsistencies worth reviewing. Below 60 indicates Medium or High risk that requires investigation.',
             },
             {
-              q: 'Can Veriflo integrate with our existing document management system?',
-              a: 'Yes. Veriflo works alongside your existing DMS. Upload documents directly or connect via our API for automated fingerprinting and verification.',
+              q: 'Can Veriflo detect AI-generated pay stubs?',
+              a: 'Yes. Veriflo uses 7-signal text and 6-signal image analysis to detect synthetic AI-generated documents. These are flagged separately from traditional tampering with an AI-content risk score.',
             },
             {
-              q: 'Does this meet regulatory compliance requirements?',
-              a: 'Veriflo provides complete audit trails that support SOX, GDPR, and financial industry compliance requirements. Every document action is logged with timestamps and user attribution.',
+              q: 'Does the API work with our underwriting system?',
+              a: 'Yes. Veriflo offers a REST API (POST /api/v1/verify) with Bearer token authentication. You can integrate automated verification into your document intake workflows.',
             },
             {
-              q: 'What types of financial documents can be protected?',
-              a: 'Any document format including PDFs, Excel spreadsheets, Word documents, and images. Common use cases include statements, reports, contracts, and client communications.',
+              q: 'What templates does Veriflo recognize?',
+              a: 'Veriflo includes 15+ built-in templates: Chase, BofA, Wells Fargo bank statements; ADP, Gusto, Paychex pay stubs; W-2, 1099, P60, invoices, and utility bills.',
             },
             {
-              q: 'How quickly can we identify a leaked document?',
-              a: 'Instantly. Upload the leaked document to Veriflo and it identifies which fingerprinted copy was compromised, giving you the source within seconds.',
+              q: 'How are metadata forensics useful?',
+              a: 'Metadata forensics reveal creation dates, editing software traces, incremental saves, and date anomalies. A pay stub created yesterday but dated 6 months ago is a red flag that metadata forensics will catch.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">
@@ -299,9 +295,9 @@ export default function FinancialServicesPage() {
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Secure your financial documents today</h2>
+          <h2 className="text-3xl font-bold text-white">Verify financial documents today</h2>
           <p className="mt-4 text-lg text-blue-100">
-            Start your free trial and protect your most sensitive financial documents in under 60 seconds.
+            Start your free trial and verify your first document in under 60 seconds. Reduce fraud losses instantly.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">

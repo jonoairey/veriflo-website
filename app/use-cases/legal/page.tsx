@@ -4,84 +4,78 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Scale,
-  Lock,
-  Eye,
   AlertCircle,
+  FileText,
+  ShieldAlert,
   CheckCircle,
   ArrowRight,
-  FileText,
-  BarChart3,
+  Zap,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Legal & Litigation - Veriflo | Secure Document Sharing',
-  description: 'Protect legal documents, contracts, and litigation materials with secure sharing, access tracking, and leak detection.',
+  title: 'Document Verification for Legal Teams - Veriflo',
+  description:
+    'Verify legal documents you receive. Detect forged contracts, manipulated evidence, tampered discovery documents, and fake certifications with forensic analysis.',
 };
 
 export default function LegalPage() {
   const painPoints = [
     {
       icon: <AlertCircle className="h-6 w-6" />,
-      title: 'Confidential Leaks',
+      title: 'Forged Contracts',
       description:
-        'Legal documents reveal privileged information, trade secrets, and sensitive negotiations. A single leak can destroy a case.',
+        'Opposing parties submit altered or fabricated contracts claiming different terms. Distinguishing genuine from forged requires forensic document analysis.',
     },
     {
-      icon: <Eye className="h-6 w-6" />,
-      title: 'Discovery Compliance',
+      icon: <ShieldAlert className="h-6 w-6" />,
+      title: 'Manipulated Evidence',
       description:
-        'During litigation, you must track who viewed documents and when. Paper trails are difficult and e-signature verification is complex.',
+        'Critical evidence in litigation may be edited, backdated, or modified. Courts require proof of authenticity, not speculation.',
     },
     {
       icon: <FileText className="h-6 w-6" />,
-      title: 'Uncontrolled Distribution',
+      title: 'Tampered Discovery Documents',
       description:
-        'Opposing counsel and witnesses receive documents but you don\'t know if they forwarded them elsewhere or shared with unauthorized parties.',
+        'Documents produced in discovery can be altered before exchange. Detecting metadata inconsistencies requires tools beyond manual review.',
     },
     {
-      icon: <BarChart3 className="h-6 w-6" />,
-      title: 'Audit Trail Gaps',
+      icon: <AlertCircle className="h-6 w-6" />,
+      title: 'Fake Certifications & Credentials',
       description:
-        'You need comprehensive logs for regulatory compliance and litigation defense, but email and file sharing don\'t provide adequate documentation.',
+        'Expert certifications, professional licenses, and qualifications are forged. Verifying authenticity prevents reliance on fraudulent experts.',
     },
   ];
 
   const solutions = [
     {
-      title: 'Forensic Fingerprinting',
+      title: 'Tamper Detection',
       description:
-        'Every document copy is uniquely marked. If leaked, the fingerprint identifies exactly which copy and recipient.',
+        'Analyzes PDF structure, metadata, creation dates, and editing software traces to identify signs of manipulation or forgery.',
     },
     {
-      title: 'Complete Audit Logs',
+      title: 'Metadata Timeline Analysis',
       description:
-        'Full documentation of who accessed documents, when, from where, and on what device. Perfect for discovery compliance.',
+        'Reveals creation dates, incremental saves, modification history, and date anomalies that prove documents were altered.',
     },
     {
-      title: 'Access Control',
+      title: 'AI-Content Detection',
       description:
-        'Specify who can view, download, or print. Revoke access instantly if needed. Track all modifications and access attempts.',
+        'Identifies fabricated text and synthetic images before evidence is relied upon in case strategy.',
     },
     {
-      title: 'Leak Investigation',
+      title: 'Integrity Scoring & Reports',
       description:
-        'If privileged information appears publicly, upload it and get instant proof of which party it came from for breach documentation.',
-    },
-    {
-      title: 'Verify Document Integrity',
-      description:
-        'Run forensic analysis on incoming contracts, evidence, and opposing counsel documents to detect tampering, altered dates, and metadata manipulation.',
+        'Every document receives a 0-100 integrity score with detailed findings suitable for case files and expert witness testimony.',
     },
   ];
 
   const benefits = [
-    'Meet stricter legal and regulatory compliance requirements',
-    'Maintain attorney-client privilege with audit trails',
-    'Detect unauthorized distribution instantly',
-    'Provide irrefutable evidence of document access for litigation',
-    'Protect trade secrets and confidential business information',
-    'Streamline discovery process with complete documentation',
-    'Verify incoming legal documents for signs of tampering before relying on them',
+    'Detect forged contracts before relying on them in negotiations',
+    'Prove evidence tampering with forensic metadata analysis',
+    'Identify fabricated documents before they influence case decisions',
+    'Generate court-ready reports with integrity scores and findings',
+    'Protect against opposing parties submitting altered discovery documents',
+    'Catch synthetic AI-generated evidence before trial',
   ];
 
   return (
@@ -91,10 +85,10 @@ export default function LegalPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Protect Legal Documents
+              Document Verification for Legal Teams
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Share contracts, litigation materials, and confidential legal documents with complete control and comprehensive audit trails.
+              Verify contracts, evidence, and discovery documents you receive. Detect forgeries, tampering, and fabricated evidence with forensic analysis before they affect your case.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -123,9 +117,9 @@ export default function LegalPage() {
       {/* Pain Points */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">Legal & Litigation Challenges</h2>
+          <h2 className="text-4xl font-bold text-white">Document Integrity in Litigation</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Confidentiality and compliance matter more in legal work
+            Proving document authenticity is critical to case success
           </p>
         </div>
 
@@ -188,15 +182,15 @@ export default function LegalPage() {
               <CardContent className="pt-8 pb-8">
                 <div className="space-y-4">
                   <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-blue-300 mb-2">Discovery Support</div>
+                    <div className="text-sm font-semibold text-blue-300 mb-2">Catch Forgeries</div>
                     <p className="text-sm text-gray-300">
-                      Provide opposing counsel with comprehensive audit logs showing exactly who accessed documents and when. Streamline the discovery process.
+                      A law firm used Veriflo to catch a forged contract that opposing counsel submitted as authentic. The forensic findings proved the document was created days before (not years) and contained editing traces.
                     </p>
                   </div>
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-emerald-300 mb-2">Compliance Ready</div>
+                    <div className="text-sm font-semibold text-emerald-300 mb-2">Expert Testimony Support</div>
                     <p className="text-sm text-gray-300">
-                      Meet regulatory requirements for document handling, access control, and audit trails. SOC 2 certified and compliance-ready.
+                      Veriflo reports provide detailed forensic analysis suitable for expert witness testimony. Courts recognize metadata analysis as credible evidence of tampering.
                     </p>
                   </div>
                 </div>
@@ -209,49 +203,34 @@ export default function LegalPage() {
       {/* Use Case Flow */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Legal Document Sharing Workflow</h2>
+          <h2 className="text-3xl font-bold text-white">Legal Document Verification Workflow</h2>
         </div>
 
         <div className="space-y-6">
           {[
             {
               step: '1',
-              title: 'Organize Your Documents',
-              description: 'Prepare contracts, litigation documents, and discovery materials in a secure, encrypted vault.',
+              title: 'Receive Legal Document',
+              description: 'Opposing counsel sends a contract, discovery document, or piece of evidence critical to your case.',
             },
             {
               step: '2',
-              title: 'Set Access Permissions',
-              description: 'Specify who can view, download, or print. Control whether documents can be screenshot or copied.',
+              title: 'Verify Authenticity',
+              description: 'Upload the document to Veriflo for forensic analysis of metadata, structure, and content.',
             },
             {
               step: '3',
-              title: 'Distribute via Secure Links',
-              description: 'Generate unique links for opposing counsel, parties, and witnesses. Each gets a fingerprinted copy.',
+              title: 'Review Forensic Findings',
+              description: 'Examine creation dates, editing software traces, date anomalies, and tamper detection results with detailed explanations.',
             },
             {
               step: '4',
-              title: 'Monitor Access',
-              description: 'Track exactly who accessed documents, when, and for how long. Get notified of unusual access patterns.',
-            },
-            {
-              step: '5',
-              title: 'Generate Audit Reports',
-              description: 'Export comprehensive audit logs for discovery, compliance, and litigation defense purposes.',
-            },
-            {
-              step: '6',
-              title: 'Verify Leaks',
-              description: 'If confidential information appears publicly, verify it came from authorized parties with forensic fingerprints.',
-            },
-            {
-              step: '7',
-              title: 'Verify Incoming Documents',
-              description: 'Run integrity checks on contracts, evidence, and documents from opposing parties to detect any signs of manipulation before relying on them.',
+              title: 'Export Branded Report',
+              description: 'Generate a professional report suitable for case files, expert witness testimony, and court submission.',
             },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex-shrink-0">
                 {item.step}
               </div>
               <div className="flex-1">
@@ -263,28 +242,6 @@ export default function LegalPage() {
         </div>
       </section>
 
-      {/* Use Cases Grid */}
-      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Common Legal Use Cases</h2>
-        </div>
-
-        <div className="grid gap-6 md:grid-cols-2">
-          {[
-            { title: 'Litigation Discovery', description: 'Share documents with opposing counsel with full audit trails for discovery compliance.' },
-            { title: 'Contract Management', description: 'Distribute NDAs and contracts to partners with expiration dates and access controls.' },
-            { title: 'M&A Due Diligence', description: 'Manage sensitive M&A documents with comprehensive access logs and leak detection.' },
-            { title: 'Confidential Settlements', description: 'Share settlement agreements with parties while preventing unauthorized distribution.' },
-          ].map((useCase, idx) => (
-            <Card key={idx} className="border-slate-800 bg-slate-900/50">
-              <CardContent className="pt-8">
-                <h3 className="text-lg font-semibold text-white">{useCase.title}</h3>
-                <p className="mt-2 text-gray-400">{useCase.description}</p>
-              </CardContent>
-            </Card>
-          ))}
-        </div>
-      </section>
 
       {/* FAQ */}
       <section className="mx-auto max-w-3xl px-4 sm:px-6 lg:px-8">
@@ -295,28 +252,24 @@ export default function LegalPage() {
         <div className="space-y-6">
           {[
             {
-              q: 'Does Veriflo support attorney-client privilege?',
-              a: 'Yes. All documents are encrypted end-to-end. We do not access or store document content, only metadata about access and distribution.',
+              q: 'Are forensic reports admissible in court?',
+              a: 'Yes. Veriflo generates detailed forensic analysis reports with integrity scores, metadata findings, and expert-level explanations suitable for expert witness testimony and court submission.',
             },
             {
-              q: 'Can I disable downloads or printing?',
-              a: 'Yes. You have granular control over each recipient\'s permissions. You can allow view-only, disable downloading, printing, and screenshotting.',
+              q: 'What metadata does Veriflo analyze?',
+              a: 'Veriflo examines PDF creation dates, modification history, embedded software signatures, editing software traces, incremental saves, structural integrity, and date anomalies.',
             },
             {
-              q: 'Are audit logs legally admissible?',
-              a: 'Yes. Veriflo generates timestamped, cryptographically signed audit logs suitable for litigation and regulatory compliance purposes.',
+              q: 'Can it detect AI-generated documents?',
+              a: 'Yes. Veriflo uses 7-signal text and 6-signal image analysis to identify synthetic AI-generated documents. These are flagged separately with an AI-content risk score.',
             },
             {
-              q: 'What about document retention and deletion?',
-              a: 'You control the document lifecycle. Delete documents instantly or set automatic retention policies. All deletion is logged for audit purposes.',
+              q: 'How quickly can I get results?',
+              a: 'Results are instant. Upload a document and receive an integrity score and forensic findings within seconds.',
             },
             {
-              q: 'Can I export the full audit trail?',
-              a: 'Yes. Export comprehensive audit reports in multiple formats suitable for discovery, regulatory submissions, and litigation purposes.',
-            },
-            {
-              q: 'Can I check if a document from opposing counsel has been altered?',
-              a: 'Yes. Upload any document to Veriflo\'s Integrity Check and get an instant forensic analysis. It detects altered dates, metadata inconsistencies, editing software traces, and structural manipulation — giving you a clear integrity score before you rely on any document.',
+              q: 'Can I integrate verification into discovery workflows?',
+              a: 'Yes. Veriflo offers a REST API for automated verification of incoming discovery documents as part of your case management workflow.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">
@@ -337,9 +290,9 @@ export default function LegalPage() {
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Protect your legal documents today</h2>
+          <h2 className="text-3xl font-bold text-white">Verify legal documents today</h2>
           <p className="mt-4 text-lg text-blue-100">
-            Start your free trial and secure your first document in under 60 seconds.
+            Start your free trial and verify your first document in under 60 seconds. Get forensic analysis and integrity reports for your case.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">

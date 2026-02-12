@@ -5,77 +5,78 @@ import { Card, CardContent } from '@/components/ui/card';
 import {
   Code,
   AlertCircle,
-  Eye,
+  ShieldAlert,
   TrendingUp,
   FileText,
   CheckCircle,
   ArrowRight,
-  Lock,
+  Zap,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Technology & SaaS - Veriflo | Secure Document Trust',
-  description: 'Protect product roadmaps, investor decks, pricing documents, and API documentation with invisible fingerprinting and leak detection.',
+  title: 'Document Verification for Technology Companies - Veriflo',
+  description:
+    'Verify vendor invoices, SOC 2 reports, and compliance certifications you receive. Detect fake documents and manipulated compliance certifications.',
 };
 
 export default function TechnologyPage() {
   const painPoints = [
     {
       icon: <AlertCircle className="h-6 w-6" />,
-      title: 'Roadmap Leaks',
+      title: 'Fake Vendor Invoices',
       description:
-        'Product roadmaps shared with investors, partners, or board members can reach competitors, eroding your first-mover advantage on key features.',
+        'Criminals impersonate vendors and send fraudulent invoices with altered bank details. Companies pay fake invoices before discovering the fraud.',
     },
     {
-      icon: <Eye className="h-6 w-6" />,
-      title: 'Investor Deck Forwarding',
+      icon: <ShieldAlert className="h-6 w-6" />,
+      title: 'Manipulated SOC 2 Reports',
       description:
-        'Pitch decks sent during fundraising get forwarded beyond intended recipients. Your financials, metrics, and strategy become widely known.',
-    },
-    {
-      icon: <TrendingUp className="h-6 w-6" />,
-      title: 'Pricing Exposure',
-      description:
-        'Enterprise pricing documents, rate cards, and discount structures leaked to competitors or published online undermine your sales team\'s negotiating power.',
+        'Vendors submit fake or outdated SOC 2 compliance reports. Tech companies need to verify that security certifications are current and authentic.',
     },
     {
       icon: <FileText className="h-6 w-6" />,
-      title: 'API & Technical Doc Theft',
+      title: 'Forged Compliance Certifications',
       description:
-        'Technical documentation, architecture diagrams, and API specs contain proprietary implementation details that competitors can exploit.',
+        'ISO certifications, compliance badges, and third-party audit reports are fabricated or altered. Detecting these forgeries requires forensic analysis.',
+    },
+    {
+      icon: <TrendingUp className="h-6 w-6" />,
+      title: 'AI-Generated Fake Documents',
+      description:
+        'Vendors use AI to generate convincing but entirely synthetic compliance documents. Distinguishing real from AI-generated requires advanced analysis.',
     },
   ];
 
   const solutions = [
     {
-      title: 'Fingerprint Everything',
+      title: 'AI-Content Detection',
       description:
-        'Every document—roadmaps, decks, pricing sheets—gets a unique invisible fingerprint tied to its recipient. Full accountability on every copy.',
+        'Identifies synthetic AI-generated documents using 7-signal text and 6-signal image analysis. No external API dependencies.',
     },
     {
-      title: 'Investor Deck Protection',
+      title: 'Template Matching',
       description:
-        'Share pitch decks with VCs knowing exactly who has access. Track engagement to identify your most interested investors.',
+        'Recognizes standard invoice templates and compliance document formats. Detects structural deviations that indicate forgery.',
     },
     {
-      title: 'Verify Document Integrity',
+      title: 'Metadata Forensics',
       description:
-        'Run integrity checks on incoming contracts, term sheets, and technical documents to detect tampering before signing or processing.',
+        'Reveals creation dates, editing software traces, and document modification patterns that expose fake certifications.',
     },
     {
-      title: 'Instant Leak Detection',
+      title: 'REST API Integration',
       description:
-        'When a document surfaces where it shouldn\'t, upload it to Veriflo and identify the exact recipient whose copy was leaked.',
+        'Automate verification of incoming vendor documents as part of your procurement workflow. POST /api/v1/verify with Bearer token auth.',
     },
   ];
 
   const benefits = [
-    'Protect product roadmaps from reaching competitors',
-    'Track investor deck access and engagement in real-time',
-    'Secure enterprise pricing from unauthorized exposure',
-    'Verify incoming contracts and term sheets for tampering',
-    'Maintain competitive advantage on unannounced features',
-    'Build trust with investors through professional document security',
+    'Detect fake vendor invoices before payments are made',
+    'Verify SOC 2 and compliance certifications are authentic',
+    'Identify AI-generated fake documents from vendors',
+    'Catch forged compliance badges and audit reports',
+    'Automate document verification in procurement workflows',
+    'Get integrity scores on all incoming vendor documentation',
   ];
 
   return (
@@ -85,10 +86,10 @@ export default function TechnologyPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Protect Tech Company Documents
+              Document Verification for Technology Companies
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Secure product roadmaps, investor decks, pricing strategies, and technical documentation with invisible fingerprinting. Detect leaks and verify document integrity.
+              Verify vendor documents, compliance certifications, and SOC 2 reports you receive. Detect fake invoices, forged certifications, and AI-generated documents instantly.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -117,9 +118,9 @@ export default function TechnologyPage() {
       {/* Pain Points */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">The Risks in Technology</h2>
+          <h2 className="text-4xl font-bold text-white">Vendor & Compliance Document Fraud</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Tech companies face unique risks around proprietary documents and strategic information
+            Tech companies receive thousands of vendor documents. Detecting fraud requires systematic verification.
           </p>
         </div>
 
@@ -182,15 +183,15 @@ export default function TechnologyPage() {
               <CardContent className="pt-8 pb-8">
                 <div className="space-y-4">
                   <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-blue-300 mb-2">SaaS Pricing Protection</div>
+                    <div className="text-sm font-semibold text-blue-300 mb-2">Invoice Fraud Prevention</div>
                     <p className="text-sm text-gray-300">
-                      A SaaS company's pricing sheet appeared on a competitor's sales deck. Veriflo traced it to a partner who had been shared an early version, enabling them to address the breach and renegotiate the partnership terms.
+                      A tech company caught 5 fraudulent vendor invoices monthly. Each invoice was fake but looked authentic. Veriflo's metadata forensics exposed the forgeries before payment.
                     </p>
                   </div>
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-emerald-300 mb-2">Investor Confidence</div>
+                    <div className="text-sm font-semibold text-emerald-300 mb-2">Compliance Due Diligence</div>
                     <p className="text-sm text-gray-300">
-                      Tech companies using Veriflo for investor materials report increased investor confidence, as document security signals operational maturity and strong governance.
+                      Companies using Veriflo to verify vendor SOC 2 reports ensure they're relying on authentic certifications, reducing security risks and demonstrating operational rigor.
                     </p>
                   </div>
                 </div>
@@ -203,44 +204,39 @@ export default function TechnologyPage() {
       {/* Use Case Flow */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Tech Document Protection Workflow</h2>
+          <h2 className="text-3xl font-bold text-white">Vendor Document Verification Workflow</h2>
         </div>
 
         <div className="space-y-6">
           {[
             {
               step: '1',
-              title: 'Identify Sensitive Materials',
-              description: 'Flag documents that need protection: roadmaps, pitch decks, pricing, technical specs, and partner agreements.',
+              title: 'Receive Vendor Document',
+              description: 'Invoice, SOC 2 report, compliance certification, or other vendor documentation arrives.',
             },
             {
               step: '2',
-              title: 'Upload & Fingerprint',
-              description: 'Upload documents to Veriflo. Each is fingerprinted and ready for secure distribution.',
+              title: 'API Auto-Verify (or Manual Upload)',
+              description: 'Automatically verify via API integration in your procurement workflow, or upload manually to web dashboard.',
             },
             {
               step: '3',
-              title: 'Share with Recipients',
-              description: 'Send uniquely fingerprinted copies to investors, partners, board members, or internal teams.',
+              title: 'Score Integrity',
+              description: 'Receive a 0-100 integrity score with risk level assessment. Detect AI-generated documents and metadata anomalies.',
             },
             {
               step: '4',
-              title: 'Monitor Access',
-              description: 'Track who opens your documents, engagement levels, and access patterns in real-time.',
+              title: 'Flag Anomalies',
+              description: 'Documents with Medium+ risk are highlighted. Detailed forensic findings explain what triggered the alert.',
             },
             {
               step: '5',
-              title: 'Verify Incoming Documents',
-              description: 'Run integrity checks on incoming term sheets, contracts, and vendor documents to detect any manipulation.',
-            },
-            {
-              step: '6',
-              title: 'Detect & Respond to Leaks',
-              description: 'If your documents appear where they shouldn\'t, identify the source instantly and take appropriate action.',
+              title: 'Dashboard Review',
+              description: 'View all verified documents in your dashboard with historical records and audit trails.',
             },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
-              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
+              <div className="flex h-12 w-12 items-center justify-center rounded-full bg-emerald-500/20 text-emerald-400 font-bold flex-shrink-0">
                 {item.step}
               </div>
               <div className="flex-1">
@@ -261,24 +257,24 @@ export default function TechnologyPage() {
         <div className="space-y-6">
           {[
             {
-              q: 'Can we protect API documentation shared with partners?',
-              a: 'Yes. Upload your API docs as PDFs or documents, and each partner receives a uniquely fingerprinted copy. If documentation is shared beyond the partner, you\'ll know exactly who leaked it.',
+              q: 'Can Veriflo detect AI-generated SOC 2 reports?',
+              a: 'Yes. Veriflo uses 7-signal text and 6-signal image analysis to identify synthetic AI-generated documents. Fake compliance reports are flagged with an AI-content risk score.',
             },
             {
-              q: 'How does this help during fundraising?',
-              a: 'Each VC firm gets a fingerprinted copy of your pitch deck. You can see who opened it, track engagement, and if your deck gets forwarded to someone you didn\'t send it to, identify the source.',
+              q: 'How does it detect fake vendor invoices?',
+              a: 'Veriflo analyzes PDF metadata, creation dates, structural integrity, and editing software traces. Invoices created recently but dated months ago are automatically flagged.',
             },
             {
-              q: 'Can we verify contracts from vendors or acquirers?',
-              a: 'Absolutely. Upload any incoming document to run an integrity check. Veriflo analyzes metadata, dates, and structure to flag potential manipulation.',
+              q: 'What does an integrity score mean?',
+              a: 'A score of 80+ (Clean) indicates minimal tampering risk. Scores of 60-79 (Low) suggest minor anomalies. Below 60 (Medium/High) indicates potential fraud or AI-generation.',
             },
             {
-              q: 'Does fingerprinting affect the document quality?',
-              a: 'No. The fingerprint is completely invisible and doesn\'t affect how the document looks, prints, or functions. Recipients cannot detect it.',
+              q: 'Can we integrate Veriflo into our procurement system?',
+              a: 'Yes. Veriflo offers a REST API (POST /api/v1/verify) with Bearer token authentication for automated verification of incoming vendor documents.',
             },
             {
-              q: 'Can we use the API to automate fingerprinting?',
-              a: 'Yes. Pro and Enterprise plans include API access for automated document fingerprinting and integrity checking as part of your existing workflows.',
+              q: 'Does Veriflo recognize invoice templates?',
+              a: 'Yes. Veriflo includes 15+ templates including major invoice formats, ADP/Gusto/Paychex, and standard compliance document templates.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">
@@ -299,9 +295,9 @@ export default function TechnologyPage() {
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Protect your tech company's documents today</h2>
+          <h2 className="text-3xl font-bold text-white">Verify vendor documents today</h2>
           <p className="mt-4 text-lg text-blue-100">
-            Start your free trial and secure your first document in under 60 seconds.
+            Start your free trial and verify your first vendor document in under 60 seconds. Protect your company from invoice fraud and fake certifications.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">

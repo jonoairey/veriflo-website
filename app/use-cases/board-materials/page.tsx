@@ -4,84 +4,78 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import {
   Crown,
-  Lock,
-  Eye,
   AlertCircle,
   CheckCircle,
   ArrowRight,
-  Users,
-  FileText,
+  FileCheck,
+  Zap,
+  TrendingDown,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Board Materials - Veriflo | Secure Document Sharing',
-  description: 'Protect board materials, minutes, and strategic documents with secure sharing and access tracking for governance.',
+  title: 'Board Material Verification - Veriflo | Verify Governance Documents',
+  description:
+    'Verify board minutes, financial reports, and governance documents for tampering. Detect manipulated resolutions and forged audit findings.',
 };
 
 export default function BoardMaterialsPage() {
   const painPoints = [
     {
       icon: <AlertCircle className="h-6 w-6" />,
-      title: 'Sensitive Strategy',
+      title: 'Tampered Board Resolutions',
       description:
-        'Board materials contain your most sensitive strategic information, future plans, and competitive advantages.',
+        'Board resolutions received from other entities or advisors may be altered after original approval. Critical decisions could be unauthorized.',
     },
     {
-      icon: <Eye className="h-6 w-6" />,
-      title: 'Board Member Security',
+      icon: <FileCheck className="h-6 w-6" />,
+      title: 'Manipulated Financial Reports',
       description:
-        'Board members often forward materials to advisors, consultants, or family offices. You lose control over who has access.',
+        'Financial statements and audit summaries submitted for board review may be modified to hide liabilities or inflate performance.',
     },
     {
-      icon: <FileText className="h-6 w-6" />,
-      title: 'Governance Compliance',
+      icon: <Zap className="h-6 w-6" />,
+      title: 'Forged Meeting Minutes',
       description:
-        'You need documentation proving board members received and reviewed materials for governance and liability purposes.',
+        'Meeting minutes may be fabricated or modified after the fact to create false documentation of board decisions.',
     },
     {
-      icon: <Users className="h-6 w-6" />,
-      title: 'Changing Board Composition',
+      icon: <TrendingDown className="h-6 w-6" />,
+      title: 'Altered Governance Documents',
       description:
-        'As board members join and leave, managing document access becomes complex. You need a clean audit trail.',
+        'Bylaws, charter amendments, and compliance certifications may be manipulated to misrepresent board authority or governance.',
     },
   ];
 
   const solutions = [
     {
-      title: 'Secure Material Distribution',
+      title: 'Integrity Scoring',
       description:
-        'Share board materials, minutes, and materials with encrypted links. Control who can access and when.',
+        'Score governance documents on a 0-100 scale. Instantly categorize sensitive board materials as Clean, Low Risk, Medium Risk, High Risk, or Critical.',
     },
     {
-      title: 'Proof of Receipt & Review',
+      title: 'Metadata Timeline Analysis',
       description:
-        'Know exactly when each board member accessed materials and for how long. Perfect for governance documentation.',
+        'Analyze creation dates, revision history, and software traces. Detect documents claiming to be from board meetings months ago but actually created recently.',
     },
     {
-      title: 'Leak Detection',
+      title: 'Tamper Detection',
       description:
-        'If board materials appear publicly, identify exactly which board member\'s copy was leaked.',
+        'Identify structural anomalies and signs of manipulation. Catch altered terms, inserted language, or modified signatures in board resolutions.',
     },
     {
-      title: 'Access Management',
+      title: 'PDF Forensics',
       description:
-        'Revoke access instantly when board members leave. Archive materials securely after board terms end.',
-    },
-    {
-      title: 'Verify Document Authenticity',
-      description:
-        'Run integrity checks on documents submitted to the board — financial reports, audit findings, and third-party assessments — to ensure they haven\'t been tampered with.',
+        'Deep analysis of document structure reveals tampering, embedded edits, and inconsistencies that indicate the document has been modified.',
     },
   ];
 
   const benefits = [
-    'Protect strategic plans and sensitive financial information',
-    'Maintain proof of proper document distribution for governance',
-    'Ensure board members reviewed materials before meetings',
-    'Track which board members are most engaged',
-    'Identify leaks of confidential board information',
-    'Meet SEC and governance compliance requirements',
-    'Verify the integrity of documents submitted to the board before review',
+    'Verify financial reports submitted to the board before review',
+    'Detect tampered board resolutions and governance documents',
+    'Catch forged audit findings and compliance certifications',
+    'Ensure governance documents haven\'t been altered post-approval',
+    'Maintain trustworthy records for SEC and regulatory compliance',
+    'Score documents for risk before board approval',
   ];
 
   return (
@@ -91,10 +85,10 @@ export default function BoardMaterialsPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Secure Board Materials
+              Verify Board Materials
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Distribute board minutes, strategic plans, and confidential materials with complete visibility and governance compliance.
+              Verify board resolutions, financial reports, and governance documents for tampering. Ensure board materials are authentic and unaltered.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -123,9 +117,9 @@ export default function BoardMaterialsPage() {
       {/* Pain Points */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">Board Material Challenges</h2>
+          <h2 className="text-4xl font-bold text-white">Document Integrity Risks for Boards</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Governance requires both security and visibility
+            Governance requires trustworthy, unaltered documentation
           </p>
         </div>
 
@@ -149,7 +143,7 @@ export default function BoardMaterialsPage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">How Veriflo Helps</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Purpose-built for board material management
+            Comprehensive verification for board documents you receive
           </p>
         </div>
 
@@ -188,15 +182,15 @@ export default function BoardMaterialsPage() {
               <CardContent className="pt-8 pb-8">
                 <div className="space-y-4">
                   <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-blue-300 mb-2">Governance Documentation</div>
+                    <div className="text-sm font-semibold text-blue-300 mb-2">Real Example: Tampered Resolution</div>
                     <p className="text-sm text-gray-300">
-                      Maintain complete documentation of board material distribution, delivery, and review for audit and governance purposes.
+                      A board received a resolution authorizing a major acquisition. Veriflo's metadata analysis revealed the document was created 3 days after the purported board meeting and had been edited 5 times to modify key terms.
                     </p>
                   </div>
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-emerald-300 mb-2">Board Engagement</div>
+                    <div className="text-sm font-semibold text-emerald-300 mb-2">Compliance Confidence</div>
                     <p className="text-sm text-gray-300">
-                      See which board members are actively reviewing materials before meetings, enabling more informed discussions.
+                      Verified documents with Veriflo reports provide auditable evidence that governance materials were authentic and unaltered at the time of review.
                     </p>
                   </div>
                 </div>
@@ -206,85 +200,90 @@ export default function BoardMaterialsPage() {
         </div>
       </section>
 
-      {/* Board Types */}
+      {/* Document Types */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">For All Types of Boards</h2>
+          <h2 className="text-3xl font-bold text-white">Documents You Can Verify</h2>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2">
           {[
             {
-              type: 'Public Company Boards',
-              description: 'Meet SEC requirements for material disclosure. Maintain proof of timely and proper distribution.',
+              type: 'Board Resolutions',
+              description: 'Verify resolutions received from other boards or advisors haven\'t been altered since original approval.',
             },
             {
-              type: 'Private Company Boards',
-              description: 'Protect sensitive strategic and financial information shared with investors and advisors.',
+              type: 'Financial Statements',
+              description: 'Confirm quarterly and annual financials are authentic and unmodified before board presentation.',
             },
             {
-              type: 'Non-Profit Boards',
-              description: 'Ensure board members reviewed materials and maintain proper governance documentation.',
+              type: 'Meeting Minutes',
+              description: 'Verify meeting minutes are authentic and detect any post-hoc modifications to create false documentation.',
             },
             {
-              type: 'Advisory Boards',
-              description: 'Securely share strategic insights with advisors while preventing unauthorized distribution.',
+              type: 'Audit Findings',
+              description: 'Verify audit reports and findings from external auditors haven\'t been tampered with or forged.',
             },
-          ].map((board, idx) => (
+            {
+              type: 'Governance Documents',
+              description: 'Verify bylaws, charter amendments, and compliance certifications are authentic and unaltered.',
+            },
+            {
+              type: 'Committee Reports',
+              description: 'Verify reports from audit, compensation, and governance committees are original and unmodified.',
+            },
+          ].map((doc, idx) => (
             <Card key={idx} className="border-slate-800 bg-slate-900/50">
               <CardContent className="pt-8">
-                <h3 className="text-lg font-semibold text-white">{board.type}</h3>
-                <p className="mt-2 text-gray-400">{board.description}</p>
+                <h3 className="text-lg font-semibold text-white">{doc.type}</h3>
+                <p className="mt-2 text-gray-400">{doc.description}</p>
               </CardContent>
             </Card>
           ))}
         </div>
       </section>
 
-      {/* Material Types */}
+      {/* Use Case Flow */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Types of Board Materials</h2>
+          <h2 className="text-3xl font-bold text-white">Board Material Verification Workflow</h2>
         </div>
 
         <div className="space-y-6">
           {[
             {
-              title: 'Board Minutes & Approvals',
-              description: 'Securely distribute and track board minutes with proof of delivery and review before subsequent meetings.',
+              step: '1',
+              title: 'Receive Board Documents',
+              description: 'You receive financial reports, resolutions, audit findings, or other governance materials for board review or action.',
             },
             {
-              title: 'Strategic Plans & Forecasts',
-              description: 'Share confidential growth plans and financial projections with board members while preventing leaks.',
+              step: '2',
+              title: 'Upload for Verification',
+              description: 'Upload each document to Veriflo. Takes seconds per document.',
             },
             {
-              title: 'Financial Statements',
-              description: 'Distribute quarterly and annual financial statements with audit trails and access controls.',
+              step: '3',
+              title: 'Review Integrity Scores',
+              description: 'Get immediate 0-100 integrity scores for each document. See risk classifications across your materials.',
             },
             {
-              title: 'Executive Compensation',
-              description: 'Manage sensitive compensation details and board-approved compensation packages securely.',
+              step: '4',
+              title: 'Analyze Forensic Findings',
+              description: 'Review metadata timelines, creation dates, editing history, and any detected tampering or structural anomalies.',
             },
             {
-              title: 'Capital Allocation Decisions',
-              description: 'Share sensitive information about investments, acquisitions, and strategic bets with board members.',
+              step: '5',
+              title: 'Generate Compliance Report',
+              description: 'Export branded verification reports documenting all findings for audit and compliance purposes.',
             },
-            {
-              title: 'Governance Documents',
-              description: 'Distribute bylaws, charter amendments, and governance policies with proper documentation.',
-            },
-            {
-              title: 'Verify Submitted Documents',
-              description: 'Run integrity checks on financial reports, audit findings, and other documents submitted for board review to ensure they haven\'t been altered.',
-            },
-          ].map((material, idx) => (
+          ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
               <div className="flex h-12 w-12 items-center justify-center rounded-full bg-blue-500/20 text-blue-400 font-bold flex-shrink-0">
-                ✓
+                {item.step}
               </div>
               <div className="flex-1">
-                <h3 className="text-lg font-semibold text-white">{material.title}</h3>
-                <p className="mt-2 text-gray-400">{material.description}</p>
+                <h3 className="text-lg font-semibold text-white">{item.title}</h3>
+                <p className="mt-2 text-gray-400">{item.description}</p>
               </div>
             </div>
           ))}
@@ -300,28 +299,24 @@ export default function BoardMaterialsPage() {
         <div className="space-y-6">
           {[
             {
-              q: 'Can we set expiration dates on board materials?',
-              a: 'Yes. Set expiration dates so materials become inaccessible after the meeting or a specified date. Perfect for materials that should not persist.',
+              q: 'Can I verify multiple board documents at once?',
+              a: 'Yes. Batch upload multiple documents and get integrity scores for all of them. Useful for verifying entire board packages before meetings.',
             },
             {
-              q: 'What happens when board members leave?',
-              a: 'Instantly revoke their access to all materials. Former board members lose immediate access, and you maintain documentation of all actions.',
+              q: 'How does Veriflo detect tampered resolutions?',
+              a: 'Veriflo analyzes PDF structure, metadata history, editing timeline, and date anomalies. If a resolution was created after the board meeting or has been edited, it will be flagged.',
             },
             {
-              q: 'Can we track board member engagement before meetings?',
-              a: 'Yes. See who has accessed materials, when they reviewed them, and for how long. Use this to ensure adequate preparation.',
+              q: 'Can I verify financial statements from external auditors?',
+              a: 'Yes. Upload audit reports and financial statements. Veriflo will analyze them for signs of tampering or forgery and provide detailed findings.',
             },
             {
-              q: 'Does this comply with SEC requirements?',
-              a: 'Yes. Veriflo provides timestamped audit logs suitable for SEC compliance, disclosure, and regulatory requirements.',
+              q: 'Are Veriflo reports suitable for SEC compliance?',
+              a: 'Yes. Veriflo generates detailed forensic reports that can support compliance documentation and governance records. All findings are timestamped and auditable.',
             },
             {
-              q: 'Can we archive old board materials?',
-              a: 'Yes. Archive materials indefinitely or set automatic retention policies. All archival actions are logged for audit purposes.',
-            },
-            {
-              q: 'Can we verify documents submitted to the board for tampering?',
-              a: 'Yes. Veriflo\'s Integrity Check analyzes any document for signs of manipulation — altered dates, metadata inconsistencies, and structural anomalies. This adds an extra layer of assurance that board materials are authentic and unaltered.',
+              q: 'What if a document has legitimate edits?',
+              a: 'Veriflo shows the complete editing timeline. You can see exactly when edits were made, what changed, and by what software. This helps distinguish legitimate revisions from suspicious tampering.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">
@@ -342,9 +337,9 @@ export default function BoardMaterialsPage() {
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Secure your board materials today</h2>
+          <h2 className="text-3xl font-bold text-white">Verify your board materials today</h2>
           <p className="mt-4 text-lg text-blue-100">
-            Start your free trial and protect your first board materials in under 60 seconds.
+            Start your free trial and verify your first document in under 60 seconds.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">

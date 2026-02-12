@@ -5,78 +5,77 @@ import { Card, CardContent } from '@/components/ui/card';
 import {
   Film,
   AlertCircle,
-  Eye,
-  Users,
-  FileText,
   CheckCircle,
   ArrowRight,
-  Lock,
+  ShieldAlert,
+  Sparkles,
+  FileCheck,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Media & Entertainment - Veriflo | Secure Document Trust',
+  title: 'Document Verification for Media & Entertainment - Veriflo',
   description:
-    'Protect scripts, screening copies, contracts, and creative assets with invisible fingerprinting and leak detection. Built for studios, agencies, and production companies.',
+    'Verify contracts, deal documents, and creative agreements received from studios, distributors, and talent. Detect tampering and AI-generated forgeries.',
 };
 
 export default function MediaEntertainmentPage() {
   const painPoints = [
     {
       icon: <AlertCircle className="h-6 w-6" />,
-      title: 'Script Leaks',
+      title: 'Forged Contracts',
       description:
-        'Leaked scripts and plot details can destroy marketing campaigns worth millions. A single leak can spoil a franchise and damage audience anticipation.',
+        'Fake studio contracts and deal memos are circulated to scam talent and production companies. It\'s hard to spot the fakes.',
     },
     {
-      icon: <Eye className="h-6 w-6" />,
-      title: 'Screening Copy Distribution',
+      icon: <ShieldAlert className="h-6 w-6" />,
+      title: 'Manipulated Deal Terms',
       description:
-        'Early screening copies sent to critics, guild members, or partners get shared beyond their intended audience, risking piracy and spoilers.',
+        'Critical contract terms—payment schedules, rights grants, distribution rights—are altered after initial agreements. You discover changes too late.',
     },
     {
-      icon: <Users className="h-6 w-6" />,
-      title: 'Talent Contract Breaches',
+      icon: <Sparkles className="h-6 w-6" />,
+      title: 'AI-Generated Documents',
       description:
-        'Contract terms, deal memos, and compensation details are highly sensitive. Leaks damage negotiations and relationships with talent.',
+        'Deep fakes and synthetic documents claiming to be from legitimate studios or networks are getting harder to spot. They look completely authentic.',
     },
     {
-      icon: <FileText className="h-6 w-6" />,
-      title: 'Unreleased Content Theft',
+      icon: <FileCheck className="h-6 w-6" />,
+      title: 'Rights Agreement Confusion',
       description:
-        'Music tracks, unreleased footage, and creative treatments shared for review can end up on torrent sites or leaked to media outlets.',
+        'Documents received for licensing, distribution, or rights grants may be tampered with or fabricated, creating liability exposure.',
     },
   ];
 
   const solutions = [
     {
-      title: 'Invisible Watermarking',
+      title: 'Tamper Detection',
       description:
-        'Every script, screener, and document shared carries an invisible fingerprint. If it leaks, you know exactly who shared it.',
+        'Analyze contracts and deal documents for signs of manipulation—altered terms, metadata inconsistencies, and structural changes that indicate tampering.',
     },
     {
-      title: 'Screener Protection',
+      title: 'Metadata Forensics',
       description:
-        'Distribute screening copies to critics and guild members with unique fingerprints. Track access and identify the source of any piracy.',
+        'Uncover creation dates, software traces, and incremental edits. Identify recently-created documents claiming to be old contracts.',
     },
     {
-      title: 'Access Control',
+      title: 'AI-Content Detection',
       description:
-        'Set expiration dates, restrict downloads, and revoke access to sensitive materials at any time. Full control over your content.',
+        'Detect AI-generated text in contracts and synthetic media. Score documents on the likelihood of AI fabrication with proprietary signal analysis.',
     },
     {
-      title: 'Leak Forensics',
+      title: 'Integrity Scoring',
       description:
-        'When content appears where it shouldn\'t, upload it to Veriflo. Our forensic analysis identifies the exact fingerprinted copy that was leaked.',
+        'Get a 0-100 integrity score with risk levels. Instantly see if a contract is Clean, Low Risk, Medium Risk, High Risk, or Critical.',
     },
   ];
 
   const benefits = [
-    'Protect scripts and plot details from spoiler leaks',
-    'Track screening copy distribution and identify piracy sources',
-    'Secure talent contracts and deal terms from unauthorized sharing',
-    'Control access to unreleased music, footage, and creative assets',
-    'Build accountability in your distribution chain',
-    'Reduce piracy losses with forensic leak identification',
+    'Verify contracts received from studios, networks, and distributors',
+    'Detect forged talent agreements and scam documents',
+    'Identify AI-generated fabrications masquerading as legitimate deals',
+    'Catch tampered contract terms before signing',
+    'Understand the full editing history and creation timeline of documents',
+    'Score documents for risk before legal review',
   ];
 
   return (
@@ -86,10 +85,10 @@ export default function MediaEntertainmentPage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
-              Protect Creative Assets
+              Verify Media & Entertainment Documents
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Secure scripts, screening copies, talent contracts, and unreleased content with invisible fingerprinting. Know exactly who leaks your most valuable creative assets.
+              Verify contracts, deal documents, and creative agreements before signing. Detect forgeries, tampering, and AI-generated fabrications.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -118,9 +117,9 @@ export default function MediaEntertainmentPage() {
       {/* Pain Points */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">The Risks in Media & Entertainment</h2>
+          <h2 className="text-4xl font-bold text-white">Document Risks in Media & Entertainment</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Creative assets and intellectual property require absolute protection
+            Forged contracts and manipulated deal documents are a growing threat
           </p>
         </div>
 
@@ -144,7 +143,7 @@ export default function MediaEntertainmentPage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">How Veriflo Helps</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Purpose-built for creative asset protection and leak detection
+            Comprehensive verification for documents you receive
           </p>
         </div>
 
@@ -183,15 +182,15 @@ export default function MediaEntertainmentPage() {
               <CardContent className="pt-8 pb-8">
                 <div className="space-y-4">
                   <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-blue-300 mb-2">Real Example: Screener Leak</div>
+                    <div className="text-sm font-semibold text-blue-300 mb-2">Real Example: Forged Contract</div>
                     <p className="text-sm text-gray-300">
-                      A major production company sent screener copies to 200 guild members. When a copy appeared online, Veriflo identified the source within minutes, enabling swift legal action.
+                      A production company received what appeared to be a studio distribution agreement. Veriflo's AI detection flagged it as synthetically generated and the structural analysis revealed it was created hours before being sent, preventing a costly mistake.
                     </p>
                   </div>
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                    <div className="text-sm font-semibold text-emerald-300 mb-2">Proven Deterrent</div>
+                    <div className="text-sm font-semibold text-emerald-300 mb-2">Catch Tampering Early</div>
                     <p className="text-sm text-gray-300">
-                      Studios using document fingerprinting report significantly reduced leak incidents, as the knowledge that copies are tracked creates a powerful deterrent.
+                      Before signing a rights agreement, Veriflo's metadata analysis revealed it had been edited 8 times in the last week—key terms had been altered from the original version sent for review.
                     </p>
                   </div>
                 </div>
@@ -204,40 +203,40 @@ export default function MediaEntertainmentPage() {
       {/* Use Case Flow */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-3xl font-bold text-white">Content Protection Workflow</h2>
+          <h2 className="text-3xl font-bold text-white">Contract Verification Workflow</h2>
         </div>
 
         <div className="space-y-6">
           {[
             {
               step: '1',
-              title: 'Upload Creative Assets',
-              description: 'Upload scripts, screeners, contracts, or any sensitive creative material to Veriflo.',
+              title: 'Receive Deal Document',
+              description: 'You receive a contract, deal memo, or rights agreement from a studio, distributor, or talent representative.',
             },
             {
               step: '2',
-              title: 'Generate Fingerprinted Copies',
-              description: 'Create uniquely fingerprinted versions for each recipient—critics, guild members, partners, or internal teams.',
+              title: 'Upload to Veriflo',
+              description: 'Upload the document to Veriflo. Takes seconds to complete.',
             },
             {
               step: '3',
-              title: 'Distribute Securely',
-              description: 'Send personalized secure links or download protected copies. Each is tracked individually.',
+              title: 'Review Integrity Score',
+              description: 'Get an immediate 0-100 integrity score with risk classification: Clean, Low, Medium, High, or Critical.',
             },
             {
               step: '4',
-              title: 'Track Engagement',
-              description: 'Monitor who opens your materials, when, and how they interact. Identify your most engaged reviewers.',
+              title: 'Analyze Forensic Findings',
+              description: 'Review metadata timelines, creation dates, software traces, and any detected tampering or anomalies.',
             },
             {
               step: '5',
-              title: 'Detect Leaks',
-              description: 'If content appears online or reaches unauthorized parties, upload it to identify the source copy instantly.',
+              title: 'Check AI Detection',
+              description: 'See if the document contains AI-generated text or synthetic content that doesn\'t match legitimate documents from that source.',
             },
             {
               step: '6',
-              title: 'Take Action',
-              description: 'Armed with forensic evidence, take appropriate legal or contractual action against the source of the leak.',
+              title: 'Archive with Report',
+              description: 'Export a branded PDF report documenting all findings. Archive with your legal records for liability protection.',
             },
           ].map((item, idx) => (
             <div key={idx} className="flex gap-6 items-start">
@@ -262,24 +261,24 @@ export default function MediaEntertainmentPage() {
         <div className="space-y-6">
           {[
             {
-              q: 'Can the fingerprint survive screenshots or photos of a screen?',
-              a: 'Yes. Veriflo\'s fingerprinting is designed to be resilient. Even screenshots, photos, or reformatted copies retain enough signal to identify the source.',
+              q: 'How accurate is the AI-content detection?',
+              a: 'Veriflo uses 7-signal text analysis to detect synthetic text patterns. Combined with other forensic signals, it provides high-confidence detection of AI-generated fabrications in documents.',
             },
             {
-              q: 'How do we distribute screeners to guild members?',
-              a: 'Upload your screener and add recipients by email. Each receives a unique, fingerprinted copy through a secure link. You control access and expiration.',
+              q: 'Can I verify PDFs and Word documents?',
+              a: 'Yes. Veriflo works with PDFs, Word documents (.docx), and other common formats. Upload any contract or deal document you receive.',
             },
             {
-              q: 'Does this work for music and audio content?',
-              a: 'Veriflo currently supports document and image formats including PDFs, Word documents, and image files. Audio fingerprinting is not yet available.',
+              q: 'What if a contract has been slightly edited?',
+              a: 'Veriflo shows the full editing timeline and metadata history. You\'ll see when each change was made, what software was used, and can compare to earlier versions to catch important modifications.',
             },
             {
-              q: 'Can we track who reads specific pages of a script?',
-              a: 'Veriflo tracks document-level access including when it was opened, from where, and for how long. Page-level tracking is available for web-viewed documents.',
+              q: 'Can I use verification reports in legal proceedings?',
+              a: 'Yes. Veriflo generates detailed branded PDF reports with forensic evidence that can be used to support legal claims of tampering or forgery.',
             },
             {
-              q: 'What happens when a leak is detected?',
-              a: 'Veriflo provides forensic evidence linking the leaked content to a specific fingerprinted copy and recipient. This can be used for internal action, contract enforcement, or legal proceedings.',
+              q: 'How do I know if a contract is actually from the studio?',
+              a: 'Veriflo can\'t verify identity, but it can detect if a document is forged, AI-generated, or structurally inconsistent. Combined with direct communication with the studio, this provides strong confidence in authenticity.',
             },
           ].map((faq, idx) => (
             <details key={idx} className="group border border-slate-800 rounded-lg">
@@ -300,9 +299,9 @@ export default function MediaEntertainmentPage() {
       {/* CTA Section */}
       <section className="mx-auto max-w-4xl px-4 sm:px-6 lg:px-8 text-center">
         <div className="rounded-xl bg-gradient-to-r from-blue-600 to-emerald-600 p-12">
-          <h2 className="text-3xl font-bold text-white">Protect your creative assets today</h2>
+          <h2 className="text-3xl font-bold text-white">Verify your next contract today</h2>
           <p className="mt-4 text-lg text-blue-100">
-            Start your free trial and secure your first document in under 60 seconds.
+            Start your free trial and verify your first document in under 60 seconds.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">

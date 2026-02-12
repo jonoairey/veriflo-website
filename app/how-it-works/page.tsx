@@ -199,7 +199,6 @@ export default function HowItWorksPage() {
       number: '1',
       title: 'Upload a Document to Verify',
       icon: <Upload className="h-8 w-8" />,
-      image: '/images/step-integrity-upload.png',
       description: 'Drag and drop any incoming document — contracts, financial statements, invoices, certificates — into the Integrity Check tool.',
       details: [
         'Supports PDF, images (JPEG, PNG), and more',
@@ -213,7 +212,6 @@ export default function HowItWorksPage() {
       number: '2',
       title: 'Forensic Analysis Runs Automatically',
       icon: <FileSearch className="h-8 w-8" />,
-      image: '/images/step-integrity-analysis.png',
       description: 'Our engine performs multiple forensic checks on the document in seconds, examining metadata, structure, and content for signs of tampering.',
       details: [
         'PDF metadata and creation date analysis',
@@ -229,7 +227,6 @@ export default function HowItWorksPage() {
       number: '3',
       title: 'Get Your Integrity Score',
       icon: <ShieldCheck className="h-8 w-8" />,
-      image: '/images/step-integrity-score.png',
       description: 'Receive an instant integrity score from 0 to 100, with a clear risk level and detailed findings explaining exactly what was detected.',
       details: [
         'Score from 0-100 with visual gauge',

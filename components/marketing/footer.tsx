@@ -9,8 +9,10 @@ export function Footer() {
 
   const sections = [
     {
-      title: 'Product',
+      title: 'Products',
       links: [
+        { name: 'Veriflo Check', href: '/products/check' },
+        { name: 'Veriflo Protect', href: '/products/protect' },
         { name: 'Features', href: '/features' },
         { name: 'How It Works', href: '/how-it-works' },
         { name: 'Pricing', href: '/pricing' },
@@ -61,7 +63,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-gray-400">
-              Verify incoming documents for tampering, fraud, and manipulation. Instant integrity scoring powered by forensic analysis.
+              Verify documents you receive. Prove documents you send. Complete document trust for every organization.
             </p>
           </div>
           {sections.map((section) => (

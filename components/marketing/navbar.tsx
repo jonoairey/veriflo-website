@@ -24,7 +24,9 @@ export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [useCasesOpen, setUseCasesOpen] = useState(false);
+  const [productsOpen, setProductsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
+  const productsRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,11 +36,14 @@ export function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
-  // Close dropdown on outside click
+  // Close dropdowns on outside click
   useEffect(() => {
     const handleClickOutside = (e: MouseEvent) => {
       if (dropdownRef.current && !dropdownRef.current.contains(e.target as Node)) {
         setUseCasesOpen(false);
+      }
+      if (productsRef.current && !productsRef.current.contains(e.target as Node)) {
+        setProductsOpen(false);
       }
     };
     document.addEventListener('mousedown', handleClickOutside);
@@ -64,6 +69,52 @@ export function Navbar() {
           </Link>
 
           <div className="hidden md:flex items-center gap-8">
+            {/* Products Dropdown */}
+            <div className="relative" ref={productsRef}>
+              <button
+                onClick={() => { setProductsOpen(!productsOpen); setUseCasesOpen(false); }}
+                className="flex items-center gap-1 text-sm font-medium text-white hover:text-emerald-300 transition-colors"
+              >
+                Products
+                <ChevronDown className={clsx('h-4 w-4 transition-transform', productsOpen && 'rotate-180')} />
+              </button>
+
+              {productsOpen && (
+                <div className="absolute top-full left-1/2 -translate-x-1/2 mt-2 w-72 bg-slate-900 border border-slate-700 rounded-lg shadow-xl py-3 z-50">
+                  <Link
+                    href="/products/check"
+                    onClick={() => setProductsOpen(false)}
+                    className="block px-4 py-3 hover:bg-slate-800 transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-emerald-500/20 text-emerald-400">
+                        <Shield className="h-4 w-4" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-white">Veriflo Check</p>
+                        <p className="text-xs text-gray-400">Verify incoming documents</p>
+                      </div>
+                    </div>
+                  </Link>
+                  <Link
+                    href="/products/protect"
+                    onClick={() => setProductsOpen(false)}
+                    className="block px-4 py-3 hover:bg-slate-800 transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
+                        <Shield className="h-4 w-4" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-white">Veriflo Protect</p>
+                        <p className="text-xs text-gray-400">Prove outgoing documents are real</p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              )}
+            </div>
+
             <Link href="/features" className="text-sm font-medium text-white hover:text-emerald-300 transition-colors">
               Features
             </Link>
@@ -126,6 +177,27 @@ export function Navbar() {
         {mobileMenuOpen && (
           <div className="md:hidden border-t border-slate-800 bg-slate-950/90 backdrop-blur-md">
             <div className="space-y-1 px-4 py-4">
+              {/* Mobile Products */}
+              <div className="px-4 py-2">
+                <p className="text-xs font-semibold uppercase tracking-wider text-gray-500 mb-2">Products</p>
+                <div className="space-y-1 pl-2">
+                  <Link
+                    href="/products/check"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-1.5 text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    Veriflo Check
+                  </Link>
+                  <Link
+                    href="/products/protect"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-1.5 text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    Veriflo Protect
+                  </Link>
+                </div>
+              </div>
+
               <Link href="/features" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
                 Features
               </Link>

@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Lock, Eye, CheckCircle, ArrowRight, BarChart3, Users, Database, Zap, FileCheck, AlertTriangle } from 'lucide-react';
+import { Lock, Eye, CheckCircle, ArrowRight, BarChart3, Users, Database, Zap, FileCheck, AlertTriangle, ShieldCheck, Send, Shield } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ContactForm } from '@/components/marketing/contact-form';
@@ -14,14 +14,14 @@ export default function HomePage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent">
-              Trust Every Document You Receive
+              Document Trust, Both Sides
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Verify contracts, invoices, pay stubs, and financial statements for tampering. Get forensic integrity scoring in seconds — not hours.
+              Verify documents you receive for fraud. Prove documents you send are authentic. One platform for complete document trust.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
-                <a href="https://app.useveriflo.com/signup">Verify Your First Document Free</a>
+                <a href="https://app.useveriflo.com/signup">Start Free</a>
               </Button>
               <Button asChild size="lg" variant="ghost">
                 <Link href="/how-it-works" className="text-white hover:text-emerald-300">
@@ -30,13 +30,88 @@ export default function HomePage() {
               </Button>
             </div>
             <p className="mt-6 text-sm text-gray-400">
-              Trusted by 100+ companies • No credit card required
+              No credit card required • Verify your first document free
             </p>
           </div>
           <div className="relative hidden lg:block">
             <div className="absolute inset-0 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-xl blur-3xl opacity-20" />
             <div className="relative rounded-xl overflow-hidden border border-emerald-500/20">
               <img src="/images/hero-dashboard.png" alt="Veriflo - Document verification and integrity scoring platform" className="w-full h-auto rounded-xl" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Two Products Section */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-12">
+          <p className="text-sm font-semibold uppercase tracking-wide text-emerald-400 mb-4">
+            Two Products, One Platform
+          </p>
+          <h2 className="text-4xl font-bold text-white">Complete Document Trust</h2>
+          <p className="mt-4 text-xl text-gray-400 max-w-3xl mx-auto">
+            Whether you&apos;re receiving documents or sending them, Veriflo gives you the tools to verify authenticity and prove integrity.
+          </p>
+        </div>
+
+        <div className="grid gap-8 lg:grid-cols-2">
+          {/* Veriflo Check Card */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-emerald-600/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative border border-slate-700 bg-slate-900/70 rounded-2xl p-8 hover:border-emerald-500/40 transition-colors h-full flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20">
+                  <ShieldCheck className="h-5 w-5 text-emerald-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Veriflo Check</h3>
+              </div>
+              <p className="text-sm font-medium text-emerald-400 mb-4">For document receivers</p>
+              <p className="text-gray-300 mb-6 flex-1">
+                Upload any document you&apos;ve received — contracts, invoices, pay stubs, financial statements — and get an instant forensic integrity score. Catch tampering, AI-generated content, and manipulation before you act on it.
+              </p>
+              <div className="space-y-3 mb-8">
+                {['Forensic integrity scoring (0-100)', 'AI-content detection', 'Metadata analysis & tamper detection', 'Template matching for known formats'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-gray-400">
+                    <CheckCircle className="h-4 w-4 text-emerald-500 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <Button asChild variant="primary" className="w-full">
+                <Link href="/products/check">
+                  Learn About Check <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Veriflo Protect Card */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative border border-slate-700 bg-slate-900/70 rounded-2xl p-8 hover:border-blue-500/40 transition-colors h-full flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20">
+                  <Shield className="h-5 w-5 text-blue-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Veriflo Protect</h3>
+              </div>
+              <p className="text-sm font-medium text-blue-400 mb-4">For document senders</p>
+              <p className="text-gray-300 mb-6 flex-1">
+                Verify your document, then share a certified proof link with the recipient. They see your verification report and know the document is authentic — building trust before they even open it.
+              </p>
+              <div className="space-y-3 mb-8">
+                {['Certified verification links', 'Shareable proof of authenticity', 'Expiry & access controls', 'Branded trust experience'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-gray-400">
+                    <CheckCircle className="h-4 w-4 text-blue-500 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <Button asChild variant="secondary" className="w-full border-blue-500/30 text-blue-400 hover:bg-blue-500/10">
+                <Link href="/products/protect">
+                  Learn About Protect <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
             </div>
           </div>
         </div>

@@ -7,7 +7,6 @@ import { Button } from '@/components/ui/button';
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false);
   const [submitting, setSubmitting] = useState(false);
-
   const [error, setError] = useState('');
 
   async function handleSubmit(e: React.FormEvent<HTMLFormElement>) {
@@ -18,31 +17,26 @@ export function ContactForm() {
     const form = e.currentTarget;
     const formData = new FormData(form);
 
-    const payload = {
-      firstName: formData.get('firstName'),
-      lastName: formData.get('lastName'),
-      email: formData.get('email'),
-      company: formData.get('company'),
-      message: formData.get('message'),
-    };
-
     try {
-      const PLATFORM_URL = process.env.NEXT_PUBLIC_PLATFORM_URL || 'https://app.useveriflo.com';
-      const res = await fetch(`${PLATFORM_URL}/api/contact`, {
+      const res = await fetch('https://formsubmit.co/ajax/hello@useveriflo.com', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload),
+        headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+        body: JSON.stringify({
+          name: `${formData.get('firstName')} ${formData.get('lastName')}`,
+          email: formData.get('email'),
+          company: formData.get('company') || 'Not provided',
+          message: formData.get('message'),
+          _subject: 'New Veriflo Contact Form Submission',
+        }),
       });
 
       if (res.ok) {
         setSubmitted(true);
       } else {
-        const data = await res.json().catch(() => null);
-        setError(data?.error || 'Something went wrong. Please try again.');
+        setError('Something went wrong. Please try again.');
       }
     } catch {
-      // Network error — still show success as the API may have received it
-      setSubmitted(true);
+      setError('Something went wrong. Please try again.');
     } finally {
       setSubmitting(false);
     }
@@ -67,6 +61,10 @@ export function ContactForm() {
       onSubmit={handleSubmit}
       className="rounded-xl border border-slate-800 bg-slate-900/50 p-8 space-y-5"
     >
+      {/* FormSubmit config */}
+      <input type="hidden" name="_captcha" value="false" />
+      <input type="hidden" name="_template" value="table" />
+
       <div className="grid gap-5 sm:grid-cols-2">
         <div>
           <label htmlFor="firstName" className="block text-sm font-medium text-gray-300 mb-1.5">
@@ -77,7 +75,7 @@ export function ContactForm() {
             id="firstName"
             name="firstName"
             required
-            className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors"
+            className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-colors"
             placeholder="Jane"
           />
         </div>
@@ -90,7 +88,7 @@ export function ContactForm() {
             id="lastName"
             name="lastName"
             required
-            className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors"
+            className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-colors"
             placeholder="Smith"
           />
         </div>
@@ -105,7 +103,7 @@ export function ContactForm() {
           id="email"
           name="email"
           required
-          className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors"
+          className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-colors"
           placeholder="jane@company.com"
         />
       </div>
@@ -118,7 +116,7 @@ export function ContactForm() {
           type="text"
           id="company"
           name="company"
-          className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors"
+          className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-colors"
           placeholder="Acme Inc."
         />
       </div>
@@ -131,8 +129,8 @@ export function ContactForm() {
           id="message"
           name="message"
           rows={4}
-          className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-colors resize-none"
-          placeholder="Tell us about your document security needs..."
+          className="w-full rounded-lg border border-slate-700 bg-slate-800/50 px-4 py-2.5 text-white placeholder-gray-500 focus:border-emerald-500 focus:ring-1 focus:ring-emerald-500 outline-none transition-colors resize-none"
+          placeholder="Tell us about your document verification needs..."
         />
       </div>
 

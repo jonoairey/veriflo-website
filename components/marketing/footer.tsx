@@ -13,6 +13,7 @@ export function Footer() {
       links: [
         { name: 'Veriflo Check', href: '/products/check' },
         { name: 'Veriflo Seal', href: '/products/protect' },
+        { name: 'Veriflo Mask', href: '/products/mask' },
         { name: 'Features', href: '/features' },
         { name: 'How It Works', href: '/how-it-works' },
         { name: 'Pricing', href: '/pricing' },
@@ -63,7 +64,7 @@ export function Footer() {
               </div>
             </div>
             <p className="text-sm text-gray-400">
-              Verify documents you receive. Prove documents you send. Complete document trust for every organization.
+              Verify documents you receive. Prove documents you send. Redact sensitive data before sharing. Complete document trust for every organization.
             </p>
           </div>
           {sections.map((section) => (

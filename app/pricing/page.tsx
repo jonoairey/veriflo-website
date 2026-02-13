@@ -19,6 +19,7 @@ export default function PricingPage() {
       description: 'Perfect for getting started',
       features: [
         '10 document checks/month',
+        '5 PII redactions/month',
         '1 team seat',
         'Basic integrity scoring',
         'Metadata forensics',
@@ -36,6 +37,7 @@ export default function PricingPage() {
       features: [
         'Everything in Free',
         '100 document checks/month',
+        '50 PII redactions/month',
         '5 team seats',
         'AI-content detection',
         'Template matching (15+ templates)',
@@ -55,6 +57,7 @@ export default function PricingPage() {
       features: [
         'Everything in Pro',
         'Unlimited document checks',
+        'Unlimited PII redactions',
         '25 team seats',
         'Custom templates',
         'Dedicated account manager',
@@ -99,6 +102,8 @@ export default function PricingPage() {
     'Synthetic image detection (6-signal forensics)',
     'Template matching (15+ templates)',
     'REST API access (POST /api/v1/verify)',
+    'PII detection (8 categories)',
+    'Permanent document redaction',
     'Branded PDF report export',
     'Team seats & role-based access',
     'Comprehensive audit logging',

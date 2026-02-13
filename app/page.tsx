@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Lock, Eye, CheckCircle, ArrowRight, BarChart3, Users, Database, Zap, FileCheck, AlertTriangle, ShieldCheck, Send, Shield, Mail } from 'lucide-react';
+import { Lock, Eye, CheckCircle, ArrowRight, BarChart3, Users, Database, Zap, FileCheck, AlertTriangle, ShieldCheck, Send, Shield, Mail, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ContactForm } from '@/components/marketing/contact-form';
@@ -17,7 +17,7 @@ export default function HomePage() {
               Document Trust, Both Sides
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Verify documents you receive for fraud. Prove documents you send are authentic. One platform for complete document trust.
+              Verify documents you receive. Prove documents you send. Redact sensitive data before you share. One platform for complete document trust.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -46,15 +46,15 @@ export default function HomePage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold uppercase tracking-wide text-emerald-400 mb-4">
-            Two Products, One Platform
+            Three Products, One Platform
           </p>
           <h2 className="text-4xl font-bold text-white">Complete Document Trust</h2>
           <p className="mt-4 text-xl text-gray-400 max-w-3xl mx-auto">
-            Whether you&apos;re receiving documents or sending them, Veriflo gives you the tools to verify authenticity and prove integrity.
+            Verify what you receive, prove what you send, and redact sensitive data before sharing. Veriflo covers the full document lifecycle.
           </p>
         </div>
 
-        <div className="grid gap-8 lg:grid-cols-2">
+        <div className="grid gap-8 lg:grid-cols-3">
           {/* Veriflo Check Card */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-emerald-500/20 to-emerald-600/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -109,7 +109,37 @@ export default function HomePage() {
               </div>
               <Button asChild variant="secondary" className="w-full border-blue-500/30 text-blue-400 hover:bg-blue-500/10">
                 <Link href="/products/protect">
-                  Learn About Protect <ArrowRight className="ml-2 h-4 w-4" />
+                  Learn About Seal <ArrowRight className="ml-2 h-4 w-4" />
+                </Link>
+              </Button>
+            </div>
+          </div>
+
+          {/* Veriflo Mask Card */}
+          <div className="relative group">
+            <div className="absolute inset-0 bg-gradient-to-br from-purple-500/20 to-purple-600/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
+            <div className="relative border border-slate-700 bg-slate-900/70 rounded-2xl p-8 hover:border-purple-500/40 transition-colors h-full flex flex-col">
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/20">
+                  <EyeOff className="h-5 w-5 text-purple-400" />
+                </div>
+                <h3 className="text-2xl font-bold text-white">Veriflo Mask</h3>
+              </div>
+              <p className="text-sm font-medium text-purple-400 mb-4">For document privacy</p>
+              <p className="text-gray-300 mb-6 flex-1">
+                Upload any document and Veriflo Mask automatically detects personal information — emails, SSNs, phone numbers, credit cards — then permanently redacts it before you share.
+              </p>
+              <div className="space-y-3 mb-8">
+                {['8 categories of PII detection', 'Permanent black-box redaction', 'Category-level control', 'Full redaction audit trail'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-gray-400">
+                    <CheckCircle className="h-4 w-4 text-purple-500 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <Button asChild variant="secondary" className="w-full border-purple-500/30 text-purple-400 hover:bg-purple-500/10">
+                <Link href="/products/mask">
+                  Learn About Mask <ArrowRight className="ml-2 h-4 w-4" />
                 </Link>
               </Button>
             </div>

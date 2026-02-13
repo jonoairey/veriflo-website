@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect, useRef } from 'react';
 import Link from 'next/link';
-import { Shield, Menu, X, ChevronDown } from 'lucide-react';
+import { Shield, Menu, X, ChevronDown, EyeOff } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import clsx from 'clsx';
 
@@ -111,6 +111,21 @@ export function Navbar() {
                       </div>
                     </div>
                   </Link>
+                  <Link
+                    href="/products/mask"
+                    onClick={() => setProductsOpen(false)}
+                    className="block px-4 py-3 hover:bg-slate-800 transition-colors"
+                  >
+                    <div className="flex items-center gap-3">
+                      <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-500/20 text-purple-400">
+                        <EyeOff className="h-4 w-4" />
+                      </div>
+                      <div>
+                        <p className="text-sm font-semibold text-white">Veriflo Mask</p>
+                        <p className="text-xs text-gray-400">Redact PII before sharing</p>
+                      </div>
+                    </div>
+                  </Link>
                 </div>
               )}
             </div>
@@ -194,6 +209,13 @@ export function Navbar() {
                     className="block py-1.5 text-sm text-gray-400 hover:text-white transition-colors"
                   >
                     Veriflo Seal
+                  </Link>
+                  <Link
+                    href="/products/mask"
+                    onClick={() => setMobileMenuOpen(false)}
+                    className="block py-1.5 text-sm text-gray-400 hover:text-white transition-colors"
+                  >
+                    Veriflo Mask
                   </Link>
                 </div>
               </div>

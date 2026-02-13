@@ -7,6 +7,7 @@ import {
   Users,
   LinkIcon,
   Eye,
+  EyeOff,
   Shield,
   ArrowRight,
   CheckCircle,
@@ -15,11 +16,13 @@ import {
   Send,
   Mail,
   ExternalLink,
+  Search,
+  Download,
 } from 'lucide-react';
 
 export const metadata = {
   title: 'How It Works - Veriflo | Verify & Certify Documents',
-  description: 'Learn how Veriflo Check verifies incoming documents and how Veriflo Seal certifies documents you send. Two flows, one platform for complete document trust.',
+  description: 'Learn how Veriflo Check verifies documents, Veriflo Seal certifies what you send, and Veriflo Mask redacts sensitive data. Three flows, one platform.',
 };
 
 export default function HowItWorksPage() {
@@ -81,7 +84,7 @@ export default function HowItWorksPage() {
             How Veriflo Works
           </h1>
           <p className="mt-6 text-xl text-gray-300">
-            Two flows for complete document trust. Verify documents you receive with <strong className="text-emerald-400">Veriflo Check</strong>, or certify documents you send with <strong className="text-blue-400">Veriflo Seal</strong>.
+            Three flows for complete document trust. Verify documents you receive with <strong className="text-emerald-400">Veriflo Check</strong>, certify documents you send with <strong className="text-blue-400">Veriflo Seal</strong>, and redact sensitive data with <strong className="text-purple-400">Veriflo Mask</strong>.
           </p>
         </div>
       </section>
@@ -241,7 +244,64 @@ export default function HowItWorksPage() {
         <div className="mt-8 text-center">
           <Button asChild size="lg" variant="ghost">
             <Link href="/products/protect" className="text-blue-400 hover:text-blue-300">
-              Learn More About Protect <ArrowRight className="ml-2 h-5 w-5" />
+              Learn More About Seal <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
+      {/* Mask Header */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-purple-500/20">
+            <EyeOff className="h-5 w-5 text-purple-400" />
+          </div>
+          <h2 className="text-3xl font-bold text-white">Veriflo Mask</h2>
+        </div>
+        <p className="text-lg text-gray-400 mb-12">Redact sensitive data before sharing — in three steps</p>
+
+        <div className="grid gap-8 md:grid-cols-3">
+          {[
+            {
+              number: '1',
+              icon: <Upload className="h-6 w-6" />,
+              title: 'Upload Document',
+              description: 'Drop any PDF into Veriflo Mask. Your file is encrypted immediately and processed in-memory.',
+            },
+            {
+              number: '2',
+              icon: <Search className="h-6 w-6" />,
+              title: 'PII Detection',
+              description: 'Our engine scans for 8 categories of personal data: emails, phone numbers, SSNs, credit cards, bank accounts, dates of birth, passport numbers, and addresses.',
+            },
+            {
+              number: '3',
+              icon: <Download className="h-6 w-6" />,
+              title: 'Redact & Download',
+              description: 'Choose which categories to redact, then download your clean PDF with all sensitive data permanently blacked out.',
+            },
+          ].map((step, idx) => (
+            <Card key={idx} className="border-purple-500/20 bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
+              <CardContent className="pt-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-purple-500/30 text-lg font-bold text-purple-400">
+                    {step.number}
+                  </span>
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-purple-500/20 text-purple-400">
+                    {step.icon}
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                <p className="text-gray-400 text-sm">{step.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Button asChild size="lg" variant="ghost">
+            <Link href="/products/mask" className="text-purple-400 hover:text-purple-300">
+              Learn More About Mask <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
           </Button>
         </div>
@@ -332,6 +392,10 @@ export default function HowItWorksPage() {
             {
               q: 'What is Veriflo Seal?',
               a: 'Veriflo Seal lets you prove your own documents are authentic. Upload your document, run the integrity check, then generate a shareable verification link for recipients. They see the full integrity report without needing a Veriflo account — building trust before they even open the document.',
+            },
+            {
+              q: 'What is Veriflo Mask?',
+              a: 'Veriflo Mask automatically detects and redacts personal information (PII) from your documents before you share them. It finds emails, phone numbers, SSNs, credit cards, bank accounts, dates of birth, passport numbers, and addresses — then permanently blacks them out so you can share safely.',
             },
             {
               q: 'Can I verify standalone images?',

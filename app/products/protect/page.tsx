@@ -7,9 +7,9 @@ import { Card, CardContent } from '@/components/ui/card';
 const PLATFORM_URL = process.env.NEXT_PUBLIC_PLATFORM_URL || 'https://app.useveriflo.com';
 
 export const metadata = {
-  title: 'Veriflo Protect - Send Verified Documents',
+  title: 'Veriflo Seal - Send Verified Documents',
   description:
-    'Prove your documents are authentic with Veriflo Protect. Send verified documents with shareable proof-of-integrity links. Build trust, prevent invoice fraud, and eliminate authenticity questions.',
+    'Prove your documents are authentic with Veriflo Seal. Send verified documents with shareable proof-of-integrity links. Build trust, prevent invoice fraud, and eliminate authenticity questions.',
 };
 
 export default function ProtectPage() {
@@ -135,7 +135,7 @@ export default function ProtectPage() {
                 Prove Your Documents Are Authentic
               </h1>
               <p className="mt-6 text-xl text-gray-300">
-                Veriflo Protect verifies your outgoing documents and gives recipients a shareable proof-of-integrity link. Build trust, prevent invoice fraud, and eliminate "is this real?" questions.
+                Veriflo Seal verifies your outgoing documents and gives recipients a shareable proof-of-integrity link. Build trust, prevent invoice fraud, and eliminate "is this real?" questions.
               </p>
               <div className="mt-8 flex gap-4 flex-wrap">
                 <Button asChild size="lg" variant="primary">
@@ -225,10 +225,10 @@ export default function ProtectPage() {
         </div>
       </section>
 
-      {/* How Veriflo Protect Works */}
+      {/* How Veriflo Seal Works */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">How Veriflo Protect Works</h2>
+          <h2 className="text-4xl font-bold text-white">How Veriflo Seal Works</h2>
           <p className="mt-4 text-xl text-gray-400">
             Four simple steps to document authenticity
           </p>
@@ -368,7 +368,7 @@ export default function ProtectPage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">Use Cases</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Who benefits from Veriflo Protect
+            Who benefits from Veriflo Seal
           </p>
         </div>
 

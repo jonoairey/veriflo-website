@@ -12,7 +12,7 @@ export function Footer() {
       title: 'Products',
       links: [
         { name: 'Veriflo Check', href: '/products/check' },
-        { name: 'Veriflo Protect', href: '/products/protect' },
+        { name: 'Veriflo Seal', href: '/products/protect' },
         { name: 'Features', href: '/features' },
         { name: 'How It Works', href: '/how-it-works' },
         { name: 'Pricing', href: '/pricing' },

@@ -106,7 +106,7 @@ export function Navbar() {
                         <Shield className="h-4 w-4" />
                       </div>
                       <div>
-                        <p className="text-sm font-semibold text-white">Veriflo Protect</p>
+                        <p className="text-sm font-semibold text-white">Veriflo Seal</p>
                         <p className="text-xs text-gray-400">Prove outgoing documents are real</p>
                       </div>
                     </div>
@@ -193,7 +193,7 @@ export function Navbar() {
                     onClick={() => setMobileMenuOpen(false)}
                     className="block py-1.5 text-sm text-gray-400 hover:text-white transition-colors"
                   >
-                    Veriflo Protect
+                    Veriflo Seal
                   </Link>
                 </div>
               </div>

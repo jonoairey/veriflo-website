@@ -158,7 +158,7 @@ export default function FeaturesPage() {
       id: 'verified-send',
       icon: <Send className="h-8 w-8" />,
       image: '/images/feature-integrity.png',
-      title: 'Sender Verification (Veriflo Protect)',
+      title: 'Sender Verification (Veriflo Seal)',
       shortDesc: 'Verify your own documents and share certified proof links with recipients.',
       fullDesc: 'Flip the script on document trust. Instead of waiting for recipients to verify your documents, proactively prove authenticity. Upload your document, run the integrity check, then generate a shareable verification link. Recipients click the link to see the full integrity report — building trust before they even open the document. Set expiry dates, view limits, and send notification emails directly.',
       benefits: [

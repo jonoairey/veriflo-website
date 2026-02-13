@@ -85,7 +85,7 @@ export default function HomePage() {
             </div>
           </div>
 
-          {/* Veriflo Protect Card */}
+          {/* Veriflo Seal Card */}
           <div className="relative group">
             <div className="absolute inset-0 bg-gradient-to-br from-blue-500/20 to-blue-600/5 rounded-2xl blur-xl opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
             <div className="relative border border-slate-700 bg-slate-900/70 rounded-2xl p-8 hover:border-blue-500/40 transition-colors h-full flex flex-col">
@@ -93,7 +93,7 @@ export default function HomePage() {
                 <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20">
                   <Shield className="h-5 w-5 text-blue-400" />
                 </div>
-                <h3 className="text-2xl font-bold text-white">Veriflo Protect</h3>
+                <h3 className="text-2xl font-bold text-white">Veriflo Seal</h3>
               </div>
               <p className="text-sm font-medium text-blue-400 mb-4">For document senders</p>
               <p className="text-gray-300 mb-6 flex-1">

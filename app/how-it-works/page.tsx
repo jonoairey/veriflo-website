@@ -19,7 +19,7 @@ import {
 
 export const metadata = {
   title: 'How It Works - Veriflo | Verify & Certify Documents',
-  description: 'Learn how Veriflo Check verifies incoming documents and how Veriflo Protect certifies documents you send. Two flows, one platform for complete document trust.',
+  description: 'Learn how Veriflo Check verifies incoming documents and how Veriflo Seal certifies documents you send. Two flows, one platform for complete document trust.',
 };
 
 export default function HowItWorksPage() {
@@ -81,7 +81,7 @@ export default function HowItWorksPage() {
             How Veriflo Works
           </h1>
           <p className="mt-6 text-xl text-gray-300">
-            Two flows for complete document trust. Verify documents you receive with <strong className="text-emerald-400">Veriflo Check</strong>, or certify documents you send with <strong className="text-blue-400">Veriflo Protect</strong>.
+            Two flows for complete document trust. Verify documents you receive with <strong className="text-emerald-400">Veriflo Check</strong>, or certify documents you send with <strong className="text-blue-400">Veriflo Seal</strong>.
           </p>
         </div>
       </section>
@@ -190,7 +190,7 @@ export default function HowItWorksPage() {
           <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20">
             <Shield className="h-5 w-5 text-blue-400" />
           </div>
-          <h2 className="text-3xl font-bold text-white">Veriflo Protect</h2>
+          <h2 className="text-3xl font-bold text-white">Veriflo Seal</h2>
         </div>
         <p className="text-lg text-gray-400 mb-12">Prove documents you send are authentic — in four steps</p>
 
@@ -330,8 +330,8 @@ export default function HowItWorksPage() {
               a: 'Most documents are analyzed in seconds. You get your integrity score and detailed findings immediately.',
             },
             {
-              q: 'What is Veriflo Protect?',
-              a: 'Veriflo Protect lets you prove your own documents are authentic. Upload your document, run the integrity check, then generate a shareable verification link for recipients. They see the full integrity report without needing a Veriflo account — building trust before they even open the document.',
+              q: 'What is Veriflo Seal?',
+              a: 'Veriflo Seal lets you prove your own documents are authentic. Upload your document, run the integrity check, then generate a shareable verification link for recipients. They see the full integrity report without needing a Veriflo account — building trust before they even open the document.',
             },
             {
               q: 'Can I verify standalone images?',

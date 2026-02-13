@@ -12,11 +12,14 @@ import {
   CheckCircle,
   ShieldCheck,
   FileSearch,
+  Send,
+  Mail,
+  ExternalLink,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'How It Works - Veriflo | Document Verification Platform',
-  description: 'Learn how Veriflo verifies document integrity. Upload, analyze, and get an instant verification score with detailed forensic findings in seconds.',
+  title: 'How It Works - Veriflo | Verify & Certify Documents',
+  description: 'Learn how Veriflo Check verifies incoming documents and how Veriflo Protect certifies documents you send. Two flows, one platform for complete document trust.',
 };
 
 export default function HowItWorksPage() {
@@ -75,12 +78,23 @@ export default function HowItWorksPage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
-            Verify Every Document
+            How Veriflo Works
           </h1>
           <p className="mt-6 text-xl text-gray-300">
-            Three simple steps. Upload, analyze, and get your verification score. Complete forensic analysis in seconds.
+            Two flows for complete document trust. Verify documents you receive with <strong className="text-emerald-400">Veriflo Check</strong>, or certify documents you send with <strong className="text-blue-400">Veriflo Protect</strong>.
           </p>
         </div>
+      </section>
+
+      {/* Check Header */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-emerald-500/20">
+            <ShieldCheck className="h-5 w-5 text-emerald-400" />
+          </div>
+          <h2 className="text-3xl font-bold text-white">Veriflo Check</h2>
+        </div>
+        <p className="text-lg text-gray-400">Verify documents you receive — in three steps</p>
       </section>
 
       {/* Verification Steps */}
@@ -170,6 +184,69 @@ export default function HowItWorksPage() {
         ))}
       </section>
 
+      {/* Protect Section */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="flex items-center gap-3 mb-2">
+          <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-blue-500/20">
+            <Shield className="h-5 w-5 text-blue-400" />
+          </div>
+          <h2 className="text-3xl font-bold text-white">Veriflo Protect</h2>
+        </div>
+        <p className="text-lg text-gray-400 mb-12">Prove documents you send are authentic — in four steps</p>
+
+        <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
+          {[
+            {
+              number: '1',
+              icon: <Upload className="h-6 w-6" />,
+              title: 'Upload Your Document',
+              description: 'Upload the document you want to certify — an invoice, contract, report, or any file you\'re sending to someone.',
+            },
+            {
+              number: '2',
+              icon: <ShieldCheck className="h-6 w-6" />,
+              title: 'Integrity Analysis',
+              description: 'Veriflo runs the same forensic analysis on your document and generates an integrity score confirming it\'s clean.',
+            },
+            {
+              number: '3',
+              icon: <Send className="h-6 w-6" />,
+              title: 'Generate Proof Link',
+              description: 'Get a certified verification link you can share. Set expiry dates and view limits for security. Email it directly to recipients.',
+            },
+            {
+              number: '4',
+              icon: <ExternalLink className="h-6 w-6" />,
+              title: 'Recipient Views Report',
+              description: 'Recipients click your link to see the full integrity report — score, findings, and verification timestamp — without needing a Veriflo account.',
+            },
+          ].map((step, idx) => (
+            <Card key={idx} className="border-blue-500/20 bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
+              <CardContent className="pt-8">
+                <div className="flex items-center gap-3 mb-4">
+                  <span className="inline-flex h-8 w-8 items-center justify-center rounded-full bg-blue-500/30 text-lg font-bold text-blue-400">
+                    {step.number}
+                  </span>
+                  <div className="flex h-8 w-8 items-center justify-center rounded-lg bg-blue-500/20 text-blue-400">
+                    {step.icon}
+                  </div>
+                </div>
+                <h3 className="text-lg font-semibold text-white mb-2">{step.title}</h3>
+                <p className="text-gray-400 text-sm">{step.description}</p>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-8 text-center">
+          <Button asChild size="lg" variant="ghost">
+            <Link href="/products/protect" className="text-blue-400 hover:text-blue-300">
+              Learn More About Protect <ArrowRight className="ml-2 h-5 w-5" />
+            </Link>
+          </Button>
+        </div>
+      </section>
+
       {/* Key Principles */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
@@ -251,6 +328,18 @@ export default function HowItWorksPage() {
             {
               q: 'How long does verification take?',
               a: 'Most documents are analyzed in seconds. You get your integrity score and detailed findings immediately.',
+            },
+            {
+              q: 'What is Veriflo Protect?',
+              a: 'Veriflo Protect lets you prove your own documents are authentic. Upload your document, run the integrity check, then generate a shareable verification link for recipients. They see the full integrity report without needing a Veriflo account — building trust before they even open the document.',
+            },
+            {
+              q: 'Can I verify standalone images?',
+              a: 'Yes. Veriflo supports dedicated image verification for JPEG, PNG, GIF, and WebP files. Upload any image to check for AI generation, editing manipulation, and authenticity — including EXIF metadata analysis and 6-signal AI detection forensics.',
+            },
+            {
+              q: 'What is Cross-Document Intelligence?',
+              a: 'Every verification contributes to an anonymized intelligence layer. Veriflo tracks document patterns — creation tools, template matches, AI detection rates, risk levels — across all your verifications to surface trends and anomalies. No personal data is stored.',
             },
             {
               q: 'Do I need an account?',

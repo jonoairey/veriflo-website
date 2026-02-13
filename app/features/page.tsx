@@ -14,11 +14,13 @@ import {
   Image,
   Zap,
   LayoutTemplate,
+  Send,
+  Brain,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Features - Veriflo | Document Verification Platform',
-  description: 'Verify document integrity instantly. Detect tampering, analyze metadata, extract EXIF data, and get AI-powered content analysis. Enterprise-grade document verification with forensic precision.',
+  title: 'Features - Veriflo | Document Verification & Sender Certification',
+  description: 'Verify documents you receive and prove documents you send. Forensic integrity scoring, AI detection, image verification, sender certification, and cross-document intelligence.',
 };
 
 export default function FeaturesPage() {
@@ -120,6 +122,54 @@ export default function FeaturesPage() {
       ],
     },
     {
+      id: 'image-verification',
+      icon: <Image className="h-8 w-8" />,
+      image: '/images/feature-image-analysis.png',
+      title: 'Standalone Image Verification',
+      shortDesc: 'Upload any image to verify authenticity and detect AI generation — no document required.',
+      fullDesc: 'Dedicated image verification goes beyond embedded document images. Upload photos, screenshots, scans, or any standalone image to check for AI generation, editing manipulation, and authenticity. Perfect for verifying identity documents, proof photos, insurance claims, and any visual evidence.',
+      benefits: [
+        'Standalone image upload and analysis',
+        'AI-generated image detection with 6-signal forensics',
+        'EXIF metadata extraction and validation',
+        'Editing software and manipulation detection',
+        'Compression analysis and quality assessment',
+        'Supports JPEG, PNG, GIF, and WebP formats',
+      ],
+    },
+    {
+      id: 'verified-send',
+      icon: <Send className="h-8 w-8" />,
+      image: '/images/feature-integrity.png',
+      title: 'Sender Verification (Veriflo Protect)',
+      shortDesc: 'Verify your own documents and share certified proof links with recipients.',
+      fullDesc: 'Flip the script on document trust. Instead of waiting for recipients to verify your documents, proactively prove authenticity. Upload your document, run the integrity check, then generate a shareable verification link. Recipients click the link to see the full integrity report — building trust before they even open the document. Set expiry dates, view limits, and send notification emails directly.',
+      benefits: [
+        'Generate certified verification links',
+        'Share proof of authenticity with anyone',
+        'Set expiry dates and view limits',
+        'Email verification links directly to recipients',
+        'Revoke links at any time',
+        'Recipients see full integrity report without signing up',
+      ],
+    },
+    {
+      id: 'intelligence',
+      icon: <Brain className="h-8 w-8" />,
+      image: '/images/feature-ai-detection.png',
+      title: 'Cross-Document Intelligence',
+      shortDesc: 'Aggregate anonymized patterns across all verifications to detect emerging threats.',
+      fullDesc: 'Every verification contributes to a collective intelligence layer. Veriflo anonymously logs document fingerprints — file types, creation tools, template patterns, AI detection rates — to surface trends and anomalies across your organization. Spot emerging fraud patterns, track which document types carry the highest risk, and see how verification activity trends over time.',
+      benefits: [
+        'Anonymized fingerprint logging (no PII stored)',
+        'Risk distribution and trend analysis',
+        'Top creation tools and template tracking',
+        'AI detection rate monitoring',
+        'Weekly trend visualization',
+        'Automated anomaly and pattern detection',
+      ],
+    },
+    {
       id: 'security',
       icon: <Lock className="h-8 w-8" />,
       image: '/images/feature-security.png',
@@ -143,10 +193,10 @@ export default function FeaturesPage() {
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto">
           <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-emerald-400 to-emerald-600 bg-clip-text text-transparent">
-            Verify Every Document Before You Trust It
+            Every Feature You Need for Document Trust
           </h1>
           <p className="mt-6 text-xl text-gray-300">
-            Upload any document and get instant verification. Forensic analysis reveals metadata anomalies, tampering signs, and manipulation attempts — so you can make informed decisions with confidence.
+            Verify documents you receive with forensic analysis. Prove documents you send with certified links. Track patterns across all verifications with cross-document intelligence.
           </p>
           <div className="mt-8 flex gap-4 justify-center">
             <Button asChild size="lg" variant="primary">
@@ -235,6 +285,9 @@ export default function FeaturesPage() {
             { title: 'AI Detection', items: ['AI-generated text', 'AI-generated images', 'Synthetic document detection'] },
             { title: 'Image Forensics', items: ['EXIF metadata', 'Camera information', 'Pixel-level analysis'] },
             { title: 'Template Matching', items: ['Format verification', 'Structural comparison', 'Issuer validation'] },
+            { title: 'Sender Verification', items: ['Certified proof links', 'Expiry & view controls', 'Email notifications'] },
+            { title: 'Intelligence', items: ['Risk trend analysis', 'Anomaly detection', 'Tool & template tracking'] },
+            { title: 'Report Export', items: ['Branded PDF reports', 'Downloadable findings', 'Share with stakeholders'] },
           ].map((check, idx) => (
             <Card key={idx} className="border-slate-800 bg-slate-900/50">
               <CardContent className="pt-6">

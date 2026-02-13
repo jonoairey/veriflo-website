@@ -17,11 +17,12 @@ import {
   Send,
   Brain,
   Mail,
+  EyeOff,
 } from 'lucide-react';
 
 export const metadata = {
-  title: 'Features - Veriflo | Document Verification & Sender Certification',
-  description: 'Verify documents you receive and prove documents you send. Forensic integrity scoring, AI detection, image verification, sender certification, and cross-document intelligence.',
+  title: 'Features - Veriflo | Document Verification, Sender Certification & PII Redaction',
+  description: 'Verify documents you receive, prove documents you send, and redact sensitive data before sharing. Forensic integrity scoring, AI detection, image verification, sender certification, PII redaction, and cross-document intelligence.',
 };
 
 export default function FeaturesPage() {
@@ -171,6 +172,22 @@ export default function FeaturesPage() {
       ],
     },
     {
+      id: 'pii-redaction',
+      icon: <EyeOff className="h-8 w-8" />,
+      image: '/images/feature-integrity.png',
+      title: 'PII Redaction (Veriflo Mask)',
+      shortDesc: 'Automatically detect and permanently redact personal information before sharing documents.',
+      fullDesc: 'Veriflo Mask scans your documents for personal information across 8 categories — emails, phone numbers, Social Security numbers, credit cards, addresses, dates of birth, passport numbers, and driver\'s licenses. Review detected items by category, select what to redact, and generate a clean copy with permanent black-box redactions. The original content is irrecoverably removed, not just hidden.',
+      benefits: [
+        '8 categories of PII detection',
+        'Permanent black-box redaction (irrecoverable)',
+        'Category-level redaction control',
+        'Full redaction audit trail and history',
+        'Download clean redacted copies',
+        'Supports PDF documents',
+      ],
+    },
+    {
       id: 'intelligence',
       icon: <Brain className="h-8 w-8" />,
       image: '/images/feature-ai-detection.png',
@@ -213,7 +230,7 @@ export default function FeaturesPage() {
             Every Feature You Need for Document Trust
           </h1>
           <p className="mt-6 text-xl text-gray-300">
-            Verify documents you receive with forensic analysis. Prove documents you send with certified links. Track patterns across all verifications with cross-document intelligence.
+            Verify documents you receive with forensic analysis. Prove documents you send with certified links. Redact sensitive data before sharing. Track patterns across all verifications with cross-document intelligence.
           </p>
           <div className="mt-8 flex gap-4 justify-center">
             <Button asChild size="lg" variant="primary">
@@ -303,6 +320,7 @@ export default function FeaturesPage() {
             { title: 'Image Forensics', items: ['EXIF metadata', 'Camera information', 'Pixel-level analysis'] },
             { title: 'Template Matching', items: ['Format verification', 'Structural comparison', 'Issuer validation'] },
             { title: 'Sender Verification', items: ['Certified proof links', 'Expiry & view controls', 'Email notifications'] },
+            { title: 'PII Redaction', items: ['8-category PII detection', 'Permanent black-box redaction', 'Redaction audit trail'] },
             { title: 'Intelligence', items: ['Risk trend analysis', 'Anomaly detection', 'Tool & template tracking'] },
             { title: 'Report Export', items: ['Branded PDF reports', 'Downloadable findings', 'Share with stakeholders'] },
           ].map((check, idx) => (

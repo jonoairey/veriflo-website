@@ -6,6 +6,11 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ContactForm } from '@/components/marketing/contact-form';
 import { StatsCounter } from '@/components/marketing/stats-counter';
 
+export const metadata = {
+  title: 'Veriflo | Document Trust Platform — Verify, Seal & Redact',
+  description: 'Verify documents you receive, prove documents you send, and redact sensitive data before sharing. Forensic integrity scoring, certified proof links, and PII redaction in one platform.',
+};
+
 export default function HomePage() {
   return (
     <div className="space-y-20 py-20">
@@ -42,7 +47,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Two Products Section */}
+      {/* Three Products Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <p className="text-sm font-semibold uppercase tracking-wide text-emerald-400 mb-4">

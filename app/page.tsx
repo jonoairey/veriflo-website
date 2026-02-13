@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Lock, Eye, CheckCircle, ArrowRight, BarChart3, Users, Database, Zap, FileCheck, AlertTriangle, ShieldCheck, Send, Shield } from 'lucide-react';
+import { Lock, Eye, CheckCircle, ArrowRight, BarChart3, Users, Database, Zap, FileCheck, AlertTriangle, ShieldCheck, Send, Shield, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import { ContactForm } from '@/components/marketing/contact-form';
@@ -117,6 +117,29 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Verify by Email Callout */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-gradient-to-r from-emerald-950/60 via-slate-900/80 to-slate-900/60">
+          <div className="absolute top-0 right-0 w-64 h-64 bg-emerald-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2" />
+          <div className="relative flex flex-col md:flex-row items-center gap-8 p-8 md:p-10">
+            <div className="flex h-16 w-16 shrink-0 items-center justify-center rounded-2xl bg-emerald-500/15 border border-emerald-500/20">
+              <Mail className="h-8 w-8 text-emerald-400" />
+            </div>
+            <div className="flex-1 text-center md:text-left">
+              <h3 className="text-xl font-bold text-white">Verify From Your Inbox</h3>
+              <p className="mt-2 text-gray-300">
+                Forward any document to <span className="font-mono text-emerald-400">check@useveriflo.com</span> and get a verification report back in minutes. No login required — works with any email client.
+              </p>
+            </div>
+            <Button asChild variant="primary" size="lg" className="shrink-0">
+              <a href="mailto:check@useveriflo.com">
+                Try Email Verification <ArrowRight className="ml-2 h-4 w-4" />
+              </a>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Stats Counter */}
       <StatsCounter />
 
@@ -209,7 +232,7 @@ export default function HomePage() {
               icon: <Zap className="h-6 w-6" />,
               title: 'AI-Content Detection',
               description:
-                'Detect AI-generated text and synthetic images using 7-signal heuristic analysis. Flags fraudulent content automatically.',
+                'Detect AI-generated text and synthetic images using 8-signal analysis including Error Level Analysis and copy-move detection. Flags fraudulent content automatically.',
             },
             {
               icon: <Eye className="h-6 w-6" />,

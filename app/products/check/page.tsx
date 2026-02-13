@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import { Shield, ShieldCheck, Search, FileSearch, BarChart3, AlertTriangle, Zap, Eye, CheckCircle, ArrowRight, Lock, Database, FileText, Brain } from 'lucide-react';
+import { Shield, ShieldCheck, Search, FileSearch, BarChart3, AlertTriangle, Zap, Eye, CheckCircle, ArrowRight, Lock, Database, FileText, Brain, Mail } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 
@@ -31,7 +31,7 @@ export default function CheckPage() {
     {
       icon: <Brain className="h-8 w-8" />,
       title: 'AI-Content Detection',
-      description: '7-signal text analysis + 6-signal image analysis to identify synthetic content. Detect ChatGPT, Claude, Midjourney, and other AI-generated documents.',
+      description: '8-signal image analysis with Error Level Analysis (ELA) and copy-move detection, plus AI text detection via GPTZero. Catch ChatGPT, Claude, Midjourney, and DALL-E generated content.',
     },
     {
       icon: <Search className="h-8 w-8" />,
@@ -255,6 +255,74 @@ export default function CheckPage() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* Verify by Email */}
+      <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+        <div className="relative overflow-hidden rounded-2xl border border-emerald-500/20 bg-gradient-to-br from-emerald-950/50 via-slate-900 to-slate-900">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-emerald-500/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3" />
+          <div className="relative grid lg:grid-cols-2 gap-8 p-8 lg:p-12 items-center">
+            <div>
+              <div className="flex items-center gap-3 mb-4">
+                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/15 border border-emerald-500/20">
+                  <Mail className="h-6 w-6 text-emerald-400" />
+                </div>
+                <span className="text-sm font-semibold uppercase tracking-wider text-emerald-400">New</span>
+              </div>
+              <h3 className="text-3xl font-bold text-white mb-4">Verify Without Leaving Email</h3>
+              <p className="text-gray-300 mb-6">
+                Forward any document to <span className="font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">check@useveriflo.com</span> and receive a full verification report in minutes. No login, no app, no signup required.
+              </p>
+              <div className="space-y-3 mb-8">
+                {['Works with any email client — Gmail, Outlook, Apple Mail', 'Instant forensic analysis and integrity scoring', 'PDF verification report delivered to your inbox', 'Supports all document types — PDF, images, Office files'].map((item, i) => (
+                  <div key={i} className="flex items-center gap-2 text-sm text-gray-400">
+                    <CheckCircle className="h-4 w-4 text-emerald-500 flex-shrink-0" />
+                    <span>{item}</span>
+                  </div>
+                ))}
+              </div>
+              <Button asChild size="lg" variant="primary">
+                <a href="mailto:check@useveriflo.com">
+                  Try Email Verification <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
+              </Button>
+            </div>
+            <div className="hidden lg:block">
+              <div className="rounded-xl border border-slate-700 bg-slate-800/60 p-6 space-y-4">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="h-3 w-3 rounded-full bg-red-500/70" />
+                  <div className="h-3 w-3 rounded-full bg-yellow-500/70" />
+                  <div className="h-3 w-3 rounded-full bg-green-500/70" />
+                  <span className="text-xs text-gray-500 ml-2">Email</span>
+                </div>
+                <div className="space-y-3 text-sm">
+                  <div className="flex gap-2">
+                    <span className="text-gray-500 shrink-0">To:</span>
+                    <span className="text-emerald-400 font-mono">check@useveriflo.com</span>
+                  </div>
+                  <div className="flex gap-2">
+                    <span className="text-gray-500 shrink-0">Subject:</span>
+                    <span className="text-gray-300">Please verify this invoice</span>
+                  </div>
+                  <div className="border-t border-slate-700 pt-3 text-gray-400">
+                    Hi, can you verify the attached document?
+                  </div>
+                  <div className="flex items-center gap-2 rounded-lg bg-slate-700/50 p-3">
+                    <FileText className="h-4 w-4 text-gray-400" />
+                    <span className="text-gray-300 text-xs">invoice-march-2026.pdf</span>
+                    <span className="text-gray-500 text-xs ml-auto">2.4 MB</span>
+                  </div>
+                </div>
+                <div className="mt-4 border-t border-emerald-500/20 pt-4">
+                  <div className="text-xs text-emerald-400 font-semibold mb-2">VERIFLO REPLY</div>
+                  <div className="text-xs text-gray-400">
+                    Your verification report is ready. Score: <span className="text-emerald-400 font-bold">84/100</span> (Low Risk). Full PDF report attached.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

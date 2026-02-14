@@ -19,11 +19,25 @@ export default function HomePage() {
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-8 items-center">
           <div>
             <h1 className="text-5xl font-bold tracking-tight sm:text-6xl bg-gradient-to-r from-emerald-400 to-emerald-300 bg-clip-text text-transparent">
-              Document Trust, Both Sides
+              The Document Trust Platform
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Verify documents you receive. Prove documents you send. Redact sensitive data before you share. One platform for complete document trust.
+              Verify documents you receive. Prove documents you send. Redact sensitive data before you share. Embed it all into your workflows with our API. One platform for complete document trust.
             </p>
+            <div className="mt-6 flex flex-wrap gap-3">
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 text-sm text-emerald-400">
+                <ShieldCheck className="h-3.5 w-3.5" /> Check
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-blue-500/10 border border-blue-500/20 px-3 py-1 text-sm text-blue-400">
+                <Shield className="h-3.5 w-3.5" /> Seal
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-purple-500/10 border border-purple-500/20 px-3 py-1 text-sm text-purple-400">
+                <EyeOff className="h-3.5 w-3.5" /> Mask
+              </span>
+              <span className="inline-flex items-center gap-1.5 rounded-full bg-slate-500/10 border border-slate-500/20 px-3 py-1 text-sm text-slate-300">
+                <Zap className="h-3.5 w-3.5" /> REST API
+              </span>
+            </div>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
                 <a href="https://app.useveriflo.com/signup">Start Free</a>

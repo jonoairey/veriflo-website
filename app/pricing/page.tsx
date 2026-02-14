@@ -57,14 +57,34 @@ export default function PricingPage() {
       description: 'For large-scale verification',
       features: [
         'Everything in Pro',
-        'Unlimited document checks',
-        'Unlimited PII operations',
+        '500 document checks/month',
+        '500 PII detections/month',
+        '250 PII redactions/month',
         '25 team seats',
         'REST API access (600 req/min)',
         'Custom templates',
-        'Dedicated account manager',
         'SSO/SAML authentication',
         'SLA guarantee',
+      ],
+      cta: 'Start Enterprise Trial',
+      ctaUrl: 'https://app.useveriflo.com/signup?plan=enterprise',
+      highlighted: false,
+    },
+    {
+      name: 'Custom',
+      price: 'Custom',
+      period: '',
+      description: 'Unlimited usage, tailored to you',
+      features: [
+        'Everything in Enterprise',
+        'Unlimited document checks',
+        'Unlimited PII operations',
+        'Unlimited team seats',
+        'Custom API rate limits',
+        'Dedicated account manager',
+        'Custom integrations',
+        'On-premise deployment option',
+        'Priority SLA',
       ],
       cta: 'Contact Sales',
       ctaUrl: '#contact',
@@ -128,7 +148,7 @@ export default function PricingPage() {
 
       {/* Pricing Tiers */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-        <div className="grid gap-8 md:grid-cols-3">
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
           {pricingTiers.map((tier, idx) => (
             <Card
               key={idx}

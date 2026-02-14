@@ -166,6 +166,9 @@ export function Navbar() {
             <Link href="/pricing" className="text-sm font-medium text-white hover:text-emerald-300 transition-colors">
               Pricing
             </Link>
+            <Link href="/docs" className="text-sm font-medium text-white hover:text-emerald-300 transition-colors">
+              Docs
+            </Link>
             <a href={`${PLATFORM_URL}/verify`} className="text-sm font-medium text-emerald-400 hover:text-emerald-300 transition-colors">
               Verify a Document
             </a>
@@ -246,6 +249,9 @@ export function Navbar() {
 
               <Link href="/pricing" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
                 Pricing
+              </Link>
+              <Link href="/docs" className="block px-4 py-2 rounded-lg text-white hover:bg-slate-800 transition-colors">
+                Docs
               </Link>
               <a href={`${PLATFORM_URL}/verify`} className="block px-4 py-2 rounded-lg text-emerald-400 hover:bg-slate-800 transition-colors">
                 Verify a Document

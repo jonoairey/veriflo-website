@@ -2,12 +2,12 @@ import React from 'react';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
-import { CheckCircle, ArrowRight, FileCheck, Shield, Zap, Lock } from 'lucide-react';
+import { CheckCircle, ArrowRight, FileCheck, Shield, Zap, Lock, Code } from 'lucide-react';
 import { ContactForm } from '@/components/marketing/contact-form';
 
 export const metadata = {
   title: 'Pricing - Veriflo | Transparent Document Verification',
-  description: 'Simple, transparent pricing for document verification. Free plan with 10 checks/month. Pro and Enterprise plans with advanced features.',
+  description: 'Simple, transparent pricing for document verification and PII redaction. Free plan with 10 checks/month. Pro and Enterprise plans with REST API access.',
 };
 
 export default function PricingPage() {
@@ -38,11 +38,12 @@ export default function PricingPage() {
         'Everything in Free',
         '100 document checks/month',
         '50 PII redactions/month',
+        '100 PII detections/month',
         '5 team seats',
         'AI-content detection',
         'Template matching (15+ templates)',
         'PDF report export',
-        'REST API access',
+        'REST API access (60 req/min)',
         'Priority support',
       ],
       cta: 'Start Pro Trial',
@@ -57,8 +58,9 @@ export default function PricingPage() {
       features: [
         'Everything in Pro',
         'Unlimited document checks',
-        'Unlimited PII redactions',
+        'Unlimited PII operations',
         '25 team seats',
+        'REST API access (600 req/min)',
         'Custom templates',
         'Dedicated account manager',
         'SSO/SAML authentication',
@@ -217,6 +219,77 @@ export default function PricingPage() {
               <span className="text-slate-300">{capability}</span>
             </div>
           ))}
+        </div>
+      </section>
+
+      {/* Developer API */}
+      <section className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
+        <div className="rounded-xl border border-slate-800 bg-slate-900/50 overflow-hidden">
+          <div className="grid gap-0 lg:grid-cols-2">
+            <div className="p-8 lg:p-10">
+              <div className="flex items-center gap-2 mb-4">
+                <Code className="h-5 w-5 text-emerald-500" />
+                <span className="text-xs font-semibold text-emerald-400 uppercase tracking-wider">
+                  Developer API
+                </span>
+              </div>
+              <h2 className="text-3xl font-bold text-white">
+                Embed Verification in Your Workflow
+              </h2>
+              <p className="mt-4 text-slate-300">
+                Integrate document verification, PII detection, and redaction directly into your applications with our REST API. Available on Pro and Enterprise plans.
+              </p>
+              <ul className="mt-6 space-y-3">
+                {[
+                  'POST /api/v1/verify — Document integrity checks',
+                  'POST /api/v1/mask/detect — PII detection (8 categories)',
+                  'POST /api/v1/mask/redact — Automated PII redaction',
+                ].map((endpoint, idx) => (
+                  <li key={idx} className="flex items-start gap-3">
+                    <CheckCircle className="h-5 w-5 text-emerald-500 flex-shrink-0 mt-0.5" />
+                    <span className="text-slate-300 text-sm font-mono">{endpoint}</span>
+                  </li>
+                ))}
+              </ul>
+              <div className="mt-8">
+                <Button asChild size="lg" variant="primary" className="bg-emerald-500 hover:bg-emerald-600">
+                  <Link href="/docs">
+                    View API Documentation <ArrowRight className="ml-2 h-5 w-5" />
+                  </Link>
+                </Button>
+              </div>
+            </div>
+
+            <div className="bg-slate-950 p-8 lg:p-10 flex items-center">
+              <div className="w-full">
+                <p className="text-xs font-semibold text-slate-500 uppercase tracking-wider mb-3">
+                  Quick Start
+                </p>
+                <pre className="text-sm leading-relaxed overflow-x-auto">
+                  <code className="text-slate-300">
+{`curl -X POST \\
+  https://app.useveriflo.com/api/v1/verify \\
+  -H "Authorization: Bearer vf_your_key" \\
+  -F "file=@document.pdf"`}
+                  </code>
+                </pre>
+                <div className="mt-6 pt-6 border-t border-slate-800">
+                  <p className="text-xs text-slate-500 mb-2">Response</p>
+                  <pre className="text-sm leading-relaxed overflow-x-auto">
+                    <code className="text-emerald-400">
+{`{
+  "status": "success",
+  "data": {
+    "integrityScore": 87,
+    "riskLevel": "Low"
+  }
+}`}
+                    </code>
+                  </pre>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 

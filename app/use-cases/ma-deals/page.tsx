@@ -92,7 +92,7 @@ export default function MADealsPage() {
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
-                <a href="https://app.useveriflo.com/signup">Get Started Free</a>
+                <a href="/pricing#contact">Get Started Free</a>
               </Button>
               <Button asChild size="lg" variant="ghost">
                 <Link href="/how-it-works" className="text-white hover:text-blue-300">
@@ -347,7 +347,7 @@ export default function MADealsPage() {
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">
-              <a href="https://app.useveriflo.com/signup">Get Started Free</a>
+              <a href="/pricing#contact">Get Started Free</a>
             </Button>
             <Button asChild size="lg" variant="ghost">
               <Link href="/" className="text-white hover:text-blue-100">

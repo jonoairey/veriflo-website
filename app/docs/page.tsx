@@ -710,7 +710,7 @@ const data = await response.json();`}</code>
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
               <Button asChild className="bg-emerald-500 hover:bg-emerald-600 text-black font-semibold px-8 py-6 text-lg h-auto">
-                <Link href="https://app.useveriflo.com/signup">
+                <Link href="/pricing#contact">
                   Sign Up Now
                   <ArrowRight className="w-5 h-5 ml-2" />
                 </Link>

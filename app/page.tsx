@@ -40,7 +40,7 @@ export default function HomePage() {
             </div>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
-                <a href="https://app.useveriflo.com/signup">Start Free</a>
+                <a href="/pricing#contact">Start Free</a>
               </Button>
               <Button asChild size="lg" variant="ghost">
                 <Link href="/how-it-works" className="text-white hover:text-emerald-300">
@@ -365,7 +365,7 @@ export default function HomePage() {
 
         <div className="mt-8 text-center">
           <Button asChild size="lg" variant="primary">
-            <a href="https://app.useveriflo.com/signup">Verify Your First Document Free</a>
+            <a href="/pricing#contact">Verify Your First Document Free</a>
           </Button>
         </div>
       </section>

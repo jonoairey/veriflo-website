@@ -163,7 +163,7 @@ function CheckContent() {
 
       <div className="text-center">
         <Button asChild size="lg" variant="primary" className="bg-emerald-500 hover:bg-emerald-600">
-          <a href="https://app.useveriflo.com/signup">
+          <a href="/pricing#contact">
             Try Veriflo Check Free <ArrowRight className="ml-2 h-5 w-5" />
           </a>
         </Button>

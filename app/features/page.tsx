@@ -234,7 +234,7 @@ export default function FeaturesPage() {
           </p>
           <div className="mt-8 flex gap-4 justify-center">
             <Button asChild size="lg" variant="primary">
-              <a href="https://app.useveriflo.com/signup">Start Free Trial</a>
+              <a href="/pricing#contact">Start Free Trial</a>
             </Button>
             <Button asChild size="lg" variant="ghost">
               <Link href="/" className="text-white hover:text-emerald-300">
@@ -350,7 +350,7 @@ export default function FeaturesPage() {
           </p>
           <div className="mt-8 flex gap-4 justify-center">
             <Button asChild size="lg" variant="primary">
-              <a href="https://app.useveriflo.com/signup">Get Started Free</a>
+              <a href="/pricing#contact">Get Started Free</a>
             </Button>
             <Button asChild size="lg" variant="ghost">
               <Link href="/how-it-works" className="text-white hover:text-emerald-100">

@@ -139,7 +139,7 @@ export default function ProtectPage() {
               </p>
               <div className="mt-8 flex gap-4 flex-wrap">
                 <Button asChild size="lg" variant="primary">
-                  <a href={`${PLATFORM_URL}/signup`}>Start Sending Verified</a>
+                  <a href={`/pricing#contact`}>Start Sending Verified</a>
                 </Button>
                 <Button asChild size="lg" variant="ghost">
                   <a href="/how-it-works" className="text-white hover:text-blue-300">
@@ -424,7 +424,7 @@ export default function ProtectPage() {
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">
-              <a href={`${PLATFORM_URL}/signup`}>Start Sending Verified</a>
+              <a href={`/pricing#contact`}>Start Sending Verified</a>
             </Button>
             <Button asChild size="lg" variant="ghost">
               <a href="/pricing" className="text-white hover:text-blue-100">

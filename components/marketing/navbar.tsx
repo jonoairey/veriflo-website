@@ -179,7 +179,7 @@ export function Navbar() {
               <a href={`${PLATFORM_URL}/login`}>Log In</a>
             </Button>
             <Button variant="primary" asChild>
-              <a href={`${PLATFORM_URL}/signup`}>Get Started</a>
+              <a href={`/pricing#contact`}>Get Started</a>
             </Button>
           </div>
 
@@ -261,7 +261,7 @@ export function Navbar() {
                   <a href={`${PLATFORM_URL}/login`}>Log In</a>
                 </Button>
                 <Button variant="primary" asChild className="w-full justify-center">
-                  <a href={`${PLATFORM_URL}/signup`}>Get Started</a>
+                  <a href={`/pricing#contact`}>Get Started</a>
                 </Button>
               </div>
             </div>

@@ -36,7 +36,7 @@ export function Footer() {
     {
       title: 'Get Started',
       links: [
-        { name: 'Sign Up', href: `${PLATFORM_URL}/signup`, external: true },
+        { name: 'Sign Up', href: `/pricing#contact`, external: true },
         { name: 'Log In', href: `${PLATFORM_URL}/login`, external: true },
         { name: 'Verify a Document', href: `${PLATFORM_URL}/verify`, external: true },
       ],

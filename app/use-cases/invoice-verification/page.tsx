@@ -141,14 +141,14 @@ export default function InvoiceVerificationPage() {
                   <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg flex items-start gap-3">
                     <Shield className="h-5 w-5 text-emerald-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-sm font-semibold text-emerald-300">Clean — Score 85</div>
+                      <div className="text-sm font-semibold text-emerald-300">Clean. Score: 85</div>
                       <p className="text-xs text-gray-400 mt-1">This invoice shows minimal tampering risk. Metadata is consistent. Safe to process payment.</p>
                     </div>
                   </div>
                   <div className="p-4 bg-red-500/10 border border-red-500/20 rounded-lg flex items-start gap-3">
                     <AlertTriangle className="h-5 w-5 text-red-400 flex-shrink-0 mt-0.5" />
                     <div>
-                      <div className="text-sm font-semibold text-red-300">High Risk — Score 25</div>
+                      <div className="text-sm font-semibold text-red-300">High Risk. Score: 25</div>
                       <p className="text-xs text-gray-400 mt-1">This invoice shows signs of tampering. Bank details may have been altered. Do NOT pay. Investigate further.</p>
                     </div>
                   </div>

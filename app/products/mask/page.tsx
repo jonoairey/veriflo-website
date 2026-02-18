@@ -28,7 +28,7 @@ const PLATFORM_URL = process.env.NEXT_PUBLIC_PLATFORM_URL || 'https://app.usever
 export const metadata = {
   title: 'Veriflo Mask - PII Redaction & Document Privacy | Veriflo',
   description:
-    'Automatically detect and redact personal information from documents. Veriflo Mask finds emails, phone numbers, SSNs, credit cards, addresses, and more — then blacks them out before you share.',
+    'Automatically detect and redact personal information from documents. Veriflo Mask finds emails, phone numbers, SSNs, credit cards, addresses, and more. Then it blacks them out before you share.',
 };
 
 export default function MaskProductPage() {
@@ -50,7 +50,7 @@ export default function MaskProductPage() {
               Redact Sensitive Data Before You Share
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Upload any document. Veriflo Mask automatically detects personal information — emails, phone numbers, SSNs, credit cards, addresses — and blacks them out in seconds. Share with confidence.
+              Upload any document. Veriflo Mask automatically detects personal information like emails, phone numbers, SSNs, credit cards, and addresses. Then it blacks them out in seconds. Share with confidence.
             </p>
             <div className="mt-8 flex gap-4">
               <Button asChild size="lg" variant="primary">
@@ -133,7 +133,7 @@ export default function MaskProductPage() {
             {
               title: 'Compliance Pressure',
               description:
-                'GDPR, HIPAA, CCPA, SOX — every regulation demands that personal data is removed before sharing. You need a systematic solution, not a manual process.',
+                'GDPR, HIPAA, CCPA, SOX. Every regulation demands that personal data is removed before sharing. You need a systematic solution, not a manual process.',
               icon: <Lock className="h-6 w-6" />,
             },
           ].map((item, idx) => (
@@ -293,7 +293,7 @@ export default function MaskProductPage() {
               icon: <EyeOff className="h-6 w-6" />,
               title: 'Permanent Redaction',
               description:
-                'Black boxes are drawn directly onto the PDF. The original text is permanently removed — not just hidden behind a layer.',
+                'Black boxes are drawn directly onto the PDF. The original text is permanently removed, not just hidden behind a layer.',
             },
             {
               icon: <CheckCircle className="h-6 w-6" />,

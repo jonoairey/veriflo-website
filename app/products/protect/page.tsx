@@ -54,7 +54,7 @@ export default function ProtectPage() {
       number: '4',
       title: 'Recipients Verify Instantly',
       description:
-        'Recipients click the link and see the full integrity report — score, findings, and your verified identity. No account needed.',
+        'Recipients click the link and see the full integrity report: score, findings, and your verified identity. No account needed.',
     },
   ];
 
@@ -257,7 +257,7 @@ export default function ProtectPage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">What Recipients See</h2>
           <p className="mt-4 text-xl text-gray-400">
-            A branded verification page — no login required
+            A branded verification page (no login required)
           </p>
         </div>
 
@@ -335,7 +335,7 @@ export default function ProtectPage() {
         </div>
 
         <p className="text-center text-gray-400 text-sm mt-6">
-          Recipients see a branded verification page — no login required
+          Recipients see a branded verification page. No login required.
         </p>
       </section>
 

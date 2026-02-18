@@ -109,7 +109,7 @@ export default function CheckPage() {
               <CardContent className="pt-8 pb-8">
                 <div className="mb-6">
                   <h3 className="text-lg font-semibold text-white mb-2">Sample Verification Report</h3>
-                  <p className="text-sm text-gray-400">Chase Bank Statement — Uploaded 2 minutes ago</p>
+                  <p className="text-sm text-gray-400">Chase Bank Statement. Uploaded 2 minutes ago</p>
                 </div>
 
                 <div className="mb-8 p-6 bg-emerald-500/10 border border-emerald-500/30 rounded-lg">
@@ -275,7 +275,7 @@ export default function CheckPage() {
                 Forward any document to <span className="font-mono text-emerald-400 bg-emerald-500/10 px-2 py-0.5 rounded">check@useveriflo.com</span> and receive a full verification report in minutes. No login, no app, no signup required.
               </p>
               <div className="space-y-3 mb-8">
-                {['Works with any email client — Gmail, Outlook, Apple Mail', 'Instant forensic analysis and integrity scoring', 'PDF verification report delivered to your inbox', 'Supports all document types — PDF, images, Office files'].map((item, i) => (
+                {['Works with any email client: Gmail, Outlook, Apple Mail', 'Instant forensic analysis and integrity scoring', 'PDF verification report delivered to your inbox', 'Supports all document types: PDF, images, Office files'].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm text-gray-400">
                     <CheckCircle className="h-4 w-4 text-emerald-500 flex-shrink-0" />
                     <span>{item}</span>
@@ -453,7 +453,7 @@ export default function CheckPage() {
         <div className="rounded-xl bg-gradient-to-r from-emerald-600 to-blue-600 p-12">
           <h2 className="text-3xl font-bold text-white">Stop Trusting Documents Blindly</h2>
           <p className="mt-4 text-lg text-emerald-100">
-            Try Veriflo Check free — verify your first document in under 30 seconds. No credit card required.
+            Try Veriflo Check free. Verify your first document in under 30 seconds. No credit card required.
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary">

@@ -71,7 +71,7 @@ export default function HowItWorksPage() {
         'Downloadable branded PDF report',
         'Exportable results for your records',
       ],
-      whatHappens: 'You get a clear, actionable assessment of document authenticity and integrity — so you can make informed decisions before trusting the document.',
+      whatHappens: 'You get a clear, actionable assessment of document authenticity and integrity. This lets you make informed decisions before trusting the document.',
     },
   ];
 
@@ -97,7 +97,7 @@ export default function HowItWorksPage() {
           </div>
           <h2 className="text-3xl font-bold text-white">Veriflo Check</h2>
         </div>
-        <p className="text-lg text-gray-400">Verify documents you receive — in three steps</p>
+        <p className="text-lg text-gray-400">Verify documents you receive in just three steps</p>
       </section>
 
       {/* Verification Steps */}
@@ -195,7 +195,7 @@ export default function HowItWorksPage() {
           </div>
           <h2 className="text-3xl font-bold text-white">Veriflo Seal</h2>
         </div>
-        <p className="text-lg text-gray-400 mb-12">Prove documents you send are authentic — in four steps</p>
+        <p className="text-lg text-gray-400 mb-12">Prove documents you send are authentic with four simple steps</p>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {[
@@ -203,7 +203,7 @@ export default function HowItWorksPage() {
               number: '1',
               icon: <Upload className="h-6 w-6" />,
               title: 'Upload Your Document',
-              description: 'Upload the document you want to certify — an invoice, contract, report, or any file you\'re sending to someone.',
+              description: 'Upload the document you want to certify. This could be an invoice, contract, report, or any file you\'re sending to someone.',
             },
             {
               number: '2',
@@ -221,7 +221,7 @@ export default function HowItWorksPage() {
               number: '4',
               icon: <ExternalLink className="h-6 w-6" />,
               title: 'Recipient Views Report',
-              description: 'Recipients click your link to see the full integrity report — score, findings, and verification timestamp — without needing a Veriflo account.',
+              description: 'Recipients click your link to see the full integrity report: score, findings, and verification timestamp. No Veriflo account needed.',
             },
           ].map((step, idx) => (
             <Card key={idx} className="border-blue-500/20 bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
@@ -258,7 +258,7 @@ export default function HowItWorksPage() {
           </div>
           <h2 className="text-3xl font-bold text-white">Veriflo Mask</h2>
         </div>
-        <p className="text-lg text-gray-400 mb-12">Redact sensitive data before sharing — in three steps</p>
+        <p className="text-lg text-gray-400 mb-12">Redact sensitive data before sharing in three easy steps</p>
 
         <div className="grid gap-8 md:grid-cols-3">
           {[
@@ -320,7 +320,7 @@ export default function HowItWorksPage() {
           {[
             {
               title: 'Instant Verification',
-              description: 'Get your integrity score in seconds. No waiting, no confusion — just clear, actionable results.',
+              description: 'Get your integrity score in seconds. No waiting. Just clear, actionable results.',
             },
             {
               title: 'Forensic Precision',
@@ -340,7 +340,7 @@ export default function HowItWorksPage() {
             },
             {
               title: 'Comprehensive Checks',
-              description: 'Metadata, structure, dates, images, compression, encoding — we check everything that matters.',
+              description: 'Metadata, structure, dates, images, compression, encoding. We check everything that matters.',
             },
           ].map((principle, idx) => (
             <Card key={idx} className="border-slate-800 bg-slate-900/50">
@@ -363,7 +363,7 @@ export default function HowItWorksPage() {
           {[
             {
               q: 'How does the integrity check work?',
-              a: 'Upload any document and Veriflo runs comprehensive forensic analysis on its metadata, structure, and content. It checks for mismatched creation dates, editing software traces, incremental saves, hidden embedded content, image manipulation, and more — then gives you an integrity score from 0 to 100 with detailed findings.',
+              a: 'Upload any document and Veriflo runs comprehensive forensic analysis on its metadata, structure, and content. It checks for mismatched creation dates, editing software traces, incremental saves, hidden embedded content, image manipulation, and more. Then you get an integrity score from 0 to 100 with detailed findings.',
             },
             {
               q: 'What does the integrity score mean?',
@@ -379,11 +379,11 @@ export default function HowItWorksPage() {
             },
             {
               q: 'How accurate is the verification?',
-              a: 'Our forensic engine uses industry-standard techniques to detect tampering. It identifies metadata mismatches, structural anomalies, and editing traces with high accuracy. However, no tool is 100% perfect — our score should inform your judgment, not replace it.',
+              a: 'Our forensic engine uses industry-standard techniques to detect tampering. It identifies metadata mismatches, structural anomalies, and editing traces with high accuracy. However, no tool is 100% perfect. Our score should inform your judgment, not replace it.',
             },
             {
               q: 'Can you detect AI-generated documents?',
-              a: 'Yes. Veriflo includes AI-content detection that identifies AI-generated text using 7-signal heuristic analysis and synthetic images using 6-signal pixel-level forensics — all without external APIs.',
+              a: 'Yes. Veriflo includes AI-content detection that identifies AI-generated text using 7-signal heuristic analysis and synthetic images using 6-signal pixel-level forensics. All of this works without external APIs.',
             },
             {
               q: 'How long does verification take?',
@@ -391,19 +391,19 @@ export default function HowItWorksPage() {
             },
             {
               q: 'What is Veriflo Seal?',
-              a: 'Veriflo Seal lets you prove your own documents are authentic. Upload your document, run the integrity check, then generate a shareable verification link for recipients. They see the full integrity report without needing a Veriflo account — building trust before they even open the document.',
+              a: 'Veriflo Seal lets you prove your own documents are authentic. Upload your document, run the integrity check, then generate a shareable verification link for recipients. They see the full integrity report without needing a Veriflo account. This builds trust before they even open the document.',
             },
             {
               q: 'What is Veriflo Mask?',
-              a: 'Veriflo Mask automatically detects and redacts personal information (PII) from your documents before you share them. It finds emails, phone numbers, SSNs, credit cards, bank accounts, dates of birth, passport numbers, and addresses — then permanently blacks them out so you can share safely.',
+              a: 'Veriflo Mask automatically detects and redacts personal information (PII) from your documents before you share them. It finds emails, phone numbers, SSNs, credit cards, bank accounts, dates of birth, passport numbers, and addresses. Then it permanently blacks them out so you can share safely.',
             },
             {
               q: 'Can I verify standalone images?',
-              a: 'Yes. Veriflo supports dedicated image verification for JPEG, PNG, GIF, and WebP files. Upload any image to check for AI generation, editing manipulation, and authenticity — including EXIF metadata analysis and 6-signal AI detection forensics.',
+              a: 'Yes. Veriflo supports dedicated image verification for JPEG, PNG, GIF, and WebP files. Upload any image to check for AI generation, editing manipulation, and authenticity. This includes EXIF metadata analysis and 6-signal AI detection forensics.',
             },
             {
               q: 'What is Cross-Document Intelligence?',
-              a: 'Every verification contributes to an anonymized intelligence layer. Veriflo tracks document patterns — creation tools, template matches, AI detection rates, risk levels — across all your verifications to surface trends and anomalies. No personal data is stored.',
+              a: 'Every verification contributes to an anonymized intelligence layer. Veriflo tracks document patterns (creation tools, template matches, AI detection rates, risk levels) across all your verifications to surface trends and anomalies. No personal data is stored.',
             },
             {
               q: 'Do I need an account?',

@@ -7,7 +7,7 @@ import { ContactForm } from '@/components/marketing/contact-form';
 import { StatsCounter } from '@/components/marketing/stats-counter';
 
 export const metadata = {
-  title: 'Veriflo | Document Trust Platform — Verify, Seal & Redact',
+  title: 'Veriflo | Document Trust Platform: Verify, Seal & Redact',
   description: 'Verify documents you receive, prove documents you send, and redact sensitive data before sharing. Forensic integrity scoring, certified proof links, and PII redaction in one platform.',
 };
 
@@ -22,7 +22,7 @@ export default function HomePage() {
               The Document Trust Platform
             </h1>
             <p className="mt-6 text-xl text-gray-300">
-              Verify documents you receive. Prove documents you send. Redact sensitive data before you share. Embed it all into your workflows with our API. One platform for complete document trust.
+              Verify documents you receive. Prove documents you send. Redact sensitive data before you share. Integrate with your workflow via API.
             </p>
             <div className="mt-6 flex flex-wrap gap-3">
               <span className="inline-flex items-center gap-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 px-3 py-1 text-sm text-emerald-400">
@@ -69,7 +69,7 @@ export default function HomePage() {
           </p>
           <h2 className="text-4xl font-bold text-white">Complete Document Trust</h2>
           <p className="mt-4 text-xl text-gray-400 max-w-3xl mx-auto">
-            Verify what you receive, prove what you send, and redact sensitive data before sharing. Veriflo covers the full document lifecycle.
+            Verify what you receive, prove what you send, and redact sensitive data before sharing. All three capabilities in one platform.
           </p>
         </div>
 
@@ -86,7 +86,7 @@ export default function HomePage() {
               </div>
               <p className="text-sm font-medium text-emerald-400 mb-4">For document receivers</p>
               <p className="text-gray-300 mb-6 flex-1">
-                Upload any document you&apos;ve received — contracts, invoices, pay stubs, financial statements — and get an instant forensic integrity score. Catch tampering, AI-generated content, and manipulation before you act on it.
+                Upload contracts, invoices, pay stubs, financial statements, or any document. Get an instant forensic integrity score. Catch tampering, AI-generated content, and manipulation before you act on it.
               </p>
               <div className="space-y-3 mb-8">
                 {['Forensic integrity scoring (0-100)', 'AI-content detection', 'Metadata analysis & tamper detection', 'Template matching for known formats'].map((item, i) => (
@@ -116,7 +116,7 @@ export default function HomePage() {
               </div>
               <p className="text-sm font-medium text-blue-400 mb-4">For document senders</p>
               <p className="text-gray-300 mb-6 flex-1">
-                Verify your document, then share a certified proof link with the recipient. They see your verification report and know the document is authentic — building trust before they even open it.
+                Verify your document, then share a certified proof link with the recipient. They see your verification report and know the document is authentic before they even open it.
               </p>
               <div className="space-y-3 mb-8">
                 {['Certified verification links', 'Shareable proof of authenticity', 'Expiry & access controls', 'Branded trust experience'].map((item, i) => (
@@ -146,7 +146,7 @@ export default function HomePage() {
               </div>
               <p className="text-sm font-medium text-purple-400 mb-4">For document privacy</p>
               <p className="text-gray-300 mb-6 flex-1">
-                Upload any document and Veriflo Mask automatically detects personal information — emails, SSNs, phone numbers, credit cards — then permanently redacts it before you share.
+                Upload any document and Veriflo Mask automatically detects emails, SSNs, phone numbers, credit cards, and other personal information. It permanently redacts everything before you share.
               </p>
               <div className="space-y-3 mb-8">
                 {['8 categories of PII detection', 'Permanent black-box redaction', 'Category-level control', 'Full redaction audit trail'].map((item, i) => (
@@ -177,7 +177,7 @@ export default function HomePage() {
             <div className="flex-1 text-center md:text-left">
               <h3 className="text-xl font-bold text-white">Verify From Your Inbox</h3>
               <p className="mt-2 text-gray-300">
-                Forward any document to <span className="font-mono text-emerald-400">check@useveriflo.com</span> and get a verification report back in minutes. No login required — works with any email client.
+                Forward any document to <span className="font-mono text-emerald-400">check@useveriflo.com</span> and get a verification report back in minutes. Works with any email client, no login needed.
               </p>
             </div>
             <Button asChild variant="primary" size="lg" className="shrink-0">
@@ -206,19 +206,19 @@ export default function HomePage() {
             {
               step: '1',
               title: 'Upload Document',
-              description: 'Drop any incoming document — contracts, invoices, pay stubs, financial statements. We accept PDF, images, and Office files.',
+              description: 'Drop contracts, invoices, pay stubs, financial statements, or any other document. We accept PDF, images, and Office files.',
               icon: <FileCheck className="h-6 w-6" />
             },
             {
               step: '2',
               title: 'Forensic Analysis',
-              description: 'Veriflo scans metadata, creation dates, file structure, font inconsistencies, and content markers for signs of tampering in seconds.',
+              description: 'We scan metadata, creation dates, file structure, fonts, and content markers for signs of tampering. Takes seconds.',
               icon: <BarChart3 className="h-6 w-6" />
             },
             {
               step: '3',
               title: 'Integrity Score',
-              description: 'Get a 0-100 authenticity score with risk level and detailed findings. Know if the document is genuine before you sign or act on it.',
+              description: 'Get a 0-100 score with your risk level and findings. You\'ll know if the document is real before you sign or act on it.',
               icon: <CheckCircle className="h-6 w-6" />
             },
           ].map((step, idx) => (
@@ -253,7 +253,7 @@ export default function HomePage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">Verification Features</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Enterprise-grade document forensics to catch tampering before it costs you
+            Catch tampering before it costs you
           </p>
         </div>
 
@@ -263,37 +263,37 @@ export default function HomePage() {
               icon: <BarChart3 className="h-6 w-6" />,
               title: 'Integrity Scoring',
               description:
-                'Get a 0-100 authenticity score with risk categorization. Know exactly which aspects of the document passed or failed verification.',
+                'Get a 0-100 score that shows you exactly which parts of the document pass or fail verification.',
             },
             {
               icon: <Database className="h-6 w-6" />,
               title: 'Metadata Forensics',
               description:
-                'Analyze file creation dates, modification history, document properties, and embedded markers for inconsistencies.',
+                'We check file creation dates, modification history, document properties, and embedded markers for red flags.',
             },
             {
               icon: <AlertTriangle className="h-6 w-6" />,
               title: 'Tamper Detection',
               description:
-                'Identify altered dates, font inconsistencies, structural anomalies, and signs of copy-paste manipulation.',
+                'Spot altered dates, mismatched fonts, structural issues, and copy-paste tricks that show a document has been faked.',
             },
             {
               icon: <Zap className="h-6 w-6" />,
               title: 'AI-Content Detection',
               description:
-                'Detect AI-generated text and synthetic images using 8-signal analysis including Error Level Analysis and copy-move detection. Flags fraudulent content automatically.',
+                'Detect AI-generated text and fake images using 8 different signals including Error Level Analysis and copy-move detection.',
             },
             {
               icon: <Eye className="h-6 w-6" />,
               title: 'Image Analysis',
               description:
-                'Verify embedded images, signatures, and visual elements for authenticity and digital manipulation.',
+                'Check embedded images, signatures, and visual elements to spot fakes and digital manipulation.',
             },
             {
               icon: <Lock className="h-6 w-6" />,
               title: 'Enterprise Security',
               description:
-                'SOC 2 ready, AES-256 encryption, audit logging, and role-based access controls for your organization.',
+                'SOC 2 compliance, AES-256 encryption, audit logs, and role-based access for your team.',
             },
           ].map((feature, idx) => (
             <Card key={idx} className="border-slate-800 bg-slate-900/50 hover:bg-slate-900/70 transition-colors">
@@ -312,9 +312,9 @@ export default function HomePage() {
       {/* Who It's For Section */}
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <h2 className="text-4xl font-bold text-white">Built for Your Industry</h2>
+          <h2 className="text-4xl font-bold text-white">Works for Every Industry</h2>
           <p className="mt-4 text-xl text-gray-400">
-            Verification is critical across every sector. Choose your use case.
+            Document fraud happens everywhere. Pick your industry.
           </p>
         </div>
 
@@ -384,7 +384,7 @@ export default function HomePage() {
         <div className="grid gap-8 md:grid-cols-3">
           {[
             {
-              quote: 'We receive dozens of financial documents daily. Veriflo\'s integrity scores help us quickly identify which contracts warrant deeper review before we sign — saving us from potential fraud.',
+              quote: 'We receive dozens of financial documents daily. Veriflo\'s integrity scores help us quickly identify which contracts need deeper review before we sign, protecting us from fraud.',
               author: 'Finance Director',
               company: 'Mid-Market Financial Services',
             },
@@ -418,7 +418,7 @@ export default function HomePage() {
           <div>
             <h2 className="text-4xl font-bold text-white">Ready to Verify Your Documents?</h2>
             <p className="mt-4 text-xl text-gray-400">
-              Tell us about your document verification needs and we&apos;ll help you build trust in every document you receive.
+              Tell us what you need to verify and we&apos;ll help you set it up.
             </p>
 
             <div className="mt-10 space-y-6">
@@ -426,17 +426,17 @@ export default function HomePage() {
                 {
                   icon: <CheckCircle className="h-6 w-6" />,
                   title: 'Custom Plans',
-                  description: 'We tailor pricing and verification workflows to your specific requirements — from startups to enterprises.',
+                  description: 'We tailor pricing and verification workflows to fit your needs. Whether you\'re a startup or an enterprise, we have a plan that works.',
                 },
                 {
                   icon: <Users className="h-6 w-6" />,
                   title: 'Dedicated Onboarding',
-                  description: 'Our team will help you set up, integrate, and verify your first documents with confidence.',
+                  description: 'Our team helps you set up and integrate everything. You\'ll verify your first documents right away.',
                 },
                 {
                   icon: <Eye className="h-6 w-6" />,
                   title: 'Free Verification',
-                  description: 'Verify your first document free to see exactly how Veriflo catches tampering. No credit card required.',
+                  description: 'Verify your first document free. See how we catch tampering. No credit card needed.',
                 },
               ].map((item, idx) => (
                 <div key={idx} className="flex gap-4">

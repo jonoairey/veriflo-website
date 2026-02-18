@@ -33,7 +33,7 @@ export default function FeaturesPage() {
       image: '/images/feature-integrity.png',
       title: 'Document Integrity Check',
       shortDesc: 'Upload any incoming document and get an instant integrity score from 0-100 with risk level.',
-      fullDesc: 'Upload any document — contracts, financial statements, invoices, certificates — and get an instant integrity score. Veriflo runs forensic analysis on metadata, creation dates, software signatures, and structural patterns to flag documents that may have been manipulated.',
+      fullDesc: 'Upload any document. Contracts, financial statements, invoices, certificates. Get an instant integrity score. Veriflo runs forensic analysis on metadata, creation dates, software signatures, and structural patterns to flag documents that may have been manipulated.',
       benefits: [
         'Instant integrity scoring from 0-100',
         'Risk level classification (clean, low, medium, high, critical)',
@@ -65,7 +65,7 @@ export default function FeaturesPage() {
       image: '/images/feature-tamper-detection.png',
       title: 'Tamper Detection',
       shortDesc: 'Detect altered dates, metadata inconsistencies, stripped metadata, and hidden JavaScript.',
-      fullDesc: 'Our forensic engine detects the signs of document fraud. It identifies mismatches between document creator and producer software, flags JavaScript or embedded files hidden inside PDFs, and spots metadata that has been stripped or altered — all indicating potential manipulation.',
+      fullDesc: 'Our forensic engine detects the signs of document fraud. It identifies mismatches between document creator and producer software, flags JavaScript or embedded files hidden inside PDFs, and spots metadata that has been stripped or altered. All these point to potential manipulation.',
       benefits: [
         'Creator/producer software mismatch detection',
         'Hidden JavaScript and embedded file detection',
@@ -97,7 +97,7 @@ export default function FeaturesPage() {
       image: '/images/feature-ai-detection.png',
       title: 'AI-Content Detection',
       shortDesc: 'Detect AI-generated text, images, and synthetic documents automatically.',
-      fullDesc: 'Advanced AI detection identifies synthetic and machine-generated content. Detect AI-generated text using GPTZero integration with sentence-level granularity. Identify AI-created images using 8-signal pixel-level forensics including Error Level Analysis (ELA), copy-move detection, frequency analysis, edge coherence, and color distribution patterns — essential for verifying authenticity in an age of synthetic media.',
+      fullDesc: 'Advanced AI detection identifies synthetic and machine-generated content. Detect AI-generated text using GPTZero integration with sentence-level granularity. Identify AI-created images using 8-signal pixel-level forensics: Error Level Analysis (ELA), copy-move detection, frequency analysis, edge coherence, and color distribution patterns. Essential for verifying authenticity in an age of synthetic media.',
       benefits: [
         'AI text detection powered by GPTZero with 99% accuracy',
         '8-signal AI image detection with pixel-level forensics',
@@ -128,7 +128,7 @@ export default function FeaturesPage() {
       icon: <Image className="h-8 w-8" />,
       image: '/images/feature-image-analysis.png',
       title: 'Standalone Image Verification',
-      shortDesc: 'Upload any image to verify authenticity and detect AI generation — no document required.',
+      shortDesc: 'Upload any image to verify authenticity and detect AI generation. No document needed.',
       fullDesc: 'Dedicated image verification goes beyond embedded document images. Upload photos, screenshots, scans, or any standalone image to check for AI generation, editing manipulation, and authenticity. Includes Error Level Analysis (ELA) and copy-move detection for forensic-grade analysis. Perfect for verifying identity documents, proof photos, insurance claims, and any visual evidence.',
       benefits: [
         'Standalone image upload and analysis',
@@ -144,11 +144,11 @@ export default function FeaturesPage() {
       icon: <Mail className="h-8 w-8" />,
       image: '/images/feature-integrity.png',
       title: 'Verify by Email',
-      shortDesc: 'Forward any document to check@useveriflo.com and get a verification report back — no login required.',
+      shortDesc: 'Forward any document to check@useveriflo.com and get a verification report back. No login needed.',
       fullDesc: 'The fastest way to verify a document. Forward any email with attachments to check@useveriflo.com and receive a full forensic verification report delivered straight to your inbox. No login, no signup, no app required. The same six verification engines run on every attachment, and you get a PDF report with integrity scores and detailed findings. Perfect for quick checks when you don\'t have time to open the platform.',
       benefits: [
         'Forward documents from any email client',
-        'Full forensic analysis — same engines as the platform',
+        'Full forensic analysis. Same engines as the platform',
         'PDF verification report delivered to your inbox',
         'No login or signup required',
         'Supports all document types (PDF, images, Office)',
@@ -161,7 +161,7 @@ export default function FeaturesPage() {
       image: '/images/feature-integrity.png',
       title: 'Sender Verification (Veriflo Seal)',
       shortDesc: 'Verify your own documents and share certified proof links with recipients.',
-      fullDesc: 'Flip the script on document trust. Instead of waiting for recipients to verify your documents, proactively prove authenticity. Upload your document, run the integrity check, then generate a shareable verification link. Recipients click the link to see the full integrity report — building trust before they even open the document. Set expiry dates, view limits, and send notification emails directly.',
+      fullDesc: 'Flip the script on document trust. Don\'t wait for recipients to verify your documents. Prove authenticity upfront. Upload your document, run the integrity check, then generate a shareable verification link. Recipients click the link to see the full integrity report and start with trust already built. Set expiry dates, view limits, and send notification emails directly.',
       benefits: [
         'Generate certified verification links',
         'Share proof of authenticity with anyone',
@@ -177,7 +177,7 @@ export default function FeaturesPage() {
       image: '/images/feature-integrity.png',
       title: 'PII Redaction (Veriflo Mask)',
       shortDesc: 'Automatically detect and permanently redact personal information before sharing documents.',
-      fullDesc: 'Veriflo Mask scans your documents for personal information across 8 categories — emails, phone numbers, Social Security numbers, credit cards, addresses, dates of birth, passport numbers, and driver\'s licenses. Review detected items by category, select what to redact, and generate a clean copy with permanent black-box redactions. The original content is irrecoverably removed, not just hidden.',
+      fullDesc: 'Veriflo Mask scans your documents for personal information across 8 categories: emails, phone numbers, Social Security numbers, credit cards, addresses, dates of birth, passport numbers, and driver\'s licenses. Review detected items by category, select what to redact, and generate a clean copy with permanent black-box redactions. The original content is irrecoverably removed, not just hidden.',
       benefits: [
         '8 categories of PII detection',
         'Permanent black-box redaction (irrecoverable)',
@@ -193,7 +193,7 @@ export default function FeaturesPage() {
       image: '/images/feature-ai-detection.png',
       title: 'Cross-Document Intelligence',
       shortDesc: 'Aggregate anonymized patterns across all verifications to detect emerging threats.',
-      fullDesc: 'Every verification contributes to a collective intelligence layer. Veriflo anonymously logs document fingerprints — file types, creation tools, template patterns, AI detection rates — to surface trends and anomalies across your organization. Spot emerging fraud patterns, track which document types carry the highest risk, and see how verification activity trends over time.',
+      fullDesc: 'Every verification contributes to a collective intelligence layer. Veriflo anonymously logs document fingerprints: file types, creation tools, template patterns, AI detection rates. This surfaces trends and anomalies across your organization. Spot emerging fraud patterns, track which document types carry the highest risk, and see how verification activity trends over time.',
       benefits: [
         'Anonymized fingerprint logging (no PII stored)',
         'Risk distribution and trend analysis',

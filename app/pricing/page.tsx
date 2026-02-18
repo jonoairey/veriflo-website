@@ -25,8 +25,8 @@ export default function PricingPage() {
         'Metadata forensics',
         'Email support',
       ],
-      cta: 'Get Started',
-      ctaUrl: 'https://app.useveriflo.com/signup',
+      cta: 'Start Free Trial',
+      ctaUrl: '#contact',
       highlighted: false,
     },
     {
@@ -351,7 +351,7 @@ export default function PricingPage() {
           </p>
           <div className="mt-8 flex gap-4 justify-center flex-wrap">
             <Button asChild size="lg" variant="primary" className="bg-emerald-500 hover:bg-emerald-600">
-              <a href="https://app.useveriflo.com/signup">Get Started Free</a>
+              <a href="#contact">Start Free Trial</a>
             </Button>
             <Button asChild size="lg" variant="ghost" className="text-slate-300 hover:text-white border-slate-700">
               <Link href="/features">

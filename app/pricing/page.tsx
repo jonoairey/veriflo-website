@@ -317,22 +317,22 @@ export default function PricingPage() {
       <section id="contact" className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <div className="grid gap-12 lg:grid-cols-2 items-start">
           <div>
-            <h2 className="text-4xl font-bold text-white">Let&apos;s Talk</h2>
+            <h2 className="text-4xl font-bold text-white">Get Started with a Free Trial</h2>
             <p className="mt-4 text-xl text-slate-300">
-              Tell us about your verification needs and we&apos;ll recommend the perfect plan for your team.
+              Fill out the form and we&apos;ll set up your free trial. No credit card required.
             </p>
 
             <div className="mt-10 space-y-6">
               <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                <h3 className="text-sm font-semibold text-emerald-300 mb-1">Free to Start</h3>
+                <h3 className="text-sm font-semibold text-emerald-300 mb-1">Free Trial</h3>
                 <p className="text-sm text-slate-400">
-                  No credit card required. Get 10 verification checks on the Free plan immediately.
+                  Get access to Veriflo with 10 document checks per month, no strings attached. We&apos;ll have you up and running within one business day.
                 </p>
               </div>
               <div className="p-4 bg-emerald-500/10 border border-emerald-500/20 rounded-lg">
-                <h3 className="text-sm font-semibold text-emerald-300 mb-1">Scale as You Grow</h3>
+                <h3 className="text-sm font-semibold text-emerald-300 mb-1">Need a Custom Plan?</h3>
                 <p className="text-sm text-slate-400">
-                  Upgrade anytime. Flexible plans designed to grow with your organization.
+                  Let us know your requirements and we&apos;ll put together a plan that fits your team.
                 </p>
               </div>
             </div>

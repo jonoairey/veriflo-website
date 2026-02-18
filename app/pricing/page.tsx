@@ -46,8 +46,8 @@ export default function PricingPage() {
         'REST API access (60 req/min)',
         'Priority support',
       ],
-      cta: 'Start Pro Trial',
-      ctaUrl: 'https://app.useveriflo.com/signup?plan=pro',
+      cta: 'Contact Sales',
+      ctaUrl: '#contact',
       highlighted: true,
     },
     {
@@ -66,8 +66,8 @@ export default function PricingPage() {
         'SSO/SAML authentication',
         'SLA guarantee',
       ],
-      cta: 'Start Enterprise Trial',
-      ctaUrl: 'https://app.useveriflo.com/signup?plan=enterprise',
+      cta: 'Contact Sales',
+      ctaUrl: '#contact',
       highlighted: false,
     },
     {

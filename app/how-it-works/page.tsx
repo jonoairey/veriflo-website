@@ -7,7 +7,7 @@ import { HowItWorksTabs } from '@/components/marketing/how-it-works-tabs';
 
 export const metadata = {
   title: 'How It Works - Veriflo | Verify, Seal & Redact Documents',
-  description: 'Learn how Veriflo Check verifies documents, Veriflo Seal certifies what you send, and Veriflo Mask redacts sensitive data. Three products, one platform.',
+  description: 'Learn how Veriflo Check verifies documents, Veriflo Seal fingerprints and shares documents for recipient verification, and Veriflo Mask redacts sensitive data. Three products, one platform.',
 };
 
 export default function HowItWorksPage() {
@@ -106,7 +106,7 @@ export default function HowItWorksPage() {
             },
             {
               q: 'What is Veriflo Seal?',
-              a: 'Seal lets you prove your own documents are authentic. Upload your document, run the integrity check, then generate a shareable verification link for recipients. They see the full integrity report without needing a Veriflo account.',
+              a: 'Seal lets you fingerprint a document, share it securely, and give recipients the power to independently verify it hasn\'t been tampered with. Upload your document, Veriflo creates a cryptographic fingerprint and stores it, then generates a shareable link. Recipients can download the original and verify their copy matches — all without needing a Veriflo account.',
             },
             {
               q: 'What is Veriflo Mask?',

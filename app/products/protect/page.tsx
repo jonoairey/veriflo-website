@@ -7,9 +7,9 @@ import { Card, CardContent } from '@/components/ui/card';
 const PLATFORM_URL = process.env.NEXT_PUBLIC_PLATFORM_URL || 'https://app.useveriflo.com';
 
 export const metadata = {
-  title: 'Veriflo Seal - Send Verified Documents',
+  title: 'Veriflo Seal - Fingerprint, Share & Verify Documents',
   description:
-    'Prove your documents are authentic with Veriflo Seal. Send verified documents with shareable proof-of-integrity links. Build trust, prevent invoice fraud, and eliminate authenticity questions.',
+    'Fingerprint your documents with Veriflo Seal. Share them securely and give recipients the power to independently verify they haven\'t been tampered with. Prevent fraud, build trust.',
 };
 
 export default function ProtectPage() {
@@ -40,30 +40,42 @@ export default function ProtectPage() {
     },
     {
       number: '2',
-      title: 'Automatic Verification',
+      title: 'Fingerprint & Verify',
       description:
-        'Veriflo runs a full integrity check. If your document passes (score 60+), it\'s eligible for certification.',
+        'Veriflo runs a full integrity check and creates a cryptographic fingerprint (SHA-256 hash) of your document.',
     },
     {
       number: '3',
-      title: 'Get a Verification Link',
+      title: 'Share Securely',
       description:
-        'Receive a unique shareable link (useveriflo.com/v/[code]) that proves your document is authentic. Set expiry and view limits.',
+        'Generate a unique verification link. The document is stored securely and available for the recipient to download. Set expiry and view limits.',
     },
     {
       number: '4',
-      title: 'Recipients Verify Instantly',
+      title: 'Recipients Verify Independently',
       description:
-        'Recipients click the link and see the full integrity report: score, findings, and your verified identity. No account needed.',
+        'Recipients download the document and can verify their copy hasn\'t been modified. Verification happens client-side — the file never leaves their browser.',
     },
   ];
 
   const keyFeatures = [
     {
-      icon: <LinkIcon className="h-6 w-6" />,
-      title: 'Shareable Verification Links',
+      icon: <Lock className="h-6 w-6" />,
+      title: 'Cryptographic Fingerprinting',
       description:
-        'Each document gets a unique URL. Recipients verify authenticity with one click.',
+        'Every document is hashed with SHA-256. This fingerprint is stored and used to verify authenticity.',
+    },
+    {
+      icon: <Send className="h-6 w-6" />,
+      title: 'Secure Document Sharing',
+      description:
+        'Documents are stored securely and shared via unique verification links. Recipients can download the original.',
+    },
+    {
+      icon: <FileCheck className="h-6 w-6" />,
+      title: 'Recipient-Side Verification',
+      description:
+        'Recipients can upload their copy to verify it matches the original. Hashing runs client-side — the file never leaves their browser.',
     },
     {
       icon: <Clock className="h-6 w-6" />,
@@ -72,28 +84,16 @@ export default function ProtectPage() {
         'Set links to expire after 7, 30, or 90 days. Limit total views for sensitive documents.',
     },
     {
-      icon: <FileCheck className="h-6 w-6" />,
-      title: 'Full Integrity Report',
-      description:
-        'Recipients see the complete forensic analysis: metadata, tamper checks, AI detection, and template matching.',
-    },
-    {
-      icon: <BadgeCheck className="h-6 w-6" />,
-      title: 'Sender Identity',
-      description:
-        'Your name or company is displayed on the verification page, building brand trust.',
-    },
-    {
       icon: <Eye className="h-6 w-6" />,
-      title: 'View Analytics',
+      title: 'Access Logging',
       description:
-        'Track how many times your verification links have been viewed.',
+        'Every view is logged with timestamp, IP, and device info. Know exactly who accessed your document.',
     },
     {
       icon: <Shield className="h-6 w-6" />,
-      title: 'API Integration',
+      title: 'Full Integrity Report',
       description:
-        'Generate verification links programmatically via REST API for high-volume senders.',
+        'Recipients also see the complete forensic analysis: metadata checks, AI detection, and template matching.',
     },
   ];
 
@@ -132,10 +132,10 @@ export default function ProtectPage() {
           <div className="space-y-8">
             <div>
               <h1 className="text-5xl font-bold tracking-tight sm:text-6xl text-white">
-                Prove Your Documents Are Authentic
+                Fingerprint, Share & Verify Documents
               </h1>
               <p className="mt-6 text-xl text-gray-300">
-                Veriflo Seal verifies your outgoing documents and gives recipients a shareable proof-of-integrity link. Build trust, prevent invoice fraud, and eliminate "is this real?" questions.
+                Veriflo Seal fingerprints your document, stores it securely, and gives recipients the power to independently verify it hasn't been tampered with. No more "is this real?" questions.
               </p>
               <div className="mt-8 flex gap-4 flex-wrap">
                 <Button asChild size="lg" variant="primary">
@@ -257,7 +257,7 @@ export default function ProtectPage() {
         <div className="text-center mb-12">
           <h2 className="text-4xl font-bold text-white">What Recipients See</h2>
           <p className="mt-4 text-xl text-gray-400">
-            A branded verification page (no login required)
+            Download the original, verify their copy, and see the full integrity report — no login required
           </p>
         </div>
 
@@ -335,7 +335,7 @@ export default function ProtectPage() {
         </div>
 
         <p className="text-center text-gray-400 text-sm mt-6">
-          Recipients see a branded verification page. No login required.
+          Recipients can download the document, verify their copy, and view the full integrity report. No login required.
         </p>
       </section>
 

@@ -107,7 +107,7 @@ export function Navbar() {
                       </div>
                       <div>
                         <p className="text-sm font-semibold text-white">Veriflo Seal</p>
-                        <p className="text-xs text-gray-400">Prove outgoing documents are real</p>
+                        <p className="text-xs text-gray-400">Fingerprint, share & verify documents</p>
                       </div>
                     </div>
                   </Link>

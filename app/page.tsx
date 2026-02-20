@@ -116,10 +116,10 @@ export default function HomePage() {
               </div>
               <p className="text-sm font-medium text-blue-400 mb-4">For document senders</p>
               <p className="text-gray-300 mb-6 flex-1">
-                Verify your document, then share a certified proof link with the recipient. They see your verification report and know the document is authentic before they even open it.
+                Fingerprint your document with a cryptographic hash, share it securely, and give recipients the power to independently verify it hasn't been tampered with.
               </p>
               <div className="space-y-3 mb-8">
-                {['Certified verification links', 'Shareable proof of authenticity', 'Expiry & access controls', 'Branded trust experience'].map((item, i) => (
+                {['Cryptographic document fingerprinting', 'Secure document sharing & download', 'Recipient-side tamper verification', 'Expiry & access controls'].map((item, i) => (
                   <div key={i} className="flex items-center gap-2 text-sm text-gray-400">
                     <CheckCircle className="h-4 w-4 text-blue-500 flex-shrink-0" />
                     <span>{item}</span>
